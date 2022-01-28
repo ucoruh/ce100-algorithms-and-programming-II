@@ -62,8 +62,8 @@ theme:
     
   palette:
     - scheme: default
-      primary: deep purple
-      accent: deep purple
+      primary: cyan
+      accent: cyan
       toggle:
         icon: material/toggle-switch
         name: Switch to dark mode
