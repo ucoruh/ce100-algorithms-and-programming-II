@@ -1243,7 +1243,7 @@ e.g. $n$ and $n^{1+sin(n)}$ cannot be compared asymptotically
 
 **Transitivity**: holds for all
 
-e.g. $ f(n) = \Theta(g(n)) \& g(n)=\Theta(h(n)) \Rightarrow f(n)=\Theta(h(n))$
+e.g. $f(n) = \Theta(g(n)) \& g(n)=\Theta(h(n)) \Rightarrow f(n)=\Theta(h(n))$
 
 **Reflexivity**: holds for $\Theta,O,\Omega$
 
