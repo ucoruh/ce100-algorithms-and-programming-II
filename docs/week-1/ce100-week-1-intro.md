@@ -390,25 +390,22 @@ $k_5 = \sum_{j=2}^n{t_j}$ and $k_6 = \sum_{j=2}^n{t_i-1}$ for operation counts
 cost function can be evaluated as follow;
 
 $T(n)=c_1n+c_2(n-1)+0(n-1)+c_4(n-1)+c_5\sum_{j=2}^n{t_j}+c_6\sum_{j=2}^n{t_i-1}+c_7\sum_{j=2}^n{t_i-1}+c_8(n-1)$
---
 
 ---
 
 $\sum_{j=2}^n j = (n(n+1)/2)- 1$ **and** $\sum_{j=2}^n {j-1} = n(n-1)/2$
---
 
 ---
 
 $T(n)=(c_5/2 + c_6/2 + c_7/2)n^2 + (c_1+c_2+c_4+c_5/2-c_6/2-c_7/2+c_8)n-(c_2 + c_4 + c_5 + c_6)$
---
 ---
 
 $T(n)= an^2 + bn + c$
---
+
 ---
 
 $O(n^2)$
---
+
 ---
 
 ## Best-Case Scenario (Sorted Array)
@@ -600,7 +597,6 @@ Merge(A,p,q,r)
 You can find by counting loops will provide you base constant nested level will provide you exponent of this constant, if you drop constants you will have complexity
 
 we have 3 for loops
---
 
 it will look like $3n$ and $\Theta(n)$ will be merge complexity
 
@@ -854,7 +850,7 @@ One-way equation, e.q. $n^2 = O(n^3)$ but we cannot say $O(n^3)=n^2$
 
 $O(g(n))$ is in fact a set of functions as follow
 
-$O(g(n)) = \{ f(n) : \exist \text{ positive constant } c, n_0 \text{ such that } 0 \leq f(n) \leq cg(n), \forall n \geq n_0 \}$
+$O(g(n)) = \{ f(n) : \exists \text{ positive constant } c, n_0 \text{ such that } 0 \leq f(n) \leq cg(n), \forall n \geq n_0 \}$
 
 ---
 
@@ -912,7 +908,7 @@ $h(n)=0$ function is also in $O(n^2)$. Hence : $T(n) \geq 0$ , runtime must be n
 
 ### Big-Omega / $\Omega$-Notation : Asymptotic Lower Bound (Best-Case)
 
-$f(n)=\Omega(g(n))$ if $\exist$ positive constants $c,n_0$ such that $0 \leq cg(n) \leq f(n) , \forall n \geq n_0$
+$f(n)=\Omega(g(n))$ if $\exists$ positive constants $c,n_0$ such that $0 \leq cg(n) \leq f(n) , \forall n \geq n_0$
 
 ---
 
@@ -965,7 +961,7 @@ $$
 $\Omega(g(n))$ is the set of functions that have asymptotic lower bound $g(n)$ 
 
 $$
-\Omega(g(n))=\{ f(n):\exist \text{ positive constants } c,n_0 \text{ such that } 0 \leq cg(n) \leq f(n), \forall n \geq n_0 \}
+\Omega(g(n))=\{ f(n):\exists \text{ positive constants } c,n_0 \text{ such that } 0 \leq cg(n) \leq f(n), \forall n \geq n_0 \}
 $$
 
 ---
@@ -1020,7 +1016,7 @@ $0 \leq 10^{-9}n^2 \leq 10^{-9}n^{2.0001} \text{ for } n \geq 1$
 
 ### Big-Theta /$\Theta$-Notation : Asymptotically tight bound (Average Case)
 
-$f(n)=\Theta(g(n))$ if $\exist$ positive constants $c_1,c_2,n_0$ such that $0 \leq c_1g(n) \leq f(n) \leq c_2g(n), \forall n \geq n_0$
+$f(n)=\Theta(g(n))$ if $\exists$ positive constants $c_1,c_2,n_0$ such that $0 \leq c_1g(n) \leq f(n) \leq c_2g(n), \forall n \geq n_0$
 
 ---
 
@@ -1094,7 +1090,7 @@ $10^9n^{2.0001} = \Theta(n^2)$ **INCORRECT**
 
 $\Theta(g(n))$ is the set of functions that have asymptotically tight bound $g(n)$
 
-$\Theta(g(n))=\{ f(n): \exist \text{ positive constants } c_1,c_2, n_0 \text{ such that } 0 \leq c_1g(n) \leq  f(n) \leq  c_2g(n), \forall n \geq n_0 \}$
+$\Theta(g(n))=\{ f(n): \exists \text{ positive constants } c_1,c_2, n_0 \text{ such that } 0 \leq c_1g(n) \leq  f(n) \leq  c_2g(n), \forall n \geq n_0 \}$
 
 ---
 
@@ -1117,7 +1113,7 @@ We can check that $10^{-8}n^2 = \Omega(n)$ and $10^{-8}n^2 \neq O(n)$
 Proof by contradiction for $O(n)$ notation
 
 $$
-O(g(n)) = \{ f(n) : \exist \text{ positive constant } c, n_0 \text{ such that } 0 \leq f(n) \leq cg(n), \forall n \geq n_0 \}
+O(g(n)) = \{ f(n) : \exists \text{ positive constant } c, n_0 \text{ such that } 0 \leq f(n) \leq cg(n), \forall n \geq n_0 \}
 $$
 
 ---
@@ -1170,7 +1166,7 @@ According to this small-$o$ notation is an upper bound that is not asymptoticall
 
 **Note that in equations equality is removed in small notations**
 
-$o(g(n))=\{ f(n): \text{ for any constant} c > 0, \exist \text{ a constant } n_0 > 0, \text{ such that } 0 \leq f(n) < cg(n), \forall n \geq n_0 \}$
+$o(g(n))=\{ f(n): \text{ for any constant} c > 0, \exists \text{ a constant } n_0 > 0, \text{ such that } 0 \leq f(n) < cg(n), \forall n \geq n_0 \}$
 
 $$
 \lim_{n \to \infty} \frac{f(n)}{g(n)} = 0
@@ -1182,7 +1178,7 @@ e.g $2n=o(n^2)$ any positive $c$ satisfies but $2n^2 \neq o(n^2)$  $c=2$ does no
 
 ### Small-omega / $\omega$-Notation: Asymptotic lower bound that is not tight
 
-$\omega(g(n))=\{ f(n): \text{ for any constant } c > 0, \exist \text{ a constant } n_0>0, \text{ such that } 0 \leq cg(n) < f(n), \forall n \geq n_0$
+$\omega(g(n))=\{ f(n): \text{ for any constant } c > 0, \exists \text{ a constant } n_0>0, \text{ such that } 0 \leq cg(n) < f(n), \forall n \geq n_0$
 
 $$
 \lim_{n \to \infty} \frac{f(n)}{g(n)} = \infty
@@ -1422,7 +1418,7 @@ stands for some anonymous function in the set
   
   - for any function $g(n) \in \Theta(n)$  
   
-  - $\exist$ some function $h(n)\in \Theta(n^2)$ 
+  - $\exists$ some function $h(n)\in \Theta(n^2)$ 
     
     - such that $2n^2+g(n) = h(n)$ 
 
