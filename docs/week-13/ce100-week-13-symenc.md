@@ -12,7 +12,7 @@ backgroundColor: #fff
 backgroundImage: url('https://marp.app/assets/hero-background.svg')
 header: 'CE100 Algorithms and Programming II'
 footer: '![height:50px](http://erdogan.edu.tr/Images/Uploads/MyContents/L_379-20170718142719217230.jpg) RTEU CE100 Week-13'
-title: "CE100 Algorithms and Programming II
+title: "CE100 Algorithms and Programming II"
 author: "Author: Asst. Prof. Dr. Uğur CORUH"
 date:
 subtitle: "Symmetric and  Asymmetric Encryption"
