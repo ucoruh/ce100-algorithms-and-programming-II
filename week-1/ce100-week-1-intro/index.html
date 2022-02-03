@@ -1142,8 +1142,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#merge-sort-example-todo-update-image" class="md-nav__link">
-    Merge Sort Example (TODO : update image)
+  <a href="#merge-sort-example" class="md-nav__link">
+    Merge Sort Example
   </a>
   
 </li>
@@ -1184,8 +1184,39 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#merge-sort-combine-algorithm-2" class="md-nav__link">
-    Merge Sort Combine Algorithm (2)
+  <a href="#mergeapqr-n1-q-p1-n2-r-q-allocate-left-and-right-arrays-increment-will-be-from-left-to-right-left-part-will-be-bigger-than-right-part-l1n11-left-array-r1n21-right-array-copy-left-part-of-array-for-i1-to-n1-liapi-1-copy-right-part-of-array-for-j1-to-n2-rjaqj-put-end-items-maximum-values-for-termination-ln11inf-rn21inf-i1j1-for-kp-to-r-if-lirj-akli-ii1-else-akrj-jj1" class="md-nav__link">
+    Merge(A,p,q,r)
+    n1 = q-p+1
+    n2 = r-q
+
+    //allocate left and right arrays 
+    //increment will be from left to right 
+    //left part will be bigger than right part
+
+    L[1...n1+1] //left array
+    R[1...n2+1] //right array
+
+    //copy left part of array
+    for i=1 to n1
+        L[i]=A[p+i-1]
+
+    //copy right part of array
+    for j=1 to n2
+        R[j]=A[q+j]
+
+    //put end items maximum values for termination
+    L[n1+1]=inf
+    R[n2+1]=inf
+
+    i=1,j=1
+    for k=p to r
+        if L[i]&lt;=R[j]
+            A[k]=L[i]
+            i=i+1
+        else
+            A[k]=R[j]
+            j=j+1
+
   </a>
   
 </li>
@@ -1322,14 +1353,7 @@
     Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (4)
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#big-o-o-notation-asymptotic-upper-bound-worst-case-5" class="md-nav__link">
-    Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (5)
-  </a>
-  
-    <nav class="md-nav" aria-label="Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (5)">
+    <nav class="md-nav" aria-label="Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (4)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1345,11 +1369,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#big-o-o-notation-asymptotic-upper-bound-worst-case-6" class="md-nav__link">
-    Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (6)
+  <a href="#big-o-o-notation-asymptotic-upper-bound-worst-case-5" class="md-nav__link">
+    Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (5)
   </a>
   
-    <nav class="md-nav" aria-label="Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (6)">
+    <nav class="md-nav" aria-label="Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (5)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1361,6 +1385,13 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#big-o-o-notation-asymptotic-upper-bound-worst-case-6" class="md-nav__link">
+    Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (6)
+  </a>
   
 </li>
         
@@ -1383,6 +1414,19 @@
     Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (9)
   </a>
   
+    <nav class="md-nav" aria-label="Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (9)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1_1" class="md-nav__link">
+    Example-1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1394,8 +1438,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-1_1" class="md-nav__link">
-    Example-1
+  <a href="#example-2_1" class="md-nav__link">
+    Example-2
   </a>
   
 </li>
@@ -1414,26 +1458,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-2_1" class="md-nav__link">
-    Example-2
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#big-o-o-notation-asymptotic-upper-bound-worst-case-12" class="md-nav__link">
-    Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (12)
-  </a>
-  
-    <nav class="md-nav" aria-label="Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (12)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#example-3" class="md-nav__link">
     Example-3
   </a>
@@ -1446,8 +1470,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#big-o-o-notation-asymptotic-upper-bound-worst-case-13" class="md-nav__link">
-    Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (13)
+  <a href="#big-o-o-notation-asymptotic-upper-bound-worst-case-12" class="md-nav__link">
+    Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (12)
   </a>
   
 </li>
@@ -1471,14 +1495,7 @@
     Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (3)
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-4" class="md-nav__link">
-    Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (4)
-  </a>
-  
-    <nav class="md-nav" aria-label="Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (4)">
+    <nav class="md-nav" aria-label="Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (3)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1494,11 +1511,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-5" class="md-nav__link">
-    Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (5)
+  <a href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-4" class="md-nav__link">
+    Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (4)
   </a>
   
-    <nav class="md-nav" aria-label="Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (5)">
+    <nav class="md-nav" aria-label="Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (4)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1514,18 +1531,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-6" class="md-nav__link">
-    Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (6)
+  <a href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-5" class="md-nav__link">
+    Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (5)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-7" class="md-nav__link">
-    Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (7)
+  <a href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-6" class="md-nav__link">
+    Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (6)
   </a>
   
-    <nav class="md-nav" aria-label="Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (7)">
+    <nav class="md-nav" aria-label="Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (6)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1541,11 +1558,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-8" class="md-nav__link">
-    Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (8)
+  <a href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-7" class="md-nav__link">
+    Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (7)
   </a>
   
-    <nav class="md-nav" aria-label="Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (8)">
+    <nav class="md-nav" aria-label="Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (7)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1561,11 +1578,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-9" class="md-nav__link">
-    Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (9)
+  <a href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-8" class="md-nav__link">
+    Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (8)
   </a>
   
-    <nav class="md-nav" aria-label="Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (9)">
+    <nav class="md-nav" aria-label="Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (8)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1935,8 +1952,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
+  <a href="#references-todo-update-missing-references" class="md-nav__link">
+    References (TODO: Update Missing References)
   </a>
   
 </li>
@@ -2609,8 +2626,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#merge-sort-example-todo-update-image" class="md-nav__link">
-    Merge Sort Example (TODO : update image)
+  <a href="#merge-sort-example" class="md-nav__link">
+    Merge Sort Example
   </a>
   
 </li>
@@ -2651,8 +2668,39 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#merge-sort-combine-algorithm-2" class="md-nav__link">
-    Merge Sort Combine Algorithm (2)
+  <a href="#mergeapqr-n1-q-p1-n2-r-q-allocate-left-and-right-arrays-increment-will-be-from-left-to-right-left-part-will-be-bigger-than-right-part-l1n11-left-array-r1n21-right-array-copy-left-part-of-array-for-i1-to-n1-liapi-1-copy-right-part-of-array-for-j1-to-n2-rjaqj-put-end-items-maximum-values-for-termination-ln11inf-rn21inf-i1j1-for-kp-to-r-if-lirj-akli-ii1-else-akrj-jj1" class="md-nav__link">
+    Merge(A,p,q,r)
+    n1 = q-p+1
+    n2 = r-q
+
+    //allocate left and right arrays 
+    //increment will be from left to right 
+    //left part will be bigger than right part
+
+    L[1...n1+1] //left array
+    R[1...n2+1] //right array
+
+    //copy left part of array
+    for i=1 to n1
+        L[i]=A[p+i-1]
+
+    //copy right part of array
+    for j=1 to n2
+        R[j]=A[q+j]
+
+    //put end items maximum values for termination
+    L[n1+1]=inf
+    R[n2+1]=inf
+
+    i=1,j=1
+    for k=p to r
+        if L[i]&lt;=R[j]
+            A[k]=L[i]
+            i=i+1
+        else
+            A[k]=R[j]
+            j=j+1
+
   </a>
   
 </li>
@@ -2789,14 +2837,7 @@
     Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (4)
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#big-o-o-notation-asymptotic-upper-bound-worst-case-5" class="md-nav__link">
-    Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (5)
-  </a>
-  
-    <nav class="md-nav" aria-label="Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (5)">
+    <nav class="md-nav" aria-label="Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (4)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2812,11 +2853,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#big-o-o-notation-asymptotic-upper-bound-worst-case-6" class="md-nav__link">
-    Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (6)
+  <a href="#big-o-o-notation-asymptotic-upper-bound-worst-case-5" class="md-nav__link">
+    Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (5)
   </a>
   
-    <nav class="md-nav" aria-label="Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (6)">
+    <nav class="md-nav" aria-label="Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (5)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2828,6 +2869,13 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#big-o-o-notation-asymptotic-upper-bound-worst-case-6" class="md-nav__link">
+    Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (6)
+  </a>
   
 </li>
         
@@ -2850,6 +2898,19 @@
     Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (9)
   </a>
   
+    <nav class="md-nav" aria-label="Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (9)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1_1" class="md-nav__link">
+    Example-1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2861,8 +2922,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-1_1" class="md-nav__link">
-    Example-1
+  <a href="#example-2_1" class="md-nav__link">
+    Example-2
   </a>
   
 </li>
@@ -2881,26 +2942,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-2_1" class="md-nav__link">
-    Example-2
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#big-o-o-notation-asymptotic-upper-bound-worst-case-12" class="md-nav__link">
-    Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (12)
-  </a>
-  
-    <nav class="md-nav" aria-label="Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (12)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#example-3" class="md-nav__link">
     Example-3
   </a>
@@ -2913,8 +2954,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#big-o-o-notation-asymptotic-upper-bound-worst-case-13" class="md-nav__link">
-    Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (13)
+  <a href="#big-o-o-notation-asymptotic-upper-bound-worst-case-12" class="md-nav__link">
+    Big-O / \(O\)- Notation : Asymptotic Upper Bound (Worst-Case) (12)
   </a>
   
 </li>
@@ -2938,14 +2979,7 @@
     Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (3)
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-4" class="md-nav__link">
-    Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (4)
-  </a>
-  
-    <nav class="md-nav" aria-label="Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (4)">
+    <nav class="md-nav" aria-label="Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (3)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2961,11 +2995,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-5" class="md-nav__link">
-    Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (5)
+  <a href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-4" class="md-nav__link">
+    Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (4)
   </a>
   
-    <nav class="md-nav" aria-label="Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (5)">
+    <nav class="md-nav" aria-label="Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (4)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2981,18 +3015,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-6" class="md-nav__link">
-    Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (6)
+  <a href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-5" class="md-nav__link">
+    Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (5)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-7" class="md-nav__link">
-    Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (7)
+  <a href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-6" class="md-nav__link">
+    Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (6)
   </a>
   
-    <nav class="md-nav" aria-label="Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (7)">
+    <nav class="md-nav" aria-label="Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (6)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3008,11 +3042,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-8" class="md-nav__link">
-    Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (8)
+  <a href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-7" class="md-nav__link">
+    Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (7)
   </a>
   
-    <nav class="md-nav" aria-label="Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (8)">
+    <nav class="md-nav" aria-label="Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (7)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3028,11 +3062,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-9" class="md-nav__link">
-    Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (9)
+  <a href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-8" class="md-nav__link">
+    Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (8)
   </a>
   
-    <nav class="md-nav" aria-label="Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (9)">
+    <nav class="md-nav" aria-label="Big-Omega / \(\Omega\)-Notation : Asymptotic Lower Bound (Best-Case) (8)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3402,8 +3436,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
+  <a href="#references-todo-update-missing-references" class="md-nav__link">
+    References (TODO: Update Missing References)
   </a>
   
 </li>
@@ -3643,6 +3677,7 @@ An algorithm must halt within finite time with the right output</p>
 <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=//%20C%2B%2B%20program%20for%20insertion%20sort%0A%23include%20%3Cstring.h%3E%0A%23include%20%3Ciostream%3E%0A%0Ausing%20namespace%20std%3B%0A%0Avoid%20printArray%28int%20arr%5B%5D,%20int%20n%29%3B%0Avoid%20insertionSort%28int%20arr%5B%5D,%20int%20n%29%3B%0A%0A%20%0A/*%20Function%20to%20sort%20an%20array%20using%20insertion%20sort*/%0Avoid%20insertionSort%28int%20arr%5B%5D,%20int%20n%29%0A%7B%0A%20%20%20%20int%20i,%20key,%20j%3B%0A%20%20%20%20for%20%28i%20%3D%201%3B%20i%20%3C%20n%3B%20i%2B%2B%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20key%20%3D%20arr%5Bi%5D%3B%0A%20%20%20%20%20%20%20%20j%20%3D%20i%20-%201%3B%0A%20%0A%20%20%20%20%20%20%20%20/*%20Move%20elements%20of%20arr%5B0..i-1%5D,%20that%20are%0A%20%20%20%20%20%20%20%20greater%20than%20key,%20to%20one%20position%20ahead%0A%20%20%20%20%20%20%20%20of%20their%20current%20position%20*/%0A%20%20%20%20%20%20%20%20while%20%28j%20%3E%3D%200%20%26%26%20arr%5Bj%5D%20%3E%20key%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20arr%5Bj%20%2B%201%5D%20%3D%20arr%5Bj%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20j%20%3D%20j%20-%201%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20arr%5Bj%20%2B%201%5D%20%3D%20key%3B%0A%20%20%20%20%7D%0A%7D%0A%20%0A//%20A%20utility%20function%20to%20print%20an%20array%20of%20size%20n%0Avoid%20printArray%28int%20arr%5B%5D,%20int%20n%29%0A%7B%0A%20%20%20%20int%20i%3B%0A%20%20%20%20for%20%28i%20%3D%200%3B%20i%20%3C%20n%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20cout%20%3C%3C%20arr%5Bi%5D%20%3C%3C%20%22%20%22%3B%0A%20%20%20%20cout%20%3C%3C%20endl%3B%0A%7D%0A%20%0A/*%20Driver%20code%20*/%0Aint%20main%28%29%0A%7B%0A%20%20%20%20int%20arr%5B%5D%20%3D%20%7B%2012,%2011,%2013,%205,%206%20%7D%3B%0A%20%20%20%20int%20n%20%3D%20sizeof%28arr%29%20/%20sizeof%28arr%5B0%5D%29%3B%0A%20%0A%20%20%20%20insertionSort%28arr,%20n%29%3B%0A%20%20%20%20printArray%28arr,%20n%29%3B%0A%20%0A%20%20%20%20return%200%3B%0A%7D&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=cpp_g%2B%2B9.3.0&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 -->
 
+<hr />
 <h2 id="kinds-of-running-time-analysis-time-complexity">Kinds of Running Time Analysis (Time Complexity)<a class="headerlink" href="#kinds-of-running-time-analysis-time-complexity" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Worst Case (Big-O  Notation)</strong> </li>
@@ -3787,8 +3822,8 @@ An algorithm must halt within finite time with the right output</p>
 <p><strong>Base-Case</strong>: Solve by Brute-Force</p>
 <p><strong>Combine</strong>: Subproblem solutions to the original problem</p>
 <hr />
-<h2 id="merge-sort-example-todo-update-image">Merge Sort Example (TODO : update image)<a class="headerlink" href="#merge-sort-example-todo-update-image" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;Merge Sort Example&quot; height:450px center" src="../assets/merge-sort.jpg" /></p>
+<h2 id="merge-sort-example">Merge Sort Example<a class="headerlink" href="#merge-sort-example" title="Permanent link">&para;</a></h2>
+<p><img alt="alt:&quot;Merge Sort Example&quot; height:550px center" src="../assets/ce100-week-1-intro-merge_sort_example.drawio.svg" /></p>
 <hr />
 <h2 id="merge-sort-algorithm-initial-setup">Merge Sort Algorithm (initial setup)<a class="headerlink" href="#merge-sort-algorithm-initial-setup" title="Permanent link">&para;</a></h2>
 <p>Merge Sort is a recursive sorting algorithm, for initial case we need to call <code>Merge-Sort(A,1,n)</code> for sorting <span class="arithmatex">\(A[1..n]\)</span> </p>
@@ -3819,15 +3854,15 @@ An algorithm must halt within finite time with the right output</p>
 <p><span class="arithmatex">\(p = start-point\)</span>
 <span class="arithmatex">\(q = mid-point\)</span>
 <span class="arithmatex">\(r = end-point\)</span></p>
-<p><img alt="alt:&quot;Merge Sort Algorithm (Combine-1)&quot; height:450px center" src="../assets/2022-01-26-17-43-08-image.png" /></p>
+<p><img alt="alt:&quot;Merge Sort Algorithm (Combine-1)&quot; height:450px center" src="../assets/ce100-week-1-intro-merge-sort-algo-1.drawio.svg" /></p>
 <hr />
 <h2 id="merge-sort-algorithm-combine-2">Merge Sort Algorithm (Combine-2)<a class="headerlink" href="#merge-sort-algorithm-combine-2" title="Permanent link">&para;</a></h2>
 <p>brute-force task, merging two sorted subarrays</p>
 <p>The pseudo-code in the textbook (Sec. 2.3.1)</p>
-<p><img alt="alt:&quot;Merge Sort Algorithm (Combine-2)&quot; height:350px center" src="../assets/2022-01-26-17-45-01-image.png" /></p>
+<p><img alt="alt:&quot;Merge Sort Algorithm (Combine-2)&quot; height:350px center" src="../assets/ce100-week-1-intro-merge-sort-algo-2.drawio.svg" /></p>
 <hr />
 <h2 id="merge-sort-combine-algorithm-1">Merge Sort Combine Algorithm (1)<a class="headerlink" href="#merge-sort-combine-algorithm-1" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nf">Merge</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">r</span><span class="p">)</span>
+<h2 id="mergeapqr-n1-q-p1-n2-r-q-allocate-left-and-right-arrays-increment-will-be-from-left-to-right-left-part-will-be-bigger-than-right-part-l1n11-left-array-r1n21-right-array-copy-left-part-of-array-for-i1-to-n1-liapi-1-copy-right-part-of-array-for-j1-to-n2-rjaqj-put-end-items-maximum-values-for-termination-ln11inf-rn21inf-i1j1-for-kp-to-r-if-lirj-akli-ii1-else-akrj-jj1"><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nf">Merge</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">r</span><span class="p">)</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">n1</span> <span class="o">=</span> <span class="n">q</span><span class="o">-</span><span class="n">p</span><span class="m">+1</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">n2</span> <span class="o">=</span> <span class="n">r</span><span class="o">-</span><span class="n">q</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
@@ -3858,11 +3893,7 @@ An algorithm must halt within finite time with the right output</p>
 <a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>        <span class="n">else</span>
 <a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>            <span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">=</span><span class="n">R</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
 <a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>            <span class="n">j</span><span class="o">=</span><span class="n">j</span><span class="m">+1</span>
-</code></pre></div>
-<hr />
-<h2 id="merge-sort-combine-algorithm-2">Merge Sort Combine Algorithm (2)<a class="headerlink" href="#merge-sort-combine-algorithm-2" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;p,q,r&quot; height:450px center" src="../assets/2022-01-26-17-41-55-image.png" /></p>
-<hr />
+</code></pre></div><a class="headerlink" href="#mergeapqr-n1-q-p1-n2-r-q-allocate-left-and-right-arrays-increment-will-be-from-left-to-right-left-part-will-be-bigger-than-right-part-l1n11-left-array-r1n21-right-array-copy-left-part-of-array-for-i1-to-n1-liapi-1-copy-right-part-of-array-for-j1-to-n2-rjaqj-put-end-items-maximum-values-for-termination-ln11inf-rn21inf-i1j1-for-kp-to-r-if-lirj-akli-ii1-else-akrj-jj1" title="Permanent link">&para;</a></h2>
 <h2 id="what-is-the-complexity-of-merge-operation">What is the complexity of merge operation?<a class="headerlink" href="#what-is-the-complexity-of-merge-operation" title="Permanent link">&para;</a></h2>
 <p>You can find by counting loops will provide you base constant nested level will provide you exponent of this constant, if you drop constants you will have complexity</p>
 <p>we have 3 for loops</p>
@@ -4011,15 +4042,12 @@ h = log_2{(n+1)}-1
 \]</div>
 <hr />
 <h3 id="big-o-o-notation-asymptotic-upper-bound-worst-case-2">Big-O / <span class="arithmatex">\(O\)</span>- Notation : Asymptotic Upper Bound (Worst-Case) (2)<a class="headerlink" href="#big-o-o-notation-asymptotic-upper-bound-worst-case-2" title="Permanent link">&para;</a></h3>
-<p><img alt="alt:&quot;Big-O Function-1&quot; height:450px center" src="../assets/2022-01-26-23-38-56-image.png" /></p>
+<p><img alt="alt:&quot;Big-O Function-1&quot; height:450px center" src="../assets/ce100-week-1-intro-bigo_worst_case.drawio.svg" /></p>
 <hr />
 <h3 id="big-o-o-notation-asymptotic-upper-bound-worst-case-3">Big-O / <span class="arithmatex">\(O\)</span>- Notation : Asymptotic Upper Bound (Worst-Case) (3)<a class="headerlink" href="#big-o-o-notation-asymptotic-upper-bound-worst-case-3" title="Permanent link">&para;</a></h3>
-<p><img alt="alt:&quot;Big-O Function-2&quot; height:450px center" src="https://xlinux.nist.gov/dads/Images/bigOGraph.gif" /></p>
-<hr />
-<h3 id="big-o-o-notation-asymptotic-upper-bound-worst-case-4">Big-O / <span class="arithmatex">\(O\)</span>- Notation : Asymptotic Upper Bound (Worst-Case) (4)<a class="headerlink" href="#big-o-o-notation-asymptotic-upper-bound-worst-case-4" title="Permanent link">&para;</a></h3>
 <p>Asymptotic running times of algorithms are usually defined by functions whose domain are <span class="arithmatex">\(N={0, 1, 2, …}\)</span>  (natural numbers)</p>
 <hr />
-<h3 id="big-o-o-notation-asymptotic-upper-bound-worst-case-5">Big-O / <span class="arithmatex">\(O\)</span>- Notation : Asymptotic Upper Bound (Worst-Case) (5)<a class="headerlink" href="#big-o-o-notation-asymptotic-upper-bound-worst-case-5" title="Permanent link">&para;</a></h3>
+<h3 id="big-o-o-notation-asymptotic-upper-bound-worst-case-4">Big-O / <span class="arithmatex">\(O\)</span>- Notation : Asymptotic Upper Bound (Worst-Case) (4)<a class="headerlink" href="#big-o-o-notation-asymptotic-upper-bound-worst-case-4" title="Permanent link">&para;</a></h3>
 <h4 id="example-1">Example-1<a class="headerlink" href="#example-1" title="Permanent link">&para;</a></h4>
 <p>Show that <span class="arithmatex">\(2n^2 = O(n^3)\)</span></p>
 <p>we need to find two positive constant <span class="arithmatex">\(c\)</span> and <span class="arithmatex">\(n_0\)</span> such that:</p>
@@ -4035,7 +4063,7 @@ h = log_2{(n+1)}-1
 2n^2 \leq n^3 \text{ for all } n \geq 2
 \]</div>
 <hr />
-<h3 id="big-o-o-notation-asymptotic-upper-bound-worst-case-6">Big-O / <span class="arithmatex">\(O\)</span>- Notation : Asymptotic Upper Bound (Worst-Case) (6)<a class="headerlink" href="#big-o-o-notation-asymptotic-upper-bound-worst-case-6" title="Permanent link">&para;</a></h3>
+<h3 id="big-o-o-notation-asymptotic-upper-bound-worst-case-5">Big-O / <span class="arithmatex">\(O\)</span>- Notation : Asymptotic Upper Bound (Worst-Case) (5)<a class="headerlink" href="#big-o-o-notation-asymptotic-upper-bound-worst-case-5" title="Permanent link">&para;</a></h3>
 <h4 id="example-2">Example-2<a class="headerlink" href="#example-2" title="Permanent link">&para;</a></h4>
 <p>Show that <span class="arithmatex">\(2n^2 + n = O(n^2)\)</span></p>
 <p>We need to find two positive constant <span class="arithmatex">\(c\)</span> and <span class="arithmatex">\(n_0\)</span> such that:</p>
@@ -4050,20 +4078,20 @@ h = log_2{(n+1)}-1
 2n^2 + n \leq 3n^2 \text{ for all } n \geq 1
 \]</div>
 <hr />
-<h3 id="big-o-o-notation-asymptotic-upper-bound-worst-case-7">Big-O / <span class="arithmatex">\(O\)</span>- Notation : Asymptotic Upper Bound (Worst-Case) (7)<a class="headerlink" href="#big-o-o-notation-asymptotic-upper-bound-worst-case-7" title="Permanent link">&para;</a></h3>
+<h3 id="big-o-o-notation-asymptotic-upper-bound-worst-case-6">Big-O / <span class="arithmatex">\(O\)</span>- Notation : Asymptotic Upper Bound (Worst-Case) (6)<a class="headerlink" href="#big-o-o-notation-asymptotic-upper-bound-worst-case-6" title="Permanent link">&para;</a></h3>
 <p>We can say the followings about  <span class="arithmatex">\(f(n)=O(g(n))\)</span> equation</p>
 <p>The notation is a little sloppy</p>
 <p>One-way equation, e.q. <span class="arithmatex">\(n^2 = O(n^3)\)</span> but we cannot say <span class="arithmatex">\(O(n^3)=n^2\)</span></p>
 <hr />
-<h3 id="big-o-o-notation-asymptotic-upper-bound-worst-case-8">Big-O / <span class="arithmatex">\(O\)</span>- Notation : Asymptotic Upper Bound (Worst-Case) (8)<a class="headerlink" href="#big-o-o-notation-asymptotic-upper-bound-worst-case-8" title="Permanent link">&para;</a></h3>
+<h3 id="big-o-o-notation-asymptotic-upper-bound-worst-case-7">Big-O / <span class="arithmatex">\(O\)</span>- Notation : Asymptotic Upper Bound (Worst-Case) (7)<a class="headerlink" href="#big-o-o-notation-asymptotic-upper-bound-worst-case-7" title="Permanent link">&para;</a></h3>
 <p><span class="arithmatex">\(O(g(n))\)</span> is in fact a set of functions as follow</p>
 <p><span class="arithmatex">\(O(g(n)) = \{ f(n) : \exists \text{ positive constant } c, n_0 \text{ such that } 0 \leq f(n) \leq cg(n), \forall n \geq n_0 \}\)</span></p>
 <hr />
-<h3 id="big-o-o-notation-asymptotic-upper-bound-worst-case-9">Big-O / <span class="arithmatex">\(O\)</span>- Notation : Asymptotic Upper Bound (Worst-Case) (9)<a class="headerlink" href="#big-o-o-notation-asymptotic-upper-bound-worst-case-9" title="Permanent link">&para;</a></h3>
+<h3 id="big-o-o-notation-asymptotic-upper-bound-worst-case-8">Big-O / <span class="arithmatex">\(O\)</span>- Notation : Asymptotic Upper Bound (Worst-Case) (8)<a class="headerlink" href="#big-o-o-notation-asymptotic-upper-bound-worst-case-8" title="Permanent link">&para;</a></h3>
 <p>In other words <span class="arithmatex">\(O(g(n))\)</span> is in fact, the set of functions that have asymptotic upper bound <span class="arithmatex">\(g(n)\)</span></p>
 <p>e.q <span class="arithmatex">\(2n^2 = O(n^3)\)</span> means <span class="arithmatex">\(2n^2 \in O(n^3)\)</span></p>
 <hr />
-<h3 id="big-o-o-notation-asymptotic-upper-bound-worst-case-10">Big-O / <span class="arithmatex">\(O\)</span>- Notation : Asymptotic Upper Bound (Worst-Case) (10)<a class="headerlink" href="#big-o-o-notation-asymptotic-upper-bound-worst-case-10" title="Permanent link">&para;</a></h3>
+<h3 id="big-o-o-notation-asymptotic-upper-bound-worst-case-9">Big-O / <span class="arithmatex">\(O\)</span>- Notation : Asymptotic Upper Bound (Worst-Case) (9)<a class="headerlink" href="#big-o-o-notation-asymptotic-upper-bound-worst-case-9" title="Permanent link">&para;</a></h3>
 <h4 id="example-1_1">Example-1<a class="headerlink" href="#example-1_1" title="Permanent link">&para;</a></h4>
 <p><span class="arithmatex">\(10^9n^2 = O(n^2)\)</span>  </p>
 <p><span class="arithmatex">\(0 \leq 10^9n^2 \leq cn^2 \text{ for } n \geq n_0\)</span></p>
@@ -4071,7 +4099,7 @@ h = log_2{(n+1)}-1
 <p><span class="arithmatex">\(0 \leq 10^9n^2 \leq 10^9n^2 \text{ for } n \geq 1\)</span></p>
 <p><strong>CORRECT</strong></p>
 <hr />
-<h3 id="big-o-o-notation-asymptotic-upper-bound-worst-case-11">Big-O / <span class="arithmatex">\(O\)</span>- Notation : Asymptotic Upper Bound (Worst-Case) (11)<a class="headerlink" href="#big-o-o-notation-asymptotic-upper-bound-worst-case-11" title="Permanent link">&para;</a></h3>
+<h3 id="big-o-o-notation-asymptotic-upper-bound-worst-case-10">Big-O / <span class="arithmatex">\(O\)</span>- Notation : Asymptotic Upper Bound (Worst-Case) (10)<a class="headerlink" href="#big-o-o-notation-asymptotic-upper-bound-worst-case-10" title="Permanent link">&para;</a></h3>
 <h4 id="example-2_1">Example-2<a class="headerlink" href="#example-2_1" title="Permanent link">&para;</a></h4>
 <p><span class="arithmatex">\(100n^{1.9999}=O(n^2)\)</span></p>
 <p><span class="arithmatex">\(0 \leq 100n^{1.9999} \leq cn^2 \text{ for } n \geq n_0\)</span></p>
@@ -4079,14 +4107,14 @@ h = log_2{(n+1)}-1
 <p><span class="arithmatex">\(0 \leq 100n^{1.9999} \leq 100n^2 \text{ for } n \geq 1\)</span></p>
 <p><strong>CORRECT</strong></p>
 <hr />
-<h3 id="big-o-o-notation-asymptotic-upper-bound-worst-case-12">Big-O / <span class="arithmatex">\(O\)</span>- Notation : Asymptotic Upper Bound (Worst-Case) (12)<a class="headerlink" href="#big-o-o-notation-asymptotic-upper-bound-worst-case-12" title="Permanent link">&para;</a></h3>
+<h3 id="big-o-o-notation-asymptotic-upper-bound-worst-case-11">Big-O / <span class="arithmatex">\(O\)</span>- Notation : Asymptotic Upper Bound (Worst-Case) (11)<a class="headerlink" href="#big-o-o-notation-asymptotic-upper-bound-worst-case-11" title="Permanent link">&para;</a></h3>
 <h4 id="example-3">Example-3<a class="headerlink" href="#example-3" title="Permanent link">&para;</a></h4>
 <p><span class="arithmatex">\(10^{-9}n^{2.0001} = O(n^2)\)</span></p>
 <p><span class="arithmatex">\(0 \leq 10^{-9}n^{2.0001} \leq cn^2 \text{ for } n \geq n_0\)</span></p>
 <p><span class="arithmatex">\(10^{-9}n^{0.0001} \leq c \text{ for } n \geq n_0\)</span></p>
 <p><strong>INCORRECT</strong> (Contradiction)</p>
 <hr />
-<h3 id="big-o-o-notation-asymptotic-upper-bound-worst-case-13">Big-O / <span class="arithmatex">\(O\)</span>- Notation : Asymptotic Upper Bound (Worst-Case) (13)<a class="headerlink" href="#big-o-o-notation-asymptotic-upper-bound-worst-case-13" title="Permanent link">&para;</a></h3>
+<h3 id="big-o-o-notation-asymptotic-upper-bound-worst-case-12">Big-O / <span class="arithmatex">\(O\)</span>- Notation : Asymptotic Upper Bound (Worst-Case) (12)<a class="headerlink" href="#big-o-o-notation-asymptotic-upper-bound-worst-case-12" title="Permanent link">&para;</a></h3>
 <p>If we analysis <span class="arithmatex">\(O(n^2)\)</span> case, <span class="arithmatex">\(O\)</span>-notation is an upper bound notation and the runtime <span class="arithmatex">\(T(n)\)</span> of algorithm A is <strong>at least</strong> <span class="arithmatex">\(O(n^2 )\)</span>.  </p>
 <p><span class="arithmatex">\(O(n^2)\)</span>: The set of functions with asymptotic <strong>upper bound</strong> <span class="arithmatex">\(n^2\)</span></p>
 <p><span class="arithmatex">\(T(n) \geq O(n^2)\)</span> means <span class="arithmatex">\(T(n) \geq h(n)\)</span> for some <span class="arithmatex">\(h(n) \in O(n^2)\)</span></p>
@@ -4096,12 +4124,9 @@ h = log_2{(n+1)}-1
 <p><span class="arithmatex">\(f(n)=\Omega(g(n))\)</span> if <span class="arithmatex">\(\exists\)</span> positive constants <span class="arithmatex">\(c,n_0\)</span> such that <span class="arithmatex">\(0 \leq cg(n) \leq f(n) , \forall n \geq n_0\)</span></p>
 <hr />
 <h3 id="big-omega-omega-notation-asymptotic-lower-bound-best-case-2">Big-Omega / <span class="arithmatex">\(\Omega\)</span>-Notation : Asymptotic Lower Bound (Best-Case) (2)<a class="headerlink" href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-2" title="Permanent link">&para;</a></h3>
-<p><img alt="alt:&quot;Big-Omega Function-1&quot; height:450px center" src="../assets/2022-01-27-01-05-11-image.png" /></p>
+<p><img alt="alt:&quot;Big-Omega Function-1&quot; height:450px center" src="../assets/ce100-week-1-intro-bigo_best_case.drawio.svg" /></p>
 <hr />
 <h3 id="big-omega-omega-notation-asymptotic-lower-bound-best-case-3">Big-Omega / <span class="arithmatex">\(\Omega\)</span>-Notation : Asymptotic Lower Bound (Best-Case) (3)<a class="headerlink" href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-3" title="Permanent link">&para;</a></h3>
-<p><img alt="alt:&quot;Big-Omega Function-2&quot; height:450px center" src="https://xlinux.nist.gov/dads/Images/omegaGraph.gif" /></p>
-<hr />
-<h3 id="big-omega-omega-notation-asymptotic-lower-bound-best-case-4">Big-Omega / <span class="arithmatex">\(\Omega\)</span>-Notation : Asymptotic Lower Bound (Best-Case) (4)<a class="headerlink" href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-4" title="Permanent link">&para;</a></h3>
 <h4 id="example-1_2">Example-1<a class="headerlink" href="#example-1_2" title="Permanent link">&para;</a></h4>
 <p>Show that <span class="arithmatex">\(2n^3 = \Omega(n^2)\)</span></p>
 <p>We need to find two positive constants <span class="arithmatex">\(c\)</span> and <span class="arithmatex">\(n_0\)</span> such that:</p>
@@ -4113,7 +4138,7 @@ h = log_2{(n+1)}-1
 n^2 \leq 2n^3 \text{ for all } n \geq 1
 \]</div>
 <hr />
-<h3 id="big-omega-omega-notation-asymptotic-lower-bound-best-case-5">Big-Omega / <span class="arithmatex">\(\Omega\)</span>-Notation : Asymptotic Lower Bound (Best-Case) (5)<a class="headerlink" href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-5" title="Permanent link">&para;</a></h3>
+<h3 id="big-omega-omega-notation-asymptotic-lower-bound-best-case-4">Big-Omega / <span class="arithmatex">\(\Omega\)</span>-Notation : Asymptotic Lower Bound (Best-Case) (4)<a class="headerlink" href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-4" title="Permanent link">&para;</a></h3>
 <h4 id="example-4">Example-4<a class="headerlink" href="#example-4" title="Permanent link">&para;</a></h4>
 <p>Show that <span class="arithmatex">\(\sqrt{n}=\Omega(lgn)\)</span></p>
 <p>We need to find two positive constants <span class="arithmatex">\(c\)</span> and <span class="arithmatex">\(n_0\)</span> such that:</p>
@@ -4125,13 +4150,13 @@ clgn \leq \sqrt{n} \text{ for all } n \geq n_0
 lgn \leq \sqrt{n} \text{ for all } n \geq 16
 \]</div>
 <hr />
-<h3 id="big-omega-omega-notation-asymptotic-lower-bound-best-case-6">Big-Omega / <span class="arithmatex">\(\Omega\)</span>-Notation : Asymptotic Lower Bound (Best-Case) (6)<a class="headerlink" href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-6" title="Permanent link">&para;</a></h3>
+<h3 id="big-omega-omega-notation-asymptotic-lower-bound-best-case-5">Big-Omega / <span class="arithmatex">\(\Omega\)</span>-Notation : Asymptotic Lower Bound (Best-Case) (5)<a class="headerlink" href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-5" title="Permanent link">&para;</a></h3>
 <p><span class="arithmatex">\(\Omega(g(n))\)</span> is the set of functions that have asymptotic lower bound <span class="arithmatex">\(g(n)\)</span> </p>
 <div class="arithmatex">\[
 \Omega(g(n))=\{ f(n):\exists \text{ positive constants } c,n_0 \text{ such that } 0 \leq cg(n) \leq f(n), \forall n \geq n_0 \}
 \]</div>
 <hr />
-<h3 id="big-omega-omega-notation-asymptotic-lower-bound-best-case-7">Big-Omega / <span class="arithmatex">\(\Omega\)</span>-Notation : Asymptotic Lower Bound (Best-Case) (7)<a class="headerlink" href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-7" title="Permanent link">&para;</a></h3>
+<h3 id="big-omega-omega-notation-asymptotic-lower-bound-best-case-6">Big-Omega / <span class="arithmatex">\(\Omega\)</span>-Notation : Asymptotic Lower Bound (Best-Case) (6)<a class="headerlink" href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-6" title="Permanent link">&para;</a></h3>
 <h4 id="example-1_3">Example-1<a class="headerlink" href="#example-1_3" title="Permanent link">&para;</a></h4>
 <p><span class="arithmatex">\(10^9n^2 = \Omega(n^2)\)</span></p>
 <p><span class="arithmatex">\(0 \leq cn^2 \leq 10^9n^2 \text{ for } n\geq n_0\)</span></p>
@@ -4139,14 +4164,14 @@ lgn \leq \sqrt{n} \text{ for all } n \geq 16
 <p><span class="arithmatex">\(0 \leq 10^9n^2 \leq 10^9n^2 \text{ for } n\geq 1\)</span></p>
 <p><strong>CORRECT</strong></p>
 <hr />
-<h3 id="big-omega-omega-notation-asymptotic-lower-bound-best-case-8">Big-Omega / <span class="arithmatex">\(\Omega\)</span>-Notation : Asymptotic Lower Bound (Best-Case) (8)<a class="headerlink" href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-8" title="Permanent link">&para;</a></h3>
+<h3 id="big-omega-omega-notation-asymptotic-lower-bound-best-case-7">Big-Omega / <span class="arithmatex">\(\Omega\)</span>-Notation : Asymptotic Lower Bound (Best-Case) (7)<a class="headerlink" href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-7" title="Permanent link">&para;</a></h3>
 <h4 id="example-2_2">Example-2<a class="headerlink" href="#example-2_2" title="Permanent link">&para;</a></h4>
 <p><span class="arithmatex">\(100n^{1.9999} = \Omega(n^2)\)</span></p>
 <p><span class="arithmatex">\(0 \leq cn^2 \leq 100n^{1.9999} \text{ for } n \geq n_0\)</span></p>
 <p><span class="arithmatex">\(n^{0.0001} \leq (100/c) \text{ for } n \geq n_0\)</span></p>
 <p><strong>INCORRECT</strong>(Contradiction)</p>
 <hr />
-<h3 id="big-omega-omega-notation-asymptotic-lower-bound-best-case-9">Big-Omega / <span class="arithmatex">\(\Omega\)</span>-Notation : Asymptotic Lower Bound (Best-Case) (9)<a class="headerlink" href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-9" title="Permanent link">&para;</a></h3>
+<h3 id="big-omega-omega-notation-asymptotic-lower-bound-best-case-8">Big-Omega / <span class="arithmatex">\(\Omega\)</span>-Notation : Asymptotic Lower Bound (Best-Case) (8)<a class="headerlink" href="#big-omega-omega-notation-asymptotic-lower-bound-best-case-8" title="Permanent link">&para;</a></h3>
 <h4 id="example-3_1">Example-3<a class="headerlink" href="#example-3_1" title="Permanent link">&para;</a></h4>
 <p><span class="arithmatex">\(10^{-9}n^{2.0001} = \Omega(n^2)\)</span></p>
 <p><span class="arithmatex">\(0 \leq cn^2 \leq 10^{-9}n^{2.0001} \text{ for } n \geq n_0\)</span></p>
@@ -4155,17 +4180,16 @@ lgn \leq \sqrt{n} \text{ for all } n \geq 16
 <p><strong>CORRECT</strong></p>
 <hr />
 <h3 id="comparison-of-notations-1">Comparison of Notations (1)<a class="headerlink" href="#comparison-of-notations-1" title="Permanent link">&para;</a></h3>
-<p><img alt="alt:&quot;Big-Omega Function for Comparison&quot; height:250px center" src="../assets/2022-01-27-01-34-39-image.png" /></p>
-<p><img alt="alt:&quot;Big-O Function for Comparison&quot; height:250px center" src="../assets/2022-01-27-01-34-34-image.png" /></p>
+<p><img alt="alt:&quot;Big-Omega Function for Comparison&quot; height:500px center" src="../assets/ce100-week-1-intro-bigo_worst_base_case.drawio.svg" /></p>
 <hr />
 <h3 id="comparison-of-notations-2">Comparison of Notations (2)<a class="headerlink" href="#comparison-of-notations-2" title="Permanent link">&para;</a></h3>
-<p><img alt="alt:&quot;Comparison of Notations&quot; height:450px center" src="https://www.dotnetlovers.com/images/coolnikhilj2256c883d1-b9fc-46e9-b225-588ac5063c3d.png?1/24/2016%202:56:15%20AM" /></p>
+<p><img alt="alt:&quot;Comparison of Notations&quot; height:550px center" src="../assets/ce100-week-1-intro-bigo_worst_avg_best_case.drawio.svg" /></p>
 <hr />
 <h3 id="big-theta-theta-notation-asymptotically-tight-bound-average-case-1">Big-Theta /<span class="arithmatex">\(\Theta\)</span>-Notation : Asymptotically tight bound (Average Case) (1)<a class="headerlink" href="#big-theta-theta-notation-asymptotically-tight-bound-average-case-1" title="Permanent link">&para;</a></h3>
 <p><span class="arithmatex">\(f(n)=\Theta(g(n))\)</span> if <span class="arithmatex">\(\exists\)</span> positive constants <span class="arithmatex">\(c_1,c_2,n_0\)</span> such that <span class="arithmatex">\(0 \leq c_1g(n) \leq f(n) \leq c_2g(n), \forall n \geq n_0\)</span></p>
 <hr />
 <h3 id="big-theta-theta-notation-asymptotically-tight-bound-average-case-2">Big-Theta /<span class="arithmatex">\(\Theta\)</span>-Notation : Asymptotically tight bound (Average Case) (2)<a class="headerlink" href="#big-theta-theta-notation-asymptotically-tight-bound-average-case-2" title="Permanent link">&para;</a></h3>
-<p><img alt="alt:&quot;Big-Theta Function&quot; height:450px center" src="../assets/2022-01-27-03-05-18-image.png" /></p>
+<p><img alt="alt:&quot;Big-Theta Function&quot; height:450px center" src="../assets/ce100-week-1-intro-bigo_avg_case.drawio.svg" /></p>
 <hr />
 <h3 id="big-theta-theta-notation-asymptotically-tight-bound-average-case-3">Big-Theta /<span class="arithmatex">\(\Theta\)</span>-Notation : Asymptotically tight bound (Average Case) (3)<a class="headerlink" href="#big-theta-theta-notation-asymptotically-tight-bound-average-case-3" title="Permanent link">&para;</a></h3>
 <h4 id="example-1_4">Example-1<a class="headerlink" href="#example-1_4" title="Permanent link">&para;</a></h4>
@@ -4186,7 +4210,7 @@ lgn \leq \sqrt{n} \text{ for all } n \geq 16
 <hr />
 <h3 id="big-theta-theta-notation-asymptotically-tight-bound-average-case-5">Big-Theta /<span class="arithmatex">\(\Theta\)</span>-Notation : Asymptotically tight bound (Average Case) (5)<a class="headerlink" href="#big-theta-theta-notation-asymptotically-tight-bound-average-case-5" title="Permanent link">&para;</a></h3>
 <h4 id="example-22">Example-2.2<a class="headerlink" href="#example-22" title="Permanent link">&para;</a></h4>
-<p><img alt="alt:&quot;Big-Theta Example&quot; height:450px center" src="../assets/2022-01-27-03-28-40-image.png" /></p>
+<p><img alt="alt:&quot;Big-Theta Example&quot; height:500px center" src="../assets/ce100-week-1-intro-bigo_example_2_2.drawio.svg" /></p>
 <hr />
 <h3 id="big-theta-theta-notation-asymptotically-tight-bound-average-case-6">Big-Theta /<span class="arithmatex">\(\Theta\)</span>-Notation : Asymptotically tight bound (Average Case) (6)<a class="headerlink" href="#big-theta-theta-notation-asymptotically-tight-bound-average-case-6" title="Permanent link">&para;</a></h3>
 <h4 id="example-23">Example-2.3<a class="headerlink" href="#example-23" title="Permanent link">&para;</a></h4>
@@ -4241,9 +4265,7 @@ O(g(n)) = \{ f(n) : \exists \text{ positive constant } c, n_0 \text{ such that }
 <p><span class="arithmatex">\(f(n)=\Theta(g(n)) \Leftrightarrow f(n)=O(g(n)) \text{ and } f(n)=\Omega(g(n))\)</span> </p>
 <hr />
 <h3 id="summary-of-oomega-and-theta-notations-2">Summary of <span class="arithmatex">\(O,\Omega\)</span> and <span class="arithmatex">\(\Theta\)</span> notations (2)<a class="headerlink" href="#summary-of-oomega-and-theta-notations-2" title="Permanent link">&para;</a></h3>
-<p><img alt="alt:&quot;Summary Big-O&quot; height:200px center" src="../assets/2022-01-27-04-23-03-image.png" /></p>
-<p><img alt="alt:&quot;Summary Big-Omega&quot; height:200px center" src="../assets/2022-01-27-04-23-10-image.png" /></p>
-<p><img alt="alt:&quot;Summary Big-Theta&quot; height:200px center" src="../assets/2022-01-27-04-23-16-image.png" /></p>
+<p><img alt="alt:&quot;Summary Asymptotic Analysis&quot; height:500px center" src="../assets/ce100-week-1-intro-bigo_worst_avg_best_case.drawio.svg" /></p>
 <hr />
 <h3 id="small-o-o-notation-asymptotic-upper-bound-that-is-not-tight-1">Small-o / <span class="arithmatex">\(o\)</span>-Notation : Asymptotic upper bound that is not tight (1)<a class="headerlink" href="#small-o-o-notation-asymptotic-upper-bound-that-is-not-tight-1" title="Permanent link">&para;</a></h3>
 <p>Remember, upper bound provided by big- <span class="arithmatex">\(O\)</span> notation can be tight or not tight</p>
@@ -4575,7 +4597,7 @@ stands for some anonymous function in the set</p>
 </li>
 </ul>
 <hr />
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<h2 id="references-todo-update-missing-references">References (TODO: Update Missing References)<a class="headerlink" href="#references-todo-update-missing-references" title="Permanent link">&para;</a></h2>
 <p><a href="https://mitpress.mit.edu/books/introduction-algorithms-third-edition">Introduction to Algorithms, Third Edition | The MIT Press</a></p>
 <p><a href="http://nabil.abubaker.bilkent.edu.tr/473/">http://nabil.abubaker.bilkent.edu.tr/473/</a></p>
 <p><a href="https://www.geeksforgeeks.org/insertion-sort/">Insertion Sort - GeeksforGeeks</a></p>
@@ -4589,7 +4611,7 @@ stands for some anonymous function in the set</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 3, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 4, 2022</span>
       
     
   </small>
