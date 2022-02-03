@@ -328,6 +328,8 @@ https://algorithm-visualizer.org/
 <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=//%20C%2B%2B%20program%20for%20insertion%20sort%0A%23include%20%3Cstring.h%3E%0A%23include%20%3Ciostream%3E%0A%0Ausing%20namespace%20std%3B%0A%0Avoid%20printArray%28int%20arr%5B%5D,%20int%20n%29%3B%0Avoid%20insertionSort%28int%20arr%5B%5D,%20int%20n%29%3B%0A%0A%20%0A/*%20Function%20to%20sort%20an%20array%20using%20insertion%20sort*/%0Avoid%20insertionSort%28int%20arr%5B%5D,%20int%20n%29%0A%7B%0A%20%20%20%20int%20i,%20key,%20j%3B%0A%20%20%20%20for%20%28i%20%3D%201%3B%20i%20%3C%20n%3B%20i%2B%2B%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20key%20%3D%20arr%5Bi%5D%3B%0A%20%20%20%20%20%20%20%20j%20%3D%20i%20-%201%3B%0A%20%0A%20%20%20%20%20%20%20%20/*%20Move%20elements%20of%20arr%5B0..i-1%5D,%20that%20are%0A%20%20%20%20%20%20%20%20greater%20than%20key,%20to%20one%20position%20ahead%0A%20%20%20%20%20%20%20%20of%20their%20current%20position%20*/%0A%20%20%20%20%20%20%20%20while%20%28j%20%3E%3D%200%20%26%26%20arr%5Bj%5D%20%3E%20key%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20arr%5Bj%20%2B%201%5D%20%3D%20arr%5Bj%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20j%20%3D%20j%20-%201%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20arr%5Bj%20%2B%201%5D%20%3D%20key%3B%0A%20%20%20%20%7D%0A%7D%0A%20%0A//%20A%20utility%20function%20to%20print%20an%20array%20of%20size%20n%0Avoid%20printArray%28int%20arr%5B%5D,%20int%20n%29%0A%7B%0A%20%20%20%20int%20i%3B%0A%20%20%20%20for%20%28i%20%3D%200%3B%20i%20%3C%20n%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20cout%20%3C%3C%20arr%5Bi%5D%20%3C%3C%20%22%20%22%3B%0A%20%20%20%20cout%20%3C%3C%20endl%3B%0A%7D%0A%20%0A/*%20Driver%20code%20*/%0Aint%20main%28%29%0A%7B%0A%20%20%20%20int%20arr%5B%5D%20%3D%20%7B%2012,%2011,%2013,%205,%206%20%7D%3B%0A%20%20%20%20int%20n%20%3D%20sizeof%28arr%29%20/%20sizeof%28arr%5B0%5D%29%3B%0A%20%0A%20%20%20%20insertionSort%28arr,%20n%29%3B%0A%20%20%20%20printArray%28arr,%20n%29%3B%0A%20%0A%20%20%20%20return%200%3B%0A%7D&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=cpp_g%2B%2B9.3.0&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 -->
 
+---
+
 ## Kinds of Running Time Analysis (Time Complexity)
 
 - **Worst Case (Big-O  Notation)** 
@@ -551,9 +553,9 @@ To compare this sorting algorithm please check the following map again.
 
 ---
 
-## Merge Sort Example (TODO : update image)
+## Merge Sort Example
 
-![alt:"Merge Sort Example" height:450px center](assets/merge-sort.jpg)
+![alt:"Merge Sort Example" height:550px center](assets/ce100-week-1-intro-merge_sort_example.drawio.svg)
 
 ---
 
@@ -599,7 +601,7 @@ $p = start-point$
 $q = mid-point$
 $r = end-point$
 
-![alt:"Merge Sort Algorithm (Combine-1)" height:450px center](assets/2022-01-26-17-43-08-image.png)
+![alt:"Merge Sort Algorithm (Combine-1)" height:450px center](assets/ce100-week-1-intro-merge-sort-algo-1.drawio.svg)
 
 ---
 
@@ -609,7 +611,7 @@ brute-force task, merging two sorted subarrays
 
 The pseudo-code in the textbook (Sec. 2.3.1)
 
-![alt:"Merge Sort Algorithm (Combine-2)" height:350px center](assets/2022-01-26-17-45-01-image.png)
+![alt:"Merge Sort Algorithm (Combine-2)" height:350px center](assets/ce100-week-1-intro-merge-sort-algo-2.drawio.svg)
 
 ---
 
@@ -648,13 +650,6 @@ Merge(A,p,q,r)
             A[k]=R[j]
             j=j+1
 ```
-
----
-
-## Merge Sort Combine Algorithm (2)
-
-![alt:"p,q,r" height:450px center](assets/2022-01-26-17-41-55-image.png)
-
 ---
 
 ## What is the complexity of merge operation?
@@ -861,23 +856,17 @@ $$
 
 ### Big-O / $O$- Notation : Asymptotic Upper Bound (Worst-Case) (2)
 
-![alt:"Big-O Function-1" height:450px center](assets/2022-01-26-23-38-56-image.png)
+![alt:"Big-O Function-1" height:450px center](assets/ce100-week-1-intro-bigo_worst_case.drawio.svg)
 
 ---
 
 ### Big-O / $O$- Notation : Asymptotic Upper Bound (Worst-Case) (3)
 
-![alt:"Big-O Function-2" height:450px center](https://xlinux.nist.gov/dads/Images/bigOGraph.gif)
-
----
-
-### Big-O / $O$- Notation : Asymptotic Upper Bound (Worst-Case) (4)
-
 Asymptotic running times of algorithms are usually defined by functions whose domain are $N={0, 1, 2, …}$  (natural numbers)
 
 ---
 
-### Big-O / $O$- Notation : Asymptotic Upper Bound (Worst-Case) (5)
+### Big-O / $O$- Notation : Asymptotic Upper Bound (Worst-Case) (4)
 
 #### Example-1
 
@@ -903,7 +892,7 @@ $$
 
 ---
 
-### Big-O / $O$- Notation : Asymptotic Upper Bound (Worst-Case) (6)
+### Big-O / $O$- Notation : Asymptotic Upper Bound (Worst-Case) (5)
 
 #### Example-2
 
@@ -927,7 +916,7 @@ $$
 
 ---
 
-### Big-O / $O$- Notation : Asymptotic Upper Bound (Worst-Case) (7)
+### Big-O / $O$- Notation : Asymptotic Upper Bound (Worst-Case) (6)
 
 We can say the followings about  $f(n)=O(g(n))$ equation
 
@@ -937,7 +926,7 @@ One-way equation, e.q. $n^2 = O(n^3)$ but we cannot say $O(n^3)=n^2$
 
 ---
 
-### Big-O / $O$- Notation : Asymptotic Upper Bound (Worst-Case) (8)
+### Big-O / $O$- Notation : Asymptotic Upper Bound (Worst-Case) (7)
 
 $O(g(n))$ is in fact a set of functions as follow
 
@@ -945,7 +934,7 @@ $O(g(n)) = \{ f(n) : \exists \text{ positive constant } c, n_0 \text{ such that 
 
 ---
 
-### Big-O / $O$- Notation : Asymptotic Upper Bound (Worst-Case) (9)
+### Big-O / $O$- Notation : Asymptotic Upper Bound (Worst-Case) (8)
 
 In other words $O(g(n))$ is in fact, the set of functions that have asymptotic upper bound $g(n)$
 
@@ -953,7 +942,7 @@ e.q $2n^2 = O(n^3)$ means $2n^2 \in O(n^3)$
 
 ---
 
-### Big-O / $O$- Notation : Asymptotic Upper Bound (Worst-Case) (10)
+### Big-O / $O$- Notation : Asymptotic Upper Bound (Worst-Case) (9)
 
 #### Example-1
 
@@ -969,7 +958,7 @@ $0 \leq 10^9n^2 \leq 10^9n^2 \text{ for } n \geq 1$
 
 ---
 
-### Big-O / $O$- Notation : Asymptotic Upper Bound (Worst-Case) (11)
+### Big-O / $O$- Notation : Asymptotic Upper Bound (Worst-Case) (10)
 
 #### Example-2
 
@@ -985,7 +974,7 @@ $0 \leq 100n^{1.9999} \leq 100n^2 \text{ for } n \geq 1$
 
 ---
 
-### Big-O / $O$- Notation : Asymptotic Upper Bound (Worst-Case) (12)
+### Big-O / $O$- Notation : Asymptotic Upper Bound (Worst-Case) (11)
 
 #### Example-3
 
@@ -999,7 +988,7 @@ $10^{-9}n^{0.0001} \leq c \text{ for } n \geq n_0$
 
 ---
 
-### Big-O / $O$- Notation : Asymptotic Upper Bound (Worst-Case) (13)
+### Big-O / $O$- Notation : Asymptotic Upper Bound (Worst-Case) (12)
 
 If we analysis $O(n^2)$ case, $O$-notation is an upper bound notation and the runtime $T(n)$ of algorithm A is **at least** $O(n^2 )$.  
 
@@ -1019,17 +1008,11 @@ $f(n)=\Omega(g(n))$ if $\exists$ positive constants $c,n_0$ such that $0 \leq cg
 
 ### Big-Omega / $\Omega$-Notation : Asymptotic Lower Bound (Best-Case) (2)
 
-![alt:"Big-Omega Function-1" height:450px center](assets/2022-01-27-01-05-11-image.png)
+![alt:"Big-Omega Function-1" height:450px center](assets/ce100-week-1-intro-bigo_best_case.drawio.svg)
 
 ---
 
 ### Big-Omega / $\Omega$-Notation : Asymptotic Lower Bound (Best-Case) (3)
-
-![alt:"Big-Omega Function-2" height:450px center](https://xlinux.nist.gov/dads/Images/omegaGraph.gif)
-
----
-
-### Big-Omega / $\Omega$-Notation : Asymptotic Lower Bound (Best-Case) (4)
 
 #### Example-1
 
@@ -1049,7 +1032,7 @@ $$
 
 ---
 
-### Big-Omega / $\Omega$-Notation : Asymptotic Lower Bound (Best-Case) (5)
+### Big-Omega / $\Omega$-Notation : Asymptotic Lower Bound (Best-Case) (4)
 
 #### Example-4
 
@@ -1069,7 +1052,7 @@ $$
 
 ---
 
-### Big-Omega / $\Omega$-Notation : Asymptotic Lower Bound (Best-Case) (6)
+### Big-Omega / $\Omega$-Notation : Asymptotic Lower Bound (Best-Case) (5)
 
 $\Omega(g(n))$ is the set of functions that have asymptotic lower bound $g(n)$ 
 
@@ -1079,7 +1062,7 @@ $$
 
 ---
 
-### Big-Omega / $\Omega$-Notation : Asymptotic Lower Bound (Best-Case) (7)
+### Big-Omega / $\Omega$-Notation : Asymptotic Lower Bound (Best-Case) (6)
 
 #### Example-1
 
@@ -1095,7 +1078,7 @@ $0 \leq 10^9n^2 \leq 10^9n^2 \text{ for } n\geq 1$
 
 ---
 
-### Big-Omega / $\Omega$-Notation : Asymptotic Lower Bound (Best-Case) (8)
+### Big-Omega / $\Omega$-Notation : Asymptotic Lower Bound (Best-Case) (7)
 
 #### Example-2
 
@@ -1109,7 +1092,7 @@ $n^{0.0001} \leq (100/c) \text{ for } n \geq n_0$
 
 ---
 
-### Big-Omega / $\Omega$-Notation : Asymptotic Lower Bound (Best-Case) (9)
+### Big-Omega / $\Omega$-Notation : Asymptotic Lower Bound (Best-Case) (8)
 
 #### Example-3
 
@@ -1127,15 +1110,13 @@ $0 \leq 10^{-9}n^2 \leq 10^{-9}n^{2.0001} \text{ for } n \geq 1$
 
 ### Comparison of Notations (1)
 
-![alt:"Big-Omega Function for Comparison" height:250px center](assets/2022-01-27-01-34-39-image.png)
-
-![alt:"Big-O Function for Comparison" height:250px center](assets/2022-01-27-01-34-34-image.png)
+![alt:"Big-Omega Function for Comparison" height:500px center](assets/ce100-week-1-intro-bigo_worst_base_case.drawio.svg)
 
 ---
 
 ### Comparison of Notations (2)
 
-![alt:"Comparison of Notations" height:450px center](https://www.dotnetlovers.com/images/coolnikhilj2256c883d1-b9fc-46e9-b225-588ac5063c3d.png?1/24/2016%202:56:15%20AM)
+![alt:"Comparison of Notations" height:550px center](assets/ce100-week-1-intro-bigo_worst_avg_best_case.drawio.svg)
 
 ---
 
@@ -1147,7 +1128,7 @@ $f(n)=\Theta(g(n))$ if $\exists$ positive constants $c_1,c_2,n_0$ such that $0 \
 
 ### Big-Theta /$\Theta$-Notation : Asymptotically tight bound (Average Case) (2)
 
-![alt:"Big-Theta Function" height:450px center](assets/2022-01-27-03-05-18-image.png)
+![alt:"Big-Theta Function" height:450px center](assets/ce100-week-1-intro-bigo_avg_case.drawio.svg)
 
 ---
 
@@ -1189,7 +1170,7 @@ Choose 3 positive constants $c_1,c_2, n_0$ that satisfy $c_1 \leq 1/2 - 2/n \leq
 
 #### Example-2.2
 
-![alt:"Big-Theta Example" height:450px center](assets/2022-01-27-03-28-40-image.png)
+![alt:"Big-Theta Example" height:500px center](assets/ce100-week-1-intro-bigo_example_2_2.drawio.svg)
 
 ---
 
@@ -1293,11 +1274,7 @@ $f(n)=\Theta(g(n)) \Leftrightarrow f(n)=O(g(n)) \text{ and } f(n)=\Omega(g(n))$
 
 ### Summary of $O,\Omega$ and $\Theta$ notations (2)
 
-![alt:"Summary Big-O" height:200px center](assets/2022-01-27-04-23-03-image.png)
-
-![alt:"Summary Big-Omega" height:200px center](assets/2022-01-27-04-23-10-image.png)
-
-![alt:"Summary Big-Theta" height:200px center](assets/2022-01-27-04-23-16-image.png)
+![alt:"Summary Asymptotic Analysis" height:500px center](assets/ce100-week-1-intro-bigo_worst_avg_best_case.drawio.svg)
 
 ---
 
@@ -1595,7 +1572,7 @@ stands for some anonymous function in the set
 
 ---
 
-## References
+## References (TODO: Update Missing References)
 
 [Introduction to Algorithms, Third Edition | The MIT Press](https://mitpress.mit.edu/books/introduction-algorithms-third-edition)
 
