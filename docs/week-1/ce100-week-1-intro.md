@@ -76,7 +76,21 @@ please read the syllabus carefully.
 
 ---
 
-## TODO : Brief Proof Methods
+## We Need Mathematical Proofs
+
+- Direct proof
+- Proof by mathematical induction
+- Proof by contraposition
+- Proof by contradiction
+- Proof by construction
+- Proof by exhaustion
+- Probabilistic proof
+- Combinatorial proof
+- Nonconstructive proof
+  - Statistical proofs in pure mathematics
+  - Computer-assisted proofs
+
+[Mathematical proof - Wikipedia](https://en.wikipedia.org/wiki/Mathematical_proof)
 
 ---
 
@@ -160,7 +174,7 @@ We can use [Flowgorithm - Flowchart Programming Language](http://www.flowgorithm
 
 ## What is the processing time ?
 
-![alt:"processing time map" height:450px center](assets/2022-01-26-14-37-23-image.png)
+![alt:"processing time map" height:550px center](assets/ce100-week-1-intro-processing_time.drawio.svg)
 
 ---
 
@@ -172,20 +186,20 @@ The array is virtually split into a sorted and an unsorted part
 
 Values from the unsorted part are picked and placed at the correct position in the sorted part.
 
-![alt:"playing cards" height:300px center](assets/2022-01-26-02-14-48-image.png)
+![alt:"playing cards" height:300px center](assets/playingcard.png)
 
 ---
 
 - Assume input array : $A[1..n]$
 - Iterate $j$ from $2$ to $n$
 
-![alt:"insertion sort movement" height:450px center](assets/f036676a77a305d409a2f2250a8cc1d7693b5ed4.png)
+![alt:"insertion sort movement" height:450px center](assets/ce100-week-1-intro-ins_sort_1.drawio.svg)
 
 ---
 
 ## Insertion Sort Algorithm
 
-![alt:"insertion sort algorithm" height:450px center](assets/2022-01-26-15-29-21-image.png)
+![alt:"insertion sort algorithm" height:550px center](assets/ce100-week-1-intro-ins_sort_2.drawio.svg)
 
 ---
 
@@ -207,19 +221,19 @@ Insertion-Sort(A)
 
 ## Insertion Sort Step-By-Step Description (1)
 
-![alt:"insertion sort description-1" height:450px center](assets/2022-01-26-15-30-22-image.png)
+![alt:"insertion sort description-1" height:550px center](assets/ce100-week-1-intro-ins_sort_3.drawio.svg)
 
 ---
 
 ## Insertion Sort Step-By-Step Description (2)
 
-![alt:"insertion sort description-2" height:450px center](assets/2022-01-26-15-31-01-image.png)
+![alt:"insertion sort description-2" height:550px center](assets/ce100-week-1-intro-ins_sort_4.drawio.svg)
 
 ---
 
 ## Insertion Sort Step-By-Step Description (3)
 
-![alt:"insertion sort description-3" height:450px center](assets/2022-01-26-15-31-48-image.png)
+![alt:"insertion sort description-3" height:500px center](assets/ce100-week-1-intro-ins_sort_5.drawio.svg)
 
 ---
 
@@ -227,49 +241,49 @@ Insertion-Sort(A)
 
 ### Insertion Sort Step-1 (initial)
 
-![alt:"insertion sort step-1" height:450px center](assets/2022-01-26-15-32-34-image.png)
+![alt:"insertion sort step-1" height:450px center](assets/ce100-week-1-intro-ins_sort_6.drawio.svg)
 
 ---
 
 ### Insertion Sort Step-2 (j=2)
 
-![alt:"insertion sort step-2" height:450px center](assets/2022-01-26-15-33-26-image.png)
+![alt:"insertion sort step-2" height:450px center](assets/ce100-week-1-intro-ins_sort_7.drawio.svg)
 
 ---
 
 ### Insertion Sort Step-3 (j=3)
 
-![alt:"insertion sort step-3" height:450px center](assets/2022-01-26-15-34-08-image.png)
+![alt:"insertion sort step-3" height:450px center](assets/ce100-week-1-intro-ins_sort_8.drawio.svg)
 
 ---
 
 ### Insertion Sort Step-4 (j=3)
 
-![alt:"insertion sort step-4" height:450px center](assets/2022-01-26-15-36-42-image.png)
+![alt:"insertion sort step-4" height:450px center](assets/ce100-week-1-intro-ins_sort_9.drawio.svg)
 
 ---
 
 ### Insertion Sort Step-5 (j=4)
 
-![alt:"insertion sort step-5" height:450px center](assets/2022-01-26-15-38-55-image.png)
+![alt:"insertion sort step-5" height:450px center](assets/ce100-week-1-intro-ins_sort_10.drawio.svg)
 
 ---
 
 ### Insertion Sort Step-6 (j=5)
 
-![alt:"insertion sort step-6" height:450px center](assets/2022-01-26-15-39-46-image.png)
+![alt:"insertion sort step-6" height:450px center](assets/ce100-week-1-intro-ins_sort_11.drawio.svg)
 
 ---
 
 ### Insertion Sort Step-7 (j=5)
 
-![alt:"insertion sort step-7" height:450px center](assets/2022-01-26-15-40-29-image.png)
+![alt:"insertion sort step-7" height:450px center](assets/ce100-week-1-intro-ins_sort_12.drawio.svg)
 
 ---
 
 ### Insertion Sort Step-8 (j=6)
 
-![alt:"insertion sort step-8" height:450px center](assets/2022-01-26-15-45-09-image.png)
+![alt:"insertion sort step-8" height:450px center](assets/ce100-week-1-intro-ins_sort_13.drawio.svg)
 
 ---
 
@@ -309,13 +323,10 @@ https://algorithm-visualizer.org/
 
 [HMvHTs - Online C++ Compiler & Debugging Tool - Ideone.com](https://ideone.com/HMvHTs)
 
----
 
 <!--
 <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=//%20C%2B%2B%20program%20for%20insertion%20sort%0A%23include%20%3Cstring.h%3E%0A%23include%20%3Ciostream%3E%0A%0Ausing%20namespace%20std%3B%0A%0Avoid%20printArray%28int%20arr%5B%5D,%20int%20n%29%3B%0Avoid%20insertionSort%28int%20arr%5B%5D,%20int%20n%29%3B%0A%0A%20%0A/*%20Function%20to%20sort%20an%20array%20using%20insertion%20sort*/%0Avoid%20insertionSort%28int%20arr%5B%5D,%20int%20n%29%0A%7B%0A%20%20%20%20int%20i,%20key,%20j%3B%0A%20%20%20%20for%20%28i%20%3D%201%3B%20i%20%3C%20n%3B%20i%2B%2B%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20key%20%3D%20arr%5Bi%5D%3B%0A%20%20%20%20%20%20%20%20j%20%3D%20i%20-%201%3B%0A%20%0A%20%20%20%20%20%20%20%20/*%20Move%20elements%20of%20arr%5B0..i-1%5D,%20that%20are%0A%20%20%20%20%20%20%20%20greater%20than%20key,%20to%20one%20position%20ahead%0A%20%20%20%20%20%20%20%20of%20their%20current%20position%20*/%0A%20%20%20%20%20%20%20%20while%20%28j%20%3E%3D%200%20%26%26%20arr%5Bj%5D%20%3E%20key%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20arr%5Bj%20%2B%201%5D%20%3D%20arr%5Bj%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20j%20%3D%20j%20-%201%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20arr%5Bj%20%2B%201%5D%20%3D%20key%3B%0A%20%20%20%20%7D%0A%7D%0A%20%0A//%20A%20utility%20function%20to%20print%20an%20array%20of%20size%20n%0Avoid%20printArray%28int%20arr%5B%5D,%20int%20n%29%0A%7B%0A%20%20%20%20int%20i%3B%0A%20%20%20%20for%20%28i%20%3D%200%3B%20i%20%3C%20n%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20cout%20%3C%3C%20arr%5Bi%5D%20%3C%3C%20%22%20%22%3B%0A%20%20%20%20cout%20%3C%3C%20endl%3B%0A%7D%0A%20%0A/*%20Driver%20code%20*/%0Aint%20main%28%29%0A%7B%0A%20%20%20%20int%20arr%5B%5D%20%3D%20%7B%2012,%2011,%2013,%205,%206%20%7D%3B%0A%20%20%20%20int%20n%20%3D%20sizeof%28arr%29%20/%20sizeof%28arr%5B0%5D%29%3B%0A%20%0A%20%20%20%20insertionSort%28arr,%20n%29%3B%0A%20%20%20%20printArray%28arr,%20n%29%3B%0A%20%0A%20%20%20%20return%200%3B%0A%7D&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=cpp_g%2B%2B9.3.0&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 -->
-
----
 
 ## Kinds of Running Time Analysis (Time Complexity)
 
@@ -331,7 +342,9 @@ https://algorithm-visualizer.org/
 
 ---
 
-![alt:"array sorting algorithms" height:550px center](https://4.bp.blogspot.com/-wDrG9mg1xk4/WASmvjkG6ZI/AAAAAAAAAeA/1v3FGEhPn38dGDgT5Z3YBjS-WLMDA_Z4wCEw/s1600/bigo3.png)
+## Array Sorting Algorithms Time and Space Complexity
+
+![alt:"array sorting algorithms" height:550px center](assets/ce100-week-1-intro-bigo3.drawio.svg)
 
 ---
 
@@ -353,7 +366,7 @@ For insertion sort, worst-case time depends on the speed of primitive operations
 
 ## Asymptotic Analysis (1)
 
-![alt:"algorithm analysis comparisons" height:550px center](assets/32f1a1149fa8543a9c7c70854064c71b00a18079.jpg)
+![alt:"algorithm analysis comparisons" height:450px center](assets/ce100-week-1-intro-bigo_chart_1.drawio.svg)
 
 ---
 
@@ -383,7 +396,7 @@ $$
 
 For both algorithms, we can see a minimum item size in the following chart. After this point, we can see performance differences.  Some algorithms for small item size can be run faster than others but if you increase item size you will see a reference point that notation proof performance metrics. 
 
-![alt:"T(n) and n change graph" height:350px center](assets/2022-01-26-13-59-16-image.png)
+![alt:"T(n) and n change graph" height:350px center](assets/ce100-week-1-intro-bigo_chart2.drawio.svg)
 
 ---
 
@@ -391,6 +404,7 @@ For both algorithms, we can see a minimum item size in the following chart. Afte
 
 ```r
 Cost   Times   Insertion-Sort(A)
+----   -----   ---------------------
 c1     n       1. for j=2 to A.length
 c2     n-1     2.     key = A[j]
 c3     n-1     3.     //insert A[j] into the sorted sequence A[1...j-1]
@@ -403,7 +417,9 @@ c8     n-1     8.     A[i+1] = key
 
 we have two loops here, if we sum up costs as follow we can see big-O worst case notation. 
 
-$k_5 = \sum_{j=2}^n{t_j}$ and $k_6 = \sum_{j=2}^n{t_i-1}$ for operation counts
+$k_5 = \sum_{j=2}^n{t_j}$ and $k_6 = \sum_{j=2}^n{t_i-1}$ 
+
+for operation counts
 
 ---
 
@@ -443,7 +459,9 @@ $O(n^2)$
 
 Problem-1, If $A[1...j]$  is already sorted, what will be $t_j=?$
 
-![alt:"Insertion Sort Best-Case Scenario (Sorted Array)" height:400px center](assets/2022-01-26-15-28-02-image.png)
+![alt:"Insertion Sort Best-Case Scenario (Sorted Array)" height:400px center](assets/ce100-week-1-intro-ins_sort_10.drawio.svg)
+
+$t_j=1$
 
 ---
 
@@ -467,7 +485,9 @@ $\Omega(n)$
 
 Problem-2 If $A[j]$ is smaller than every entry in $A[1...j-1]$, what will be $t_j=?$ 
 
-![alt:"Insertion Sort Worst-Case Scenario (Reversed Array)" height:400px center](assets/2022-01-26-15-27-09-image.png)
+![alt:"Insertion Sort Worst-Case Scenario (Reversed Array)" height:400px center](assets/ce100-week-1-intro-ins_sort_11.drawio.svg)
+
+$t_j=?$
 
 ---
 
@@ -485,7 +505,7 @@ $O(n^2)$
 
 ## Asymptotic Runtime Analysis of Insertion-Sort
 
-![alt:"Asymptotic Runtime Analysis of Insertion-Sort" height:450px center](assets/2022-01-26-16-22-45-image.png)
+![alt:"Asymptotic Runtime Analysis of Insertion-Sort" height:450px center](assets/ce100-week-1-intro-ins_sort_bigo.drawio.svg)
 
 ---
 
@@ -509,13 +529,13 @@ $T(n)=\sum_{j=2}^n\Theta(j/2)=\sum_{j=2}^n\Theta(j)=\Theta(n^2)$
 
 To compare this sorting algorithm please check the following map again.
 
-![alt:"Array Sorting Algorithms Time/Space Complexities" height:450px center](https://4.bp.blogspot.com/-wDrG9mg1xk4/WASmvjkG6ZI/AAAAAAAAAeA/1v3FGEhPn38dGDgT5Z3YBjS-WLMDA_Z4wCEw/s1600/bigo3.png)
+![alt:"array sorting algorithms" height:450px center](assets/ce100-week-1-intro-bigo3.drawio.svg)
 
 ---
 
 ## Merge Sort : Divide / Conquer / Combine (1)
 
-![alt:"Merge Sort : Divide / Conquer / Combine" height:450px center](assets/2022-01-26-17-14-42-image.png)
+![alt:"Merge Sort : Divide / Conquer / Combine" height:450px center](assets/ce100-week-1-intro-merge_sort_1.drawio.svg)
 
 ---
 
@@ -531,9 +551,9 @@ To compare this sorting algorithm please check the following map again.
 
 ---
 
-## Merge Sort Example
+## Merge Sort Example (TODO : update image)
 
-![alt:"Merge Sort Example" height:450px center](https://facingissuesonitcom.files.wordpress.com/2019/07/merge-sort.jpg?w=1000)
+![alt:"Merge Sort Example" height:450px center](assets/merge-sort.jpg)
 
 ---
 
@@ -741,7 +761,7 @@ Multiply by height $\Theta(lgn)$ with each level cost $\Theta(n)$ we can found $
 
 This tree is binary-tree and binary-tree height is related with item size.
 
-![alt:"Merge Sort Recursive Tree" height:450px center](assets/2022-01-26-18-39-11-image.png)
+![alt:"Merge Sort Recursive Tree" height:500px center](assets/ce100-week-1-intro-solve_recursion.drawio.svg)
 
 ---
 
