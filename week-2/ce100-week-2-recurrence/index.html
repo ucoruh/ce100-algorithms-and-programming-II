@@ -1327,6 +1327,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#correctness-proofs-for-divide-and-conquer-algorithms" class="md-nav__link">
+    Correctness Proofs for Divide and Conquer Algorithms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-correctness-proof-powering-a-number" class="md-nav__link">
+    Example Correctness Proof: Powering a Number
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
@@ -2160,6 +2174,20 @@
         <li class="md-nav__item">
   <a href="#powering-a-number-solving-the-recurrence" class="md-nav__link">
     Powering a Number: Solving the Recurrence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correctness-proofs-for-divide-and-conquer-algorithms" class="md-nav__link">
+    Correctness Proofs for Divide and Conquer Algorithms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-correctness-proof-powering-a-number" class="md-nav__link">
+    Example Correctness Proof: Powering a Number
   </a>
   
 </li>
@@ -3099,6 +3127,39 @@ a^n=\begin{cases}
 </li>
 </ul>
 <hr />
+<h2 id="correctness-proofs-for-divide-and-conquer-algorithms">Correctness Proofs for Divide and Conquer Algorithms<a class="headerlink" href="#correctness-proofs-for-divide-and-conquer-algorithms" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>Proof by induction</strong> commonly used for Divide and Conquer Algorithms</p>
+</li>
+<li>
+<p><strong>Base case:</strong> Show that the algorithm is correct when the recursion bottoms out (i.e., for sufficiently small n)</p>
+</li>
+<li>
+<p><strong>Inductive hypothesis:</strong> Assume the alg. is correct for any recursive call on any smaller subproblem of size <span class="arithmatex">\(k\)</span>, <span class="arithmatex">\((k &lt; n)\)</span></p>
+</li>
+<li>
+<p><strong>General case:</strong> Based on the inductive hypothesis, prove that the alg. is correct for any input of size n</p>
+</li>
+</ul>
+<hr />
+<h2 id="example-correctness-proof-powering-a-number">Example Correctness Proof: Powering a Number<a class="headerlink" href="#example-correctness-proof-powering-a-number" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Base Case:</strong> <span class="arithmatex">\(POWER(a, 0)\)</span> is correct, because it returns <span class="arithmatex">\(1\)</span></li>
+<li><strong>Ind. Hyp:</strong> Assume <span class="arithmatex">\(POWER(a, k)\)</span> is correct for any <span class="arithmatex">\(k&lt;n\)</span></li>
+<li><strong>General Case:</strong> </li>
+<li>In <span class="arithmatex">\(POWER(a,n)\)</span> function:<ul>
+<li>If <span class="arithmatex">\(n\)</span> is <span class="arithmatex">\(even\)</span>:</li>
+<li><span class="arithmatex">\(val = a^{n/2}\)</span> (due to ind. hyp.)</li>
+<li>it returns <span class="arithmatex">\(val*val = a^n\)</span></li>
+<li>If <span class="arithmatex">\(n\)</span> is <span class="arithmatex">\(odd\)</span>:</li>
+<li><span class="arithmatex">\(val = a^{(n-1)/2}\)</span> (due to ind. hyp.)</li>
+<li>it returns <span class="arithmatex">\(val*val*a = a^n\)</span></li>
+</ul>
+</li>
+<li>The correctness proof is complete</li>
+</ul>
+<hr />
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <h2 id="todo">TODO<a class="headerlink" href="#todo" title="Permanent link">&para;</a></h2>
 
@@ -3107,7 +3168,7 @@ a^n=\begin{cases}
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 4, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 5, 2022</span>
       
     
   </small>
