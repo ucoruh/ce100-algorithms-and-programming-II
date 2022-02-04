@@ -1073,6 +1073,35 @@ POWER(a, n)
 
 ---
 
+## Correctness Proofs for Divide and Conquer Algorithms
+
+- **Proof by induction** commonly used for Divide and Conquer Algorithms
+
+- **Base case:** Show that the algorithm is correct when the recursion bottoms out (i.e., for sufficiently small n)
+
+- **Inductive hypothesis:** Assume the alg. is correct for any recursive call on any smaller subproblem of size $k$, $(k < n)$
+
+- **General case:** Based on the inductive hypothesis, prove that the alg. is correct for any input of size n
+
+---
+
+## Example Correctness Proof: Powering a Number 
+
+- **Base Case:** $POWER(a, 0)$ is correct, because it returns $1$
+- **Ind. Hyp:** Assume $POWER(a, k)$ is correct for any $k<n$
+- **General Case:** 
+  - In $POWER(a,n)$ function:
+    - If $n$ is $even$:
+      - $val = a^{n/2}$ (due to ind. hyp.)
+      - it returns $val*val = a^n$
+    - If $n$ is $odd$:
+      - $val = a^{(n-1)/2}$ (due to ind. hyp.)
+      - it returns $val*val*a = a^n$
+- The correctness proof is complete
+
+
+---
+
 ## References
 
 TODO
