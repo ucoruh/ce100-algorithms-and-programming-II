@@ -94,7 +94,7 @@ Download [DOC](ce100-week-2-recurrence.md_doc.pdf), [SLIDE](ce100-week-2-recurre
 
 ---
 
-### Solving Recurrences
+## Solving Recurrences
 
 - Reminder: Runtime $(T(n))$  of  *MergeSort* was expressed as a recurrence
 
@@ -108,7 +108,7 @@ $$
 
 ---
 
-### Recurrences
+## Recurrences
 
 <u>Recurrence</u>: An equation or inequality that describes a function in terms of its value on smaller inputs.
 
@@ -120,7 +120,7 @@ $$
 
 ---
 
-### Recurrence Example
+## Recurrence Example
 
 $$
 T(n)=\begin{cases} \ 1 &\text{if n=1} \\ T(\lceil{n/2}\rceil)+ 1 &\text{if n>1}\end{cases}
@@ -140,7 +140,7 @@ $$
 
 ---
 
-### Technicalities: Floor / Ceiling
+## Technicalities: Floor / Ceiling
 
 Technically, should be careful about the floor and ceiling functions (as in the book).
 
@@ -160,7 +160,7 @@ But, it's usually ok to:
 
 ---
 
-### Technicalities: Boundary Conditions
+## Technicalities: Boundary Conditions
 
 - Usually assume: $T(n) = \Theta(1)$ for sufficiently small $n$
   - Changes the exact solution, but usually the asymptotic solution is not affected (e.g. if polynomially bounded)
@@ -170,7 +170,7 @@ But, it's usually ok to:
 
 ---
 
-### Example: When Boundary Conditions Matter
+## Example: When Boundary Conditions Matter
 
 Exponential function: $T(n) = (T(n/2))2$
 Assume  
@@ -196,7 +196,7 @@ $$
 
 ---
 
-### Solving Recurrences
+## Solving Recurrences
 
 We will focus on 3 techniques 
 
@@ -208,7 +208,7 @@ We will focus on 3 techniques
 
 ---
 
-### Substitution Method
+## Substitution Method
 
 The most general method:
 
@@ -220,7 +220,7 @@ The most general method:
 
 ---
 
-### Substitution Method: Example
+## Substitution Method: Example
 
 Solve $T(n)=4T(n/2)+n$ (assume $T(1)= \Theta(1)$)
 
@@ -231,7 +231,7 @@ Solve $T(n)=4T(n/2)+n$ (assume $T(1)= \Theta(1)$)
 
 ---
 
-### Substitution Method: Example – cont’d
+## Substitution Method: Example – cont’d
 
 Original recurrence: $T(n) = 4T(n/2) + n$
 
@@ -247,7 +247,7 @@ Substitute this into the original recurrence:
 
 ---
 
-### Substitution Method: Example – cont’d
+## Substitution Method: Example – cont’d
 
 So far, we have shown: 
 
@@ -266,7 +266,7 @@ But, the proof is not complete yet.
 
 ---
 
-### Substitution Method: Example – cont’d
+## Substitution Method: Example – cont’d
 
 - We need to prove the base cases
   - Base: $T(n) = \Theta(1)$ for small $n$ (e.g. for $n = n_0$)
@@ -277,7 +277,7 @@ But, the proof is not complete yet.
 
 ---
 
-### Example: A tighter upper bound?
+## Example: A tighter upper bound?
 
 - Original recurrence: $T(n) = 4T(n/2) + n$
 
@@ -291,7 +291,7 @@ But, the proof is not complete yet.
 
 ---
 
-### Example (cont’d)
+## Example (cont’d)
 
 Original recurrence: $T(n) = 4T(n/2) + n$
 Ind. hyp: Assume that $T(k) \leq ck^2$  for $k < n$ 
@@ -306,7 +306,7 @@ $$
 
 ---
 
-### Example (cont’d)
+## Example (cont’d)
 
 **Original recurrence:** $T(n) = 4T(n/2) + n$
 **Ind. hyp:** Assume that $T(k) \leq ck^2$  for $k < n$
@@ -319,7 +319,7 @@ $$
 
 ---
 
-### Example (cont’d)
+## Example (cont’d)
 
 - What was the problem?
   
@@ -335,7 +335,7 @@ $$
 
 ---
 
-### Example (cont’d)
+## Example (cont’d)
 
 **Original recurrence:** $T(n) = 4T(n/2) + n$
 
@@ -351,7 +351,7 @@ Prove the general case: $T(n) ≤ c_1n^2 – c_2n$
 
 ---
 
-### Example (cont’d)
+## Example (cont’d)
 
 We now need to prove
 $$
@@ -370,7 +370,7 @@ We have proved that $T(n) = O(n^2)$
 
 ---
 
-### Substitution Method: Example 2
+## Substitution Method: Example 2
 
 For the recurrence $T(n) = 4T(n/2) + n$, 
 
@@ -391,7 +391,7 @@ Proof succeeded – no need to strengthen the ind. hyp as in the last example
 
 ---
 
-### Example 2 (cont’d)
+## Example 2 (cont’d)
 
 We now need to prove that
 $T(n) ≥ cn^2$
@@ -407,7 +407,7 @@ We have proved that $T(n) = \Omega(n^2)$
 
 ---
 
-### Substitution Method - Summary
+## Substitution Method - Summary
 
 - Guess the asymptotic complexity
 
@@ -423,7 +423,7 @@ We have proved that $T(n) = \Omega(n^2)$
 
 ---
 
-### Recursion Tree Method
+## Recursion Tree Method
 
 - A recursion tree models the runtime costs of a recursive execution of an algorithm.
 - The recursion tree method is good for generating guesses for the substitution method.
@@ -433,33 +433,243 @@ We have proved that $T(n) = \Omega(n^2)$
 
 ---
 
-### Solve Recurrence : $T(n)=2T(n/2)+\Theta(n)$
+## Solve Recurrence : $T(n)=2T(n/2)+\Theta(n)$
 
 ![alt:"alt" height:250px center](assets/ce100-week-2-recurrence-recursion_1.drawio.svg)
 
 ---
 
-### Solve Recurrence : $T(n)=2T(n/2)+\Theta(n)$
+## Solve Recurrence : $T(n)=2T(n/2)+\Theta(n)$
 
 ![alt:"alt" height:450px center](assets/ce100-week-2-recurrence-recursion_2.drawio.svg)
 
 ---
 
-### Solve Recurrence : $T(n)=2T(n/2)+\Theta(n)$
+## Solve Recurrence : $T(n)=2T(n/2)+\Theta(n)$
 
 ![alt:"alt" height:500px center](assets/ce100-week-2-recurrence-recursion_3.drawio.svg)
 
 ---
-### Example of Recursion Tree
+## Example of Recursion Tree
 
 Solve $T(n) = T(n/4) + T(n/2) + n^2$
 
----
-### TODO
 
-Continue From
-Slide : 03
-Page : 27
+
+![alt:"alt" height:500px center](assets/ce100-week-2-recurrence-recursion_4.drawio.svg)
+
+---
+## Example of Recursion Tree
+
+Solve $T(n) = T(n/4) + T(n/2) + n^2$
+![alt:"alt" height:500px center](assets/ce100-week-2-recurrence-recursion_5.drawio.svg)
+
+---
+## Example of Recursion Tree
+
+Solve $T(n) = T(n/4) + T(n/2) + n^2$
+![alt:"alt" height:500px center](assets/ce100-week-2-recurrence-recursion_6.drawio.svg)
+
+---
+## The Master Method
+
+- A powerful black-box method to solve recurrences.
+
+- The master method applies to recurrences of the form
+  - $T(n) = aT(n/b) + f (n)$
+- where $a \geq 1, b > 1$, and $f$ is **asymptotically positive**.
+
+---
+## The Master Method: 3 Cases
+
+- Recurrence: $T(n) = aT(n/b) + f(n)$
+- Compare $f(n)$ with $n^{log_b^a}$
+- Intuitively:
+  - **Case 1:** $f(n)$ grows polynomially slower than $n^{log_b^a}$ 
+  - **Case 2:** $f(n)$ grows at the same rate as $n^{log_b^a}$ 
+  - **Case 3:** $f(n)$ grows polynomially faster than $n^{log_b^a}$ 
+
+---
+## The Master Method: Case 1
+
+- Recurrence: $T(n) = aT(n/b) + f(n)$
+
+- *Case 1:* $\frac{n^{log_b^a}}{f(n)}=\Omega(n^{\varepsilon})$ for some constant $\varepsilon>0$
+
+- i.e., $f(n)$ grows polynomialy slower than $n^{log_b^a}$ (by an $n^{\varepsilon}$ factor)
+
+- **Solution:** $T(n)=\Theta(n^{log_b^a})$
+
+---
+## The Master Method: Case 2 (Simple Version)
+- Recurrence: $T(n) = aT(n/b) + f(n)$
+
+- *Case 2:* $\frac{f(n)}{n^{log_b^a}}=\Theta(1)$
+
+- i.e., $f(n)$ and $n^{log_b^a}$ grow at similar rates
+
+- **Solution:** $T(n)=\Theta(n^{log_b^a}lgn)$
+
+---
+## The Master Method: Case 3
+
+- *Case 3:* $\frac{f(n)}{n^{log_b^a}}=\Omega(n^{\varepsilon})$ for some constant $\varepsilon > 0$
+
+- i.e., $f(n)$ grows polynomialy faster than $n^{log_b^a}$ (by an $n^{\varepsilon}$ factor)
+
+- and the following regularity condition holds:
+  - $af(n/b) \leq cf(n)$ for some constant $c<1$
+
+- Solution: $T(n)=\Theta(f(n))$
+
+---
+## Example : $T(n)=4T(n/2)+n$
+- $a=4$
+- $b=2$
+- $f(n)=n$
+- $n^{log_b^a}=n^{log_2^4}=n^{log_2^{2^2}}=n^{2log_2^2}=n^2$
+- $f(n)=n$ grows polynomially slower than $n^{log_b^a}=n^2$
+  - $\frac{n^{log_b^a}}{f(n)}=\frac{n^2}{n}=n=\Omega(n^{\varepsilon})$
+- CASE-1:
+  - $T(n)=\Theta(n^{log_b^a})=\Theta(n^{log_2^4})=\Theta(n^2)$
+
+---
+## Example : $T(n)=4T(n/2)+n^2$
+- $a=4$
+- $b=2$
+- $f(n)=n^2$
+- $n^{log_b^a}=n^{log_2^4}=n^{log_2^{2^2}}=n^{2log_2^2}=n^2$
+- $f(n)=n^2$ grows at similar rate as $n^{log_b^a}=n^2$
+  - $f(n)=\Theta(n^{log_b^a})=n^2$
+
+- CASE-2:
+  - $T(n)=\Theta(n^{log_b^a}lgn)=\Theta(n^{log_2^4}lgn)=\Theta(n^2lgn)$
+
+---
+## Example : $T(n)=4T(n/2)+n^3$
+- $a=4$
+- $b=2$
+- $f(n)=n^3$
+- $n^{log_b^a}=n^{log_2^4}=n^{log_2^{2^2}}=n^{2log_2^2}=n^2$
+- $f(n)=n^3$ grows polynomially faster than $n^{log_b^a}=n^2$
+  - $\frac{f(n)}{n^{log_b^a}}=\frac{n^3}{n^2}=n=\Omega(n^{\varepsilon})$
+
+---
+## Example : $T(n)=4T(n/2)+n^3$ (con't)
+
+- Seems like CASE 3, but need to check the regularity condition
+- Regularity condition $af(n/b) \leq cf(n)$ for some constant $c<1$
+- $4(n/2)^3 \leq cn^3$ for $c=1/2$
+- CASE-3:
+  - $T(n)=\Theta(f(n))$ $\Longrightarrow$ $T(n)=\Theta(n^3)$
+
+---
+## Example : $T(n)=4T(n/2)+n^2lgn$
+- $a=4$
+- $b=2$
+- $f(n)=n^2lgn$
+- $n^{log_b^a}=n^{log_2^4}=n^{log_2^{2^2}}=n^{2log_2^2}=n^2$
+- $f(n)=n^2lgn$ grows slower than $n^{log_b^a}=n^2$
+  - but is it polynomially slower?
+  - $\frac{n^{log_b^a}{f(n)}}=\frac{n^2}{\frac{n^2}{lgn}}=lgn \neq \Omega(n^{\varepsilon})$ for any $\varepsilon>0$
+    - is not CASE-1
+    - Master Method does not apply!
+
+---
+## The Master Method : Case 2 (General Version)
+
+- Recurrence : $T(n) = aT(n/b) + f(n)$
+- Case 2: $\frac{f(n)}{n^{log_b^a}}=\Theta(lg^kn)$ for some constant $k \geq 0$ 
+- Solution : $T(n)=\Theta(n^{log_b^a}lg^{k+1}n)$
+
+---
+## General Method (Akra-Bazzi)
+$T(n)=\sum_{i=1}^k{a_iT(n/b_i)}+f(n)$
+
+Let $p$ be the unique solution to
+
+$\sum_{i=1}^k{(a_i/b^p_i)}=1$
+
+Then, the answers are the same as for the master method, but with $n^p$ instead of $n^{log_b^a}$
+*(Akra and Bazzi also prove an even more general result.)*
+
+---
+## Idea of Master Theorem
+Recursion Tree:
+![alt:"alt" height:500px center](assets/ce100-week-2-recurrence-master_theorem_1.drawio.svg)
+
+---
+## Idea of Master Theorem
+CASE 1 : The weight increases geometrically from the root to the leaves. The leaves hold a constant fraction of the total weight.
+
+$n^{log_b^a}T(1)=\Theta(n^{log_b^a})$
+
+---
+## Idea of Master Theorem
+CASE 2 : $(k = 0)$ The weight is approximately the same on each of the $log_bn$ levels.
+
+$n^{log_b^a}T(1)=\Theta(n^{log_b^a}lgn)$
+
+---
+## Idea of Master Theorem
+CASE 3 : The weight decreases geometrically from the root to the leaves. The root holds a constant fraction of the total weight.
+
+
+$n^{log_b^a}T(1)=\Theta(f(n))$
+
+---
+## Proof of Master Theorem: Case 1 and Case 2
+- Recall from the recursion tree (note $h = lg_bn =\text{tree height}$)
+
+$\text{Leaf Cost}=\Theta(n^{log_b^a})$
+$\text{Non-leaf Cost}=g(n)=\sum_{i=0}^{h-1}a^if(n/{b^i})$
+
+$T(n)=\text{Leaf Cost} + \text{Non-leaf Cost}$
+
+$T(n)=\Theta(n^{log_b^a}) + \sum_{i=0}^{h-1}a^if(n/{b^i})$
+
+---
+## Proof Case 1
+
+- $\frac{n^{log_b^a}}{f(n)}=\Omega(n^{\varepsilon})$ for some $\varepsilon>0$
+
+- $\frac{n^{log_b^a}}{f(n)}=\Omega(n^{\varepsilon}) \Longrightarrow O(n^{-\varepsilon}) \Longrightarrow f(n) = O(n^{log_b^{a-\varepsilon}})$
+
+- $g(n)=\sum_{i=0}^{h-1}a^iO((n/{b^i})^{log_b^{a-\varepsilon}})=O(\sum_{i=0}^{h-1}a^i(n/{b^i})^{log_b^{a-\varepsilon}})$
+
+- $O(n^{log_b^{a-\varepsilon}}\sum_{i=0}^{h-1}a^ib^{i\varepsilon}/b^{ilog_b^{a-\varepsilon}})$
+
+---
+## Proof Case 1 (con't)
+
+- $\sum_{i=0}^{h-1} \frac{a^ib^{i\varepsilon}}{b^{ilog_b^a}} =\sum_{i=0}^{h-1} a^i\frac{(b^\varepsilon)^i}{(b^{log_b^a})^i} =\sum a^i\frac{b^{i\varepsilon}}{a^i}=\sum_{i=0}^{h-1}(b^{\varepsilon})^i$
+
+= An increasing geometric series since $b > 1$
+
+$\frac{b^{h\varepsilon}-1}{b^{\varepsilon}-1}=\frac{(b^h)^{\varepsilon}-1}{b^{\varepsilon}-1} = \frac{(b^{log_b^n})^{\varepsilon}-1}{b^{\varepsilon}-1}=\frac{n^{\varepsilon}-1}{b^{\varepsilon}-1} = O(n^{\varepsilon})$
+
+---
+## Proof Case 1 (con't)
+
+- $g(n)=O(n^{log_b{a-\varepsilon}}O(n^{\varepsilon}))=O(\frac{n^{log_b^a}}{n^{\varepsilon}}O(n^{\varepsilon}))=O(n^{log_b^a})$
+- $T(n)=\Theta(n^{log_b^a})+g(n)=\Theta(n^{log_b^a})+O(n^{log_b^a})=\Theta(n^{log_b^a})$
+
+**Q.E.D.**
+(Quod Erat Demonstrandum)
+
+---
+## Proof of Case 2 (limited to k=0)
+
+- $\frac{f(n)}{n^log_b^a}=\Theta(lg^0n)=\Theta(1) \Longrightarrow f(n)=\Theta(n^{log_b^a}) \Longrightarrow f(n/b^i)=\Theta((n/b^i)^{log_b^a})$
+- $g(n)=\sum_{i=0}^{h-1}a^i\Theta((n/b^i)^{log_b^a})$
+- $= \Theta(\sum_{i=0}^{h-1}a^i\frac{n^{log_b^a}}{b^{ilog_b^a}})$
+- $=\Theta(n^{log_b^a}\sum_{i=0}^{h-1}a^i\frac{1}{(b^{log_b^a})^i})$
+- $=\Theta(n^{log_b^a}\sum_{i=0}^{h-1}a^i\frac{1}{a^i})$
+- $=\Theta(n^{log_b^a}\sum_{i=0}^{log_b^{n-1}}1) = \Theta(n^{log_b^a}log_bn)=\Theta(n^{log_b^a}lgn)$
+- $T(n)=n^{log_b^a}+\Theta(n^{log_b^a}lgn)$
+- $=\Theta(n^{log_b^a}lgn)$
+
+**Q.E.D.**
 
 ---
 
