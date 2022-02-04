@@ -760,12 +760,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Week-3 (RAM / Matrix Multiplication)
+          Week-3 (Matrix Multiplication/Quick Sort)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Week-3 (RAM / Matrix Multiplication)
+        Week-3 (Matrix Multiplication/Quick Sort)
       </a>
       
         
@@ -789,11 +789,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#week-3-ram-matrix-multiplication" class="md-nav__link">
-    Week-3 (RAM / Matrix Multiplication)
+  <a href="#week-3-matrix-multiplication-quick-sort" class="md-nav__link">
+    Week-3 (Matrix Multiplication/ Quick Sort)
   </a>
   
-    <nav class="md-nav" aria-label="Week-3 (RAM / Matrix Multiplication)">
+    <nav class="md-nav" aria-label="Week-3 (Matrix Multiplication/ Quick Sort)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -823,6 +823,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#outline_1" class="md-nav__link">
+    Outline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outline_2" class="md-nav__link">
+    Outline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matrix-multiplication" class="md-nav__link">
+    Matrix Multiplication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-c_ijsum_1leq-k-leq-na_ikb_kj" class="md-nav__link">
+    - \(c_{ij}=\sum_{1\leq k \leq n}a_{ik}.b_{kj}\)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
@@ -844,8 +872,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week-4/ce100-week-4-quicksort/" class="md-nav__link">
-        Week-4 (Quick Sort)
+      <a href="../../week-4/ce100-week-4-heap/" class="md-nav__link">
+        Week-4 (Heap/Heap Sort)
       </a>
     </li>
   
@@ -1088,11 +1116,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#week-3-ram-matrix-multiplication" class="md-nav__link">
-    Week-3 (RAM / Matrix Multiplication)
+  <a href="#week-3-matrix-multiplication-quick-sort" class="md-nav__link">
+    Week-3 (Matrix Multiplication/ Quick Sort)
   </a>
   
-    <nav class="md-nav" aria-label="Week-3 (RAM / Matrix Multiplication)">
+    <nav class="md-nav" aria-label="Week-3 (Matrix Multiplication/ Quick Sort)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1122,6 +1150,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#outline_1" class="md-nav__link">
+    Outline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outline_2" class="md-nav__link">
+    Outline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matrix-multiplication" class="md-nav__link">
+    Matrix Multiplication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-c_ijsum_1leq-k-leq-na_ikb_kj" class="md-nav__link">
+    - \(c_{ij}=\sum_{1\leq k \leq n}a_{ik}.b_{kj}\)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
@@ -1141,7 +1197,7 @@
               
                 
 
-  <h1>Week-3 (RAM / Matrix Multiplication)</h1>
+  <h1>Week-3 (Matrix Multiplication/Quick Sort)</h1>
 
 <!-- _backgroundColor: aquq -->
 
@@ -1150,7 +1206,7 @@
 <!-- paginate: false -->
 
 <h2 id="ce100-algorithms-and-programming-ii">CE100 Algorithms and Programming II<a class="headerlink" href="#ce100-algorithms-and-programming-ii" title="Permanent link">&para;</a></h2>
-<h2 id="week-3-ram-matrix-multiplication">Week-3 (RAM / Matrix Multiplication)<a class="headerlink" href="#week-3-ram-matrix-multiplication" title="Permanent link">&para;</a></h2>
+<h2 id="week-3-matrix-multiplication-quick-sort">Week-3 (Matrix Multiplication/ Quick Sort)<a class="headerlink" href="#week-3-matrix-multiplication-quick-sort" title="Permanent link">&para;</a></h2>
 <h4 id="spring-semester-2021-2022">Spring Semester, 2021-2022<a class="headerlink" href="#spring-semester-2021-2022" title="Permanent link">&para;</a></h4>
 <p>Download <a href="../ce100-week-3-matrix.md_doc.pdf">DOC</a>, <a href="../ce100-week-3-matrix.md_slide.pdf">SLIDE</a>, <a href="../ce100-week-3-matrix.md_slide.pptx">PPTX</a></p>
 <iframe width=700, height=500 frameBorder=0 src="../ce100-week-3-matrix.md_slide.html"></iframe>
@@ -1161,9 +1217,6 @@
 <h2 id="solving-recurrences">Solving Recurrences<a class="headerlink" href="#solving-recurrences" title="Permanent link">&para;</a></h2>
 <h2 id="outline">Outline<a class="headerlink" href="#outline" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p>RAM (Random Access Machine Model) </p>
-</li>
 <li>
 <p>Matrix Multiplication </p>
 </li>
@@ -1178,6 +1231,71 @@
 </li>
 </ul>
 <hr />
+<h2 id="outline_1">Outline<a class="headerlink" href="#outline_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Quicksort </p>
+</li>
+<li>
+<p>Hoare Partitioning </p>
+</li>
+<li>
+<p>Lomuto Partitioning </p>
+</li>
+<li>
+<p>Recursive Sorting </p>
+</li>
+</ul>
+<hr />
+<h2 id="outline_2">Outline<a class="headerlink" href="#outline_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Quicksort Analysis </p>
+</li>
+<li>
+<p>Randomized Quicksort </p>
+</li>
+<li>
+<p>Randomized Selection </p>
+<ul>
+<li>
+<p>Recursive </p>
+</li>
+<li>
+<p>Medians </p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="matrix-multiplication">Matrix Multiplication<a class="headerlink" href="#matrix-multiplication" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Input:</strong> <span class="arithmatex">\(A=[a_{ij}],B=[b_{ij}]\)</span></li>
+<li><strong>Output:</strong> <span class="arithmatex">\(C=[c_{ij}]=A \cdot B\)</span> <span class="arithmatex">\(\Longrightarrow i,j=1,2,3, \dots, n\)</span></li>
+</ul>
+<div class="arithmatex">\[
+\begin{bmatrix}
+    c_{11} &amp; c_{12} &amp; \dots &amp; c_{1n}  \\
+    c_{21} &amp; c_{22} &amp; \dots &amp; c_{2n}  \\
+    \vdots &amp; \vdots &amp; \vdots &amp; \ddots \\
+    c_{n1} &amp; c_{n2} &amp; \dots &amp; c_{nn}  \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+    a_{11} &amp; a_{12} &amp; \dots &amp; a_{1n}  \\
+    a_{21} &amp; a_{22} &amp; \dots &amp; a_{2n}  \\
+    \vdots &amp; \vdots &amp; \vdots &amp; \ddots \\
+    a_{n1} &amp; a_{n2} &amp; \dots &amp; a_{nn}  \\
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+    b_{11} &amp; b_{12} &amp; \dots &amp; b_{1n}  \\
+    b_{21} &amp; b_{22} &amp; \dots &amp; b_{2n}  \\
+    \vdots &amp; \vdots &amp; \vdots &amp; \ddots \\
+    b_{n1} &amp; a_{n2} &amp; \dots &amp; b_{nn}  \\
+\end{bmatrix}
+\]</div>
+<h2 id="-c_ijsum_1leq-k-leq-na_ikb_kj">- <span class="arithmatex">\(c_{ij}=\sum_{1\leq k \leq n}a_{ik}.b_{kj}\)</span><a class="headerlink" href="#-c_ijsum_1leq-k-leq-na_ikb_kj" title="Permanent link">&para;</a></h2>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <p>TODO</p>
 
@@ -1186,7 +1304,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 28, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 4, 2022</span>
       
     
   </small>
@@ -1225,13 +1343,13 @@
       
       
         
-        <a href="../../week-4/ce100-week-4-quicksort/" class="md-footer__link md-footer__link--next" aria-label="Next: Week-4 (Quick Sort)" rel="next">
+        <a href="../../week-4/ce100-week-4-heap/" class="md-footer__link md-footer__link--next" aria-label="Next: Week-4 (Heap/Heap Sort)" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Week-4 (Quick Sort)
+              Week-4 (Heap/Heap Sort)
             </div>
           </div>
           <div class="md-footer__button md-icon">
