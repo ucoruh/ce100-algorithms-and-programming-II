@@ -75,6 +75,34 @@ We will first talk about,
 please read the syllabus carefully. 
 
 ---
+## Outline
+
+- Introduction to Analysis of Algorithms
+  - Algorithm Basics
+  - Flowgorithm
+  - Pseudocode
+
+---
+## Outline
+
+- RAM (Random Access Machine Model) 
+- Sorting Problem
+- Insertion Sort Analysis 
+- Algorithm Cost Calculation for Time Complexity 
+- Worst, Average, and Best Case Summary 
+- Merge Sort Analysis
+
+---
+## Outline
+
+- Asymptotic Notation 
+  - Big O Notation 
+  - Big Teta Notation 
+  - Big Omega Notation 
+  - Small o Notation 
+  - Small omega Notation 
+
+---
 
 ## We Need Mathematical Proofs
 
@@ -84,6 +112,11 @@ please read the syllabus carefully.
 - Proof by contradiction
 - Proof by construction
 - Proof by exhaustion
+
+---
+
+## We Need Mathematical Proofs
+
 - Probabilistic proof
 - Combinatorial proof
 - Nonconstructive proof
@@ -172,9 +205,58 @@ We can use [Flowgorithm - Flowchart Programming Language](http://www.flowgorithm
 
 ---
 
+## Correctness
+
+We often use a **loop invariant** to help us to understand why an algorithm gives the correct answer.
+
+**Example:** (Insertion Sort) at the start of each iteration of the "outer" for loop - the loop indexed by $j$ - the subarray $A[1 \dots j-1]$ consist of the elements originally in $A[1\dots j-1]$ but in sorted order.
+
+---
+## Correctness
+
+To use a loop invariant to prove correctness, we must show 3 things about it.
+
+- **Initialization:** It is true to the first iteration of the loop.
+- **Maintaince:** If it is true before an iteration of the loop, it remains true before the next iteration.
+- **Termination:** When the loop terminates, the invariant - usually along with the reason that the loop terminated - gives us a usefull property that helps show that the algorithm is correct.
+
+---
+## RAM (Random Access Machine Model)  $\Longrightarrow \Theta(1)$
+
+- Operations
+  - Single Step
+  - Sequential
+  - No Concurrent 
+  - Arithmetic
+    - add, subtract, multiply, divide, remainder, floor, ceiling, 
+    - shift left/shift right (good by multiply/dividing $2^k$)
+    
+---
+## RAM (Random Access Machine Model)  $\Longrightarrow \Theta(1)$  
+
+  - Data Movement
+    - load, store, copy
+  - Control
+    - conditional / unconditional branch
+    - subroutine calls
+    - returns
+
+---
+## RAM (Random Access Machine Model)  $\Longrightarrow \Theta(1)$ 
+
+- Each instruction take a constant amount of time
+- Integer will be represented by $clogn$ $c \geq 1$
+- $T(n)$ the running time of the algorithm:
+
+$$
+\sum_{\text{all statement}}(\text{cost of statement})*(\text{number of times statement is executed}) = T(n)
+$$
+
+---
+
 ## What is the processing time ?
 
-![alt:"processing time map" height:550px center](assets/ce100-week-1-intro-processing_time.drawio.svg)
+![alt:"processing time map" height:500px center](assets/ce100-week-1-intro-processing_time.drawio.svg)
 
 ---
 
@@ -1276,6 +1358,7 @@ $f(n)=\Theta(g(n)) \Leftrightarrow f(n)=O(g(n)) \text{ and } f(n)=\Omega(g(n))$
 
 ![alt:"Summary Asymptotic Analysis" height:500px center](assets/ce100-week-1-intro-bigo_worst_avg_best_case.drawio.svg)
 
+
 ---
 
 ### Small-o / $o$-Notation : Asymptotic upper bound that is not tight (1)
@@ -1341,6 +1424,19 @@ $$
 $$
 f(n)= \omega(g(n)) \leftrightarrow a > b 
 $$
+
+---
+### (Important) Analogy to compare of two real numbers
+
+$O \approx \leq$
+
+$\Theta \approx =$
+
+$\Omega \approx \geq$
+
+$\omega \approx >$
+
+$o \approx <$
 
 ---
 

@@ -15,7 +15,7 @@ footer: '![height:50px](http://erdogan.edu.tr/Images/Uploads/MyContents/L_379-20
 title: "CE100 Algorithms and Programming II"
 author: "Author: Asst. Prof. Dr. Uğur CORUH"
 date:
-subtitle: "Solving Recurrences"
+subtitle: "Solving Recurrences / The Divide-and-Conquer"
 geometry: "left=2.54cm,right=2.54cm,top=1.91cm,bottom=1.91cm"
 titlepage: true
 titlepage-color: "FFFFFF"
@@ -52,7 +52,7 @@ math: katex
 
 ## CE100 Algorithms and Programming II
 
-## Week-2 (Solving Recurrences)
+## Week-2 (Solving Recurrences / The Divide-and-Conquer)
 
 #### Spring Semester, 2021-2022
 
@@ -78,6 +78,8 @@ Download [DOC](ce100-week-2-recurrence.md_doc.pdf), [SLIDE](ce100-week-2-recurre
 
 ---
 
+## Outline
+
 - Divide-and-Conquer Analysis 
   
   - Merge Sort 
@@ -89,6 +91,8 @@ Download [DOC](ce100-week-2-recurrence.md_doc.pdf), [SLIDE](ce100-week-2-recurre
   - Complexity 
 
 ---
+
+## Outline
 
 - Recurrence Solution
 
@@ -487,6 +491,8 @@ Solve $T(n) = T(n/4) + T(n/2) + n^2$
 
 ## The Master Method: 3 Cases
 
+(TODO : Add Notes )
+
 - Recurrence: $T(n) = aT(n/b) + f(n)$
 - Compare $f(n)$ with $n^{log_b^a}$
 - Intuitively:
@@ -496,7 +502,7 @@ Solve $T(n) = T(n/4) + T(n/2) + n^2$
 
 ---
 
-## The Master Method: Case 1
+## The Master Method: Case 1 (Bigger)
 
 - Recurrence: $T(n) = aT(n/b) + f(n)$
 
@@ -508,7 +514,7 @@ Solve $T(n) = T(n/4) + T(n/2) + n^2$
 
 ---
 
-## The Master Method: Case 2 (Simple Version)
+## The Master Method: Case 2 (Simple Version) (Equal)
 
 - Recurrence: $T(n) = aT(n/b) + f(n)$
 
@@ -520,7 +526,7 @@ Solve $T(n) = T(n/4) + T(n/2) + n^2$
 
 ---
 
-## The Master Method: Case 3
+## The Master Method: Case 3 (Smaller)
 
 - *Case 3:* $\frac{f(n)}{n^{log_b^a}}=\Omega(n^{\varepsilon})$ for some constant $\varepsilon > 0$
 
@@ -722,9 +728,154 @@ $\frac{b^{h\varepsilon}-1}{b^{\varepsilon}-1}=\frac{(b^h)^{\varepsilon}-1}{b^{\v
 
 ## The Divide-and-Conquer Design Paradigm
 
-1. **Divide** the problem (instance) into subproblems.
-2. **Conquer** the subproblems by solving them recursively.
-3. **Combine** subproblem solutions. 
+1. **Divide** we divide the problem into a number of subproblems.
+2. **Conquer** we solve the subproblems recursively.
+3. **BaseCase** solve by Brute-Force
+4. **Combine** subproblem solutions to the original problem. 
+
+---
+
+## The Divide-and-Conquer Design Paradigm
+
+- $a=\text{subproblem}$
+- $1/b=\text{each size of the problem}$
+
+$$
+T(n)=\begin{cases} 
+\Theta(1) & \text{if} & n \leq c & (basecase) \\ 
+aT(n/b)+D(n)+C(n) & \text{otherwise} 
+\end{cases}
+$$
+
+Merge-Sort
+
+$$
+T(n)=\begin{cases} 
+  \Theta(1)  & & n = 1 \\ 
+  2T(n/2)+\Theta(n) & \text{if} & n>1
+  \end{cases}
+$$
+
+$T(n)=\Theta(nlgn)$
+
+---
+
+## Selection Sort
+
+```r
+SELECTION-SORT(A)
+    n = A.length;
+    for j=1 to n-1
+        smallest=j;
+        for i= j+1 to n
+            if A[i]<A[smallest]
+                smallest=i;
+        endfor
+        exchange A[j] with A[smallest]
+    endfor
+```
+
+---
+
+## Selection Sort
+
+$$
+T(n)=\begin{cases} 
+      \Theta(1)  & & n = 1 \\ 
+      T(n-1)+\Theta(n) & \text{if} & n>1
+      \end{cases}
+$$
+
+- Sequential Series
+
+$$
+cost = n(n+1)/2 = {1/2}n^2 +{1/2}n
+$$
+
+- Drop low-order terms
+- Ignore the constant coefficient in the leading term
+
+$$
+T(n)=\Theta(n^2)
+$$
+
+---
+
+## Merge Sort Algorithm (initial setup)
+
+Merge Sort is a recursive sorting algorithm, for initial case we need to call `Merge-Sort(A,1,n)` for sorting $A[1..n]$ 
+
+initial case
+
+```r
+A : Array
+p : 1 (offset)
+r : n (length)
+Merge-Sort(A,1,n)
+```
+
+---
+
+## Merge Sort Algorithm (internal iterations)
+
+internal iterations
+
+$p = start-point$
+$q = mid-point$
+$r = end-point$
+
+```r
+A : Array
+p : offset
+r : length
+Merge-Sort(A,p,r)
+    if p=r then                (CHECK FOR BASE-CASE)
+        return
+    else
+        q = floor((p+r)/2)    (DIVIDE)
+        Merge-Sort(A,p,q)     (CONQUER)
+        Merge-Sort(A,q+1,r)   (CONQUER)
+        Merge(A,p,q,r)        (COMBINE)
+    endif
+```
+
+---
+
+## Merge Sort Combine Algorithm (1)
+
+```r
+Merge(A,p,q,r)
+    n1 = q-p+1
+    n2 = r-q
+
+    //allocate left and right arrays 
+    //increment will be from left to right 
+    //left part will be bigger than right part
+
+    L[1...n1+1] //left array
+    R[1...n2+1] //right array
+
+    //copy left part of array
+    for i=1 to n1
+        L[i]=A[p+i-1]
+
+    //copy right part of array
+    for j=1 to n2
+        R[j]=A[q+j]
+
+    //put end items maximum values for termination
+    L[n1+1]=inf
+    R[n2+1]=inf
+
+    i=1,j=1
+    for k=p to r
+        if L[i]<=R[j]
+            A[k]=L[i]
+            i=i+1
+        else
+            A[k]=R[j]
+            j=j+1
+```
 
 ---
 
@@ -766,9 +917,72 @@ $T(n)=\Theta(nlgn)$
 
 Find an element in a sorted array:
 
-1. Divide: Check middle element.
-2. Conquer: Recursively search 1 subarray.
-3. Combine: Trivial.
+**1. Divide:** Check middle element.
+**2. Conquer:** Recursively search 1 subarray.
+**3. Combine:** Trivial.
+
+---
+
+## Binary Search :
+
+$$
+\text{PARENT} = \lfloor i/2 \rfloor
+$$
+
+$$
+\text{LEFT-CHILD} = 2i,  \text{ 2i>n}
+$$
+
+$$
+\text{RIGHT-CHILD} = 2i+1,  \text{ 2i>n}
+$$
+
+---
+
+## Binary Search : Iterative
+
+```r
+ITERATIVE-BINARY-SEARCH(A,V,low,high)
+    while low<=high
+        mid=floor((low+high)/2);
+        if v == A[mid]
+            return mid;
+        elseif v > A[mid]
+            low = mid + 1;
+        else
+            high = mid - 1;
+    endwhile
+    return NIL
+```
+
+---
+
+## Binary Search : Recursive
+
+```r
+RECURSIVE-BINARY-SEARCH(A,V,low,high)
+    if low>high
+        return NIL;
+    endif
+
+    mid = floor((low+high)/2);
+
+    if v == A[mid]
+        return mid;
+    elseif v > A[mid]
+        return RECURSIVE-BINARY-SEARCH(A,V,mid+1,high);
+    else
+        return RECURSIVE-BINARY-SEARCH(A,V,low,mid-1);
+    endif
+```
+
+---
+
+## Binary Search : Recursive
+
+$$
+T(n)=T(n/2)+\Theta(1) \Longrightarrow T(n)=\Theta(lgn) 
+$$
 
 ---
 
@@ -789,6 +1003,73 @@ $T(n)=1T(n/2)+\Theta(1)$
 ---
 
 ## Binary Search: Solving the Recurrence
+
+- $T(n) = T(n/2) + \Theta(1)$
+
+- $a = 1,b = 2,f(n) = \Theta(1) \Longrightarrow n^{log_b^a} = n^0=1$
+
+- **Case 2:** $\frac{f(n)}{n^{log_b^a}}=\Theta(lg^kn) \Longrightarrow T(n)=\Theta(n^{log_b^a}lg^{k+1}n)$ holds for $k=0$
+
+- **$T(n)=\Theta(lgn)$**
+
+---
+
+## Powering a Number
+
+**Problem**: Compute an, where n is a natural number
+
+```r
+NAIVE-POWER(a, n)
+    powerVal = 1;
+    for i = 1 to n
+        powerVal = powerVal * a;
+    endfor
+return powerVal;
+```
+
+- What is the complexity? $\Longrightarrow T(n)=\Theta(n)$
+
+---
+
+## Powering a Number: Divide & Conquer
+
+- Basic Idea:
+
+$$
+a^n=\begin{cases} 
+  a^{n/2}*a^{n/2} & \text{if n is even} \\ 
+  a^{(n-1)/2}*a^{(n-1)/2}*a & \text{if n is odd} 
+  \end{cases}
+$$
+
+---
+
+## Powering a Number: Divide & Conquer
+
+```r
+POWER(a, n)
+    if n = 0 then 
+        return 1;
+    else if n is even then
+        val = POWER(a, n/2);
+        return val * val;
+    else if n is odd then
+        val = POWER(a,(n-1)/2)
+        return val * val * a;
+    endif
+```
+
+---
+
+## Powering a Number: Solving the Recurrence
+
+- $T(n) = T(n/2) + \Theta(1)$
+
+- $a = 1,b = 2,f(n) = \Theta(1) \Longrightarrow n^{log_b^a} = n^0=1$
+
+- **Case 2:** $\frac{f(n)}{n^{log_b^a}}=\Theta(lg^kn) \Longrightarrow T(n)=\Theta(n^{log_b^a}lg^{k+1}n)$ holds for $k=0$
+
+- **$T(n)=\Theta(lgn)$**
 
 ---
 

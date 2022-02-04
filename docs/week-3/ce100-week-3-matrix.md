@@ -52,7 +52,7 @@ math: katex
 
 ## CE100 Algorithms and Programming II
 
-## Week-3 (RAM / Matrix Multiplication)
+## Week-3 (Matrix Multiplication/ Quick Sort)
 
 #### Spring Semester, 2021-2022
 
@@ -68,9 +68,8 @@ Download [DOC](ce100-week-3-matrix.md_doc.pdf), [SLIDE](ce100-week-3-matrix.md_s
 
 ## Outline
 
- - RAM (Random Access Machine Model) 
- 
- - Matrix Multiplication 
+
+- Matrix Multiplication 
  
   - Traditional 
   
@@ -78,6 +77,60 @@ Download [DOC](ce100-week-3-matrix.md_doc.pdf), [SLIDE](ce100-week-3-matrix.md_s
   
   - Strassen
 
+---
+## Outline
+
+- Quicksort 
+
+  - Hoare Partitioning 
+
+  - Lomuto Partitioning 
+
+  - Recursive Sorting 
+
+---
+## Outline
+
+- Quicksort Analysis 
+
+  - Randomized Quicksort 
+
+  - Randomized Selection 
+
+    - Recursive 
+
+    - Medians 
+
+---
+## Matrix Multiplication
+
+- **Input:** $A=[a_{ij}],B=[b_{ij}]$
+- **Output:** $C=[c_{ij}]=A \cdot B$ $\Longrightarrow i,j=1,2,3, \dots, n$
+
+$$
+\begin{bmatrix}
+    c_{11} & c_{12} & \dots & c_{1n}  \\
+    c_{21} & c_{22} & \dots & c_{2n}  \\
+    \vdots & \vdots & \vdots & \ddots \\
+    c_{n1} & c_{n2} & \dots & c_{nn}  \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+    a_{11} & a_{12} & \dots & a_{1n}  \\
+    a_{21} & a_{22} & \dots & a_{2n}  \\
+    \vdots & \vdots & \vdots & \ddots \\
+    a_{n1} & a_{n2} & \dots & a_{nn}  \\
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+    b_{11} & b_{12} & \dots & b_{1n}  \\
+    b_{21} & b_{22} & \dots & b_{2n}  \\
+    \vdots & \vdots & \vdots & \ddots \\
+    b_{n1} & a_{n2} & \dots & b_{nn}  \\
+\end{bmatrix}
+$$
+
+- $c_{ij}=\sum_{1\leq k \leq n}a_{ik}.b_{kj}$
 ---
 
 ## References

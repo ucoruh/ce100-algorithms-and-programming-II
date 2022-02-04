@@ -214,8 +214,8 @@ nav:
   - Course Modules:
     - Week-1 (Intro, Asymptotic Notations): week-1/ce100-week-1-intro.md
     - Week-2 (Solving Recurrences): week-2/ce100-week-2-recurrence.md
-    - Week-3 (RAM / Matrix Multiplication): week-3/ce100-week-3-matrix.md
-    - Week-4 (Quick Sort): week-4/ce100-week-4-quicksort.md
+    - Week-3 (Matrix Multiplication/Quick Sort): week-3/ce100-week-3-matrix.md
+    - Week-4 (Heap/Heap Sort): week-4/ce100-week-4-heap.md
     - Week-5 (Dynamic Programming): week-5/ce100-week-5-dp.md
     - Week-6 (Matrix Chain Order / LCS): week-6/ce100-week-6-lcs.md
     - Week-7 (Greedy Algorithms, Knapsack): week-7/ce100-week-7-knapsack.md

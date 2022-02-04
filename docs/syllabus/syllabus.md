@@ -376,17 +376,17 @@ If deemed necessary, changes in the lecture content or course schedule can be ma
 
 ## Course Schedule Overview
 
-| Weeks  | Dates | Subjects                                                                                                                                                                                                                                    | Other Tasks |
-|:------ |:----- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:----------- |
-| Week 1 | TBD   | Course Plan and Communication Grading System, Assignments and Exams. Algorithms Basics, Pseudocode Algorithm Cost Calculation for Time Complexity. Worst, Average and Best Case Summary Sorting Problem (Insertion and Merge Sort Analysis) | TBD         |
-| Week 2 | TBD   | Solving Recurrences (Recursion Tree, Master Method and Back-Substitution) Divide-and-Conquer Analysis (Merge Sort, Binary Search) Recurrence Solution                                                                                       | TBD         |
+| Weeks  | Dates | Subjects                                                                                                                                                                                                                                                                                                                                                              | Other Tasks |
+|:------ |:----- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:----------- |
+| Week 1 | TBD   | Course Plan and Communication Grading System, Assignments and Exams. Algorithms Basics, Pseudocode,iv.	RAM (Random Access Machine Model), Algorithm Cost Calculation for Time Complexity. Worst, Average and Best Case Summary Sorting Problem (Insertion and Merge Sort Analysis), 4.	Asymptotic Notation(Big O, Big Teta,Big Omega, Small o, Small omega Notations) | TBD         |
+| Week 2 | TBD   | Solving Recurrences (Recursion Tree, Master Method and Back-Substitution) Divide-and-Conquer Analysis (Merge Sort, Binary Search) Recurrence Solution                                                                                                                                                                                                                 | TBD         |
 
 ---
 
-| Week 3 | TBD | RAM (Random Access Machine Model)  Asymptotic Notation (Big O, Big Teta,  Big Omega,Small o,Small omega) Matrix Multiplication(Traditional,Recursive,Strassen)                                                                                                                                             | TBD |
-|:------ |:--- |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--- |
-| Week 4 | TBD | Quicksort and Analysis ( Hoare and Lomuto Partitioning, Recursive Sorting) Randomized Quicksort and Selection Recursive, Medians) Heaps (Max / Min Heap, Heap Data Structure, Iterative and Recursive Heapify, Extract-Max, Build Heap) Heap Sort, Priority Queues, Linked Lists, Radix Sort,Counting Sort | TBD |
-| Week 5 | TBD | Convex Hull (Divide & Conquer) Dynamic Programming (Fibonacci Numbers) Divide-and-Conquer (DAC) vs Dynamic Programming (DP)  Development of a DP Algorithms  Matrix-Chain Multiplication and Analysis                                                                                                      | TBD |
+| Week 3 | TBD | Matrix Multiplication(Traditional,Recursive,Strassen),Quicksort(Hoare and Lomuto Partitioning,Recursive Sorting),Quicksort Analysis,Randomized Quicksort, Randomized Selection(Recursive,Medians)     | TBD |
+|:------ |:--- |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--- |
+| Week 4 | TBD | Heaps (Max / Min Heap, Heap Data Structure, Iterative and Recursive Heapify, Extract-Max, Build Heap) Heap Sort, Priority Queues, Linked Lists, Radix Sort,Counting Sort                              | TBD |
+| Week 5 | TBD | Convex Hull (Divide & Conquer) Dynamic Programming (Fibonacci Numbers) Divide-and-Conquer (DAC) vs Dynamic Programming (DP)  Development of a DP Algorithms  Matrix-Chain Multiplication and Analysis | TBD |
 
 ---
 
