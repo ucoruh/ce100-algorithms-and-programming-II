@@ -1152,8 +1152,78 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#the-divide-and-conquer-design-paradigm" class="md-nav__link">
+    The Divide-and-Conquer Design Paradigm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-divide-and-conquer-design-paradigm_1" class="md-nav__link">
+    The Divide-and-Conquer Design Paradigm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-merge-sort" class="md-nav__link">
+    Example : Merge Sort
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#master-theorem-reminder" class="md-nav__link">
+    Master Theorem: Reminder
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merge-sort-solving-the-recurrence" class="md-nav__link">
+    Merge Sort: Solving the Recurrence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-search" class="md-nav__link">
+    Binary Search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-find-9" class="md-nav__link">
+    Example: Find 9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recurrence-for-binary-search" class="md-nav__link">
+    Recurrence for Binary Search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-search-solving-the-recurrence" class="md-nav__link">
+    Binary Search: Solving the Recurrence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#todo" class="md-nav__link">
+    TODO
   </a>
   
 </li>
@@ -1808,8 +1878,78 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#the-divide-and-conquer-design-paradigm" class="md-nav__link">
+    The Divide-and-Conquer Design Paradigm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-divide-and-conquer-design-paradigm_1" class="md-nav__link">
+    The Divide-and-Conquer Design Paradigm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-merge-sort" class="md-nav__link">
+    Example : Merge Sort
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#master-theorem-reminder" class="md-nav__link">
+    Master Theorem: Reminder
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merge-sort-solving-the-recurrence" class="md-nav__link">
+    Merge Sort: Solving the Recurrence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-search" class="md-nav__link">
+    Binary Search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-find-9" class="md-nav__link">
+    Example: Find 9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recurrence-for-binary-search" class="md-nav__link">
+    Recurrence for Binary Search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-search-solving-the-recurrence" class="md-nav__link">
+    Binary Search: Solving the Recurrence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#todo" class="md-nav__link">
+    TODO
   </a>
   
 </li>
@@ -2425,8 +2565,64 @@ for the base cases
 </ul>
 <p><strong>Q.E.D.</strong></p>
 <hr />
+<h2 id="the-divide-and-conquer-design-paradigm">The Divide-and-Conquer Design Paradigm<a class="headerlink" href="#the-divide-and-conquer-design-paradigm" title="Permanent link">&para;</a></h2>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-2-recurrence-divide_conquer.drawio.svg" /></p>
+<hr />
+<h2 id="the-divide-and-conquer-design-paradigm_1">The Divide-and-Conquer Design Paradigm<a class="headerlink" href="#the-divide-and-conquer-design-paradigm_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Divide</strong> the problem (instance) into subproblems.</li>
+<li><strong>Conquer</strong> the subproblems by solving them recursively.</li>
+<li><strong>Combine</strong> subproblem solutions. </li>
+</ol>
+<hr />
+<h2 id="example-merge-sort">Example : Merge Sort<a class="headerlink" href="#example-merge-sort" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Divide:</strong> Trivial.</li>
+<li><strong>Conquer:</strong> Recursively sort 2 subarrays.</li>
+<li>
+<p><strong>Combine:</strong> Linear- time merge.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(T(n)=2T(n/2)+\Theta(n)\)</span></p>
+</li>
+<li>Subproblems <span class="arithmatex">\(\Longrightarrow 2\)</span></li>
+<li>Subproblemsize <span class="arithmatex">\(\Longrightarrow n/2\)</span></li>
+<li>Work dividing and combining <span class="arithmatex">\(\Longrightarrow\Theta(n)\)</span></li>
+</ol>
+<hr />
+<h2 id="master-theorem-reminder">Master Theorem: Reminder<a class="headerlink" href="#master-theorem-reminder" title="Permanent link">&para;</a></h2>
+<ul>
+<li><span class="arithmatex">\(T(n) = aT(n/b) + f(n)\)</span></li>
+<li>Case 1: <span class="arithmatex">\(\frac{n^{log_b^a}}{f(n)}=\Omega(n^{\varepsilon}) \Longrightarrow T(n)=\Theta(n^{log_b^a})\)</span></li>
+<li>Case 2: <span class="arithmatex">\(\frac{f(n)}{n^{log_b^a}}=\Theta(lg^kn) \Longrightarrow T(n)=\Theta(n^{log_b^a}lg^{k+1}n)\)</span></li>
+<li>Case 3: <span class="arithmatex">\(\frac{n^{log_b^a}}{f(n)}=\Omega(n^{\varepsilon}) \Longrightarrow T(n)=\Theta(f(n))\)</span> and <span class="arithmatex">\(af(n/b) \leq cf(n)\)</span> for <span class="arithmatex">\(c&lt;1\)</span></li>
+</ul>
+<hr />
+<h2 id="merge-sort-solving-the-recurrence">Merge Sort: Solving the Recurrence<a class="headerlink" href="#merge-sort-solving-the-recurrence" title="Permanent link">&para;</a></h2>
+<p><span class="arithmatex">\(T(n)=2T(n/2)+\Theta(n)\)</span>
+<span class="arithmatex">\(a=2,b=2,f(n)=\Theta(n),n^{log_b^a}=n\)</span></p>
+<p>Case-2: <span class="arithmatex">\(\frac{f(n)}{n^{log_b^a}}=\Theta(lg^kn) \Longrightarrow T(n)=\Theta(n^{log_b^a}lg^{k+1}n)\)</span> holds for <span class="arithmatex">\(k=0\)</span></p>
+<p><span class="arithmatex">\(T(n)=\Theta(nlgn)\)</span></p>
+<hr />
+<h2 id="binary-search">Binary Search<a class="headerlink" href="#binary-search" title="Permanent link">&para;</a></h2>
+<p>Find an element in a sorted array:
+1. Divide: Check middle element.
+2. Conquer: Recursively search 1 subarray.
+3. Combine: Trivial.</p>
+<hr />
+<h2 id="example-find-9">Example: Find 9<a class="headerlink" href="#example-find-9" title="Permanent link">&para;</a></h2>
+<p><img alt="alt:&quot;alt&quot; height:450px center" src="../assets/ce100-week-2-recurrence-binary_search.drawio.svg" /></p>
+<hr />
+<h2 id="recurrence-for-binary-search">Recurrence for Binary Search<a class="headerlink" href="#recurrence-for-binary-search" title="Permanent link">&para;</a></h2>
+<p><span class="arithmatex">\(T(n)=1T(n/2)+\Theta(1)\)</span>
+  -  Subproblems <span class="arithmatex">\(\Longrightarrow 1\)</span>
+  -  Subproblemsize <span class="arithmatex">\(\Longrightarrow n/2\)</span>
+  -  Work dividing and combining <span class="arithmatex">\(\Longrightarrow\Theta(1)\)</span></p>
+<hr />
+<h2 id="binary-search-solving-the-recurrence">Binary Search: Solving the Recurrence<a class="headerlink" href="#binary-search-solving-the-recurrence" title="Permanent link">&para;</a></h2>
+<hr />
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
-<p>TODO</p>
+<h2 id="todo">TODO<a class="headerlink" href="#todo" title="Permanent link">&para;</a></h2>
 
   <hr>
 <div class="md-source-file">
