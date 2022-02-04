@@ -1184,44 +1184,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mergeapqr-n1-q-p1-n2-r-q-allocate-left-and-right-arrays-increment-will-be-from-left-to-right-left-part-will-be-bigger-than-right-part-l1n11-left-array-r1n21-right-array-copy-left-part-of-array-for-i1-to-n1-liapi-1-copy-right-part-of-array-for-j1-to-n2-rjaqj-put-end-items-maximum-values-for-termination-ln11inf-rn21inf-i1j1-for-kp-to-r-if-lirj-akli-ii1-else-akrj-jj1" class="md-nav__link">
-    Merge(A,p,q,r)
-    n1 = q-p+1
-    n2 = r-q
-
-    //allocate left and right arrays 
-    //increment will be from left to right 
-    //left part will be bigger than right part
-
-    L[1...n1+1] //left array
-    R[1...n2+1] //right array
-
-    //copy left part of array
-    for i=1 to n1
-        L[i]=A[p+i-1]
-
-    //copy right part of array
-    for j=1 to n2
-        R[j]=A[q+j]
-
-    //put end items maximum values for termination
-    L[n1+1]=inf
-    R[n2+1]=inf
-
-    i=1,j=1
-    for k=p to r
-        if L[i]&lt;=R[j]
-            A[k]=L[i]
-            i=i+1
-        else
-            A[k]=R[j]
-            j=j+1
-
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#what-is-the-complexity-of-merge-operation" class="md-nav__link">
     What is the complexity of merge operation?
   </a>
@@ -2668,44 +2630,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mergeapqr-n1-q-p1-n2-r-q-allocate-left-and-right-arrays-increment-will-be-from-left-to-right-left-part-will-be-bigger-than-right-part-l1n11-left-array-r1n21-right-array-copy-left-part-of-array-for-i1-to-n1-liapi-1-copy-right-part-of-array-for-j1-to-n2-rjaqj-put-end-items-maximum-values-for-termination-ln11inf-rn21inf-i1j1-for-kp-to-r-if-lirj-akli-ii1-else-akrj-jj1" class="md-nav__link">
-    Merge(A,p,q,r)
-    n1 = q-p+1
-    n2 = r-q
-
-    //allocate left and right arrays 
-    //increment will be from left to right 
-    //left part will be bigger than right part
-
-    L[1...n1+1] //left array
-    R[1...n2+1] //right array
-
-    //copy left part of array
-    for i=1 to n1
-        L[i]=A[p+i-1]
-
-    //copy right part of array
-    for j=1 to n2
-        R[j]=A[q+j]
-
-    //put end items maximum values for termination
-    L[n1+1]=inf
-    R[n2+1]=inf
-
-    i=1,j=1
-    for k=p to r
-        if L[i]&lt;=R[j]
-            A[k]=L[i]
-            i=i+1
-        else
-            A[k]=R[j]
-            j=j+1
-
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#what-is-the-complexity-of-merge-operation" class="md-nav__link">
     What is the complexity of merge operation?
   </a>
@@ -3862,7 +3786,7 @@ An algorithm must halt within finite time with the right output</p>
 <p><img alt="alt:&quot;Merge Sort Algorithm (Combine-2)&quot; height:350px center" src="../assets/ce100-week-1-intro-merge-sort-algo-2.drawio.svg" /></p>
 <hr />
 <h2 id="merge-sort-combine-algorithm-1">Merge Sort Combine Algorithm (1)<a class="headerlink" href="#merge-sort-combine-algorithm-1" title="Permanent link">&para;</a></h2>
-<h2 id="mergeapqr-n1-q-p1-n2-r-q-allocate-left-and-right-arrays-increment-will-be-from-left-to-right-left-part-will-be-bigger-than-right-part-l1n11-left-array-r1n21-right-array-copy-left-part-of-array-for-i1-to-n1-liapi-1-copy-right-part-of-array-for-j1-to-n2-rjaqj-put-end-items-maximum-values-for-termination-ln11inf-rn21inf-i1j1-for-kp-to-r-if-lirj-akli-ii1-else-akrj-jj1"><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nf">Merge</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">r</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nf">Merge</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">r</span><span class="p">)</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">n1</span> <span class="o">=</span> <span class="n">q</span><span class="o">-</span><span class="n">p</span><span class="m">+1</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">n2</span> <span class="o">=</span> <span class="n">r</span><span class="o">-</span><span class="n">q</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
@@ -3893,7 +3817,8 @@ An algorithm must halt within finite time with the right output</p>
 <a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>        <span class="n">else</span>
 <a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>            <span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">=</span><span class="n">R</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
 <a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>            <span class="n">j</span><span class="o">=</span><span class="n">j</span><span class="m">+1</span>
-</code></pre></div><a class="headerlink" href="#mergeapqr-n1-q-p1-n2-r-q-allocate-left-and-right-arrays-increment-will-be-from-left-to-right-left-part-will-be-bigger-than-right-part-l1n11-left-array-r1n21-right-array-copy-left-part-of-array-for-i1-to-n1-liapi-1-copy-right-part-of-array-for-j1-to-n2-rjaqj-put-end-items-maximum-values-for-termination-ln11inf-rn21inf-i1j1-for-kp-to-r-if-lirj-akli-ii1-else-akrj-jj1" title="Permanent link">&para;</a></h2>
+</code></pre></div>
+<hr />
 <h2 id="what-is-the-complexity-of-merge-operation">What is the complexity of merge operation?<a class="headerlink" href="#what-is-the-complexity-of-merge-operation" title="Permanent link">&para;</a></h2>
 <p>You can find by counting loops will provide you base constant nested level will provide you exponent of this constant, if you drop constants you will have complexity</p>
 <p>we have 3 for loops</p>

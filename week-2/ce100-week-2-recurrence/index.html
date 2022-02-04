@@ -2355,8 +2355,12 @@ for the base cases
 <li>
 <p>The master method applies to recurrences of the form</p>
 </li>
-<li><span class="arithmatex">\(T(n) = aT(n/b) + f (n)\)</span></li>
-<li>where <span class="arithmatex">\(a \geq 1, b &gt; 1\)</span>, and <span class="arithmatex">\(f\)</span> is <strong>asymptotically positive</strong>.</li>
+<li>
+<p><span class="arithmatex">\(T(n) = aT(n/b) + f (n)\)</span></p>
+</li>
+<li>
+<p>where <span class="arithmatex">\(a \geq 1, b &gt; 1\)</span>, and <span class="arithmatex">\(f\)</span> is <strong>asymptotically positive</strong>.</p>
+</li>
 </ul>
 <hr />
 <h2 id="the-master-method-3-cases">The Master Method: 3 Cases<a class="headerlink" href="#the-master-method-3-cases" title="Permanent link">&para;</a></h2>
@@ -2434,18 +2438,30 @@ for the base cases
 <hr />
 <h2 id="example-tn4tn2n2">Example : <span class="arithmatex">\(T(n)=4T(n/2)+n^2\)</span><a class="headerlink" href="#example-tn4tn2n2" title="Permanent link">&para;</a></h2>
 <ul>
-<li><span class="arithmatex">\(a=4\)</span></li>
-<li><span class="arithmatex">\(b=2\)</span></li>
-<li><span class="arithmatex">\(f(n)=n^2\)</span></li>
-<li><span class="arithmatex">\(n^{log_b^a}=n^{log_2^4}=n^{log_2^{2^2}}=n^{2log_2^2}=n^2\)</span></li>
-<li><span class="arithmatex">\(f(n)=n^2\)</span> grows at similar rate as <span class="arithmatex">\(n^{log_b^a}=n^2\)</span></li>
+<li>
+<p><span class="arithmatex">\(a=4\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(b=2\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(f(n)=n^2\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(n^{log_b^a}=n^{log_2^4}=n^{log_2^{2^2}}=n^{2log_2^2}=n^2\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(f(n)=n^2\)</span> grows at similar rate as <span class="arithmatex">\(n^{log_b^a}=n^2\)</span></p>
+</li>
 <li>
 <p><span class="arithmatex">\(f(n)=\Theta(n^{log_b^a})=n^2\)</span></p>
 </li>
 <li>
 <p>CASE-2:</p>
 </li>
-<li><span class="arithmatex">\(T(n)=\Theta(n^{log_b^a}lgn)=\Theta(n^{log_2^4}lgn)=\Theta(n^2lgn)\)</span></li>
+<li>
+<p><span class="arithmatex">\(T(n)=\Theta(n^{log_b^a}lgn)=\Theta(n^{log_2^4}lgn)=\Theta(n^2lgn)\)</span></p>
+</li>
 </ul>
 <hr />
 <h2 id="example-tn4tn2n3">Example : <span class="arithmatex">\(T(n)=4T(n/2)+n^3\)</span><a class="headerlink" href="#example-tn4tn2n3" title="Permanent link">&para;</a></h2>
@@ -2577,14 +2593,16 @@ for the base cases
 <hr />
 <h2 id="example-merge-sort">Example : Merge Sort<a class="headerlink" href="#example-merge-sort" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Divide:</strong> Trivial.</li>
-<li><strong>Conquer:</strong> Recursively sort 2 subarrays.</li>
+<li>
+<p><strong>Divide:</strong> Trivial.</p>
+</li>
+<li>
+<p><strong>Conquer:</strong> Recursively sort 2 subarrays.</p>
+</li>
 <li>
 <p><strong>Combine:</strong> Linear- time merge.</p>
 </li>
-<li>
-<p><span class="arithmatex">\(T(n)=2T(n/2)+\Theta(n)\)</span></p>
-</li>
+<li><span class="arithmatex">\(T(n)=2T(n/2)+\Theta(n)\)</span></li>
 <li>Subproblems <span class="arithmatex">\(\Longrightarrow 2\)</span></li>
 <li>Subproblemsize <span class="arithmatex">\(\Longrightarrow n/2\)</span></li>
 <li>Work dividing and combining <span class="arithmatex">\(\Longrightarrow\Theta(n)\)</span></li>
@@ -2605,19 +2623,23 @@ for the base cases
 <p><span class="arithmatex">\(T(n)=\Theta(nlgn)\)</span></p>
 <hr />
 <h2 id="binary-search">Binary Search<a class="headerlink" href="#binary-search" title="Permanent link">&para;</a></h2>
-<p>Find an element in a sorted array:
-1. Divide: Check middle element.
-2. Conquer: Recursively search 1 subarray.
-3. Combine: Trivial.</p>
+<p>Find an element in a sorted array:</p>
+<ol>
+<li>Divide: Check middle element.</li>
+<li>Conquer: Recursively search 1 subarray.</li>
+<li>Combine: Trivial.</li>
+</ol>
 <hr />
 <h2 id="example-find-9">Example: Find 9<a class="headerlink" href="#example-find-9" title="Permanent link">&para;</a></h2>
 <p><img alt="alt:&quot;alt&quot; height:450px center" src="../assets/ce100-week-2-recurrence-binary_search.drawio.svg" /></p>
 <hr />
 <h2 id="recurrence-for-binary-search">Recurrence for Binary Search<a class="headerlink" href="#recurrence-for-binary-search" title="Permanent link">&para;</a></h2>
-<p><span class="arithmatex">\(T(n)=1T(n/2)+\Theta(1)\)</span>
-  -  Subproblems <span class="arithmatex">\(\Longrightarrow 1\)</span>
-  -  Subproblemsize <span class="arithmatex">\(\Longrightarrow n/2\)</span>
-  -  Work dividing and combining <span class="arithmatex">\(\Longrightarrow\Theta(1)\)</span></p>
+<p><span class="arithmatex">\(T(n)=1T(n/2)+\Theta(1)\)</span></p>
+<ul>
+<li>Subproblems <span class="arithmatex">\(\Longrightarrow 1\)</span></li>
+<li>Subproblemsize <span class="arithmatex">\(\Longrightarrow n/2\)</span></li>
+<li>Work dividing and combining <span class="arithmatex">\(\Longrightarrow\Theta(1)\)</span></li>
+</ul>
 <hr />
 <h2 id="binary-search-solving-the-recurrence">Binary Search: Solving the Recurrence<a class="headerlink" href="#binary-search-solving-the-recurrence" title="Permanent link">&para;</a></h2>
 <hr />
