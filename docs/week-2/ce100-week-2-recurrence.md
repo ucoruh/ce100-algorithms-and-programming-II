@@ -672,7 +672,67 @@ $\frac{b^{h\varepsilon}-1}{b^{\varepsilon}-1}=\frac{(b^h)^{\varepsilon}-1}{b^{\v
 **Q.E.D.**
 
 ---
+## The Divide-and-Conquer Design Paradigm
+![alt:"alt" height:500px center](assets/ce100-week-2-recurrence-divide_conquer.drawio.svg)
 
+---
+## The Divide-and-Conquer Design Paradigm
+1. **Divide** the problem (instance) into subproblems.
+2. **Conquer** the subproblems by solving them recursively.
+3. **Combine** subproblem solutions. 
+---
+## Example : Merge Sort
+
+1. **Divide:** Trivial.
+2. **Conquer:** Recursively sort 2 subarrays.
+3. **Combine:** Linear- time merge.
+
+- $T(n)=2T(n/2)+\Theta(n)$
+  -  Subproblems $\Longrightarrow 2$
+  -  Subproblemsize $\Longrightarrow n/2$
+  -  Work dividing and combining $\Longrightarrow\Theta(n)$
+
+---
+## Master Theorem: Reminder
+- $T(n) = aT(n/b) + f(n)$
+  - Case 1: $\frac{n^{log_b^a}}{f(n)}=\Omega(n^{\varepsilon}) \Longrightarrow T(n)=\Theta(n^{log_b^a})$
+  - Case 2: $\frac{f(n)}{n^{log_b^a}}=\Theta(lg^kn) \Longrightarrow T(n)=\Theta(n^{log_b^a}lg^{k+1}n)$
+  - Case 3: $\frac{n^{log_b^a}}{f(n)}=\Omega(n^{\varepsilon}) \Longrightarrow T(n)=\Theta(f(n))$ and $af(n/b) \leq cf(n)$ for $c<1$
+
+---
+## Merge Sort: Solving the Recurrence
+$T(n)=2T(n/2)+\Theta(n)$
+$a=2,b=2,f(n)=\Theta(n),n^{log_b^a}=n$
+
+Case-2: $\frac{f(n)}{n^{log_b^a}}=\Theta(lg^kn) \Longrightarrow T(n)=\Theta(n^{log_b^a}lg^{k+1}n)$ holds for $k=0$
+
+$T(n)=\Theta(nlgn)$
+
+---
+## Binary Search
+Find an element in a sorted array:
+1. Divide: Check middle element.
+2. Conquer: Recursively search 1 subarray.
+3. Combine: Trivial.
+
+---
+## Example: Find 9 
+
+![alt:"alt" height:450px center](assets/ce100-week-2-recurrence-binary_search.drawio.svg)
+
+---
+## Recurrence for Binary Search
+
+$T(n)=1T(n/2)+\Theta(1)$
+  -  Subproblems $\Longrightarrow 1$
+  -  Subproblemsize $\Longrightarrow n/2$
+  -  Work dividing and combining $\Longrightarrow\Theta(1)$
+
+---
+## Binary Search: Solving the Recurrence
+
+---
 ## References
 
 TODO
+---
