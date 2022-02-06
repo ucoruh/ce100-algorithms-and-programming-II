@@ -291,32 +291,44 @@ $$
   - Each add/sub operation takes $\Theta(n^2)$ time
 - Compute $P1 \dots P7$ using $7$ recursive calls to  matrix-multiply
 
-$P_1 =  a_{11} * (b_{12} - b_{22} )    \\
-P_2 = (a_{11} + a_{12} ) * b_{22}    \\
-P_3 = (a_{21} + a_{22} ) * b_{11}    \\          
-P_4 = a_{22} * (b_{21} - b_{11} )    \\           
-P_5 = (a_{11} + a_{22} ) * (b_{11} + b_{22} ) \\
-P_6 = (a_{12} - a_{22} ) * (b_{21} + b_{22} ) \\
-P_7 = ( a_{11} - a_{21} ) * (b_{11} + b_{12} )$
+$$
+\begin{align*} 
+  P_1 & =  a_{11} * (b_{12} - b_{22} )    \\
+  P_2 & = (a_{11} + a_{12} ) * b_{22}    \\
+  P_3 & = (a_{21} + a_{22} ) * b_{11}    \\          
+  P_4 & = a_{22} * (b_{21} - b_{11} )    \\           
+  P_5 & = (a_{11} + a_{22} ) * (b_{11} + b_{22} ) \\
+  P_6 & = (a_{12} - a_{22} ) * (b_{21} + b_{22} ) \\
+  P_7 & = ( a_{11} - a_{21} ) * (b_{11} + b_{12} )
+\end{align*}
+$$
 
 ---
 
 ## Matrix Multiplication: Strassen’s Idea
 
-$P_1 =  a_{11} * (b_{12} - b_{22} )    \\
-P_2 = (a_{11} + a_{12} ) * b_{22}    \\
-P_3 = (a_{21} + a_{22} ) * b_{11}    \\          
-P_4 = a_{22} * (b_{21} - b_{11} )    \\           
-P_5 = (a_{11} + a_{22} ) * (b_{11} + b_{22} ) \\
-P_6 = (a_{12} - a_{22} ) * (b_{21} + b_{22} ) \\
-P_7 = ( a_{11} - a_{21} ) * (b_{11} + b_{12} )$
+$$
+\begin{align*} 
+P_1 &=  a_{11} * (b_{12} - b_{22} )    \\
+P_2 &= (a_{11} + a_{12} ) * b_{22}    \\
+P_3 &= (a_{21} + a_{22} ) * b_{11}    \\          
+P_4 &= a_{22} * (b_{21} - b_{11} )    \\           
+P_5 &= (a_{11} + a_{22} ) * (b_{11} + b_{22} ) \\
+P_6 &= (a_{12} - a_{22} ) * (b_{21} + b_{22} ) \\
+P_7 &= ( a_{11} - a_{21} ) * (b_{11} + b_{12} )
+\end{align*}
+$$
 
 - How to compute $c_{ij}$ using $P1 \dots P7$ ?
 
-$c_{11} = P_5 + P_4 – P_2 + P_6 \\
-c_{12} = P_1 + P_2 \\
-c_{21} = P_3 + P_4 \\
-c_{22} = P_5 + P_1 – P_3 – P_7$
+$$
+\begin{align*} 
+c_{11} & = P_5 + P_4 – P_2 + P_6 \\
+c_{12} & = P_1 + P_2 \\
+c_{21} & = P_3 + P_4 \\
+c_{22} & = P_5 + P_1 – P_3 – P_7
+\end{align*}
+$$
 
 ---
 
@@ -329,12 +341,17 @@ c_{22} = P_5 + P_1 – P_3 – P_7$
 
 ## Matrix Multiplication: Strassen’s Idea
 
-e.g. Show that $c_{12} = P_1+P_2$
+e.g. Show that $c_{12} = P_1+P_2$ :
 
-$c_{12} = P_1 + P_2 \\
-     = a_{11}(b_{12}–b_{22})+(a_{11}+a_{12})b_{22} \\
-     = a_{11}b_{12}-a_{11}b_{22}+a_{11}b_{22}+a_{12}b_{22} \\
-     = a_{11}b_{12}+a_{12}b_{22}$
+$$
+\begin{align*} 
+c_{12} & = P_1 + P_2 \\ 
+&= a_{11}(b_{12}–b_{22})+(a_{11}+a_{12})b_{22} \\
+&= a_{11}b_{12}-a_{11}b_{22}+a_{11}b_{22}+a_{12}b_{22} \\
+&= a_{11}b_{12}+a_{12}b_{22}
+\end{align*}
+$$
+
 
 ---
 
@@ -1505,19 +1522,620 @@ $$
 - We can choose a large enough so that $\frac{a}{4}n \geq \Theta(n)$ 
 
 $$
-T(n) \leq anlgn \\
-T(n) = O(nlgn)
+\begin{align*} 
+T(n) & \leq anlgn \\
+T(n) & = O(nlgn)
+\end{align*} 
 $$
 Q.E.D.
 
+---
+
+## Medians and Order Statistics
+
+- **ith order statistic**: $i^{th}$ smallest element of a set of $n$ elements
+
+- **minimum:** *first* order statistic
+- **maximum:** $n^{th}$ order statistic
+
+- **median:** “halfway point” of the set
+$$
+\begin{align*} 
+i & = \lfloor \frac{(n+1)}{2} \rfloor \\ 
+\text{ or } \\
+i & = \lceil \frac{(n+1)}{2}  \rceil
+ \end{align*} 
+$$
+
+---
+
+## Selection Problem
+
+- **Selection problem:** Select the $i^{th}$ smallest of $n$ elements
+
+- **Naïve algorithm:**  Sort the input array $A$; then return $A[i]$
+  - $T(n) = \theta(nlgn)$
+    - *using e.g. merge sort (but not quicksort)*
+- Can we do any better?
+
+---
+
+## Selection in Expected Linear Time
+
+- Randomized algorithm using divide and conquer
+
+- Similar to randomized quicksort
+  - **Like quicksort:** Partitions input array recursively
+  - **Unlike quicksort:** Makes a single recursive call
+    - **Reminder:** *Quicksort makes two recursive calls*
+
+- Expected runtime: $\Theta(n)$
+  - **Reminder:** *Expected runtime of quicksort: $\Theta(nlgn)$*
+
+---
+
+## Selection in Expected Linear Time: Example 1
+
+- Select the $2^{nd}$ smallest element:
+
+$$
+\begin{align*} 
+A & = \{6,10,13,5,8,3,2,11\} \\
+i & = 2 \\
+\end{align*} 
+$$
+
+- Partition the input array:
+
+$$
+\begin{align*} 
+A & = \{\underbrace{2,3,5,}_{\text{left subarray}
+}\underbrace{13,8,10,6,11}_{\text{right subarray}}\} 
+\end{align*} 
+$$
+- make a recursive call to select the **$2^{nd}$ smallest** element in **left subarray**
+
+---
+
+## Selection in Expected Linear Time: Example 2
+
+- Select the $7^{th}$ smallest element:
+
+$$
+\begin{align*} 
+A & = \{6,10,13,5,8,3,2,11\} \\
+i & = 7 \\
+\end{align*} 
+$$
+
+- Partition the input array:
+
+$$
+\begin{align*} 
+A & = \{\underbrace{2,3,5,}_{\text{left subarray}
+}\underbrace{13,8,10,6,11}_{\text{right subarray}}\} 
+\end{align*} 
+$$
+- make a recursive call to select the **$4^{th}$ smallest** element in **right subarray**
+
+---
+
+## Selection in Expected Linear Time
+
+```r
+R-SELECT(A,p,r,i)
+  if p == r then 
+    return A[p];
+  q = R-PARTITION(A, p, r)
+  k = q–p+1;
+  if i <= k then 
+    return R-SELECT(A, p, q, i);
+  else
+    return R-SELECT(A, q+1, r, i-k);
+```
+
+$$
+\begin{align*} 
+A & = \{ \underbrace{ | }_{p} \dots \leq x \text{(k smallest elements)} \dots \underbrace{ | }_{q} \dots \geq x \dots \underbrace{ | }_{r} \} \\
+x & = pivot
+\end{align*} 
+$$
+
+---
+
+## Selection in Expected Linear Time
+
+$$
+\begin{align*} 
+A & = \{ \overbrace{ | }^{p} \underbrace{ \dots \leq x  \dots }_{L} \overbrace{ | }^{q} \underbrace{ \dots \geq x  \dots }_{R}  \overbrace{ | }^{r} \} \\
+x & = pivot
+\end{align*} 
+$$
+
+ - All elements in $L \leq$  all elements in $R$ 
+ - $L$ contains:
+  - $|L| = q–p+1$  $=$ k smallest elements of $A[p...r]$
+  - if $i \leq |L| = k$  then
+    - **search** $L$ recursively for its $i^{th}$ smallest element 
+  - else 
+    - **search** $R$ recursively for its $(i-k)^{th}$ smallest element 
+
+---
+
+## Runtime Analysis
+
+- **Worst case:**
+  - Imbalanced partitioning at every level and the recursive call always to the larger partition
+
+$$
+\begin{align*} 
+& = \{1,\underbrace{2,3,4,5,6,7,8}_{\text{recursive call}} \} &
+i & =  8 \\
+& = \{2,\underbrace{3,4,5,6,7,8}_{\text{recursive call}} \} &
+i & = 7
+\end{align*} 
+$$
+
+---
+
+## Runtime Analysis
+
+- **Worst case:** Worse than the naïve method (based on sorting)
+
+$$
+\begin{align*} 
+T(n) &= T(n-1) + \Theta(n) \\
+T(n) &= \Theta(n^2)
+\end{align*} 
+$$
+
+- **Best case:** Balanced partitioning at every recursive level
+
+$$
+\begin{align*} 
+T(n) &= T(n/2) + \Theta(n) \\
+T(n) &= \Theta(n)
+\end{align*} 
+$$
+
+- **Avg case:** Expected runtime – need analysis T.B.D.
+
+---
+
+## Reminder: Various Outcomes of H-PARTITION
+
+- $x: pivot$
+- $|L|: \text{size of left region}$
+- $P(rank(x) = i) = 1/n  \text{ for } 1 \leq i \leq n$
+  - $\text{if } rank(x) = 1 \text{ then } |L| = 1$
+  - $\text{if } rank(x) > 1 \text{ then } |L| = rank(x) - 1$
+
+- $P(|L| = 1) = P(rank(x) = 1) + P(rank(x) = 2)$
+  - $P(|L| = 1) = 2/n$
+
+- $P(|L| = i) = P(rank(x) = i+1) \text{ for } 1< i < n$
+  - $P(|L| = i) = 1/n \text{ for } 1< i < n$
+
+---
+
+## Average Case Analysis of Randomized Select
+
+- To compute the **upper bound** for the **avg case**, assume that the $i^{th}$ element always falls into the **larger partition**.
+
+$$
+\begin{align*} 
+A & = \{ \overbrace{ | }^{p} \underbrace{ \dots \leq x  \dots }_{Left Partition} \overbrace{ | }^{q} \underbrace{ \dots \geq x  \dots }_{Right Partition}  \overbrace{ | }^{r} \} \\
+x & = pivot
+\end{align*} 
+$$
+
+- We will analyze the case where the recursive call is always made to the larger partition
+  - *This will give us an upper bound for the avg case*
+
+---
+
+## Various Outcomes of H-PARTITION
+
+![alt:"alt" h:450px center](assets/ce100-week-3-matrix-median_random.drawio.svg)
+
+---
+
+## Average-Case Analysis of Randomized Select
+
+$$
+\text{Recall:} P(|L|=i) = 
+\begin{cases}
+ 2/n & \text{for } i=1 \\
+ 1/n & \text{for }  i=2,3,\dots,n-1
+\end{cases}
+$$
+
+**Upper bound:** Assume $i^{th}$ element always falls into the larger part.
+
+$$
+\begin{align*}
+T(n) &\leq \frac{1}{n}T(max(1,n-1))+\frac{1}{n}\sum_{q=1}^{n-1}T(max(q,n-q))+O(n) \\
+Note: & \frac{1}{n}T(max(1,n-1)) = \frac{1}{n}T(n-1)=\frac{1}{n}O(n^2) = O(n) \\
+
+\therefore \text{(3 dot mean therefore) } & T(n) \leq \frac{1}{n}\sum_{q=1}^{n-1}T(max(q,n-q))+O(n)
+
+\end{align*}
+$$
+
+---
+
+## Average-Case Analysis of Randomized Select
+
+$$
+\begin{align*}
+
+\therefore T(n) \leq \frac{1}{n}\sum_{q=1}^{n-1}T(max(q,n-q))+O(n)
+
+\end{align*}
+$$
+
+$$
+max(q, n–q) =
+\begin{cases}
+q & \text{ if } q \geq \lceil n/2 \rceil \\
+n-q & \text{ if } q < \lceil n/2 \rceil \\
+\end{cases}
+$$
+
+- $n$ is odd: $T(k)$ appears twice for $k=\lceil n/2 \rceil+1,\lceil n/2 \rceil+2,\dots,n–1$
+- $n$ is even:$T(\lceil n/2 \rceil)$ appears once $T(k)$ appears twice for $k =  \lceil n/2 \rceil +1, \lceil n/2 \rceil+2,\dots,n–1$
+
+---
+
+## Average-Case Analysis of Randomized Select
+
+- Hence, in both cases: 
+$$
+\begin{align*}
+\sum_{q=1}^{n-1} T(max(q,n-q))+O(n) & \leq 2\sum_{q=\lceil n/2 \rceil}^{n-1} T(q)+O(n) \\
+\therefore T(n) & \leq \frac{2}{n} \sum_{q=\lceil n/2 \rceil}^{n-1}T(q)+O(n)
+\end{align*}
+$$
+
+---
+
+## Average-Case Analysis of Randomized Select
+
+$$
+\begin{align*}
+T(n) & \leq \frac{2}{n} \sum_{q=\lceil n/2 \rceil}^{n-1}T(q)+O(n)
+\end{align*}
+$$
+
+- By substitution guess $T(n) = O(n)$
+- Inductive hypothesis: $T(k) \leq ck, \forall k<n$
+
+$$
+\begin{align*}
+T(n) & \leq \frac{2}{n} \sum_{q=\lceil n/2 \rceil}^{n-1}ck+O(n) \\
+& = \frac{2c}{n} \Bigg(\sum_{k=1}^{n-1}k-\sum_{k=1}^{\lceil n/2 \rceil-1}k \Bigg)+ O(n) \\
+& = \frac{2c}{n} \Bigg(\frac{1}{2}n(n-1)-\frac{1}{2} \lceil \frac{n}{2} \rceil \bigg( \frac{n}{2}-1 \bigg) \Bigg)+ O(n)
+\end{align*}
+$$
+
+---
+
+## Average-Case Analysis of Randomized Select
+
+$$
+\begin{align*}
+T(n)& \leq \frac{2c}{n} \Bigg(\frac{1}{2}n(n-1)-\frac{1}{2} \lceil \frac{n}{2} \rceil \bigg( \frac{n}{2}-1 \bigg) \Bigg)+ O(n) \\
+ & \leq c(n-1)-\frac{c}{4}n+\frac{c}{2}+O(n) \\
+ & = cn - \frac{c}{4}n - \frac{c}{2} + O(n) \\
+ & = cn - \Bigg( \bigg( \frac{c}{4}n+\frac{c}{2}\bigg) + O(n) \Bigg) \\
+ & \leq cn
+\end{align*}
+$$
+
+- since we can choose c large enough so that $(cn/4+c/2 )$ dominates $O(n)$
+
+---
+
+## Summary of Randomized Order-Statistic Selection
+
+ - Works fast: linear expected time
+ - Excellent algorithm in practise
+ - But, the worst case is very bad: $\Theta(n^2)$
+
+- **Blum, Floyd, Pratt, Rivest & Tarjan[1973]** algorithms are runs in **linear time** in the **worst case**.
+
+- Generate a **good pivot** recursively
+
+---
+
+## Selection in Worst Case Linear Time
+
+```r
+//return i-th element in set S with n elements
+SELECT(S, n, i)  
+  
+  if n <= 5 then
+    
+    SORT S and return the i-th element
+    
+  DIVIDE S into ceil(n/5) groups
+  //first ceil(n/5) groups are of size 5, last group is of size n mod 5
+
+  FIND median set M={m , …, m_ceil(n/5)}
+  // m_j : median of j-th group
+
+  x = SELECT(M,ceil(n/5),floor((ceil(n/5)+1)/2))
+
+  PARTITION set S around the pivot x into L and R
+
+  if i <= |L| then
+    return  SELECT(L, |L|, i)
+  else
+    return  SELECT(R, n–|L|, i–|L|)
+```
+---
+
+## Selection in Worst Case Linear Time - Example
+
+- **Input:** Array $S$ and index $i$
+- **Output:** The $i^{th}$ smallest value
+
+$$
+\begin{array}{ccc}
+25 & 9 & 16  & 8  & 11 &  27 & 39 & 42 & 15 & 6  
+32 & 14 & 36 & 20 & 33 & 22 & 31 & 4 & 17 & 3 & 30 & 41 \\ 2 & 13 & 19 & 7 & 21 & 10 & 34 & 1 & 37 & 23 & 40 & 5 & 29 & 18 & 24 & 12 & 38 & 28 & 26 & 35 & 43
+\end{array}
+$$
+
+---
+
+## Selection in Worst Case Linear Time - Example
+
+**Step 1:** Divide the input array into groups of size $5$
+
+$$
+\overbrace{
+\begin{array}{ccc}
+25 & 9 & 16 & 8  & 11 \\ 
+27 & 39 & 42 & 15 & 6 \\ 
+32 & 14 & 36 & 20 & 33 \\
+22 & 31 & 4 & 17 & 3 \\ 
+30 & 41 & 2 & 13 & 19 \\
+7 & 21 & 10 & 34 & 1 \\ 
+37 & 23 & 40 & 5 & 29 \\
+18 & 24 & 12 & 38 & 28 \\ 
+26 & 35 & 43
+\end{array}
+}^{\text{group size}=5}
+$$
+
+---
+
+## Selection in Worst Case Linear Time - Example
+
+**Step 2:** Compute the median of each group ($\Theta(n)$)
+
+$$
+\begin{array}{ccc}
+25 & 16 & \overbrace{11}^{Medians} & 8  & 9 \\ 
+39 & 42 & 27 & 6 & 15 \\ 
+36 & 33 & 32 & 20 & 14 \\
+22 & 31 & 17 & 3 & 4 \\ 
+41 & 30 & 19 & 13 & 2 \\
+21 & 34 & 10 & 1 & 7 \\ 
+37 & 40 & 29 & 23 & 5 \\
+38 & 28 & 24 & 12 & 18 \\ 
+& 26 & 35 & 43
+\end{array}
+$$
+
+- Let $M$ be the set of the medians computed: 
+  - $M = \{11, 27, 32, 17, 19, 10, 29, 24, 35\}$
+
+---
+
+## Selection in Worst Case Linear Time - Example
+
+**Step 3:** Compute the median of the median group $M$
+
+$x \leftarrow SELECT(M,|M|,\lfloor (|M|+1)/2 \rfloor)$ where $|M|=\lceil n/5 \rceil$ 
+
+- Let $M$ be the set of the medians computed: 
+  - $M = \{11, 27, 32, 17, 19, 10, 29, \overbrace{24}^{Median}, 35\}$
+
+- $Median = 24$
+- The runtime of the recursive call: $T(|M|)=T(\lceil n/5 \rceil)$
+
+---
+
+## Selection in Worst Case Linear Time - Example
+
+**Step 4:** Partition the input array $S$ around the median-of-medians $x$
+
+$$
+\begin{array}{ccc}
+25 & 9 & 16  & 8  & 11 &  27 & 39 & 42 & 15 & 6  
+32 & 14 & 36 & 20 & 33 & 22 & 31 & 4 & 17 & 3 & 30 & 41 \\ 2 & 13 & 19 & 7 & 21 & 10 & 34 & 1 & 37 & 23 & 40 & 5 & 29 & 18 & 24 & 12 & 38 & 28 & 26 & 35 & 43
+\end{array}
+$$
+
+Partition $S$ around $x = 24$
+
+**Claim:** Partitioning around x is guaranteed to be **well-balanced.**
+
+---
+
+## Selection in Worst Case Linear Time - Example
+
+- $M$ : Median, $M^*$ : Median of Medians
+
+$$
+\begin{array}{ccc}
+41 & 30 & \overbrace{19}^{M} & 13 & 2 \\
+21 & 34 & 10 & 1 & 7 \\ 
+22 & 31 & 17 & 3 & 4 \\ 
+25 & 16 & 11 & 8  & 9 \\ 
+38 & 28 & \overbrace{24}^{M^*} & 12 & 18 \\ 
+36 & 33 & 32 & 20 & 14 \\
+37 & 40 & 29 & 23 & 5 \\
+39 & 42 & 27 & 6 & 15 \\ 
+& 26 & 35 & 43
+\end{array}
+$$
+
+- About half of the medians greater than $x=24$ (about $n/10$)
+
+---
+
+## Selection in Worst Case Linear Time - Example
+
+![alt:"alt" h:500px center](assets/ce100-week-3-matrix-median_ex1.drawio.svg)
+
+---
+
+## Selection in Worst Case Linear Time - Example
+
+![alt:"alt" h:500px center](assets/ce100-week-3-matrix-median_ex2.drawio.svg)
+
+---
+
+## Selection in Worst Case Linear Time - Example
+
+$$S =
+\begin{array}{ccc}
+\{  25 & 9 & 16  & 8  & 11 &  27 & 39 & 42 & 15 & 6  
+32 & 14 & 36 & 20 & 33 & 22 & 31 & 4 & 17 & 3 & 30 & 41 \\ 2 & 13 & 19 & 7 & 21 & 10 & 34 & 1 & 37 & 23 & 40 & 5 & 29 & 18 & 24 & 12 & 38 & 28 & 26 & 35 & 43  \}
+\end{array}
+$$
+
+- Partitioning $S$ around $x = 24$ will lead to partitions
+of sizes $\sim 3n/10$ and $\sim 7n/10$ in the **worst case**. 
+
+**Step 5:** Make a recursive call to one of the partitions
+
+```r
+if i <= |L| then 
+  return SELECT(L,|L|,i)
+else 
+  return SELECT(R,n-|L|,i-|L|)
+```
+---
+
+## Selection in Worst Case Linear Time
+
+```r
+//return i-th element in set S with n elements
+SELECT(S, n, i)  
+  
+  if n <= 5 then
+    
+    SORT S and return the i-th element
+    
+  DIVIDE S into ceil(n/5) groups
+  //first ceil(n/5) groups are of size 5, last group is of size n mod 5
+
+  FIND median set M={m , …, m_ceil(n/5)}
+  // m_j : median of j-th group
+
+  x = SELECT(M,ceil(n/5),floor((ceil(n/5)+1)/2))
+
+  PARTITION set S around the pivot x into L and R
+
+  if i <= |L| then
+    return  SELECT(L, |L|, i)
+  else
+    return  SELECT(R, n–|L|, i–|L|)
+```
+---
+
+## Choosing the Pivot
+
+1. Divide S into groups of size 5
+
+![alt:"alt" h:450px center](assets/ce100-week-3-matrix-choose_pivot_1.drawio.svg)
+
+---
+
+## Choosing the Pivot
+
+- Divide S into groups of size 5
+- Find the median of each group
+
+![alt:"alt" h:450px center](assets/ce100-week-3-matrix-choose_pivot_2.drawio.svg)
+
+---
+
+## Choosing the Pivot
+
+- Divide S into groups of size 5
+- Find the median of each group
+- Recursively select the median x of the medians
+
+![alt:"alt" h:450px center](assets/ce100-week-3-matrix-choose_pivot_3.drawio.svg)
+
+---
+
+## Choosing the Pivot
+
+- At least half of the medians $\geq x$ 
+- Thus $m = \lceil \lceil n/5 \rceil /2 \rceil$ groups contribute 3 elements to R except possibly the last group and the group that contains $x$, $|R|\geq 3(m–2)\geq \frac{3n}{10}–6$
+
+![alt:"alt" h:400px center](assets/ce100-week-3-matrix-choose_pivot_4.drawio.svg)
+
+---
+
+## Choosing the Pivot
+
+- Similarly $|L| \geq \frac{3n}{10}– 6$
+- Therefore, **SELECT** is recursively called on at most $n-(\frac{3n}{10}-6)=\frac{7n}{10}+6$ elements
+
+
+![alt:"alt" h:400px center](assets/ce100-week-3-matrix-choose_pivot_5.drawio.svg)
+
+---
+
+## Selection in Worst Case Linear Time
+
+
+![alt:"alt" h:500px center](assets/ce100-week-3-matrix-select_func.drawio.svg)
+
+---
+
+## Selection in Worst Case Linear Time
+
+- Thus recurrence becomes
+  - $T(n) \leq T \big( \lceil \frac{n}{5} \rceil \big) + T\big( \frac{7n}{10}+6 \big) + \Theta(n)$
+- Guess $T(n)=O(n)$ and prove by induction
+- Inductive step:
+$$
+\begin{align*}
+T(n) & \leq c \lceil n/5 \rceil + c(7n/10+6)+\Theta(n) \\
+& \leq cn/5 + c + 7cn/10 + 6c + \Theta(n) \\
+& = 9cn/10 + 7c + \Theta(n) \\
+& = cn - [c(n/10-7)-\Theta(n)] \leq cn &\text{( for large c)}
+\end{align*}
+$$
+
+- Work at each level of recursion is a constant factor $(9/10)$ smaller
 
 
 ---
 
 ## References
 
-[Introduction to Algorithms, Third Edition | The MIT Press](https://mitpress.mit.edu/books/introduction-algorithms-third-edition)
+- [Introduction to Algorithms, Third Edition | The MIT Press](https://mitpress.mit.edu/books/introduction-algorithms-third-edition)
 
-http://nabil.abubaker.bilkent.edu.tr/473/
+- [Bilkent CS473 Course Notes (new)](http://nabil.abubaker.bilkent.edu.tr/473/)
 
-TODO
+- [Bilkent CS473 Course Notes (old)](http://cs.bilkent.edu.tr/~ugur/teaching/cs473/)
+
+- [Insertion Sort - GeeksforGeeks](https://www.geeksforgeeks.org/insertion-sort/)
+
+- [NIST Dictionary of Algorithms and Data Structures](https://xlinux.nist.gov/dads/)
+
+- [NIST - Dictionary of Algorithms and Data Structures](https://xlinux.nist.gov/dads/)
+
+- [NIST - big-O notation](https://xlinux.nist.gov/dads/HTML/bigOnotation.html)
+
+- [NIST - big-Omega notation](https://xlinux.nist.gov/dads/HTML/omegaCapital.html)
+

@@ -1104,10 +1104,18 @@ POWER(a, n)
 
 ## References
 
-[Introduction to Algorithms, Third Edition | The MIT Press](https://mitpress.mit.edu/books/introduction-algorithms-third-edition)
+- [Introduction to Algorithms, Third Edition | The MIT Press](https://mitpress.mit.edu/books/introduction-algorithms-third-edition)
 
-http://nabil.abubaker.bilkent.edu.tr/473/
+- [Bilkent CS473 Course Notes (new)](http://nabil.abubaker.bilkent.edu.tr/473/)
 
-TODO
+- [Bilkent CS473 Course Notes (old)](http://cs.bilkent.edu.tr/~ugur/teaching/cs473/)
 
----
+- [Insertion Sort - GeeksforGeeks](https://www.geeksforgeeks.org/insertion-sort/)
+
+- [NIST Dictionary of Algorithms and Data Structures](https://xlinux.nist.gov/dads/)
+
+- [NIST - Dictionary of Algorithms and Data Structures](https://xlinux.nist.gov/dads/)
+
+- [NIST - big-O notation](https://xlinux.nist.gov/dads/HTML/bigOnotation.html)
+
+- [NIST - big-Omega notation](https://xlinux.nist.gov/dads/HTML/omegaCapital.html)

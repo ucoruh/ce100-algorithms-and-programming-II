@@ -1670,16 +1670,18 @@ stands for some anonymous function in the set
 
 ## References (TODO: Update Missing References)
 
-[Introduction to Algorithms, Third Edition | The MIT Press](https://mitpress.mit.edu/books/introduction-algorithms-third-edition)
+- [Introduction to Algorithms, Third Edition | The MIT Press](https://mitpress.mit.edu/books/introduction-algorithms-third-edition)
 
-http://nabil.abubaker.bilkent.edu.tr/473/
+- [Bilkent CS473 Course Notes (new)](http://nabil.abubaker.bilkent.edu.tr/473/)
 
-[Insertion Sort - GeeksforGeeks](https://www.geeksforgeeks.org/insertion-sort/)
+- [Bilkent CS473 Course Notes (old)](http://cs.bilkent.edu.tr/~ugur/teaching/cs473/)
 
-http://www.cs.gettysburg.edu/~ilinkin/courses/Fall-2012/cs216/notes/bintree.pdf
+- [Insertion Sort - GeeksforGeeks](https://www.geeksforgeeks.org/insertion-sort/)
 
-[Dictionary of Algorithms and Data Structures](https://xlinux.nist.gov/dads/)
+- [NIST Dictionary of Algorithms and Data Structures](https://xlinux.nist.gov/dads/)
 
-[big-O notation](https://xlinux.nist.gov/dads/HTML/bigOnotation.html)
+- [NIST - Dictionary of Algorithms and Data Structures](https://xlinux.nist.gov/dads/)
 
-[Omega](https://xlinux.nist.gov/dads/HTML/omegaCapital.html)
+- [NIST - big-O notation](https://xlinux.nist.gov/dads/HTML/bigOnotation.html)
+
+- [NIST - big-Omega notation](https://xlinux.nist.gov/dads/HTML/omegaCapital.html)
