@@ -303,7 +303,7 @@ Prove the general case: $T(n) \leq cn^2$
 
 $$
 T(n) = 4T(n/2) + n  \\
-≤ 4c(n/2)^2 + n \\
+\leq 4c(n/2)^2 + n \\
 = cn^2 + n \\
 = O(n2)  \Longleftarrow  \text{ Wrong! We must prove exactly}
 $$
@@ -1104,5 +1104,10 @@ POWER(a, n)
 
 ## References
 
+[Introduction to Algorithms, Third Edition | The MIT Press](https://mitpress.mit.edu/books/introduction-algorithms-third-edition)
+
+http://nabil.abubaker.bilkent.edu.tr/473/
+
 TODO
+
 ---

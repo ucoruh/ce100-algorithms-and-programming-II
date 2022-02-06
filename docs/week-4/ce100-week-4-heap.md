@@ -15,7 +15,7 @@ footer: '![height:50px](http://erdogan.edu.tr/Images/Uploads/MyContents/L_379-20
 title: "CE100 Algorithms and Programming II"
 author: "Author: Asst. Prof. Dr. Uğur CORUH"
 date:
-subtitle: "Quicksort"
+subtitle: "Heap/Heap Sort"
 geometry: "left=2.54cm,right=2.54cm,top=1.91cm,bottom=1.91cm"
 titlepage: true
 titlepage-color: "FFFFFF"
@@ -100,5 +100,9 @@ Download [DOC](ce100-week-4-heap.md_doc.pdf), [SLIDE](ce100-week-4-heap.md_slide
 ---
 
 ## References
+
+[Introduction to Algorithms, Third Edition | The MIT Press](https://mitpress.mit.edu/books/introduction-algorithms-third-edition)
+
+http://nabil.abubaker.bilkent.edu.tr/473/
 
 TODO
