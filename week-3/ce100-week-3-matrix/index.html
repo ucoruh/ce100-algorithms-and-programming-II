@@ -1635,6 +1635,325 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#medians-and-order-statistics" class="md-nav__link">
+    Medians and Order Statistics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-problem" class="md-nav__link">
+    Selection Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-expected-linear-time" class="md-nav__link">
+    Selection in Expected Linear Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-expected-linear-time-example-1" class="md-nav__link">
+    Selection in Expected Linear Time: Example 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-expected-linear-time-example-2" class="md-nav__link">
+    Selection in Expected Linear Time: Example 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-expected-linear-time_1" class="md-nav__link">
+    Selection in Expected Linear Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-expected-linear-time_2" class="md-nav__link">
+    Selection in Expected Linear Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime-analysis" class="md-nav__link">
+    Runtime Analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime-analysis_1" class="md-nav__link">
+    Runtime Analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-various-outcomes-of-h-partition" class="md-nav__link">
+    Reminder: Various Outcomes of H-PARTITION
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#average-case-analysis-of-randomized-select" class="md-nav__link">
+    Average Case Analysis of Randomized Select
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#various-outcomes-of-h-partition_2" class="md-nav__link">
+    Various Outcomes of H-PARTITION
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#average-case-analysis-of-randomized-select_1" class="md-nav__link">
+    Average-Case Analysis of Randomized Select
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#average-case-analysis-of-randomized-select_2" class="md-nav__link">
+    Average-Case Analysis of Randomized Select
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#average-case-analysis-of-randomized-select_3" class="md-nav__link">
+    Average-Case Analysis of Randomized Select
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#average-case-analysis-of-randomized-select_4" class="md-nav__link">
+    Average-Case Analysis of Randomized Select
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#average-case-analysis-of-randomized-select_5" class="md-nav__link">
+    Average-Case Analysis of Randomized Select
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-randomized-order-statistic-selection" class="md-nav__link">
+    Summary of Randomized Order-Statistic Selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time" class="md-nav__link">
+    Selection in Worst Case Linear Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#return-i-th-element-in-set-s-with-n-elements-selects-n-i-if-n-5-then-sort-s-and-return-the-i-th-element-divide-s-into-ceiln5-groups-first-ceiln5-groups-are-of-size-5-last-group-is-of-size-n-mod-5-find-median-set-mm-m_ceiln5-m_j-median-of-j-th-group-x-selectmceiln5floorceiln512-partition-set-s-around-the-pivot-x-into-l-and-r-if-i-l-then-return-selectl-l-i-else-return-selectr-nl-il" class="md-nav__link">
+    //return i-th element in set S with n elements
+SELECT(S, n, i)  
+
+  if n &lt;= 5 then
+
+    SORT S and return the i-th element
+
+  DIVIDE S into ceil(n/5) groups
+  //first ceil(n/5) groups are of size 5, last group is of size n mod 5
+
+  FIND median set M={m , …, m_ceil(n/5)}
+  // m_j : median of j-th group
+
+  x = SELECT(M,ceil(n/5),floor((ceil(n/5)+1)/2))
+
+  PARTITION set S around the pivot x into L and R
+
+  if i &lt;= |L| then
+    return  SELECT(L, |L|, i)
+  else
+    return  SELECT(R, n–|L|, i–|L|)
+
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time-example" class="md-nav__link">
+    Selection in Worst Case Linear Time - Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time-example_1" class="md-nav__link">
+    Selection in Worst Case Linear Time - Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time-example_2" class="md-nav__link">
+    Selection in Worst Case Linear Time - Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time-example_3" class="md-nav__link">
+    Selection in Worst Case Linear Time - Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time-example_4" class="md-nav__link">
+    Selection in Worst Case Linear Time - Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time-example_5" class="md-nav__link">
+    Selection in Worst Case Linear Time - Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time-example_6" class="md-nav__link">
+    Selection in Worst Case Linear Time - Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time-example_7" class="md-nav__link">
+    Selection in Worst Case Linear Time - Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time-example_8" class="md-nav__link">
+    Selection in Worst Case Linear Time - Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-i-l-then-return-selectlli-else-return-selectrn-li-l" class="md-nav__link">
+    if i &lt;= |L| then 
+  return SELECT(L,|L|,i)
+else 
+  return SELECT(R,n-|L|,i-|L|)
+
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time_1" class="md-nav__link">
+    Selection in Worst Case Linear Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#return-i-th-element-in-set-s-with-n-elements-selects-n-i-if-n-5-then-sort-s-and-return-the-i-th-element-divide-s-into-ceiln5-groups-first-ceiln5-groups-are-of-size-5-last-group-is-of-size-n-mod-5-find-median-set-mm-m_ceiln5-m_j-median-of-j-th-group-x-selectmceiln5floorceiln512-partition-set-s-around-the-pivot-x-into-l-and-r-if-i-l-then-return-selectl-l-i-else-return-selectr-nl-il_1" class="md-nav__link">
+    //return i-th element in set S with n elements
+SELECT(S, n, i)  
+
+  if n &lt;= 5 then
+
+    SORT S and return the i-th element
+
+  DIVIDE S into ceil(n/5) groups
+  //first ceil(n/5) groups are of size 5, last group is of size n mod 5
+
+  FIND median set M={m , …, m_ceil(n/5)}
+  // m_j : median of j-th group
+
+  x = SELECT(M,ceil(n/5),floor((ceil(n/5)+1)/2))
+
+  PARTITION set S around the pivot x into L and R
+
+  if i &lt;= |L| then
+    return  SELECT(L, |L|, i)
+  else
+    return  SELECT(R, n–|L|, i–|L|)
+
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-pivot" class="md-nav__link">
+    Choosing the Pivot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-pivot_1" class="md-nav__link">
+    Choosing the Pivot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-pivot_2" class="md-nav__link">
+    Choosing the Pivot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-pivot_3" class="md-nav__link">
+    Choosing the Pivot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-pivot_4" class="md-nav__link">
+    Choosing the Pivot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time_2" class="md-nav__link">
+    Selection in Worst Case Linear Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time_3" class="md-nav__link">
+    Selection in Worst Case Linear Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
@@ -2746,6 +3065,325 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#medians-and-order-statistics" class="md-nav__link">
+    Medians and Order Statistics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-problem" class="md-nav__link">
+    Selection Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-expected-linear-time" class="md-nav__link">
+    Selection in Expected Linear Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-expected-linear-time-example-1" class="md-nav__link">
+    Selection in Expected Linear Time: Example 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-expected-linear-time-example-2" class="md-nav__link">
+    Selection in Expected Linear Time: Example 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-expected-linear-time_1" class="md-nav__link">
+    Selection in Expected Linear Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-expected-linear-time_2" class="md-nav__link">
+    Selection in Expected Linear Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime-analysis" class="md-nav__link">
+    Runtime Analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime-analysis_1" class="md-nav__link">
+    Runtime Analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-various-outcomes-of-h-partition" class="md-nav__link">
+    Reminder: Various Outcomes of H-PARTITION
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#average-case-analysis-of-randomized-select" class="md-nav__link">
+    Average Case Analysis of Randomized Select
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#various-outcomes-of-h-partition_2" class="md-nav__link">
+    Various Outcomes of H-PARTITION
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#average-case-analysis-of-randomized-select_1" class="md-nav__link">
+    Average-Case Analysis of Randomized Select
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#average-case-analysis-of-randomized-select_2" class="md-nav__link">
+    Average-Case Analysis of Randomized Select
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#average-case-analysis-of-randomized-select_3" class="md-nav__link">
+    Average-Case Analysis of Randomized Select
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#average-case-analysis-of-randomized-select_4" class="md-nav__link">
+    Average-Case Analysis of Randomized Select
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#average-case-analysis-of-randomized-select_5" class="md-nav__link">
+    Average-Case Analysis of Randomized Select
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-randomized-order-statistic-selection" class="md-nav__link">
+    Summary of Randomized Order-Statistic Selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time" class="md-nav__link">
+    Selection in Worst Case Linear Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#return-i-th-element-in-set-s-with-n-elements-selects-n-i-if-n-5-then-sort-s-and-return-the-i-th-element-divide-s-into-ceiln5-groups-first-ceiln5-groups-are-of-size-5-last-group-is-of-size-n-mod-5-find-median-set-mm-m_ceiln5-m_j-median-of-j-th-group-x-selectmceiln5floorceiln512-partition-set-s-around-the-pivot-x-into-l-and-r-if-i-l-then-return-selectl-l-i-else-return-selectr-nl-il" class="md-nav__link">
+    //return i-th element in set S with n elements
+SELECT(S, n, i)  
+
+  if n &lt;= 5 then
+
+    SORT S and return the i-th element
+
+  DIVIDE S into ceil(n/5) groups
+  //first ceil(n/5) groups are of size 5, last group is of size n mod 5
+
+  FIND median set M={m , …, m_ceil(n/5)}
+  // m_j : median of j-th group
+
+  x = SELECT(M,ceil(n/5),floor((ceil(n/5)+1)/2))
+
+  PARTITION set S around the pivot x into L and R
+
+  if i &lt;= |L| then
+    return  SELECT(L, |L|, i)
+  else
+    return  SELECT(R, n–|L|, i–|L|)
+
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time-example" class="md-nav__link">
+    Selection in Worst Case Linear Time - Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time-example_1" class="md-nav__link">
+    Selection in Worst Case Linear Time - Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time-example_2" class="md-nav__link">
+    Selection in Worst Case Linear Time - Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time-example_3" class="md-nav__link">
+    Selection in Worst Case Linear Time - Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time-example_4" class="md-nav__link">
+    Selection in Worst Case Linear Time - Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time-example_5" class="md-nav__link">
+    Selection in Worst Case Linear Time - Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time-example_6" class="md-nav__link">
+    Selection in Worst Case Linear Time - Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time-example_7" class="md-nav__link">
+    Selection in Worst Case Linear Time - Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time-example_8" class="md-nav__link">
+    Selection in Worst Case Linear Time - Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-i-l-then-return-selectlli-else-return-selectrn-li-l" class="md-nav__link">
+    if i &lt;= |L| then 
+  return SELECT(L,|L|,i)
+else 
+  return SELECT(R,n-|L|,i-|L|)
+
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time_1" class="md-nav__link">
+    Selection in Worst Case Linear Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#return-i-th-element-in-set-s-with-n-elements-selects-n-i-if-n-5-then-sort-s-and-return-the-i-th-element-divide-s-into-ceiln5-groups-first-ceiln5-groups-are-of-size-5-last-group-is-of-size-n-mod-5-find-median-set-mm-m_ceiln5-m_j-median-of-j-th-group-x-selectmceiln5floorceiln512-partition-set-s-around-the-pivot-x-into-l-and-r-if-i-l-then-return-selectl-l-i-else-return-selectr-nl-il_1" class="md-nav__link">
+    //return i-th element in set S with n elements
+SELECT(S, n, i)  
+
+  if n &lt;= 5 then
+
+    SORT S and return the i-th element
+
+  DIVIDE S into ceil(n/5) groups
+  //first ceil(n/5) groups are of size 5, last group is of size n mod 5
+
+  FIND median set M={m , …, m_ceil(n/5)}
+  // m_j : median of j-th group
+
+  x = SELECT(M,ceil(n/5),floor((ceil(n/5)+1)/2))
+
+  PARTITION set S around the pivot x into L and R
+
+  if i &lt;= |L| then
+    return  SELECT(L, |L|, i)
+  else
+    return  SELECT(R, n–|L|, i–|L|)
+
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-pivot" class="md-nav__link">
+    Choosing the Pivot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-pivot_1" class="md-nav__link">
+    Choosing the Pivot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-pivot_2" class="md-nav__link">
+    Choosing the Pivot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-pivot_3" class="md-nav__link">
+    Choosing the Pivot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-pivot_4" class="md-nav__link">
+    Choosing the Pivot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time_2" class="md-nav__link">
+    Selection in Worst Case Linear Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-in-worst-case-linear-time_3" class="md-nav__link">
+    Selection in Worst Case Linear Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
@@ -2998,29 +3636,41 @@
 <li>Each add/sub operation takes <span class="arithmatex">\(\Theta(n^2)\)</span> time</li>
 <li>Compute <span class="arithmatex">\(P1 \dots P7\)</span> using <span class="arithmatex">\(7\)</span> recursive calls to  matrix-multiply</li>
 </ul>
-<p><span class="arithmatex">\(P_1 =  a_{11} * (b_{12} - b_{22} )    \\
-P_2 = (a_{11} + a_{12} ) * b_{22}    \\
-P_3 = (a_{21} + a_{22} ) * b_{11}    \\          
-P_4 = a_{22} * (b_{21} - b_{11} )    \\           
-P_5 = (a_{11} + a_{22} ) * (b_{11} + b_{22} ) \\
-P_6 = (a_{12} - a_{22} ) * (b_{21} + b_{22} ) \\
-P_7 = ( a_{11} - a_{21} ) * (b_{11} + b_{12} )\)</span></p>
+<div class="arithmatex">\[
+\begin{align*} 
+  P_1 &amp; =  a_{11} * (b_{12} - b_{22} )    \\
+  P_2 &amp; = (a_{11} + a_{12} ) * b_{22}    \\
+  P_3 &amp; = (a_{21} + a_{22} ) * b_{11}    \\          
+  P_4 &amp; = a_{22} * (b_{21} - b_{11} )    \\           
+  P_5 &amp; = (a_{11} + a_{22} ) * (b_{11} + b_{22} ) \\
+  P_6 &amp; = (a_{12} - a_{22} ) * (b_{21} + b_{22} ) \\
+  P_7 &amp; = ( a_{11} - a_{21} ) * (b_{11} + b_{12} )
+\end{align*}
+\]</div>
 <hr />
 <h2 id="matrix-multiplication-strassens-idea_2">Matrix Multiplication: Strassen’s Idea<a class="headerlink" href="#matrix-multiplication-strassens-idea_2" title="Permanent link">&para;</a></h2>
-<p><span class="arithmatex">\(P_1 =  a_{11} * (b_{12} - b_{22} )    \\
-P_2 = (a_{11} + a_{12} ) * b_{22}    \\
-P_3 = (a_{21} + a_{22} ) * b_{11}    \\          
-P_4 = a_{22} * (b_{21} - b_{11} )    \\           
-P_5 = (a_{11} + a_{22} ) * (b_{11} + b_{22} ) \\
-P_6 = (a_{12} - a_{22} ) * (b_{21} + b_{22} ) \\
-P_7 = ( a_{11} - a_{21} ) * (b_{11} + b_{12} )\)</span></p>
+<div class="arithmatex">\[
+\begin{align*} 
+P_1 &amp;=  a_{11} * (b_{12} - b_{22} )    \\
+P_2 &amp;= (a_{11} + a_{12} ) * b_{22}    \\
+P_3 &amp;= (a_{21} + a_{22} ) * b_{11}    \\          
+P_4 &amp;= a_{22} * (b_{21} - b_{11} )    \\           
+P_5 &amp;= (a_{11} + a_{22} ) * (b_{11} + b_{22} ) \\
+P_6 &amp;= (a_{12} - a_{22} ) * (b_{21} + b_{22} ) \\
+P_7 &amp;= ( a_{11} - a_{21} ) * (b_{11} + b_{12} )
+\end{align*}
+\]</div>
 <ul>
 <li>How to compute <span class="arithmatex">\(c_{ij}\)</span> using <span class="arithmatex">\(P1 \dots P7\)</span> ?</li>
 </ul>
-<p><span class="arithmatex">\(c_{11} = P_5 + P_4 – P_2 + P_6 \\
-c_{12} = P_1 + P_2 \\
-c_{21} = P_3 + P_4 \\
-c_{22} = P_5 + P_1 – P_3 – P_7\)</span></p>
+<div class="arithmatex">\[
+\begin{align*} 
+c_{11} &amp; = P_5 + P_4 – P_2 + P_6 \\
+c_{12} &amp; = P_1 + P_2 \\
+c_{21} &amp; = P_3 + P_4 \\
+c_{22} &amp; = P_5 + P_1 – P_3 – P_7
+\end{align*}
+\]</div>
 <hr />
 <h2 id="matrix-multiplication-strassens-idea_3">Matrix Multiplication: Strassen’s Idea<a class="headerlink" href="#matrix-multiplication-strassens-idea_3" title="Permanent link">&para;</a></h2>
 <ul>
@@ -3029,11 +3679,15 @@ c_{22} = P_5 + P_1 – P_3 – P_7\)</span></p>
 </ul>
 <hr />
 <h2 id="matrix-multiplication-strassens-idea_4">Matrix Multiplication: Strassen’s Idea<a class="headerlink" href="#matrix-multiplication-strassens-idea_4" title="Permanent link">&para;</a></h2>
-<p>e.g. Show that <span class="arithmatex">\(c_{12} = P_1+P_2\)</span></p>
-<p><span class="arithmatex">\(c_{12} = P_1 + P_2 \\
-     = a_{11}(b_{12}–b_{22})+(a_{11}+a_{12})b_{22} \\
-     = a_{11}b_{12}-a_{11}b_{22}+a_{11}b_{22}+a_{12}b_{22} \\
-     = a_{11}b_{12}+a_{12}b_{22}\)</span></p>
+<p>e.g. Show that <span class="arithmatex">\(c_{12} = P_1+P_2\)</span> :</p>
+<div class="arithmatex">\[
+\begin{align*} 
+c_{12} &amp; = P_1 + P_2 \\ 
+&amp;= a_{11}(b_{12}–b_{22})+(a_{11}+a_{12})b_{22} \\
+&amp;= a_{11}b_{12}-a_{11}b_{22}+a_{11}b_{22}+a_{12}b_{22} \\
+&amp;= a_{11}b_{12}+a_{12}b_{22}
+\end{align*}
+\]</div>
 <hr />
 <h2 id="strassens-algorithm">Strassen’s Algorithm<a class="headerlink" href="#strassens-algorithm" title="Permanent link">&para;</a></h2>
 <ul>
@@ -4074,15 +4728,573 @@ T(n) &amp; \leq \frac{2a}{n}\sum_{k=1}^{n-1}klgk+\Theta(n)\\
 <li>We can choose a large enough so that <span class="arithmatex">\(\frac{a}{4}n \geq \Theta(n)\)</span> </li>
 </ul>
 <p>$$
-T(n) \leq anlgn \
-T(n) = O(nlgn)
+\begin{align*} 
+T(n) &amp; \leq anlgn \
+T(n) &amp; = O(nlgn)
+\end{align*} 
 $$
 Q.E.D.</p>
 <hr />
+<h2 id="medians-and-order-statistics">Medians and Order Statistics<a class="headerlink" href="#medians-and-order-statistics" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>ith order statistic</strong>: <span class="arithmatex">\(i^{th}\)</span> smallest element of a set of <span class="arithmatex">\(n\)</span> elements</p>
+</li>
+<li>
+<p><strong>minimum:</strong> <em>first</em> order statistic</p>
+</li>
+<li>
+<p><strong>maximum:</strong> <span class="arithmatex">\(n^{th}\)</span> order statistic</p>
+</li>
+<li>
+<p><strong>median:</strong> “halfway point” of the set
+$$
+\begin{align*} 
+i &amp; = \lfloor \frac{(n+1)}{2} \rfloor \ 
+\text{ or } \
+i &amp; = \lceil \frac{(n+1)}{2}  \rceil
+ \end{align*} 
+$$</p>
+</li>
+</ul>
+<hr />
+<h2 id="selection-problem">Selection Problem<a class="headerlink" href="#selection-problem" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>Selection problem:</strong> Select the <span class="arithmatex">\(i^{th}\)</span> smallest of <span class="arithmatex">\(n\)</span> elements</p>
+</li>
+<li>
+<p><strong>Naïve algorithm:</strong>  Sort the input array <span class="arithmatex">\(A\)</span>; then return <span class="arithmatex">\(A[i]\)</span></p>
+</li>
+<li><span class="arithmatex">\(T(n) = \theta(nlgn)\)</span><ul>
+<li><em>using e.g. merge sort (but not quicksort)</em></li>
+</ul>
+</li>
+<li>Can we do any better?</li>
+</ul>
+<hr />
+<h2 id="selection-in-expected-linear-time">Selection in Expected Linear Time<a class="headerlink" href="#selection-in-expected-linear-time" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Randomized algorithm using divide and conquer</p>
+</li>
+<li>
+<p>Similar to randomized quicksort</p>
+</li>
+<li><strong>Like quicksort:</strong> Partitions input array recursively</li>
+<li>
+<p><strong>Unlike quicksort:</strong> Makes a single recursive call</p>
+<ul>
+<li><strong>Reminder:</strong> <em>Quicksort makes two recursive calls</em></li>
+</ul>
+</li>
+<li>
+<p>Expected runtime: <span class="arithmatex">\(\Theta(n)\)</span></p>
+</li>
+<li><strong>Reminder:</strong> <em>Expected runtime of quicksort: <span class="arithmatex">\(\Theta(nlgn)\)</span></em></li>
+</ul>
+<hr />
+<h2 id="selection-in-expected-linear-time-example-1">Selection in Expected Linear Time: Example 1<a class="headerlink" href="#selection-in-expected-linear-time-example-1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Select the <span class="arithmatex">\(2^{nd}\)</span> smallest element:</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align*} 
+A &amp; = \{6,10,13,5,8,3,2,11\} \\
+i &amp; = 2 \\
+\end{align*} 
+\]</div>
+<ul>
+<li>Partition the input array:</li>
+</ul>
+<p>$$
+\begin{align*} 
+A &amp; = {\underbrace{2,3,5,}<em _text_right="\text{right" subarray="subarray">{\text{left subarray}
+}\underbrace{13,8,10,6,11}</em>}} 
+\end{align*} 
+$$
+- make a recursive call to select the <strong><span class="arithmatex">\(2^{nd}\)</span> smallest</strong> element in <strong>left subarray</strong></p>
+<hr />
+<h2 id="selection-in-expected-linear-time-example-2">Selection in Expected Linear Time: Example 2<a class="headerlink" href="#selection-in-expected-linear-time-example-2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Select the <span class="arithmatex">\(7^{th}\)</span> smallest element:</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align*} 
+A &amp; = \{6,10,13,5,8,3,2,11\} \\
+i &amp; = 7 \\
+\end{align*} 
+\]</div>
+<ul>
+<li>Partition the input array:</li>
+</ul>
+<p>$$
+\begin{align*} 
+A &amp; = {\underbrace{2,3,5,}<em _text_right="\text{right" subarray="subarray">{\text{left subarray}
+}\underbrace{13,8,10,6,11}</em>}} 
+\end{align*} 
+$$
+- make a recursive call to select the <strong><span class="arithmatex">\(4^{th}\)</span> smallest</strong> element in <strong>right subarray</strong></p>
+<hr />
+<h2 id="selection-in-expected-linear-time_1">Selection in Expected Linear Time<a class="headerlink" href="#selection-in-expected-linear-time_1" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">R</span><span class="o">-</span><span class="nf">SELECT</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>  <span class="n">if</span> <span class="n">p</span> <span class="o">==</span> <span class="n">r</span> <span class="n">then</span> 
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="n">return</span> <span class="n">A</span><span class="p">[</span><span class="n">p</span><span class="p">];</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>  <span class="n">q</span> <span class="o">=</span> <span class="n">R</span><span class="o">-</span><span class="nf">PARTITION</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>  <span class="n">k</span> <span class="o">=</span> <span class="n">q</span>–<span class="n">p</span><span class="m">+1</span><span class="p">;</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>  <span class="n">if</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">k</span> <span class="n">then</span> 
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    <span class="n">return</span> <span class="n">R</span><span class="o">-</span><span class="nf">SELECT</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>  <span class="n">else</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>    <span class="n">return</span> <span class="n">R</span><span class="o">-</span><span class="nf">SELECT</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">q</span><span class="m">+1</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">i</span><span class="o">-</span><span class="n">k</span><span class="p">);</span>
+</code></pre></div>
+<div class="arithmatex">\[
+\begin{align*} 
+A &amp; = \{ \underbrace{ | }_{p} \dots \leq x \text{(k smallest elements)} \dots \underbrace{ | }_{q} \dots \geq x \dots \underbrace{ | }_{r} \} \\
+x &amp; = pivot
+\end{align*} 
+\]</div>
+<hr />
+<h2 id="selection-in-expected-linear-time_2">Selection in Expected Linear Time<a class="headerlink" href="#selection-in-expected-linear-time_2" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[
+\begin{align*} 
+A &amp; = \{ \overbrace{ | }^{p} \underbrace{ \dots \leq x  \dots }_{L} \overbrace{ | }^{q} \underbrace{ \dots \geq x  \dots }_{R}  \overbrace{ | }^{r} \} \\
+x &amp; = pivot
+\end{align*} 
+\]</div>
+<ul>
+<li>All elements in <span class="arithmatex">\(L \leq\)</span>  all elements in <span class="arithmatex">\(R\)</span> </li>
+<li><span class="arithmatex">\(L\)</span> contains:</li>
+<li><span class="arithmatex">\(|L| = q–p+1\)</span>  <span class="arithmatex">\(=\)</span> k smallest elements of <span class="arithmatex">\(A[p...r]\)</span></li>
+<li>if <span class="arithmatex">\(i \leq |L| = k\)</span>  then<ul>
+<li><strong>search</strong> <span class="arithmatex">\(L\)</span> recursively for its <span class="arithmatex">\(i^{th}\)</span> smallest element </li>
+</ul>
+</li>
+<li>else <ul>
+<li><strong>search</strong> <span class="arithmatex">\(R\)</span> recursively for its <span class="arithmatex">\((i-k)^{th}\)</span> smallest element </li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="runtime-analysis">Runtime Analysis<a class="headerlink" href="#runtime-analysis" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Worst case:</strong></li>
+<li>Imbalanced partitioning at every level and the recursive call always to the larger partition</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align*} 
+&amp; = \{1,\underbrace{2,3,4,5,6,7,8}_{\text{recursive call}} \} &amp;
+i &amp; =  8 \\
+&amp; = \{2,\underbrace{3,4,5,6,7,8}_{\text{recursive call}} \} &amp;
+i &amp; = 7
+\end{align*} 
+\]</div>
+<hr />
+<h2 id="runtime-analysis_1">Runtime Analysis<a class="headerlink" href="#runtime-analysis_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Worst case:</strong> Worse than the naïve method (based on sorting)</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align*} 
+T(n) &amp;= T(n-1) + \Theta(n) \\
+T(n) &amp;= \Theta(n^2)
+\end{align*} 
+\]</div>
+<ul>
+<li><strong>Best case:</strong> Balanced partitioning at every recursive level</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align*} 
+T(n) &amp;= T(n/2) + \Theta(n) \\
+T(n) &amp;= \Theta(n)
+\end{align*} 
+\]</div>
+<ul>
+<li><strong>Avg case:</strong> Expected runtime – need analysis T.B.D.</li>
+</ul>
+<hr />
+<h2 id="reminder-various-outcomes-of-h-partition">Reminder: Various Outcomes of H-PARTITION<a class="headerlink" href="#reminder-various-outcomes-of-h-partition" title="Permanent link">&para;</a></h2>
+<ul>
+<li><span class="arithmatex">\(x: pivot\)</span></li>
+<li><span class="arithmatex">\(|L|: \text{size of left region}\)</span></li>
+<li><span class="arithmatex">\(P(rank(x) = i) = 1/n  \text{ for } 1 \leq i \leq n\)</span></li>
+<li><span class="arithmatex">\(\text{if } rank(x) = 1 \text{ then } |L| = 1\)</span></li>
+<li>
+<p><span class="arithmatex">\(\text{if } rank(x) &gt; 1 \text{ then } |L| = rank(x) - 1\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(P(|L| = 1) = P(rank(x) = 1) + P(rank(x) = 2)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(P(|L| = 1) = 2/n\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(P(|L| = i) = P(rank(x) = i+1) \text{ for } 1&lt; i &lt; n\)</span></p>
+</li>
+<li><span class="arithmatex">\(P(|L| = i) = 1/n \text{ for } 1&lt; i &lt; n\)</span></li>
+</ul>
+<hr />
+<h2 id="average-case-analysis-of-randomized-select">Average Case Analysis of Randomized Select<a class="headerlink" href="#average-case-analysis-of-randomized-select" title="Permanent link">&para;</a></h2>
+<ul>
+<li>To compute the <strong>upper bound</strong> for the <strong>avg case</strong>, assume that the <span class="arithmatex">\(i^{th}\)</span> element always falls into the <strong>larger partition</strong>.</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align*} 
+A &amp; = \{ \overbrace{ | }^{p} \underbrace{ \dots \leq x  \dots }_{Left Partition} \overbrace{ | }^{q} \underbrace{ \dots \geq x  \dots }_{Right Partition}  \overbrace{ | }^{r} \} \\
+x &amp; = pivot
+\end{align*} 
+\]</div>
+<ul>
+<li>We will analyze the case where the recursive call is always made to the larger partition</li>
+<li><em>This will give us an upper bound for the avg case</em></li>
+</ul>
+<hr />
+<h2 id="various-outcomes-of-h-partition_2">Various Outcomes of H-PARTITION<a class="headerlink" href="#various-outcomes-of-h-partition_2" title="Permanent link">&para;</a></h2>
+<p><img alt="alt:&quot;alt&quot; h:450px center" src="../assets/ce100-week-3-matrix-median_random.drawio.svg" /></p>
+<hr />
+<h2 id="average-case-analysis-of-randomized-select_1">Average-Case Analysis of Randomized Select<a class="headerlink" href="#average-case-analysis-of-randomized-select_1" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[
+\text{Recall:} P(|L|=i) = 
+\begin{cases}
+ 2/n &amp; \text{for } i=1 \\
+ 1/n &amp; \text{for }  i=2,3,\dots,n-1
+\end{cases}
+\]</div>
+<p><strong>Upper bound:</strong> Assume <span class="arithmatex">\(i^{th}\)</span> element always falls into the larger part.</p>
+<p>$$
+\begin{align*}
+T(n) &amp;\leq \frac{1}{n}T(max(1,n-1))+\frac{1}{n}\sum_{q=1}^{n-1}T(max(q,n-q))+O(n) \
+Note: &amp; \frac{1}{n}T(max(1,n-1)) = \frac{1}{n}T(n-1)=\frac{1}{n}O(n^2) = O(n) \</p>
+<p>\therefore \text{(3 dot mean therefore) } &amp; T(n) \leq \frac{1}{n}\sum_{q=1}^{n-1}T(max(q,n-q))+O(n)</p>
+<p>\end{align*}
+$$</p>
+<hr />
+<h2 id="average-case-analysis-of-randomized-select_2">Average-Case Analysis of Randomized Select<a class="headerlink" href="#average-case-analysis-of-randomized-select_2" title="Permanent link">&para;</a></h2>
+<p>$$
+\begin{align*}</p>
+<p>\therefore T(n) \leq \frac{1}{n}\sum_{q=1}^{n-1}T(max(q,n-q))+O(n)</p>
+<p>\end{align*}
+$$</p>
+<div class="arithmatex">\[
+max(q, n–q) =
+\begin{cases}
+q &amp; \text{ if } q \geq \lceil n/2 \rceil \\
+n-q &amp; \text{ if } q &lt; \lceil n/2 \rceil \\
+\end{cases}
+\]</div>
+<ul>
+<li><span class="arithmatex">\(n\)</span> is odd: <span class="arithmatex">\(T(k)\)</span> appears twice for <span class="arithmatex">\(k=\lceil n/2 \rceil+1,\lceil n/2 \rceil+2,\dots,n–1\)</span></li>
+<li><span class="arithmatex">\(n\)</span> is even:<span class="arithmatex">\(T(\lceil n/2 \rceil)\)</span> appears once <span class="arithmatex">\(T(k)\)</span> appears twice for <span class="arithmatex">\(k =  \lceil n/2 \rceil +1, \lceil n/2 \rceil+2,\dots,n–1\)</span></li>
+</ul>
+<hr />
+<h2 id="average-case-analysis-of-randomized-select_3">Average-Case Analysis of Randomized Select<a class="headerlink" href="#average-case-analysis-of-randomized-select_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Hence, in both cases: 
+$$
+\begin{align*}
+\sum_{q=1}^{n-1} T(max(q,n-q))+O(n) &amp; \leq 2\sum_{q=\lceil n/2 \rceil}^{n-1} T(q)+O(n) \
+\therefore T(n) &amp; \leq \frac{2}{n} \sum_{q=\lceil n/2 \rceil}^{n-1}T(q)+O(n)
+\end{align*}
+$$</li>
+</ul>
+<hr />
+<h2 id="average-case-analysis-of-randomized-select_4">Average-Case Analysis of Randomized Select<a class="headerlink" href="#average-case-analysis-of-randomized-select_4" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[
+\begin{align*}
+T(n) &amp; \leq \frac{2}{n} \sum_{q=\lceil n/2 \rceil}^{n-1}T(q)+O(n)
+\end{align*}
+\]</div>
+<ul>
+<li>By substitution guess <span class="arithmatex">\(T(n) = O(n)\)</span></li>
+<li>Inductive hypothesis: <span class="arithmatex">\(T(k) \leq ck, \forall k&lt;n\)</span></li>
+</ul>
+<div class="arithmatex">\[
+\begin{align*}
+T(n) &amp; \leq \frac{2}{n} \sum_{q=\lceil n/2 \rceil}^{n-1}ck+O(n) \\
+&amp; = \frac{2c}{n} \Bigg(\sum_{k=1}^{n-1}k-\sum_{k=1}^{\lceil n/2 \rceil-1}k \Bigg)+ O(n) \\
+&amp; = \frac{2c}{n} \Bigg(\frac{1}{2}n(n-1)-\frac{1}{2} \lceil \frac{n}{2} \rceil \bigg( \frac{n}{2}-1 \bigg) \Bigg)+ O(n)
+\end{align*}
+\]</div>
+<hr />
+<h2 id="average-case-analysis-of-randomized-select_5">Average-Case Analysis of Randomized Select<a class="headerlink" href="#average-case-analysis-of-randomized-select_5" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[
+\begin{align*}
+T(n)&amp; \leq \frac{2c}{n} \Bigg(\frac{1}{2}n(n-1)-\frac{1}{2} \lceil \frac{n}{2} \rceil \bigg( \frac{n}{2}-1 \bigg) \Bigg)+ O(n) \\
+ &amp; \leq c(n-1)-\frac{c}{4}n+\frac{c}{2}+O(n) \\
+ &amp; = cn - \frac{c}{4}n - \frac{c}{2} + O(n) \\
+ &amp; = cn - \Bigg( \bigg( \frac{c}{4}n+\frac{c}{2}\bigg) + O(n) \Bigg) \\
+ &amp; \leq cn
+\end{align*}
+\]</div>
+<ul>
+<li>since we can choose c large enough so that <span class="arithmatex">\((cn/4+c/2 )\)</span> dominates <span class="arithmatex">\(O(n)\)</span></li>
+</ul>
+<hr />
+<h2 id="summary-of-randomized-order-statistic-selection">Summary of Randomized Order-Statistic Selection<a class="headerlink" href="#summary-of-randomized-order-statistic-selection" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Works fast: linear expected time</li>
+<li>Excellent algorithm in practise</li>
+<li>
+<p>But, the worst case is very bad: <span class="arithmatex">\(\Theta(n^2)\)</span></p>
+</li>
+<li>
+<p><strong>Blum, Floyd, Pratt, Rivest &amp; Tarjan[1973]</strong> algorithms are runs in <strong>linear time</strong> in the <strong>worst case</strong>.</p>
+</li>
+<li>
+<p>Generate a <strong>good pivot</strong> recursively</p>
+</li>
+</ul>
+<hr />
+<h2 id="selection-in-worst-case-linear-time">Selection in Worst Case Linear Time<a class="headerlink" href="#selection-in-worst-case-linear-time" title="Permanent link">&para;</a></h2>
+<h2 id="return-i-th-element-in-set-s-with-n-elements-selects-n-i-if-n-5-then-sort-s-and-return-the-i-th-element-divide-s-into-ceiln5-groups-first-ceiln5-groups-are-of-size-5-last-group-is-of-size-n-mod-5-find-median-set-mm-m_ceiln5-m_j-median-of-j-th-group-x-selectmceiln5floorceiln512-partition-set-s-around-the-pivot-x-into-l-and-r-if-i-l-then-return-selectl-l-i-else-return-selectr-nl-il"><div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="o">//</span><span class="n">return</span> <span class="n">i</span><span class="o">-</span><span class="n">th</span> <span class="n">element</span> <span class="n">in</span> <span class="n">set</span> <span class="n">S</span> <span class="n">with</span> <span class="n">n</span> <span class="n">elements</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nf">SELECT</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>  
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>  <span class="n">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="m">5</span> <span class="n">then</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>    <span class="n">SORT</span> <span class="n">S</span> <span class="n">and</span> <span class="n">return</span> <span class="n">the</span> <span class="n">i</span><span class="o">-</span><span class="n">th</span> <span class="n">element</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>  <span class="n">DIVIDE</span> <span class="n">S</span> <span class="n">into</span> <span class="nf">ceil</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="m">5</span><span class="p">)</span> <span class="n">groups</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>  <span class="o">//</span><span class="n">first</span> <span class="nf">ceil</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="m">5</span><span class="p">)</span> <span class="n">groups</span> <span class="n">are</span> <span class="n">of</span> <span class="n">size</span> <span class="m">5</span><span class="p">,</span> <span class="n">last</span> <span class="n">group</span> <span class="n">is</span> <span class="n">of</span> <span class="n">size</span> <span class="n">n</span> <span class="n">mod</span> <span class="m">5</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>  <span class="n">FIND</span> <span class="n">median</span> <span class="n">set</span> <span class="n">M</span><span class="o">=</span><span class="p">{</span><span class="n">m</span> <span class="p">,</span> …<span class="p">,</span> <span class="nf">m_ceil</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="m">5</span><span class="p">)}</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>  <span class="o">//</span> <span class="n">m_j</span> <span class="o">:</span> <span class="n">median</span> <span class="n">of</span> <span class="n">j</span><span class="o">-</span><span class="n">th</span> <span class="n">group</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>  <span class="n">x</span> <span class="o">=</span> <span class="nf">SELECT</span><span class="p">(</span><span class="n">M</span><span class="p">,</span><span class="nf">ceil</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="m">5</span><span class="p">),</span><span class="nf">floor</span><span class="p">((</span><span class="nf">ceil</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="m">5</span><span class="p">)</span><span class="m">+1</span><span class="p">)</span><span class="o">/</span><span class="m">2</span><span class="p">))</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>  <span class="n">PARTITION</span> <span class="n">set</span> <span class="n">S</span> <span class="n">around</span> <span class="n">the</span> <span class="n">pivot</span> <span class="n">x</span> <span class="n">into</span> <span class="n">L</span> <span class="n">and</span> <span class="n">R</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>  <span class="n">if</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="o">|</span><span class="n">L</span><span class="o">|</span> <span class="n">then</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>    <span class="n">return</span>  <span class="nf">SELECT</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="o">|</span><span class="n">L</span><span class="o">|</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>  <span class="n">else</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>    <span class="n">return</span>  <span class="nf">SELECT</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">n</span>–<span class="o">|</span><span class="n">L</span><span class="o">|</span><span class="p">,</span> <span class="n">i</span>–<span class="o">|</span><span class="n">L</span><span class="o">|</span><span class="p">)</span>
+</code></pre></div><a class="headerlink" href="#return-i-th-element-in-set-s-with-n-elements-selects-n-i-if-n-5-then-sort-s-and-return-the-i-th-element-divide-s-into-ceiln5-groups-first-ceiln5-groups-are-of-size-5-last-group-is-of-size-n-mod-5-find-median-set-mm-m_ceiln5-m_j-median-of-j-th-group-x-selectmceiln5floorceiln512-partition-set-s-around-the-pivot-x-into-l-and-r-if-i-l-then-return-selectl-l-i-else-return-selectr-nl-il" title="Permanent link">&para;</a></h2>
+<h2 id="selection-in-worst-case-linear-time-example">Selection in Worst Case Linear Time - Example<a class="headerlink" href="#selection-in-worst-case-linear-time-example" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Input:</strong> Array <span class="arithmatex">\(S\)</span> and index <span class="arithmatex">\(i\)</span></li>
+<li><strong>Output:</strong> The <span class="arithmatex">\(i^{th}\)</span> smallest value</li>
+</ul>
+<div class="arithmatex">\[
+\begin{array}{ccc}
+25 &amp; 9 &amp; 16  &amp; 8  &amp; 11 &amp;  27 &amp; 39 &amp; 42 &amp; 15 &amp; 6  
+32 &amp; 14 &amp; 36 &amp; 20 &amp; 33 &amp; 22 &amp; 31 &amp; 4 &amp; 17 &amp; 3 &amp; 30 &amp; 41 \\ 2 &amp; 13 &amp; 19 &amp; 7 &amp; 21 &amp; 10 &amp; 34 &amp; 1 &amp; 37 &amp; 23 &amp; 40 &amp; 5 &amp; 29 &amp; 18 &amp; 24 &amp; 12 &amp; 38 &amp; 28 &amp; 26 &amp; 35 &amp; 43
+\end{array}
+\]</div>
+<hr />
+<h2 id="selection-in-worst-case-linear-time-example_1">Selection in Worst Case Linear Time - Example<a class="headerlink" href="#selection-in-worst-case-linear-time-example_1" title="Permanent link">&para;</a></h2>
+<p><strong>Step 1:</strong> Divide the input array into groups of size <span class="arithmatex">\(5\)</span></p>
+<div class="arithmatex">\[
+\overbrace{
+\begin{array}{ccc}
+25 &amp; 9 &amp; 16 &amp; 8  &amp; 11 \\ 
+27 &amp; 39 &amp; 42 &amp; 15 &amp; 6 \\ 
+32 &amp; 14 &amp; 36 &amp; 20 &amp; 33 \\
+22 &amp; 31 &amp; 4 &amp; 17 &amp; 3 \\ 
+30 &amp; 41 &amp; 2 &amp; 13 &amp; 19 \\
+7 &amp; 21 &amp; 10 &amp; 34 &amp; 1 \\ 
+37 &amp; 23 &amp; 40 &amp; 5 &amp; 29 \\
+18 &amp; 24 &amp; 12 &amp; 38 &amp; 28 \\ 
+26 &amp; 35 &amp; 43
+\end{array}
+}^{\text{group size}=5}
+\]</div>
+<hr />
+<h2 id="selection-in-worst-case-linear-time-example_2">Selection in Worst Case Linear Time - Example<a class="headerlink" href="#selection-in-worst-case-linear-time-example_2" title="Permanent link">&para;</a></h2>
+<p><strong>Step 2:</strong> Compute the median of each group (<span class="arithmatex">\(\Theta(n)\)</span>)</p>
+<div class="arithmatex">\[
+\begin{array}{ccc}
+25 &amp; 16 &amp; \overbrace{11}^{Medians} &amp; 8  &amp; 9 \\ 
+39 &amp; 42 &amp; 27 &amp; 6 &amp; 15 \\ 
+36 &amp; 33 &amp; 32 &amp; 20 &amp; 14 \\
+22 &amp; 31 &amp; 17 &amp; 3 &amp; 4 \\ 
+41 &amp; 30 &amp; 19 &amp; 13 &amp; 2 \\
+21 &amp; 34 &amp; 10 &amp; 1 &amp; 7 \\ 
+37 &amp; 40 &amp; 29 &amp; 23 &amp; 5 \\
+38 &amp; 28 &amp; 24 &amp; 12 &amp; 18 \\ 
+&amp; 26 &amp; 35 &amp; 43
+\end{array}
+\]</div>
+<ul>
+<li>Let <span class="arithmatex">\(M\)</span> be the set of the medians computed: </li>
+<li><span class="arithmatex">\(M = \{11, 27, 32, 17, 19, 10, 29, 24, 35\}\)</span></li>
+</ul>
+<hr />
+<h2 id="selection-in-worst-case-linear-time-example_3">Selection in Worst Case Linear Time - Example<a class="headerlink" href="#selection-in-worst-case-linear-time-example_3" title="Permanent link">&para;</a></h2>
+<p><strong>Step 3:</strong> Compute the median of the median group <span class="arithmatex">\(M\)</span></p>
+<p><span class="arithmatex">\(x \leftarrow SELECT(M,|M|,\lfloor (|M|+1)/2 \rfloor)\)</span> where <span class="arithmatex">\(|M|=\lceil n/5 \rceil\)</span> </p>
+<ul>
+<li>Let <span class="arithmatex">\(M\)</span> be the set of the medians computed: </li>
+<li>
+<p><span class="arithmatex">\(M = \{11, 27, 32, 17, 19, 10, 29, \overbrace{24}^{Median}, 35\}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(Median = 24\)</span></p>
+</li>
+<li>The runtime of the recursive call: <span class="arithmatex">\(T(|M|)=T(\lceil n/5 \rceil)\)</span></li>
+</ul>
+<hr />
+<h2 id="selection-in-worst-case-linear-time-example_4">Selection in Worst Case Linear Time - Example<a class="headerlink" href="#selection-in-worst-case-linear-time-example_4" title="Permanent link">&para;</a></h2>
+<p><strong>Step 4:</strong> Partition the input array <span class="arithmatex">\(S\)</span> around the median-of-medians <span class="arithmatex">\(x\)</span></p>
+<div class="arithmatex">\[
+\begin{array}{ccc}
+25 &amp; 9 &amp; 16  &amp; 8  &amp; 11 &amp;  27 &amp; 39 &amp; 42 &amp; 15 &amp; 6  
+32 &amp; 14 &amp; 36 &amp; 20 &amp; 33 &amp; 22 &amp; 31 &amp; 4 &amp; 17 &amp; 3 &amp; 30 &amp; 41 \\ 2 &amp; 13 &amp; 19 &amp; 7 &amp; 21 &amp; 10 &amp; 34 &amp; 1 &amp; 37 &amp; 23 &amp; 40 &amp; 5 &amp; 29 &amp; 18 &amp; 24 &amp; 12 &amp; 38 &amp; 28 &amp; 26 &amp; 35 &amp; 43
+\end{array}
+\]</div>
+<p>Partition <span class="arithmatex">\(S\)</span> around <span class="arithmatex">\(x = 24\)</span></p>
+<p><strong>Claim:</strong> Partitioning around x is guaranteed to be <strong>well-balanced.</strong></p>
+<hr />
+<h2 id="selection-in-worst-case-linear-time-example_5">Selection in Worst Case Linear Time - Example<a class="headerlink" href="#selection-in-worst-case-linear-time-example_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li><span class="arithmatex">\(M\)</span> : Median, <span class="arithmatex">\(M^*\)</span> : Median of Medians</li>
+</ul>
+<div class="arithmatex">\[
+\begin{array}{ccc}
+41 &amp; 30 &amp; \overbrace{19}^{M} &amp; 13 &amp; 2 \\
+21 &amp; 34 &amp; 10 &amp; 1 &amp; 7 \\ 
+22 &amp; 31 &amp; 17 &amp; 3 &amp; 4 \\ 
+25 &amp; 16 &amp; 11 &amp; 8  &amp; 9 \\ 
+38 &amp; 28 &amp; \overbrace{24}^{M^*} &amp; 12 &amp; 18 \\ 
+36 &amp; 33 &amp; 32 &amp; 20 &amp; 14 \\
+37 &amp; 40 &amp; 29 &amp; 23 &amp; 5 \\
+39 &amp; 42 &amp; 27 &amp; 6 &amp; 15 \\ 
+&amp; 26 &amp; 35 &amp; 43
+\end{array}
+\]</div>
+<ul>
+<li>About half of the medians greater than <span class="arithmatex">\(x=24\)</span> (about <span class="arithmatex">\(n/10\)</span>)</li>
+</ul>
+<hr />
+<h2 id="selection-in-worst-case-linear-time-example_6">Selection in Worst Case Linear Time - Example<a class="headerlink" href="#selection-in-worst-case-linear-time-example_6" title="Permanent link">&para;</a></h2>
+<p><img alt="alt:&quot;alt&quot; h:500px center" src="../assets/ce100-week-3-matrix-median_ex1.drawio.svg" /></p>
+<hr />
+<h2 id="selection-in-worst-case-linear-time-example_7">Selection in Worst Case Linear Time - Example<a class="headerlink" href="#selection-in-worst-case-linear-time-example_7" title="Permanent link">&para;</a></h2>
+<p><img alt="alt:&quot;alt&quot; h:500px center" src="../assets/ce100-week-3-matrix-median_ex2.drawio.svg" /></p>
+<hr />
+<h2 id="selection-in-worst-case-linear-time-example_8">Selection in Worst Case Linear Time - Example<a class="headerlink" href="#selection-in-worst-case-linear-time-example_8" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[S =
+\begin{array}{ccc}
+\{  25 &amp; 9 &amp; 16  &amp; 8  &amp; 11 &amp;  27 &amp; 39 &amp; 42 &amp; 15 &amp; 6  
+32 &amp; 14 &amp; 36 &amp; 20 &amp; 33 &amp; 22 &amp; 31 &amp; 4 &amp; 17 &amp; 3 &amp; 30 &amp; 41 \\ 2 &amp; 13 &amp; 19 &amp; 7 &amp; 21 &amp; 10 &amp; 34 &amp; 1 &amp; 37 &amp; 23 &amp; 40 &amp; 5 &amp; 29 &amp; 18 &amp; 24 &amp; 12 &amp; 38 &amp; 28 &amp; 26 &amp; 35 &amp; 43  \}
+\end{array}
+\]</div>
+<ul>
+<li>Partitioning <span class="arithmatex">\(S\)</span> around <span class="arithmatex">\(x = 24\)</span> will lead to partitions
+of sizes <span class="arithmatex">\(\sim 3n/10\)</span> and <span class="arithmatex">\(\sim 7n/10\)</span> in the <strong>worst case</strong>. </li>
+</ul>
+<p><strong>Step 5:</strong> Make a recursive call to one of the partitions</p>
+<h2 id="if-i-l-then-return-selectlli-else-return-selectrn-li-l"><div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">if</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="o">|</span><span class="n">L</span><span class="o">|</span> <span class="n">then</span> 
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>  <span class="n">return</span> <span class="nf">SELECT</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="o">|</span><span class="n">L</span><span class="o">|</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">else</span> 
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>  <span class="n">return</span> <span class="nf">SELECT</span><span class="p">(</span><span class="n">R</span><span class="p">,</span><span class="n">n</span><span class="o">-|</span><span class="n">L</span><span class="o">|</span><span class="p">,</span><span class="n">i</span><span class="o">-|</span><span class="n">L</span><span class="o">|</span><span class="p">)</span>
+</code></pre></div><a class="headerlink" href="#if-i-l-then-return-selectlli-else-return-selectrn-li-l" title="Permanent link">&para;</a></h2>
+<h2 id="selection-in-worst-case-linear-time_1">Selection in Worst Case Linear Time<a class="headerlink" href="#selection-in-worst-case-linear-time_1" title="Permanent link">&para;</a></h2>
+<h2 id="return-i-th-element-in-set-s-with-n-elements-selects-n-i-if-n-5-then-sort-s-and-return-the-i-th-element-divide-s-into-ceiln5-groups-first-ceiln5-groups-are-of-size-5-last-group-is-of-size-n-mod-5-find-median-set-mm-m_ceiln5-m_j-median-of-j-th-group-x-selectmceiln5floorceiln512-partition-set-s-around-the-pivot-x-into-l-and-r-if-i-l-then-return-selectl-l-i-else-return-selectr-nl-il_1"><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="o">//</span><span class="n">return</span> <span class="n">i</span><span class="o">-</span><span class="n">th</span> <span class="n">element</span> <span class="n">in</span> <span class="n">set</span> <span class="n">S</span> <span class="n">with</span> <span class="n">n</span> <span class="n">elements</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nf">SELECT</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>  
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>  <span class="n">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="m">5</span> <span class="n">then</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>    <span class="n">SORT</span> <span class="n">S</span> <span class="n">and</span> <span class="n">return</span> <span class="n">the</span> <span class="n">i</span><span class="o">-</span><span class="n">th</span> <span class="n">element</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>  <span class="n">DIVIDE</span> <span class="n">S</span> <span class="n">into</span> <span class="nf">ceil</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="m">5</span><span class="p">)</span> <span class="n">groups</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>  <span class="o">//</span><span class="n">first</span> <span class="nf">ceil</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="m">5</span><span class="p">)</span> <span class="n">groups</span> <span class="n">are</span> <span class="n">of</span> <span class="n">size</span> <span class="m">5</span><span class="p">,</span> <span class="n">last</span> <span class="n">group</span> <span class="n">is</span> <span class="n">of</span> <span class="n">size</span> <span class="n">n</span> <span class="n">mod</span> <span class="m">5</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>  <span class="n">FIND</span> <span class="n">median</span> <span class="n">set</span> <span class="n">M</span><span class="o">=</span><span class="p">{</span><span class="n">m</span> <span class="p">,</span> …<span class="p">,</span> <span class="nf">m_ceil</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="m">5</span><span class="p">)}</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>  <span class="o">//</span> <span class="n">m_j</span> <span class="o">:</span> <span class="n">median</span> <span class="n">of</span> <span class="n">j</span><span class="o">-</span><span class="n">th</span> <span class="n">group</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>  <span class="n">x</span> <span class="o">=</span> <span class="nf">SELECT</span><span class="p">(</span><span class="n">M</span><span class="p">,</span><span class="nf">ceil</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="m">5</span><span class="p">),</span><span class="nf">floor</span><span class="p">((</span><span class="nf">ceil</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="m">5</span><span class="p">)</span><span class="m">+1</span><span class="p">)</span><span class="o">/</span><span class="m">2</span><span class="p">))</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>  <span class="n">PARTITION</span> <span class="n">set</span> <span class="n">S</span> <span class="n">around</span> <span class="n">the</span> <span class="n">pivot</span> <span class="n">x</span> <span class="n">into</span> <span class="n">L</span> <span class="n">and</span> <span class="n">R</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>  <span class="n">if</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="o">|</span><span class="n">L</span><span class="o">|</span> <span class="n">then</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>    <span class="n">return</span>  <span class="nf">SELECT</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="o">|</span><span class="n">L</span><span class="o">|</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>  <span class="n">else</span>
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>    <span class="n">return</span>  <span class="nf">SELECT</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">n</span>–<span class="o">|</span><span class="n">L</span><span class="o">|</span><span class="p">,</span> <span class="n">i</span>–<span class="o">|</span><span class="n">L</span><span class="o">|</span><span class="p">)</span>
+</code></pre></div><a class="headerlink" href="#return-i-th-element-in-set-s-with-n-elements-selects-n-i-if-n-5-then-sort-s-and-return-the-i-th-element-divide-s-into-ceiln5-groups-first-ceiln5-groups-are-of-size-5-last-group-is-of-size-n-mod-5-find-median-set-mm-m_ceiln5-m_j-median-of-j-th-group-x-selectmceiln5floorceiln512-partition-set-s-around-the-pivot-x-into-l-and-r-if-i-l-then-return-selectl-l-i-else-return-selectr-nl-il_1" title="Permanent link">&para;</a></h2>
+<h2 id="choosing-the-pivot">Choosing the Pivot<a class="headerlink" href="#choosing-the-pivot" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Divide S into groups of size 5</li>
+</ol>
+<p><img alt="alt:&quot;alt&quot; h:450px center" src="../assets/ce100-week-3-matrix-choose_pivot_1.drawio.svg" /></p>
+<hr />
+<h2 id="choosing-the-pivot_1">Choosing the Pivot<a class="headerlink" href="#choosing-the-pivot_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Divide S into groups of size 5</li>
+<li>Find the median of each group</li>
+</ul>
+<p><img alt="alt:&quot;alt&quot; h:450px center" src="../assets/ce100-week-3-matrix-choose_pivot_2.drawio.svg" /></p>
+<hr />
+<h2 id="choosing-the-pivot_2">Choosing the Pivot<a class="headerlink" href="#choosing-the-pivot_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Divide S into groups of size 5</li>
+<li>Find the median of each group</li>
+<li>Recursively select the median x of the medians</li>
+</ul>
+<p><img alt="alt:&quot;alt&quot; h:450px center" src="../assets/ce100-week-3-matrix-choose_pivot_3.drawio.svg" /></p>
+<hr />
+<h2 id="choosing-the-pivot_3">Choosing the Pivot<a class="headerlink" href="#choosing-the-pivot_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>At least half of the medians <span class="arithmatex">\(\geq x\)</span> </li>
+<li>Thus <span class="arithmatex">\(m = \lceil \lceil n/5 \rceil /2 \rceil\)</span> groups contribute 3 elements to R except possibly the last group and the group that contains <span class="arithmatex">\(x\)</span>, <span class="arithmatex">\(|R|\geq 3(m–2)\geq \frac{3n}{10}–6\)</span></li>
+</ul>
+<p><img alt="alt:&quot;alt&quot; h:400px center" src="../assets/ce100-week-3-matrix-choose_pivot_4.drawio.svg" /></p>
+<hr />
+<h2 id="choosing-the-pivot_4">Choosing the Pivot<a class="headerlink" href="#choosing-the-pivot_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Similarly <span class="arithmatex">\(|L| \geq \frac{3n}{10}– 6\)</span></li>
+<li>Therefore, <strong>SELECT</strong> is recursively called on at most <span class="arithmatex">\(n-(\frac{3n}{10}-6)=\frac{7n}{10}+6\)</span> elements</li>
+</ul>
+<p><img alt="alt:&quot;alt&quot; h:400px center" src="../assets/ce100-week-3-matrix-choose_pivot_5.drawio.svg" /></p>
+<hr />
+<h2 id="selection-in-worst-case-linear-time_2">Selection in Worst Case Linear Time<a class="headerlink" href="#selection-in-worst-case-linear-time_2" title="Permanent link">&para;</a></h2>
+<p><img alt="alt:&quot;alt&quot; h:500px center" src="../assets/ce100-week-3-matrix-select_func.drawio.svg" /></p>
+<hr />
+<h2 id="selection-in-worst-case-linear-time_3">Selection in Worst Case Linear Time<a class="headerlink" href="#selection-in-worst-case-linear-time_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Thus recurrence becomes</li>
+<li><span class="arithmatex">\(T(n) \leq T \big( \lceil \frac{n}{5} \rceil \big) + T\big( \frac{7n}{10}+6 \big) + \Theta(n)\)</span></li>
+<li>Guess <span class="arithmatex">\(T(n)=O(n)\)</span> and prove by induction</li>
+<li>
+<p>Inductive step:
+$$
+\begin{align*}
+T(n) &amp; \leq c \lceil n/5 \rceil + c(7n/10+6)+\Theta(n) \
+&amp; \leq cn/5 + c + 7cn/10 + 6c + \Theta(n) \
+&amp; = 9cn/10 + 7c + \Theta(n) \
+&amp; = cn - [c(n/10-7)-\Theta(n)] \leq cn &amp;\text{( for large c)}
+\end{align*}
+$$</p>
+</li>
+<li>
+<p>Work at each level of recursion is a constant factor <span class="arithmatex">\((9/10)\)</span> smaller</p>
+</li>
+</ul>
+<hr />
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
 <p><a href="https://mitpress.mit.edu/books/introduction-algorithms-third-edition">Introduction to Algorithms, Third Edition | The MIT Press</a></p>
-<p><a href="http://nabil.abubaker.bilkent.edu.tr/473/">http://nabil.abubaker.bilkent.edu.tr/473/</a></p>
-<p>TODO</p>
+</li>
+<li>
+<p><a href="http://nabil.abubaker.bilkent.edu.tr/473/">Bilkent CS473 Course Notes (new)</a></p>
+</li>
+<li>
+<p><a href="http://cs.bilkent.edu.tr/~ugur/teaching/cs473/">Bilkent CS473 Course Notes (old)</a></p>
+</li>
+<li>
+<p><a href="https://www.geeksforgeeks.org/insertion-sort/">Insertion Sort - GeeksforGeeks</a></p>
+</li>
+<li>
+<p><a href="https://xlinux.nist.gov/dads/">NIST Dictionary of Algorithms and Data Structures</a></p>
+</li>
+<li>
+<p><a href="https://xlinux.nist.gov/dads/">NIST - Dictionary of Algorithms and Data Structures</a></p>
+</li>
+<li>
+<p><a href="https://xlinux.nist.gov/dads/HTML/bigOnotation.html">NIST - big-O notation</a></p>
+</li>
+<li>
+<p><a href="https://xlinux.nist.gov/dads/HTML/omegaCapital.html">NIST - big-Omega notation</a></p>
+</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
