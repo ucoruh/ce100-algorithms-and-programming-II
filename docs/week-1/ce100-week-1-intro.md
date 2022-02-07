@@ -75,7 +75,7 @@ We will first talk about,
 please read the syllabus carefully. 
 
 ---
-## Outline
+## Outline (1/3)
 
 - Introduction to Analysis of Algorithms
   - Algorithm Basics
@@ -83,7 +83,7 @@ please read the syllabus carefully.
   - Pseudocode
 
 ---
-## Outline
+## Outline (2/3)
 
 - RAM (Random Access Machine Model) 
 - Sorting Problem
@@ -93,7 +93,7 @@ please read the syllabus carefully.
 - Merge Sort Analysis
 
 ---
-## Outline
+## Outline (3/3)
 
 - Asymptotic Notation 
   - Big O Notation 
@@ -104,7 +104,7 @@ please read the syllabus carefully.
 
 ---
 
-## We Need Mathematical Proofs
+## We Need Mathematical Proofs (1/2)
 
 - Direct proof
 - Proof by mathematical induction
@@ -115,7 +115,7 @@ please read the syllabus carefully.
 
 ---
 
-## We Need Mathematical Proofs
+## We Need Mathematical Proofs (2/2)
 
 - Probabilistic proof
 - Combinatorial proof
@@ -128,8 +128,6 @@ please read the syllabus carefully.
 ---
 
 ## Introduction to Analysis of Algorithms
-
-## Outline
 
 - Study two sorting algorithms as examples
   
@@ -181,9 +179,7 @@ $$
 
 ---
 
-## Pseudo-code notation
-
-We can use [Flowgorithm - Flowchart Programming Language](http://www.flowgorithm.org/)
+## Pseudo-code notation (1)
 
 - Objective: Express algorithms to humans in a clear and concise way
 
@@ -193,26 +189,32 @@ We can use [Flowgorithm - Flowchart Programming Language](http://www.flowgorithm
 
 - Omission of error handling and other details (needed in real programs)
 
----
-
-### Pseudocode Links to Visit
-
-[Pseudocode - Wikipedia](https://en.wikipedia.org/wiki/Pseudocode)
-
-[Pseudocode Examples](https://www.unf.edu/~broggio/cop2221/2221pseu.htm)
-
-[How to write a Pseudo Code? - GeeksforGeeks](https://www.geeksforgeeks.org/how-to-write-a-pseudo-code/)
+You can use [Flowgorithm](http://www.flowgorithm.org/) application to understand concept easily.
 
 ---
 
-## Correctness
+## Pseudo-code notation (2)
+
+### Links and Examples
+
+[Wikipedia](https://en.wikipedia.org/wiki/Pseudocode)
+
+[CS50](https://cs50.harvard.edu/ap/2021/problems/algorithms/)
+
+[University of North Florida](https://www.unf.edu/~broggio/cop2221/2221pseu.htm)
+
+[GeeksforGeeks](https://www.geeksforgeeks.org/how-to-write-a-pseudo-code/)
+
+---
+
+## Correctness (1)
 
 We often use a **loop invariant** to help us to understand why an algorithm gives the correct answer.
 
 **Example:** (Insertion Sort) at the start of each iteration of the "outer" for loop - the loop indexed by $j$ - the subarray $A[1 \dots j-1]$ consist of the elements originally in $A[1\dots j-1]$ but in sorted order.
 
 ---
-## Correctness
+## Correctness (2)
 
 To use a loop invariant to prove correctness, we must show 3 things about it.
 
@@ -221,7 +223,7 @@ To use a loop invariant to prove correctness, we must show 3 things about it.
 - **Termination:** When the loop terminates, the invariant - usually along with the reason that the loop terminated - gives us a usefull property that helps show that the algorithm is correct.
 
 ---
-## RAM (Random Access Machine Model)  $\Longrightarrow \Theta(1)$
+## RAM (Random Access Machine Model)  $\Longrightarrow \Theta(1)$ (1)
 
 - Operations
   - Single Step
@@ -232,7 +234,7 @@ To use a loop invariant to prove correctness, we must show 3 things about it.
     - shift left/shift right (good by multiply/dividing $2^k$)
     
 ---
-## RAM (Random Access Machine Model)  $\Longrightarrow \Theta(1)$  
+## RAM (Random Access Machine Model)  $\Longrightarrow \Theta(1)$ (2) 
 
   - Data Movement
     - load, store, copy
@@ -242,7 +244,7 @@ To use a loop invariant to prove correctness, we must show 3 things about it.
     - returns
 
 ---
-## RAM (Random Access Machine Model)  $\Longrightarrow \Theta(1)$ 
+## RAM (Random Access Machine Model)  $\Longrightarrow \Theta(1)$ (3)
 
 - Each instruction take a constant amount of time
 - Integer will be represented by $clogn$ $c \geq 1$
@@ -260,7 +262,7 @@ $$
 
 ---
 
-## Insertion Sort
+## Insertion Sort Algorithm (1)
 
 Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands
 
@@ -279,13 +281,13 @@ Values from the unsorted part are picked and placed at the correct position in t
 
 ---
 
-## Insertion Sort Algorithm
+## Insertion Sort Algorithm (2)
 
 ![alt:"insertion sort algorithm" height:550px center](assets/ce100-week-1-intro-ins_sort_2.drawio.svg)
 
 ---
 
-## Insertion Sort Algorithm (inline)
+## Insertion Sort Algorithm (Pseudo-Code) (3)
 
 ```r
 Insertion-Sort(A)
@@ -1403,7 +1405,7 @@ e.g. $n^2/2=\omega(n)$, any positive $c$ satisfies but $n^2/2 \neq \omega(n^2)$,
 
 ---
 
-### (Important) Analogy to compare of two real numbers
+### (Important) Analogy to compare of two real numbers (1)
 
 $$
 f(n)= O(g(n)) \leftrightarrow a \leq b 
@@ -1426,7 +1428,7 @@ f(n)= \omega(g(n)) \leftrightarrow a > b
 $$
 
 ---
-### (Important) Analogy to compare of two real numbers
+### (Important) Analogy to compare of two real numbers (2)
 
 $O \approx \leq$
 

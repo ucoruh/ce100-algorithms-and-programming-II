@@ -66,7 +66,7 @@ Download [DOC](ce100-week-2-recurrence.md_doc.pdf), [SLIDE](ce100-week-2-recurre
 
 ## Solving Recurrences
 
-## Outline
+## Outline (1)
 
 - Solving Recurrences 
   
@@ -78,7 +78,7 @@ Download [DOC](ce100-week-2-recurrence.md_doc.pdf), [SLIDE](ce100-week-2-recurre
 
 ---
 
-## Outline
+## Outline (2)
 
 - Divide-and-Conquer Analysis 
   
@@ -92,13 +92,13 @@ Download [DOC](ce100-week-2-recurrence.md_doc.pdf), [SLIDE](ce100-week-2-recurre
 
 ---
 
-## Outline
+## Outline (3)
 
 - Recurrence Solution
 
 ---
 
-## Solving Recurrences
+## Solving Recurrences (1)
 
 - Reminder: Runtime $(T(n))$  of  *MergeSort* was expressed as a recurrence
 
@@ -112,14 +112,18 @@ $$
 
 ---
 
-## Recurrences
+## Solving Recurrences (2)
 
-<u>Recurrence</u>: An equation or inequality that describes a function in terms of its value on smaller inputs.
+**Recurrence:** An equation or inequality that describes a function in terms of its value on smaller inputs.
 
 Example : 
 
 $$
-T(n)=\begin{cases} \ 1 &\text{if n=1} \\ T(\lceil{n/2}\rceil)+ 1 &\text{if n>1}\end{cases}
+T(n)=
+\begin{cases}
+1 &\text{if n=1} \\ 
+T(\lceil{n/2}\rceil)+ 1 &\text{if n>1} 
+\end{cases}
 $$
 
 ---
@@ -127,7 +131,11 @@ $$
 ## Recurrence Example
 
 $$
-T(n)=\begin{cases} \ 1 &\text{if n=1} \\ T(\lceil{n/2}\rceil)+ 1 &\text{if n>1}\end{cases}
+T(n)=
+\begin{cases}
+  1 &\text{if n=1} \\ 
+  T(\lceil{n/2}\rceil)+ 1 &\text{if n>1}
+\end{cases}
 $$
 
 - Simplification: Assume $n=2^k$
@@ -137,7 +145,11 @@ $$
 - Substitute claimed answer in the recurrence:
 
 $$
-lgn+1=\begin{cases} \ 1 &\text{if n=1} \\ lg(\lceil{n/2}\rceil)+ 2 &\text{if n>1}\end{cases}
+lgn+1=
+\begin{cases}
+  1 &\text{if n=1} \\ 
+  lg(\lceil{n/2}\rceil)+ 2 &\text{if n>1}
+\end{cases}
 $$
 
 - True when $n=2^k$
@@ -151,9 +163,11 @@ Technically, should be careful about the floor and ceiling functions (as in the 
 e.g. For merge sort, the recurrence should in fact be:,
 
 $$
-T(n)=\begin{cases} \ \Theta(1) &\text{if n=1} \\
-                     T(\lceil{n/2}\rceil)+ T(\lfloor{n/2}\rfloor) +\Theta(n) &\text{if n>1}
-     \end{cases}
+T(n)=
+\begin{cases}
+  \Theta(1) &\text{if n=1} \\
+  T(\lceil{n/2}\rceil)+ T(\lfloor{n/2}\rfloor) +\Theta(n) &\text{if n>1}
+\end{cases}
 $$
 
 But, it's usually ok to:
@@ -185,11 +199,11 @@ Assume
 e.g.
 
 $$
-\begin{rcases}
+\text{ However } \Theta(2^n) \neq \Theta(3^n)
+\begin{cases}
   T(1)= 2 &\Rightarrow & T(n)= \Theta(2^n) \\
   T(1)= 3 &\Rightarrow & T(n)= \Theta(3^n)
-\end{rcases}
-\text{ However } \Theta(2^n) \neq \Theta(3^n)
+\end{cases}
 $$
 
 The difference in solution more dramatic when:
@@ -200,7 +214,7 @@ $$
 
 ---
 
-## Solving Recurrences
+## Solving Recurrences Methods
 
 We will focus on 3 techniques 
 
@@ -224,7 +238,7 @@ The most general method:
 
 ---
 
-## Substitution Method: Example
+## Substitution Method: Example (1)
 
 Solve $T(n)=4T(n/2)+n$ (assume $T(1)= \Theta(1)$)
 
@@ -235,7 +249,7 @@ Solve $T(n)=4T(n/2)+n$ (assume $T(1)= \Theta(1)$)
 
 ---
 
-## Substitution Method: Example – cont’d
+## Substitution Method: Example (2)
 
 Original recurrence: $T(n) = 4T(n/2) + n$
 
@@ -251,7 +265,7 @@ Substitute this into the original recurrence:
 
 ---
 
-## Substitution Method: Example – cont’d
+## Substitution Method: Example (3)
 
 So far, we have shown: 
 
@@ -270,7 +284,7 @@ But, the proof is not complete yet.
 
 ---
 
-## Substitution Method: Example – cont’d
+## Substitution Method: Example (4)
 
 - We need to prove the base cases
   - Base: $T(n) = \Theta(1)$ for small $n$ (e.g. for $n = n_0$)
@@ -281,7 +295,7 @@ But, the proof is not complete yet.
 
 ---
 
-## Example: A tighter upper bound?
+## Example: A tighter upper bound? (1)
 
 - Original recurrence: $T(n) = 4T(n/2) + n$
 
@@ -295,22 +309,25 @@ But, the proof is not complete yet.
 
 ---
 
-## Example (cont’d)
+## Example: A tighter upper bound? (2)
+
 
 Original recurrence: $T(n) = 4T(n/2) + n$
 Ind. hyp: Assume that $T(k) \leq ck^2$  for $k < n$ 
 Prove the general case: $T(n) \leq cn^2$
 
 $$
-T(n) = 4T(n/2) + n  \\
-\leq 4c(n/2)^2 + n \\
-= cn^2 + n \\
-= O(n2)  \Longleftarrow  \text{ Wrong! We must prove exactly}
+\begin{align*}
+T(n) & = 4T(n/2) + n  \\
+& \leq 4c(n/2)^2 + n \\
+& = cn^2 + n \\
+& = O(n2)  \Longleftarrow  \text{ Wrong! We must prove exactly}
+\end{align*}
 $$
 
 ---
 
-## Example (cont’d)
+## Example: A tighter upper bound? (3)
 
 **Original recurrence:** $T(n) = 4T(n/2) + n$
 **Ind. hyp:** Assume that $T(k) \leq ck^2$  for $k < n$
@@ -323,7 +340,7 @@ $$
 
 ---
 
-## Example (cont’d)
+## Example: A tighter upper bound? (4)
 
 - What was the problem?
   
@@ -339,23 +356,28 @@ $$
 
 ---
 
-## Example (cont’d)
+## Example: A tighter upper bound? (5)
 
 **Original recurrence:** $T(n) = 4T(n/2) + n$
 
 **Ind. hyp:** Assume that $T(k) \leq c_1k^2 – c_2k$  for $k < n$
 
 Prove the general case: $T(n) ≤ c_1n^2 – c_2n$
-        $T(n)    = 4T(n/2) + n$
-             $≤ 4 (c_1(n/2)^2 – c_2(n/2)) + n$
-            $= c_1n^2 – 2c_2n + n$
-            $= c_1n^2 – c_2n – (c_2n – n)$
-            $≤  c_1n^2 – c_2n$        for $n(c_2 – 1) \geq 0$
-                        choose $c2 \geq 1$
+$$
+\begin{align*}
+T(n) & = 4T(n/2) + n \\
+& \leq 4 (c_1(n/2)^2 – c_2(n/2)) + n \\
+& = c_1n^2 – 2c_2n + n \\
+& = c_1n^2 – c_2n – (c_2n – n) \\
+& \leq  c_1n^2 – c_2n \text{ for }  n(c_2 – 1) \geq 0 \\
+& \text{choose } c2 \geq 1 
+\end{align*}
+$$
+
 
 ---
 
-## Example (cont’d)
+## Example: A tighter upper bound? (6)
 
 We now need to prove
 $$
@@ -374,7 +396,7 @@ We have proved that $T(n) = O(n^2)$
 
 ---
 
-## Substitution Method: Example 2
+## Substitution Method: Example 2 (1)
 
 For the recurrence $T(n) = 4T(n/2) + n$, 
 
@@ -395,7 +417,7 @@ Proof succeeded – no need to strengthen the ind. hyp as in the last example
 
 ---
 
-## Example 2 (cont’d)
+## Substitution Method: Example 2 (2)
 
 We now need to prove that
 $T(n) ≥ cn^2$
@@ -437,25 +459,25 @@ We have proved that $T(n) = \Omega(n^2)$
 
 ---
 
-## Solve Recurrence : $T(n)=2T(n/2)+\Theta(n)$
+## Solve Recurrence (1) : $T(n)=2T(n/2)+\Theta(n)$
 
 ![alt:"alt" height:250px center](assets/ce100-week-2-recurrence-recursion_1.drawio.svg)
 
 ---
 
-## Solve Recurrence : $T(n)=2T(n/2)+\Theta(n)$
+## Solve Recurrence (2) : $T(n)=2T(n/2)+\Theta(n)$
 
 ![alt:"alt" height:450px center](assets/ce100-week-2-recurrence-recursion_2.drawio.svg)
 
 ---
 
-## Solve Recurrence : $T(n)=2T(n/2)+\Theta(n)$
+## Solve Recurrence (3) : $T(n)=2T(n/2)+\Theta(n)$
 
 ![alt:"alt" height:500px center](assets/ce100-week-2-recurrence-recursion_3.drawio.svg)
 
 ---
 
-## Example of Recursion Tree
+## Example of Recursion Tree (1)
 
 Solve $T(n) = T(n/4) + T(n/2) + n^2$
 
@@ -463,14 +485,14 @@ Solve $T(n) = T(n/4) + T(n/2) + n^2$
 
 ---
 
-## Example of Recursion Tree
+## Example of Recursion Tree (2)
 
 Solve $T(n) = T(n/4) + T(n/2) + n^2$
 ![alt:"alt" height:500px center](assets/ce100-week-2-recurrence-recursion_5.drawio.svg)
 
 ---
 
-## Example of Recursion Tree
+## Example of Recursion Tree (3)
 
 Solve $T(n) = T(n/4) + T(n/2) + n^2$
 ![alt:"alt" height:500px center](assets/ce100-week-2-recurrence-recursion_6.drawio.svg)
@@ -540,7 +562,7 @@ Solve $T(n) = T(n/4) + T(n/2) + n^2$
 
 ---
 
-## Example : $T(n)=4T(n/2)+n$
+## The Master Method Example (case-1) : $T(n)=4T(n/2)+n$
 
 - $a=4$
 - $b=2$
@@ -553,7 +575,7 @@ Solve $T(n) = T(n/4) + T(n/2) + n^2$
 
 ---
 
-## Example : $T(n)=4T(n/2)+n^2$
+## The Master Method Example (case-2) : $T(n)=4T(n/2)+n^2$
 
 - $a=4$
 
@@ -573,7 +595,7 @@ Solve $T(n) = T(n/4) + T(n/2) + n^2$
 
 ---
 
-## Example : $T(n)=4T(n/2)+n^3$
+## The Master Method Example (case-3) (1) : $T(n)=4T(n/2)+n^3$
 
 - $a=4$
 - $b=2$
@@ -584,7 +606,7 @@ Solve $T(n) = T(n/4) + T(n/2) + n^2$
 
 ---
 
-## Example : $T(n)=4T(n/2)+n^3$ (con't)
+## The Master Method Example (case-3) (2) : $T(n)=4T(n/2)+n^3$ (con't)
 
 - Seems like CASE 3, but need to check the regularity condition
 - Regularity condition $af(n/b) \leq cf(n)$ for some constant $c<1$
@@ -594,7 +616,7 @@ Solve $T(n) = T(n/4) + T(n/2) + n^2$
 
 ---
 
-## Example : $T(n)=4T(n/2)+n^2lgn$
+## The Master Method Example (N/A case) : $T(n)=4T(n/2)+n^2lgn$
 
 - $a=4$
 - $b=2$
@@ -629,14 +651,14 @@ Then, the answers are the same as for the master method, but with $n^p$ instead 
 
 ---
 
-## Idea of Master Theorem
+## Idea of Master Theorem (1)
 
 Recursion Tree:
 ![alt:"alt" height:500px center](assets/ce100-week-2-recurrence-master_theorem_1.drawio.svg)
 
 ---
 
-## Idea of Master Theorem
+## Idea of Master Theorem (2)
 
 CASE 1 : The weight increases geometrically from the root to the leaves. The leaves hold a constant fraction of the total weight.
 
@@ -644,7 +666,7 @@ $n^{log_b^a}T(1)=\Theta(n^{log_b^a})$
 
 ---
 
-## Idea of Master Theorem
+## Idea of Master Theorem (3)
 
 CASE 2 : $(k = 0)$ The weight is approximately the same on each of the $log_bn$ levels.
 
@@ -652,7 +674,7 @@ $n^{log_b^a}T(1)=\Theta(n^{log_b^a}lgn)$
 
 ---
 
-## Idea of Master Theorem
+## Idea of Master Theorem (4)
 
 CASE 3 : The weight decreases geometrically from the root to the leaves. The root holds a constant fraction of the total weight.
 
@@ -673,7 +695,7 @@ $T(n)=\Theta(n^{log_b^a}) + \sum_{i=0}^{h-1}a^if(n/{b^i})$
 
 ---
 
-## Proof Case 1
+## Proof of Master Theorem Case 1 (1)
 
 - $\frac{n^{log_b^a}}{f(n)}=\Omega(n^{\varepsilon})$ for some $\varepsilon>0$
 
@@ -685,7 +707,7 @@ $T(n)=\Theta(n^{log_b^a}) + \sum_{i=0}^{h-1}a^if(n/{b^i})$
 
 ---
 
-## Proof Case 1 (con't)
+## Proof of Master Theorem Case 1 (2)
 
 - $\sum_{i=0}^{h-1} \frac{a^ib^{i\varepsilon}}{b^{ilog_b^a}} =\sum_{i=0}^{h-1} a^i\frac{(b^\varepsilon)^i}{(b^{log_b^a})^i} =\sum a^i\frac{b^{i\varepsilon}}{a^i}=\sum_{i=0}^{h-1}(b^{\varepsilon})^i$
 
@@ -695,7 +717,7 @@ $\frac{b^{h\varepsilon}-1}{b^{\varepsilon}-1}=\frac{(b^h)^{\varepsilon}-1}{b^{\v
 
 ---
 
-## Proof Case 1 (con't)
+## Proof of Master Theorem Case 1 (3)
 
 - $g(n)=O(n^{log_b{a-\varepsilon}}O(n^{\varepsilon}))=O(\frac{n^{log_b^a}}{n^{\varepsilon}}O(n^{\varepsilon}))=O(n^{log_b^a})$
 - $T(n)=\Theta(n^{log_b^a})+g(n)=\Theta(n^{log_b^a})+O(n^{log_b^a})=\Theta(n^{log_b^a})$
@@ -705,7 +727,7 @@ $\frac{b^{h\varepsilon}-1}{b^{\varepsilon}-1}=\frac{(b^h)^{\varepsilon}-1}{b^{\v
 
 ---
 
-## Proof of Case 2 (limited to k=0)
+## Proof of Master Theorem Case 2 (limited to k=0)
 
 - $\frac{f(n)}{n^log_b^a}=\Theta(lg^0n)=\Theta(1) \Longrightarrow f(n)=\Theta(n^{log_b^a}) \Longrightarrow f(n/b^i)=\Theta((n/b^i)^{log_b^a})$
 - $g(n)=\sum_{i=0}^{h-1}a^i\Theta((n/b^i)^{log_b^a})$
@@ -720,13 +742,13 @@ $\frac{b^{h\varepsilon}-1}{b^{\varepsilon}-1}=\frac{(b^h)^{\varepsilon}-1}{b^{\v
 
 ---
 
-## The Divide-and-Conquer Design Paradigm
+## The Divide-and-Conquer Design Paradigm (1)
 
 ![alt:"alt" height:500px center](assets/ce100-week-2-recurrence-divide_conquer.drawio.svg)
 
 ---
 
-## The Divide-and-Conquer Design Paradigm
+## The Divide-and-Conquer Design Paradigm (2)
 
 1. **Divide** we divide the problem into a number of subproblems.
 2. **Conquer** we solve the subproblems recursively.
@@ -735,7 +757,7 @@ $\frac{b^{h\varepsilon}-1}{b^{\varepsilon}-1}=\frac{(b^h)^{\varepsilon}-1}{b^{\v
 
 ---
 
-## The Divide-and-Conquer Design Paradigm
+## The Divide-and-Conquer Design Paradigm (3)
 
 - $a=\text{subproblem}$
 - $1/b=\text{each size of the problem}$
@@ -760,7 +782,7 @@ $T(n)=\Theta(nlgn)$
 
 ---
 
-## Selection Sort
+## Selection Sort Algorithm
 
 ```r
 SELECTION-SORT(A)
@@ -777,7 +799,7 @@ SELECTION-SORT(A)
 
 ---
 
-## Selection Sort
+## Selection Sort Algorithm
 
 $$
 T(n)=\begin{cases} 
@@ -913,7 +935,7 @@ $T(n)=\Theta(nlgn)$
 
 ---
 
-## Binary Search
+## Binary Search (1)
 
 Find an element in a sorted array:
 
@@ -923,7 +945,7 @@ Find an element in a sorted array:
 
 ---
 
-## Binary Search :
+## Binary Search (2)
 
 $$
 \text{PARENT} = \lfloor i/2 \rfloor
@@ -939,7 +961,7 @@ $$
 
 ---
 
-## Binary Search : Iterative
+## Binary Search (3) : Iterative
 
 ```r
 ITERATIVE-BINARY-SEARCH(A,V,low,high)
@@ -957,7 +979,7 @@ ITERATIVE-BINARY-SEARCH(A,V,low,high)
 
 ---
 
-## Binary Search : Recursive
+## Binary Search (4): Recursive
 
 ```r
 RECURSIVE-BINARY-SEARCH(A,V,low,high)
@@ -978,7 +1000,7 @@ RECURSIVE-BINARY-SEARCH(A,V,low,high)
 
 ---
 
-## Binary Search : Recursive
+## Binary Search (5): Recursive
 
 $$
 T(n)=T(n/2)+\Theta(1) \Longrightarrow T(n)=\Theta(lgn) 
@@ -986,13 +1008,13 @@ $$
 
 ---
 
-## Example: Find 9
+## Binary Search (6): Example (Find 9)
 
 ![alt:"alt" height:450px center](assets/ce100-week-2-recurrence-binary_search.drawio.svg)
 
 ---
 
-## Recurrence for Binary Search
+## Recurrence for Binary Search (7)
 
 $T(n)=1T(n/2)+\Theta(1)$
 
@@ -1002,7 +1024,7 @@ $T(n)=1T(n/2)+\Theta(1)$
 
 ---
 
-## Binary Search: Solving the Recurrence
+## Binary Search: Solving the Recurrence (8)
 
 - $T(n) = T(n/2) + \Theta(1)$
 
@@ -1014,7 +1036,7 @@ $T(n)=1T(n/2)+\Theta(1)$
 
 ---
 
-## Powering a Number
+## Powering a Number: Divide & Conquer (1)
 
 **Problem**: Compute an, where n is a natural number
 
@@ -1031,7 +1053,7 @@ return powerVal;
 
 ---
 
-## Powering a Number: Divide & Conquer
+## Powering a Number: Divide & Conquer (2)
 
 - Basic Idea:
 
@@ -1044,7 +1066,7 @@ $$
 
 ---
 
-## Powering a Number: Divide & Conquer
+## Powering a Number: Divide & Conquer (3)
 
 ```r
 POWER(a, n)
@@ -1061,7 +1083,7 @@ POWER(a, n)
 
 ---
 
-## Powering a Number: Solving the Recurrence
+## Powering a Number: Solving the Recurrence (4)
 
 - $T(n) = T(n/2) + \Theta(1)$
 

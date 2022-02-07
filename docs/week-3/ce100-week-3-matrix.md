@@ -66,7 +66,7 @@ Download [DOC](ce100-week-3-matrix.md_doc.pdf), [SLIDE](ce100-week-3-matrix.md_s
 
 ## Matrix Multiplication / Quick Sort
 
-## Outline
+## Outline (1)
 
 - Matrix Multiplication 
   
@@ -78,7 +78,7 @@ Download [DOC](ce100-week-3-matrix.md_doc.pdf), [SLIDE](ce100-week-3-matrix.md_s
 
 ---
 
-## Outline
+## Outline (2)
 
 - Quicksort 
   
@@ -90,7 +90,7 @@ Download [DOC](ce100-week-3-matrix.md_doc.pdf), [SLIDE](ce100-week-3-matrix.md_s
 
 ---
 
-## Outline
+## Outline (3)
 
 - Quicksort Analysis 
   
@@ -104,7 +104,7 @@ Download [DOC](ce100-week-3-matrix.md_doc.pdf), [SLIDE](ce100-week-3-matrix.md_s
 
 ---
 
-## Matrix Multiplication
+## Matrix Multiplication (1)
 
 - **Input:** $A=[a_{ij}],B=[b_{ij}]$
 - **Output:** $C=[c_{ij}]=A \cdot B$ $\Longrightarrow i,j=1,2,3, \dots, n$
@@ -134,7 +134,7 @@ $$
 
 ---
 
-## Matrix Multiplication
+## Matrix Multiplication (2)
 
 ![alt:"alt" height:450px center](assets/ce100-week-3-matrix.drawio.svg)
 
@@ -159,7 +159,7 @@ endfor
 
 ---
 
-## Matrix Multiplication: Divide & Conquer
+## Matrix Multiplication: Divide & Conquer (1)
 
 **IDEA:** Divide the $nxn$ matrix into $2x2$ matrix of $(n/2)x(n/2)$ submatrices.
 
@@ -167,7 +167,7 @@ endfor
 
 ---
 
-## Matrix Multiplication: Divide & Conquer
+## Matrix Multiplication: Divide & Conquer (2)
 
 $$
 \begin{bmatrix}
@@ -198,7 +198,7 @@ $$
 
 ---
 
-## Matrix Multiplication: Divide & Conquer
+## Matrix Multiplication: Divide & Conquer (3)
 
 ```r
 MATRIX-MULTIPLY(A, B)
@@ -249,7 +249,7 @@ Similar with ordinary (iterative) algorithm.
 
 ---
 
-## Matrix Multiplication: Strassen’s Idea
+## Matrix Multiplication: Strassen’s Idea (1)
 
 Compute $c_{11},c_{12},c_{21},c_{22}$ using $7$ recursive multiplications. 
 
@@ -284,7 +284,7 @@ $$
 
 ---
 
-## Matrix Multiplication: Strassen’s Idea
+## Matrix Multiplication: Strassen’s Idea (2)
 
 - **Reminder:** 
   - Each submatrix is of size $(n/2)*(n/2)$
@@ -305,7 +305,7 @@ $$
 
 ---
 
-## Matrix Multiplication: Strassen’s Idea
+## Matrix Multiplication: Strassen’s Idea (3)
 
 $$
 \begin{align*} 
@@ -332,14 +332,14 @@ $$
 
 ---
 
-## Matrix Multiplication: Strassen’s Idea
+## Matrix Multiplication: Strassen’s Idea (4)
 
 - $7$ recursive multiply calls
 - $18$ add/sub operations
 
 ---
 
-## Matrix Multiplication: Strassen’s Idea
+## Matrix Multiplication: Strassen’s Idea (5)
 
 e.g. Show that $c_{12} = P_1+P_2$ :
 
@@ -367,7 +367,7 @@ $$
 
 ---
 
-## Strassen’s Algorithm: Solving the Recurrence
+## Strassen’s Algorithm: Solving the Recurrence (1)
 
 - $T(n) = 7T(n/2) + \Theta(n^2)$
   
@@ -385,7 +385,7 @@ or use https://www.omnicalculator.com/math/log
 
 ---
 
-## Strassen’s Algorithm
+## Strassen’s Algorithm: Solving the Recurrence (2)
 
 - The number $2.81$ may not seem much smaller than $3$
 
@@ -407,7 +407,7 @@ or use https://www.omnicalculator.com/math/log
 
 ---
 
-## Maximum Subarray Problem: Divide & Conquer
+## Maximum Subarray Problem: Divide & Conquer (1)
 
 - **Basic idea:**
 - **Divide** the input array into 2 from the middle
@@ -418,13 +418,13 @@ or use https://www.omnicalculator.com/math/log
 
 ---
 
-## Maximum Subarray Problem: Divide & Conquer
+## Maximum Subarray Problem: Divide & Conquer (2)
 
 ![alt:"alt" height:450px center](assets/ce100-week-3-matrix-max_subarray.drawio.svg)
 
 ---
 
-## Maximum Subarray Problem: Divide & Conquer
+## Maximum Subarray Problem: Divide & Conquer (3)
 
 - **Divide:** Trivial (divide the array from the middle)
 - **Conquer:** Recursively compute the max subarrays of the left and right halves
@@ -447,7 +447,7 @@ TODO : detailed solution in textbook...
 
 ---
 
-## Quicksort
+## Quicksort (1)
 
 - One of the most-used algorithms in practice
 - Proposed by **C.A.R.** *Hoare* in 1962.
@@ -460,7 +460,7 @@ TODO : detailed solution in textbook...
 
 ---
 
-## Quicksort
+## Quicksort (2)
 
 - **Divide:** Partition the array into 2 subarrays such that elements in the lower part $\leq$ elements in the higher part
 - **Conquer:** Recursively sort 2 subarrays
@@ -511,7 +511,7 @@ Note: Combine is trivial after conquer. Array already sorted.
 
 ---
 
-## Hoare’s Partitioning Algorithm
+## Hoare’s Partitioning Algorithm (1)
 
 - Choose a pivot element: $pivot = x = A[p]$
 
@@ -526,13 +526,13 @@ Note: Combine is trivial after conquer. Array already sorted.
 
 ---
 
-## Hoare’s Partitioning Algorithm
+## Hoare’s Partitioning Algorithm (2)
 
 ![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_hoare_steps.drawio.svg)
 
 ---
 
-## Hoare’s Partitioning Algorithm
+## Hoare’s Partitioning Algorithm (3)
 
 - Elements are exchanged when
   - $A[i]$ is **too large** to  belong to the **left** region
@@ -782,7 +782,7 @@ $A[p \dots i_m-1] \leq x$ and $A[j_m-1 \dots r] \geq x$
 
 ---
 
-## Lomuto’s Partitioning Algorithm
+## Lomuto’s Partitioning Algorithm (1)
 
 - Choose a pivot element: $pivot = x = A[r]$
 
@@ -796,7 +796,7 @@ $A[p \dots i_m-1] \leq x$ and $A[j_m-1 \dots r] \geq x$
       - every element in $A[i+1 \dots j] > pivot$
 ---
 
-## Lomuto’s Partitioning Algorithm
+## Lomuto’s Partitioning Algorithm (2)
 
 ![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_lomuto_steps.drawio.svg)
 
@@ -909,7 +909,7 @@ Initial invocation: `QUICKSORT(A,1,n)`
 
 ---
 
-## Comparison of Hoare’s & Lomuto’s Algorithms
+## Comparison of Hoare’s & Lomuto’s Algorithms (1)
 
 - Notation: $n=r-p+1$ 
   - $pivot=A[p]$ (*Hoare*)
@@ -924,7 +924,7 @@ Initial invocation: `QUICKSORT(A,1,n)`
 
 ---
 
-## Comparison of Hoare’s & Lomuto’s Algorithms
+## Comparison of Hoare’s & Lomuto’s Algorithms (2)
 
 - **$\#$ of element comparisons: $c_e(n)$**
   - **Hoare**: $n+1 \leq c_e(n) \leq n+2$
@@ -938,7 +938,7 @@ Initial invocation: `QUICKSORT(A,1,n)`
 
 ---
 
-## Comparison of Hoare’s & Lomuto’s Algorithms
+## Comparison of Hoare’s & Lomuto’s Algorithms (3)
 
 - **$\#$ of index increment/decrement operations: $a(n)$**
   - **Hoare**: $n+1 \leq a(n) \leq n+2 | (a(n)=c_e(n))$
@@ -951,7 +951,7 @@ Initial invocation: `QUICKSORT(A,1,n)`
 
 ---
 
-## Analysis of Quicksort
+## Analysis of Quicksort (1)
 
 ```r
 QUICKSORT (A, p, r)
@@ -970,7 +970,7 @@ Assume **all elements are distinct** in the following analysis
 
 ---
 
-## Analysis of Quicksort
+## Analysis of Quicksort (2)
 
 - **H-PARTITION** always chooses $A[p]$ (the first element) as the pivot. 
 - The runtime of **QUICKSORT** on an already-sorted array is $\Theta(n^2)$
@@ -1036,7 +1036,7 @@ $$
 
 ---
 
-## Balanced Partitioning
+## Balanced Partitioning (1)
 
 - We have seen that if **H-PARTITION** always splits the array with $0.1-to-0.9$ ratio, the runtime will be $\Theta(nlgn)$.
 - Same is true with a split ratio of $0.01-to-0.99$, etc.
@@ -1048,7 +1048,7 @@ $$
 
 ---
 
-## Balanced Partitioning
+## Balanced Partitioning (2)
 
 - In the rest of the analysis, assume that all input permutations are equally likely.
   - This is only to gain some intuition
@@ -1058,13 +1058,13 @@ $$
 
 ---
 
-## Balanced Partitioning
+## Balanced Partitioning (3)
 
 - **Question:** What is the probability that H-PARTITION returns a split that is more balanced than $0.1-to-0.9$?
 
 ---
 
-## Balanced Partitioning
+## Balanced Partitioning (4)
 
 **Reminder:** *H-PARTITION* will place the pivot in the right partition unless the pivot is the smallest element in the arrays.
 
@@ -1074,7 +1074,7 @@ $$
 
 ---
 
-## Balanced Partitioning
+## Balanced Partitioning (5)
 
 - **Question:** What is the probability that the **pivot** selected is the $m^{th}$ smallest value in the array of size $n$? 
   - $1/n$ (*since all input permutations are equally likely*)
@@ -1084,7 +1084,7 @@ $$
 
 ---
 
-## Balanced Partitioning
+## Balanced Partitioning (6)
 
 - **Question:** What is the probability that H-PARTITION returns a split that is more balanced than $0.1-to-0.9$?
 
@@ -1101,7 +1101,7 @@ $$
 
 ---
 
-## Balanced Partitioning
+## Balanced Partitioning (7)
 
 - The probability that **H-PARTITION** yields a split that is more balanced than $0.1-to-0.9$ is $80\%$ on a random array.
 
@@ -1111,7 +1111,7 @@ $$
 
 ---
 
-## Balanced Partitioning
+## Balanced Partitioning (8)
 
 - **Question:** What is the probability that H-PARTITION returns a split that is more balanced than $\alpha-to-(1-\alpha)$?
 
@@ -1130,7 +1130,7 @@ $$
 
 ---
 
-## Balanced Partitioning
+## Balanced Partitioning (9)
 
 - We found $P_{\alpha >}=1-2\alpha$
   - Ex: $P_{0.1>}=0.8$ and $P_{0.01>}=0.98$
@@ -1144,7 +1144,7 @@ $$
 
 ---
 
-## Intuition for the Average Case
+## Intuition for the Average Case (1)
 
 - **Assumption:** All permutations are equally likely
   - Only for intuition; we’ll revisit this assumption later
@@ -1158,7 +1158,7 @@ $$
 
 ---
 
-## Intuition for the Average Case
+## Intuition for the Average Case (2)
 
 - **Assume for intuition:** Good and bad splits occur in the alternate levels of the tree
   - **Good split:** Best case split
@@ -1166,7 +1166,7 @@ $$
 
 ---
 
-## Intuition for the Average Case
+## Intuition for the Average Case (3)
 
 Compare 2-successive levels of avg case vs. 1 level of best case
 
@@ -1174,7 +1174,7 @@ Compare 2-successive levels of avg case vs. 1 level of best case
 
 ---
 
-## Intuition for the Average Case
+## Intuition for the Average Case (4)
 
 - In terms of the remaining subproblems, **two levels of avg case** is slightly better than the **single level of the best case**
 - The avg case has **extra divide cost of $\Theta(n)$** at alternate levels
@@ -1185,7 +1185,7 @@ Compare 2-successive levels of avg case vs. 1 level of best case
 
 ---
 
-## Intuition for the Average Case
+## Intuition for the Average Case (5)
 
 - Another way of looking at it:
   - Suppose we alternate lucky, unlucky, lucky, unlucky, …
@@ -1204,7 +1204,7 @@ Compare 2-successive levels of avg case vs. 1 level of best case
 
 ---
 
-## Summary: Quicksort Runtime Analysis
+## Summary: Quicksort Runtime Analysis (1)
 
 - **Worst case:** Unbalanced split at every recursive call
 $$
@@ -1225,7 +1225,7 @@ $$
 
 ---
 
-## Summary: Quicksort Runtime Analysis
+## Summary: Quicksort Runtime Analysis (2)
 
 - **Almost-best case:** Almost-balanced split at every recursive call
 $$
@@ -1240,7 +1240,7 @@ for any constant $\alpha, 0 < \alpha \leq 0.5$
 
 ---
 
-## Summary: Quicksort Runtime Analysis
+## Summary: Quicksort Runtime Analysis (3)
 
 - For a random input array, the probability of having a split 
   - more balanced than   $0.1 – to – 0.9 : 80\%$
@@ -1249,7 +1249,7 @@ for any constant $\alpha, 0 < \alpha \leq 0.5$
 				for any constant $\alpha, 0 < \alpha \leq 0.5$
 ---
 
-## Summary: Quicksort Runtime Analysis
+## Summary: Quicksort Runtime Analysis (4)
 
 - **Avg case intuition:** Different splits expected at different levels
   - some balanced (good), some unbalanced (bad)
@@ -1273,7 +1273,7 @@ for any constant $\alpha, 0 < \alpha \leq 0.5$
 
 ---
 
-## Randomized Algorithms
+## Randomized Algorithms (1)
 
 - Alternative to assuming a uniform distribution: 
   - **Impose a uniform distribution**
@@ -1285,7 +1285,7 @@ for any constant $\alpha, 0 < \alpha \leq 0.5$
 
 ---
 
-## Randomized Algorithms
+## Randomized Algorithms (1)
 
 - Ideally:
   - Runtime should be **independent of the specific inputs**
@@ -1294,7 +1294,7 @@ for any constant $\alpha, 0 < \alpha \leq 0.5$
 
 ---
 
-## Randomized Quicksort
+## Randomized Quicksort (1)
 
 - Using Hoare’s partitioning algorithm:
 
@@ -1317,7 +1317,7 @@ R-PARTITION(A, p, r)
 
 ---
 
-## Randomized Quicksort
+## Randomized Quicksort (2)
 
 - Using Lomuto’s partitioning algorithm:
 
@@ -1365,7 +1365,7 @@ R-PARTITION(A, p, r)
 
 ---
 
-## Various Outcomes of H-PARTITION
+## Various Outcomes of H-PARTITION (1)
 
 - Assume that $rank(x)=1$
   - i.e. the **random pivot** chosen is the **smallest** element
@@ -1381,7 +1381,7 @@ $pivot=x=2$
 
 ---
 
-## Various Outcomes of H-PARTITION
+## Various Outcomes of H-PARTITION (2)
 
 - Assume that $rank(x)>1$
   - i.e. the random pivot chosen is not the smallest element
@@ -1398,7 +1398,7 @@ $pivot=x=5$
 
 ---
 
-## Various Outcomes of H-PARTITION - Summary
+## Various Outcomes of H-PARTITION - Summary (1)
 - $x: pivot$
 - $|L|: \text{size of left region}$
 - $P(rank(x) = i) = 1/n  \text{ for } 1 \leq i \leq n$
@@ -1415,13 +1415,13 @@ $
 
 ---
 
-## Various Outcomes of H-PARTITION - Summary
+## Various Outcomes of H-PARTITION - Summary (2)
 
 ![alt:"alt" h:450px center](assets/ce100-week-3-matrix-quicksort-h-part-sum.drawio.svg)
 
 ---
 
-## Average - Case Analysis: Recurrence
+## Average - Case Analysis: Recurrence (1)
 
 $x=pivot$
 $$
@@ -1439,7 +1439,7 @@ $$
 
 ---
 
-## Recurrence
+## Average - Case Analysis: Recurrence (2)
 
 $$
 \begin{align*} 
@@ -1457,7 +1457,7 @@ $$
 
 ---
 
-## Solving Recurrence: Substitution
+## Average - Case Analysis -Solving Recurrence: Substitution
 
 - Guess: $T(n)=O(nlgn)$
 - $T(k) ≤ aklgk$ for  $k<n$, for some constant  $a > 0$
@@ -1474,7 +1474,7 @@ $$
 
 ---
 
-## Tight bound for $\sum klgk$
+## Tight bound for $\sum klgk$ (1)
 
 - Bounding the terms
   - $\sum_{k=1}^{n-1}klgk \leq \sum_{k=1}^{n-1}nlgn = n(n-1)lgn \leq n^2lgn$
@@ -1484,7 +1484,7 @@ $$
 
 ---
 
-## Tight bound for $\sum klgk$
+## Tight bound for $\sum klgk$ (2)
 
 - **Splitting summations:** ignore ceilings for simplicity
 
@@ -1495,7 +1495,7 @@ $$
 
 ---
 
-## Splitting: $\sum_{k=1}^{n-1}klgk \leq \sum_{k=1}^{n/2-1}klgk + \sum_{k=n/2}^{n-1}klgk$
+## Splitting: $\sum_{k=1}^{n-1}klgk \leq \sum_{k=1}^{n/2-1}klgk + \sum_{k=n/2}^{n-1}klgk$ (3)
 
 - $\sum_{k=1}^{n-1}klgk \leq (lg(n-1))\sum_{k=1}^{n/2-1}k + lgn \sum_{k=n/2}^{n-1}k$
 
@@ -1509,7 +1509,7 @@ $$
 
 ---
 
-## Substituting: - $\sum_{k=1}^{n-1}klgk \leq \frac{1}{2}n^2lgn-\frac{1}{8}n^2$
+## Substituting: - $\sum_{k=1}^{n-1}klgk \leq \frac{1}{2}n^2lgn-\frac{1}{8}n^2$ (4)
 
 $$
 \begin{align*} 
@@ -1620,7 +1620,7 @@ $$
 
 ---
 
-## Selection in Expected Linear Time
+## Selection in Expected Linear Time (1)
 
 ```r
 R-SELECT(A,p,r,i)
@@ -1643,7 +1643,7 @@ $$
 
 ---
 
-## Selection in Expected Linear Time
+## Selection in Expected Linear Time (2)
 
 $$
 \begin{align*} 
@@ -1662,7 +1662,7 @@ $$
 
 ---
 
-## Runtime Analysis
+## Runtime Analysis (1)
 
 - **Worst case:**
   - Imbalanced partitioning at every level and the recursive call always to the larger partition
@@ -1678,7 +1678,7 @@ $$
 
 ---
 
-## Runtime Analysis
+## Runtime Analysis (2)
 
 - **Worst case:** Worse than the naïve method (based on sorting)
 
@@ -1740,7 +1740,7 @@ $$
 
 ---
 
-## Average-Case Analysis of Randomized Select
+## Average-Case Analysis of Randomized Select (1)
 
 $$
 \text{Recall:} P(|L|=i) = 
@@ -1764,7 +1764,7 @@ $$
 
 ---
 
-## Average-Case Analysis of Randomized Select
+## Average-Case Analysis of Randomized Select (2)
 
 $$
 \begin{align*}
@@ -1787,7 +1787,7 @@ $$
 
 ---
 
-## Average-Case Analysis of Randomized Select
+## Average-Case Analysis of Randomized Select (3)
 
 - Hence, in both cases: 
 $$
@@ -1799,7 +1799,7 @@ $$
 
 ---
 
-## Average-Case Analysis of Randomized Select
+## Average-Case Analysis of Randomized Select (4)
 
 $$
 \begin{align*}
@@ -1820,7 +1820,7 @@ $$
 
 ---
 
-## Average-Case Analysis of Randomized Select
+## Average-Case Analysis of Randomized Select (5)
 
 $$
 \begin{align*}
@@ -1875,7 +1875,7 @@ SELECT(S, n, i)
 ```
 ---
 
-## Selection in Worst Case Linear Time - Example
+## Selection in Worst Case Linear Time - Example (1)
 
 - **Input:** Array $S$ and index $i$
 - **Output:** The $i^{th}$ smallest value
@@ -1889,7 +1889,7 @@ $$
 
 ---
 
-## Selection in Worst Case Linear Time - Example
+## Selection in Worst Case Linear Time - Example (2)
 
 **Step 1:** Divide the input array into groups of size $5$
 
@@ -1911,7 +1911,7 @@ $$
 
 ---
 
-## Selection in Worst Case Linear Time - Example
+## Selection in Worst Case Linear Time - Example (3)
 
 **Step 2:** Compute the median of each group ($\Theta(n)$)
 
@@ -1934,7 +1934,7 @@ $$
 
 ---
 
-## Selection in Worst Case Linear Time - Example
+## Selection in Worst Case Linear Time - Example (4)
 
 **Step 3:** Compute the median of the median group $M$
 
@@ -1948,7 +1948,7 @@ $x \leftarrow SELECT(M,|M|,\lfloor (|M|+1)/2 \rfloor)$ where $|M|=\lceil n/5 \rc
 
 ---
 
-## Selection in Worst Case Linear Time - Example
+## Selection in Worst Case Linear Time - Example (5)
 
 **Step 4:** Partition the input array $S$ around the median-of-medians $x$
 
@@ -1965,7 +1965,7 @@ Partition $S$ around $x = 24$
 
 ---
 
-## Selection in Worst Case Linear Time - Example
+## Selection in Worst Case Linear Time - Example (6)
 
 - $M$ : Median, $M^*$ : Median of Medians
 
@@ -1987,19 +1987,19 @@ $$
 
 ---
 
-## Selection in Worst Case Linear Time - Example
+## Selection in Worst Case Linear Time - Example (7)
 
 ![alt:"alt" h:500px center](assets/ce100-week-3-matrix-median_ex1.drawio.svg)
 
 ---
 
-## Selection in Worst Case Linear Time - Example
+## Selection in Worst Case Linear Time - Example (8)
 
 ![alt:"alt" h:500px center](assets/ce100-week-3-matrix-median_ex2.drawio.svg)
 
 ---
 
-## Selection in Worst Case Linear Time - Example
+## Selection in Worst Case Linear Time - Example (9)
 
 $$S =
 \begin{array}{ccc}
@@ -2048,7 +2048,7 @@ SELECT(S, n, i)
 ```
 ---
 
-## Choosing the Pivot
+## Choosing the Pivot (1)
 
 1. Divide S into groups of size 5
 
@@ -2056,7 +2056,7 @@ SELECT(S, n, i)
 
 ---
 
-## Choosing the Pivot
+## Choosing the Pivot (2)
 
 - Divide S into groups of size 5
 - Find the median of each group
@@ -2065,7 +2065,7 @@ SELECT(S, n, i)
 
 ---
 
-## Choosing the Pivot
+## Choosing the Pivot (3)
 
 - Divide S into groups of size 5
 - Find the median of each group
@@ -2075,7 +2075,7 @@ SELECT(S, n, i)
 
 ---
 
-## Choosing the Pivot
+## Choosing the Pivot (4)
 
 - At least half of the medians $\geq x$ 
 - Thus $m = \lceil \lceil n/5 \rceil /2 \rceil$ groups contribute 3 elements to R except possibly the last group and the group that contains $x$, $|R|\geq 3(m–2)\geq \frac{3n}{10}–6$
@@ -2084,7 +2084,7 @@ SELECT(S, n, i)
 
 ---
 
-## Choosing the Pivot
+## Choosing the Pivot (5)
 
 - Similarly $|L| \geq \frac{3n}{10}– 6$
 - Therefore, **SELECT** is recursively called on at most $n-(\frac{3n}{10}-6)=\frac{7n}{10}+6$ elements
@@ -2094,14 +2094,14 @@ SELECT(S, n, i)
 
 ---
 
-## Selection in Worst Case Linear Time
+## Selection in Worst Case Linear Time (1)
 
 
 ![alt:"alt" h:500px center](assets/ce100-week-3-matrix-select_func.drawio.svg)
 
 ---
 
-## Selection in Worst Case Linear Time
+## Selection in Worst Case Linear Time (2)
 
 - Thus recurrence becomes
   - $T(n) \leq T \big( \lceil \frac{n}{5} \rceil \big) + T\big( \frac{7n}{10}+6 \big) + \Theta(n)$
