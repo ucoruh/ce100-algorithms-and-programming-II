@@ -1047,25 +1047,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#heapifya-i-n-largest-i-if-2i-n-and-a2i-ai-then-largest-2i-if-2i1-n-and-a2i1-alargest-then-largest-2i1-if-largest-i-then-exchange-ai-with-alargest-heapifya-largest-n" class="md-nav__link">
-      HEAPIFY(A, i, n)
-  largest = i 
-
-  if 2i &lt;= n and A[2i] &gt; A[i] then 
-    largest = 2i
-
-  if 2i+1 &lt;= n and A[2i+1] &gt; A[largest] then 
-    largest = 2i+1
-
-  if largest != i  then
-    exchange A[i] with A[largest]
-    HEAPIFY(A, largest, n)
-
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#heap-operations-heapify-2_2" class="md-nav__link">
     Heap Operations: HEAPIFY (2)
   </a>
@@ -1215,6 +1196,419 @@
         <li class="md-nav__item">
   <a href="#heapsort-algorithm-steps" class="md-nav__link">
     Heapsort Algorithm Steps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-1" class="md-nav__link">
+    Heapsort Algorithm Example (Step-1)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-2" class="md-nav__link">
+    Heapsort Algorithm Example (Step-2)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-3" class="md-nav__link">
+    Heapsort Algorithm Example (Step-3)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-4" class="md-nav__link">
+    Heapsort Algorithm Example (Step-4)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-5" class="md-nav__link">
+    Heapsort Algorithm Example (Step-5)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-6" class="md-nav__link">
+    Heapsort Algorithm Example (Step-6)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-7" class="md-nav__link">
+    Heapsort Algorithm Example (Step-7)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-8" class="md-nav__link">
+    Heapsort Algorithm Example (Step-8)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-9" class="md-nav__link">
+    Heapsort Algorithm Example (Step-9)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-10" class="md-nav__link">
+    Heapsort Algorithm Example (Step-10)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-11" class="md-nav__link">
+    Heapsort Algorithm Example (Step-11)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-12" class="md-nav__link">
+    Heapsort Algorithm Example (Step-12)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-13" class="md-nav__link">
+    Heapsort Algorithm Example (Step-13)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-14" class="md-nav__link">
+    Heapsort Algorithm Example (Step-14)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-15" class="md-nav__link">
+    Heapsort Algorithm Example (Step-15)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-16" class="md-nav__link">
+    Heapsort Algorithm Example (Step-16)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-17" class="md-nav__link">
+    Heapsort Algorithm Example (Step-17)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-18" class="md-nav__link">
+    Heapsort Algorithm Example (Step-18)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-19" class="md-nav__link">
+    Heapsort Algorithm Example (Step-19)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-runtime-analysis" class="md-nav__link">
+    Heapsort Algorithm: Runtime Analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-notes" class="md-nav__link">
+    Heapsort - Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-structures-for-dynamic-sets" class="md-nav__link">
+    Data structures for Dynamic Sets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operations-on-dynamic-sets" class="md-nav__link">
+    Operations on Dynamic Sets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priority-queues-pq" class="md-nav__link">
+    Priority Queues (PQ)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priority-queues-pq_1" class="md-nav__link">
+    Priority Queues (PQ)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priority-queues-pq_2" class="md-nav__link">
+    Priority Queues (PQ)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-of-priority-queue" class="md-nav__link">
+    Implementation of Priority Queue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-of-priority-queue_1" class="md-nav__link">
+    Implementation of Priority Queue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-implementation-of-pq" class="md-nav__link">
+    Heap Implementation of PQ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-implementation-of-pq_1" class="md-nav__link">
+    Heap Implementation of PQ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-insert-example-step-1" class="md-nav__link">
+    HEAP-INSERT Example (Step-1)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-insert-example-step-2" class="md-nav__link">
+    HEAP-INSERT Example (Step-2)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-insert-example-step-3" class="md-nav__link">
+    HEAP-INSERT Example (Step-3)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-insert-example-step-4" class="md-nav__link">
+    HEAP-INSERT Example (Step-4)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-insert-example-step-5" class="md-nav__link">
+    HEAP-INSERT Example (Step-5)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-increase-key" class="md-nav__link">
+    Heap Increase Key
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-increase-key-example-step-1" class="md-nav__link">
+    HEAP-INCREASE-KEY Example (Step-1)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-increase-key-example-step-2" class="md-nav__link">
+    HEAP-INCREASE-KEY Example (Step-2)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-increase-key-example-step-3" class="md-nav__link">
+    HEAP-INCREASE-KEY Example (Step-3)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-increase-key-example-step-4" class="md-nav__link">
+    HEAP-INCREASE-KEY Example (Step-4)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-increase-key-example-step-5" class="md-nav__link">
+    HEAP-INCREASE-KEY Example (Step-5)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-implementation-of-priority-queue-pq" class="md-nav__link">
+    Heap Implementation of Priority Queue (PQ)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-max-heap" class="md-nav__link">
+    Summary: Max Heap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-max-heap_1" class="md-nav__link">
+    Summary: Max Heap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-max-heap_2" class="md-nav__link">
+    Summary: Max Heap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phone-operator-problem" class="md-nav__link">
+    Phone Operator Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phone-operator-solution" class="md-nav__link">
+    Phone Operator Solution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phone-operator-solution_1" class="md-nav__link">
+    Phone Operator Solution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-lists" class="md-nav__link">
+    Linked Lists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-lists-c-definition" class="md-nav__link">
+    Linked Lists - C Definition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-lists-cpp-definition" class="md-nav__link">
+    Linked Lists - Cpp Definition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-lists-java-definition" class="md-nav__link">
+    Linked Lists - Java Definition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-lists-csharp-definition" class="md-nav__link">
+    Linked Lists - Csharp Definition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priority-queue-using-linked-list-methods" class="md-nav__link">
+    Priority Queue using Linked List Methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priority-queue-using-linked-list-algorithm" class="md-nav__link">
+    Priority Queue using Linked List Algorithm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priority-queue-using-linked-list-algorithm_1" class="md-nav__link">
+    Priority Queue using Linked List Algorithm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priority-queue-using-linked-list-notes" class="md-nav__link">
+    Priority Queue using Linked List Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sorting-in-linear-time" class="md-nav__link">
+    Sorting in Linear Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-fast-can-we-sort" class="md-nav__link">
+    How Fast Can We Sort?
   </a>
   
 </li>
@@ -1715,25 +2109,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#heapifya-i-n-largest-i-if-2i-n-and-a2i-ai-then-largest-2i-if-2i1-n-and-a2i1-alargest-then-largest-2i1-if-largest-i-then-exchange-ai-with-alargest-heapifya-largest-n" class="md-nav__link">
-      HEAPIFY(A, i, n)
-  largest = i 
-
-  if 2i &lt;= n and A[2i] &gt; A[i] then 
-    largest = 2i
-
-  if 2i+1 &lt;= n and A[2i+1] &gt; A[largest] then 
-    largest = 2i+1
-
-  if largest != i  then
-    exchange A[i] with A[largest]
-    HEAPIFY(A, largest, n)
-
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#heap-operations-heapify-2_2" class="md-nav__link">
     Heap Operations: HEAPIFY (2)
   </a>
@@ -1888,6 +2263,419 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-1" class="md-nav__link">
+    Heapsort Algorithm Example (Step-1)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-2" class="md-nav__link">
+    Heapsort Algorithm Example (Step-2)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-3" class="md-nav__link">
+    Heapsort Algorithm Example (Step-3)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-4" class="md-nav__link">
+    Heapsort Algorithm Example (Step-4)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-5" class="md-nav__link">
+    Heapsort Algorithm Example (Step-5)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-6" class="md-nav__link">
+    Heapsort Algorithm Example (Step-6)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-7" class="md-nav__link">
+    Heapsort Algorithm Example (Step-7)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-8" class="md-nav__link">
+    Heapsort Algorithm Example (Step-8)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-9" class="md-nav__link">
+    Heapsort Algorithm Example (Step-9)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-10" class="md-nav__link">
+    Heapsort Algorithm Example (Step-10)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-11" class="md-nav__link">
+    Heapsort Algorithm Example (Step-11)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-12" class="md-nav__link">
+    Heapsort Algorithm Example (Step-12)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-13" class="md-nav__link">
+    Heapsort Algorithm Example (Step-13)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-14" class="md-nav__link">
+    Heapsort Algorithm Example (Step-14)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-15" class="md-nav__link">
+    Heapsort Algorithm Example (Step-15)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-16" class="md-nav__link">
+    Heapsort Algorithm Example (Step-16)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-17" class="md-nav__link">
+    Heapsort Algorithm Example (Step-17)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-18" class="md-nav__link">
+    Heapsort Algorithm Example (Step-18)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-example-step-19" class="md-nav__link">
+    Heapsort Algorithm Example (Step-19)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-algorithm-runtime-analysis" class="md-nav__link">
+    Heapsort Algorithm: Runtime Analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heapsort-notes" class="md-nav__link">
+    Heapsort - Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-structures-for-dynamic-sets" class="md-nav__link">
+    Data structures for Dynamic Sets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operations-on-dynamic-sets" class="md-nav__link">
+    Operations on Dynamic Sets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priority-queues-pq" class="md-nav__link">
+    Priority Queues (PQ)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priority-queues-pq_1" class="md-nav__link">
+    Priority Queues (PQ)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priority-queues-pq_2" class="md-nav__link">
+    Priority Queues (PQ)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-of-priority-queue" class="md-nav__link">
+    Implementation of Priority Queue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-of-priority-queue_1" class="md-nav__link">
+    Implementation of Priority Queue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-implementation-of-pq" class="md-nav__link">
+    Heap Implementation of PQ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-implementation-of-pq_1" class="md-nav__link">
+    Heap Implementation of PQ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-insert-example-step-1" class="md-nav__link">
+    HEAP-INSERT Example (Step-1)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-insert-example-step-2" class="md-nav__link">
+    HEAP-INSERT Example (Step-2)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-insert-example-step-3" class="md-nav__link">
+    HEAP-INSERT Example (Step-3)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-insert-example-step-4" class="md-nav__link">
+    HEAP-INSERT Example (Step-4)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-insert-example-step-5" class="md-nav__link">
+    HEAP-INSERT Example (Step-5)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-increase-key" class="md-nav__link">
+    Heap Increase Key
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-increase-key-example-step-1" class="md-nav__link">
+    HEAP-INCREASE-KEY Example (Step-1)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-increase-key-example-step-2" class="md-nav__link">
+    HEAP-INCREASE-KEY Example (Step-2)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-increase-key-example-step-3" class="md-nav__link">
+    HEAP-INCREASE-KEY Example (Step-3)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-increase-key-example-step-4" class="md-nav__link">
+    HEAP-INCREASE-KEY Example (Step-4)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-increase-key-example-step-5" class="md-nav__link">
+    HEAP-INCREASE-KEY Example (Step-5)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-implementation-of-priority-queue-pq" class="md-nav__link">
+    Heap Implementation of Priority Queue (PQ)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-max-heap" class="md-nav__link">
+    Summary: Max Heap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-max-heap_1" class="md-nav__link">
+    Summary: Max Heap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-max-heap_2" class="md-nav__link">
+    Summary: Max Heap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phone-operator-problem" class="md-nav__link">
+    Phone Operator Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phone-operator-solution" class="md-nav__link">
+    Phone Operator Solution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phone-operator-solution_1" class="md-nav__link">
+    Phone Operator Solution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-lists" class="md-nav__link">
+    Linked Lists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-lists-c-definition" class="md-nav__link">
+    Linked Lists - C Definition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-lists-cpp-definition" class="md-nav__link">
+    Linked Lists - Cpp Definition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-lists-java-definition" class="md-nav__link">
+    Linked Lists - Java Definition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-lists-csharp-definition" class="md-nav__link">
+    Linked Lists - Csharp Definition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priority-queue-using-linked-list-methods" class="md-nav__link">
+    Priority Queue using Linked List Methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priority-queue-using-linked-list-algorithm" class="md-nav__link">
+    Priority Queue using Linked List Algorithm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priority-queue-using-linked-list-algorithm_1" class="md-nav__link">
+    Priority Queue using Linked List Algorithm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priority-queue-using-linked-list-notes" class="md-nav__link">
+    Priority Queue using Linked List Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sorting-in-linear-time" class="md-nav__link">
+    Sorting in Linear Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-fast-can-we-sort" class="md-nav__link">
+    How Fast Can We Sort?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
@@ -2016,7 +2804,9 @@
 <li>
 <p><strong>Min heap:</strong> For every node <strong>i</strong> other than <strong>root</strong>, <span class="arithmatex">\(A[parent(i)] \leq A[i]\)</span></p>
 </li>
-<li>Parent node is always smaller than the child nodes</li>
+<li>
+<p>Parent node is always smaller than the child nodes</p>
+</li>
 </ul>
 <p><img alt="bg right:40% w:480" src="../assets/ce100-week-4-heap-heap_min_heap.drawio.svg" /></p>
 <hr />
@@ -2034,8 +2824,12 @@
 <hr />
 <h2 id="heap-data-structures-5">Heap Data Structures (5)<a class="headerlink" href="#heap-data-structures-5" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Computing left child, right child, and parent indices very fast</li>
-<li><strong>left(i) = 2i</strong> <span class="arithmatex">\(\Longrightarrow\)</span> binary left shift</li>
+<li>
+<p>Computing left child, right child, and parent indices very fast</p>
+</li>
+<li>
+<p><strong>left(i) = 2i</strong> <span class="arithmatex">\(\Longrightarrow\)</span> binary left shift</p>
+</li>
 <li><strong>right(i) = 2i+1</strong> <span class="arithmatex">\(\Longrightarrow\)</span> binary left shift, then set the lowest bit to 1</li>
 <li>
 <p><strong>parent(i) = floor(i/2)</strong> <span class="arithmatex">\(\Longrightarrow\)</span> right shift in binary</p>
@@ -2046,7 +2840,9 @@
 <li>
 <p>Array <span class="arithmatex">\(A\)</span> has two attributes:</p>
 </li>
-<li><strong>length(A):</strong> The number of elements in <span class="arithmatex">\(A\)</span></li>
+<li>
+<p><strong>length(A):</strong> The number of elements in <span class="arithmatex">\(A\)</span></p>
+</li>
 <li><strong>n = heap-size(A):</strong> The number elements in <span class="arithmatex">\(heap\)</span><ul>
 <li><span class="arithmatex">\(n \leq length(A)\)</span></li>
 </ul>
@@ -2154,7 +2950,9 @@
 <li>
 <p><span class="arithmatex">\(T(n) \leq T(|S_{L(i)}|) + \Theta(1)\)</span> </p>
 </li>
-<li><span class="arithmatex">\(S_{L(i)}\)</span> and <span class="arithmatex">\(S_{R(i)}\)</span> are complete binary trees of heights  <span class="arithmatex">\(h(i)-1\)</span> and <span class="arithmatex">\(h(i)-2\)</span>, respectively</li>
+<li>
+<p><span class="arithmatex">\(S_{L(i)}\)</span> and <span class="arithmatex">\(S_{R(i)}\)</span> are complete binary trees of heights  <span class="arithmatex">\(h(i)-1\)</span> and <span class="arithmatex">\(h(i)-2\)</span>, respectively</p>
+</li>
 </ul>
 <p><img alt="bg right:50% w:600" src="../assets/ce100-week-4-heap-heap_analysis_1.drawio.svg" /></p>
 <hr />
@@ -2213,7 +3011,7 @@ T(n) &amp;= O(lgn)
 <hr />
 <h2 id="heap-operations-heapify-1_1">Heap Operations: HEAPIFY (1)<a class="headerlink" href="#heap-operations-heapify-1_1" title="Permanent link">&para;</a></h2>
 <p><strong>Recursive</strong></p>
-<h2 id="heapifya-i-n-largest-i-if-2i-n-and-a2i-ai-then-largest-2i-if-2i1-n-and-a2i1-alargest-then-largest-2i1-if-largest-i-then-exchange-ai-with-alargest-heapifya-largest-n"><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>  <span class="nf">HEAPIFY</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>  <span class="nf">HEAPIFY</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  <span class="n">largest</span> <span class="o">=</span> <span class="n">i</span> 
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  <span class="n">if</span> <span class="m">2i</span> <span class="o">&lt;=</span> <span class="n">n</span> <span class="n">and</span> <span class="n">A</span><span class="p">[</span><span class="m">2i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="n">then</span> 
@@ -2225,7 +3023,8 @@ T(n) &amp;= O(lgn)
 <a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>  <span class="n">if</span> <span class="n">largest</span> <span class="o">!=</span> <span class="n">i</span>  <span class="n">then</span>
 <a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    <span class="n">exchange</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="n">with</span> <span class="n">A</span><span class="p">[</span><span class="n">largest</span><span class="p">]</span>
 <a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="nf">HEAPIFY</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">largest</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-</code></pre></div><a class="headerlink" href="#heapifya-i-n-largest-i-if-2i-n-and-a2i-ai-then-largest-2i-if-2i1-n-and-a2i1-alargest-then-largest-2i1-if-largest-i-then-exchange-ai-with-alargest-heapifya-largest-n" title="Permanent link">&para;</a></h2>
+</code></pre></div>
+<hr />
 <h2 id="heap-operations-heapify-2_2">Heap Operations: HEAPIFY (2)<a class="headerlink" href="#heap-operations-heapify-2_2" title="Permanent link">&para;</a></h2>
 <p><strong>Iterative</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nf">HEAPIFY</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
@@ -2250,9 +3049,15 @@ T(n) &amp;= O(lgn)
 <hr />
 <h2 id="heap-operations-building-heap">Heap Operations: Building Heap<a class="headerlink" href="#heap-operations-building-heap" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Given an arbitrary array, how to build a heap from scratch?</li>
-<li><strong>Basic idea:</strong> Call <span class="arithmatex">\(HEAPIFY\)</span> on each node bottom up </li>
-<li>Start from the leaves (which trivially satisfy the heap property)</li>
+<li>
+<p>Given an arbitrary array, how to build a heap from scratch?</p>
+</li>
+<li>
+<p><strong>Basic idea:</strong> Call <span class="arithmatex">\(HEAPIFY\)</span> on each node bottom up </p>
+</li>
+<li>
+<p>Start from the leaves (which trivially satisfy the heap property)</p>
+</li>
 <li>Process nodes in bottom up order.</li>
 <li>When <span class="arithmatex">\(HEAPIFY\)</span> is called on node <span class="arithmatex">\(i\)</span>, the subtrees connected to the <span class="arithmatex">\(left\)</span> and <span class="arithmatex">\(right\)</span> subtrees already satisfy the heap property.</li>
 </ul>
@@ -2335,11 +3140,21 @@ T(n) &amp;= O(lgn)
 <hr />
 <h2 id="build-heap-runtime-analysis">Build-Heap: Runtime Analysis<a class="headerlink" href="#build-heap-runtime-analysis" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Simple analysis:</li>
-<li><span class="arithmatex">\(O(n)\)</span> calls to <span class="arithmatex">\(HEAPIFY\)</span>, each of which takes <span class="arithmatex">\(O(lgn)\)</span> time</li>
-<li><span class="arithmatex">\(O(nlgn)\)</span> <span class="arithmatex">\(\Longrightarrow\)</span> loose bound</li>
-<li>In general, a good approach:</li>
-<li>Start by proving an easy bound</li>
+<li>
+<p>Simple analysis:</p>
+</li>
+<li>
+<p><span class="arithmatex">\(O(n)\)</span> calls to <span class="arithmatex">\(HEAPIFY\)</span>, each of which takes <span class="arithmatex">\(O(lgn)\)</span> time</p>
+</li>
+<li>
+<p><span class="arithmatex">\(O(nlgn)\)</span> <span class="arithmatex">\(\Longrightarrow\)</span> loose bound</p>
+</li>
+<li>
+<p>In general, a good approach:</p>
+</li>
+<li>
+<p>Start by proving an easy bound</p>
+</li>
 <li>
 <p>Then, try to tighten it</p>
 </li>
@@ -2376,29 +3191,33 @@ $$</p>
 <h2 id="build-heap-tighter-running-time-analysis_2">Build-Heap: <strong>Tighter</strong> Running Time Analysis<a class="headerlink" href="#build-heap-tighter-running-time-analysis_2" title="Permanent link">&para;</a></h2>
 <div class="arithmatex">\[
 \sum_{h=1}^{d}h(1/2)^h \leq  \sum_{h=0}^{d}h(1/2)^h \leq \sum_{h=0}^{\infty}h(1/2)^h 
-$$
-- recall infinite decreasing geometric series
-$$
-\sum_{k=0}^{\infty}x^k = \frac{1}{1-x} \text{ where } |x|&lt;1 
-$$
-- differentiate both sides
-$$
-\sum_{k=0}^{\infty}kx^{k-1} = \frac{1}{(1-x)^2}  
 \]</div>
+<ul>
+<li>recall infinite decreasing geometric series</li>
+</ul>
+<p>$$
+  \sum_{k=0}<sup>{\infty}x</sup>k = \frac{1}{1-x} \text{ where } |x|&lt;1 
+  $$
+- differentiate both sides</p>
+<p>$$
+  \sum_{k=0}<sup k-1="k-1">{\infty}kx</sup> = \frac{1}{(1-x)^2}<br />
+  $$</p>
 <hr />
 <h2 id="build-heap-tighter-running-time-analysis_3">Build-Heap: <strong>Tighter</strong> Running Time Analysis<a class="headerlink" href="#build-heap-tighter-running-time-analysis_3" title="Permanent link">&para;</a></h2>
 <div class="arithmatex">\[
 \sum_{k=0}^{\infty}kx^{k-1} = \frac{1}{(1-x)^2}  
-$$
-- then, multiply both sides by $x$
-$$
-\sum_{k=0}^{\infty}kx^k = \frac{x}{(1-x)^2}  
-$$
-- in our case: $x = 1/2$ and $k = h$
-$$
-\therefore \sum_{h=0}^{\infty}h(1/2)^h = \frac{1/2}{(1-(1/2))^2}=2=O(1) \\
-\therefore T(n)=O(n\sum_{h=1}^{d}h(1/2)^h)=O(n)  
 \]</div>
+<ul>
+<li>then, multiply both sides by <span class="arithmatex">\(x\)</span></li>
+</ul>
+<p>$$
+  \sum_{k=0}<sup>{\infty}kx</sup>k = \frac{x}{(1-x)^2}<br />
+  $$
+- in our case: <span class="arithmatex">\(x = 1/2\)</span> and <span class="arithmatex">\(k = h\)</span></p>
+<p>$$
+  \therefore \sum_{h=0}<sup>{\infty}h(&frac12;)</sup>h = \frac{&frac12;}{(1-(&frac12;))^2}=2=O(1) \
+\therefore T(n)=O(n\sum_{h=1}<sup>{d}h(&frac12;)</sup>h)=O(n)<br />
+  $$</p>
 <hr />
 <h2 id="heapsort-algorithm-steps">Heapsort Algorithm Steps<a class="headerlink" href="#heapsort-algorithm-steps" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2411,6 +3230,480 @@ $$
 <li><strong>(5)</strong> <span class="arithmatex">\(n \leftarrow n-1\)</span></li>
 <li><strong>(6)</strong> Repeat steps <strong>(2-4)</strong> until <span class="arithmatex">\(n=2\)</span></li>
 </ul>
+<hr />
+<h2 id="heapsort-algorithm-example-step-1">Heapsort Algorithm Example (Step-1)<a class="headerlink" href="#heapsort-algorithm-example-step-1" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_sort_step_1.drawio.svg" /></p>
+<hr />
+<h2 id="heapsort-algorithm-example-step-2">Heapsort Algorithm Example (Step-2)<a class="headerlink" href="#heapsort-algorithm-example-step-2" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_sort_step_2.drawio.svg" /></p>
+<hr />
+<h2 id="heapsort-algorithm-example-step-3">Heapsort Algorithm Example (Step-3)<a class="headerlink" href="#heapsort-algorithm-example-step-3" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_sort_step_3.drawio.svg" /></p>
+<hr />
+<h2 id="heapsort-algorithm-example-step-4">Heapsort Algorithm Example (Step-4)<a class="headerlink" href="#heapsort-algorithm-example-step-4" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_sort_step_4.drawio.svg" /></p>
+<hr />
+<h2 id="heapsort-algorithm-example-step-5">Heapsort Algorithm Example (Step-5)<a class="headerlink" href="#heapsort-algorithm-example-step-5" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_sort_step_5.drawio.svg" /></p>
+<hr />
+<h2 id="heapsort-algorithm-example-step-6">Heapsort Algorithm Example (Step-6)<a class="headerlink" href="#heapsort-algorithm-example-step-6" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_sort_step_6.drawio.svg" /></p>
+<hr />
+<h2 id="heapsort-algorithm-example-step-7">Heapsort Algorithm Example (Step-7)<a class="headerlink" href="#heapsort-algorithm-example-step-7" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_sort_step_7.drawio.svg" /></p>
+<hr />
+<h2 id="heapsort-algorithm-example-step-8">Heapsort Algorithm Example (Step-8)<a class="headerlink" href="#heapsort-algorithm-example-step-8" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_sort_step_8.drawio.svg" /></p>
+<hr />
+<h2 id="heapsort-algorithm-example-step-9">Heapsort Algorithm Example (Step-9)<a class="headerlink" href="#heapsort-algorithm-example-step-9" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_sort_step_9.drawio.svg" /></p>
+<hr />
+<h2 id="heapsort-algorithm-example-step-10">Heapsort Algorithm Example (Step-10)<a class="headerlink" href="#heapsort-algorithm-example-step-10" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_sort_step_10.drawio.svg" /></p>
+<hr />
+<h2 id="heapsort-algorithm-example-step-11">Heapsort Algorithm Example (Step-11)<a class="headerlink" href="#heapsort-algorithm-example-step-11" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_sort_step_11.drawio.svg" /></p>
+<hr />
+<h2 id="heapsort-algorithm-example-step-12">Heapsort Algorithm Example (Step-12)<a class="headerlink" href="#heapsort-algorithm-example-step-12" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_sort_step_12.drawio.svg" /></p>
+<hr />
+<h2 id="heapsort-algorithm-example-step-13">Heapsort Algorithm Example (Step-13)<a class="headerlink" href="#heapsort-algorithm-example-step-13" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_sort_step_13.drawio.svg" /></p>
+<hr />
+<h2 id="heapsort-algorithm-example-step-14">Heapsort Algorithm Example (Step-14)<a class="headerlink" href="#heapsort-algorithm-example-step-14" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_sort_step_14.drawio.svg" /></p>
+<hr />
+<h2 id="heapsort-algorithm-example-step-15">Heapsort Algorithm Example (Step-15)<a class="headerlink" href="#heapsort-algorithm-example-step-15" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_sort_step_15.drawio.svg" /></p>
+<hr />
+<h2 id="heapsort-algorithm-example-step-16">Heapsort Algorithm Example (Step-16)<a class="headerlink" href="#heapsort-algorithm-example-step-16" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_sort_step_16.drawio.svg" /></p>
+<hr />
+<h2 id="heapsort-algorithm-example-step-17">Heapsort Algorithm Example (Step-17)<a class="headerlink" href="#heapsort-algorithm-example-step-17" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_sort_step_17.drawio.svg" /></p>
+<hr />
+<h2 id="heapsort-algorithm-example-step-18">Heapsort Algorithm Example (Step-18)<a class="headerlink" href="#heapsort-algorithm-example-step-18" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_sort_step_18.drawio.svg" /></p>
+<hr />
+<h2 id="heapsort-algorithm-example-step-19">Heapsort Algorithm Example (Step-19)<a class="headerlink" href="#heapsort-algorithm-example-step-19" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_sort_step_19.drawio.svg" /></p>
+<hr />
+<h2 id="heapsort-algorithm-runtime-analysis">Heapsort Algorithm: Runtime Analysis<a class="headerlink" href="#heapsort-algorithm-runtime-analysis" title="Permanent link">&para;</a></h2>
+<p><img alt="center height:250px" src="../assets/ce100-week-4-heap-heap_sort_runtime_1.drawio.svg" /></p>
+<div class="arithmatex">\[
+\begin{align*}
+T(n) &amp;= \Theta(n)+\sum_{i=2}^{n}O(lgi) \\
+&amp;= \Theta(n)+O\bigg( \sum_{i=2}^{n}O(lgn) \bigg) \\
+&amp;= O(nlgn)
+\end{align*}
+\]</div>
+<hr />
+<h2 id="heapsort-notes">Heapsort - Notes<a class="headerlink" href="#heapsort-notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Heapsort</strong> is a very good algorithm but, a good implementation of <strong>quicksort</strong> always <strong>beats</strong> heapsort <strong>in practice</strong></li>
+<li>However, <strong>heap data structure</strong> has many popular applications, and it can be efficiently used for implementing <strong>priority queues</strong></li>
+</ul>
+<hr />
+<h2 id="data-structures-for-dynamic-sets">Data structures for <strong>Dynamic Sets</strong><a class="headerlink" href="#data-structures-for-dynamic-sets" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Consider sets of records having <strong>key</strong> and <strong>satellite</strong> data</li>
+</ul>
+<p><img alt="center height:300px" src="../assets/ce100-week-4-heap-dynamic_set.drawio.svg" /></p>
+<hr />
+<h2 id="operations-on-dynamic-sets">Operations on <strong>Dynamic Sets</strong><a class="headerlink" href="#operations-on-dynamic-sets" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Queries:</strong> Simply return info; </li>
+<li><span class="arithmatex">\(MAX(S) / MIN(S):\)</span> (Query) return <span class="arithmatex">\(x \in S\)</span> with the <strong>largest/smallest</strong> <span class="arithmatex">\(key\)</span></li>
+<li><span class="arithmatex">\(SEARCH(S, k):\)</span> (Query) return <span class="arithmatex">\(x \in S\)</span> with <span class="arithmatex">\(key[x]= k\)</span></li>
+<li><span class="arithmatex">\(SUCCESSOR(S, x) / PREDECESSOR(S, x):\)</span> (Query) return <span class="arithmatex">\(y \in S\)</span> which is the next <strong>larger/smaller</strong> element after <span class="arithmatex">\(x\)</span></li>
+<li><strong>Modifying operations:</strong> Change the set</li>
+<li><span class="arithmatex">\(INSERT(S, x):\)</span> (Modifying) <span class="arithmatex">\(S \leftarrow S \cup \{x\}\)</span></li>
+<li><span class="arithmatex">\(DELETE(S, x):\)</span> (Modifying) <span class="arithmatex">\(S \leftarrow S - \{x\}\)</span></li>
+<li><span class="arithmatex">\(\text{EXTRACT-MAX}(S) / \text{EXTRACT-MIN}(S):\)</span> (Modifying) return and delete <span class="arithmatex">\(x \in S\)</span> with the largest/smallest <span class="arithmatex">\(key\)</span></li>
+<li>Different data structures support/optimize different operations</li>
+</ul>
+<hr />
+<h2 id="priority-queues-pq">Priority Queues (PQ)<a class="headerlink" href="#priority-queues-pq" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Supports</li>
+<li><span class="arithmatex">\(INSERT\)</span></li>
+<li><span class="arithmatex">\(MAX / MIN\)</span> </li>
+<li><span class="arithmatex">\(\text{EXTRACT-MAX} / \text{EXTRACT-MIN}\)</span></li>
+</ul>
+<hr />
+<h2 id="priority-queues-pq_1">Priority Queues (PQ)<a class="headerlink" href="#priority-queues-pq_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>One application:</strong> Schedule jobs on a shared resource </li>
+<li><strong>PQ</strong> keeps track of jobs and their relative priorities</li>
+<li>When a job is finished or interrupted, highest priority job is selected from those pending using <span class="arithmatex">\(\text{EXTRACT-MAX}\)</span></li>
+<li>A new job can be added at any time using <span class="arithmatex">\(INSERT\)</span></li>
+</ul>
+<hr />
+<h2 id="priority-queues-pq_2">Priority Queues (PQ)<a class="headerlink" href="#priority-queues-pq_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Another application:</strong> Event-driven simulation</li>
+<li>Events to be simulated are the items in the <strong>PQ</strong> </li>
+<li>Each event is associated with a time of occurrence which serves as a <span class="arithmatex">\(key\)</span></li>
+<li>Simulation of an event can cause other events to be simulated in the future</li>
+<li>Use <span class="arithmatex">\(\text{EXTRACT-MIN}\)</span> at each step to choose the next event to simulate</li>
+<li>As new events are produced insert them into the <strong>PQ</strong> using <span class="arithmatex">\(INSERT\)</span></li>
+</ul>
+<hr />
+<h2 id="implementation-of-priority-queue">Implementation of <strong>Priority Queue</strong><a class="headerlink" href="#implementation-of-priority-queue" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Sorted linked list:</strong> Simplest implementation</li>
+<li><span class="arithmatex">\(INSERT\)</span><ul>
+<li><span class="arithmatex">\(O(n)\)</span> time</li>
+<li>Scan the list to find place and splice in the new item</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(\text{EXTRACT-MAX}\)</span><ul>
+<li><span class="arithmatex">\(O(1)\)</span> time</li>
+<li>Take the first element</li>
+</ul>
+</li>
+<li><strong>Fast</strong> extraction but <strong>slow</strong> insertion.</li>
+</ul>
+<hr />
+<h2 id="implementation-of-priority-queue_1">Implementation of <strong>Priority Queue</strong><a class="headerlink" href="#implementation-of-priority-queue_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>Unsorted linked list:</strong> Simplest implementation</p>
+</li>
+<li>
+<p><span class="arithmatex">\(INSERT\)</span></p>
+<ul>
+<li><span class="arithmatex">\(O(1)\)</span> time</li>
+<li>Put the new item at front</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(\text{EXTRACT-MAX}\)</span><ul>
+<li><span class="arithmatex">\(O(n)\)</span> time</li>
+<li>Scan the whole list</li>
+</ul>
+</li>
+<li>
+<p><strong>Fast</strong> insertion but <strong>slow</strong> extraction.</p>
+</li>
+<li>
+<p>Sorted linked list is better on the average</p>
+</li>
+<li>
+<p><strong>Sorted list:</strong> on the average, scans <span class="arithmatex">\(n/2\)</span> element per insertion</p>
+</li>
+<li><strong>Unsorted list:</strong> always scans <span class="arithmatex">\(n\)</span> element at each extraction</li>
+</ul>
+<hr />
+<h2 id="heap-implementation-of-pq">Heap Implementation of <strong>PQ</strong><a class="headerlink" href="#heap-implementation-of-pq" title="Permanent link">&para;</a></h2>
+<ul>
+<li><span class="arithmatex">\(INSERT\)</span> and <span class="arithmatex">\(\text{EXTRACT-MAX}\)</span> are both <span class="arithmatex">\(O(lgn)\)</span></li>
+<li>good compromise between fast insertion but slow extraction and vice versa</li>
+<li><span class="arithmatex">\(\text{EXTRACT-MAX}\)</span>: already discussed <span class="arithmatex">\(\text{HEAP-EXTRACT-MAX}\)</span></li>
+<li><span class="arithmatex">\(INSERT\)</span>: Insertion is like that of Insertion-Sort. </li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">HEAP</span><span class="o">-</span><span class="nf">INSERT</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="m">+1</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>  <span class="n">i</span><span class="o">=</span><span class="n">n</span>  
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>  <span class="n">while</span> <span class="n">i</span><span class="o">&gt;</span><span class="m">1</span> <span class="n">and</span> <span class="n">A</span><span class="p">[</span><span class="nf">floor</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="m">2</span><span class="p">)]</span> <span class="o">&lt;</span> <span class="n">key</span> <span class="n">do</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">A</span><span class="p">[</span><span class="nf">floor</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="m">2</span><span class="p">)]</span> 
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="n">i</span><span class="o">=</span> <span class="nf">floor</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="m">2</span><span class="p">)</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>  <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">key</span>
+</code></pre></div>
+<hr />
+<h2 id="heap-implementation-of-pq_1">Heap Implementation of <strong>PQ</strong><a class="headerlink" href="#heap-implementation-of-pq_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Traverses <span class="arithmatex">\(O(lgn)\)</span> nodes, as <span class="arithmatex">\(HEAPIFY\)</span> does but makes fewer comparisons and assignments</li>
+<li><span class="arithmatex">\(HEAPIFY\)</span>: compares parent with both children</li>
+<li><span class="arithmatex">\(HEAP-INSERT\)</span>: with only one </li>
+</ul>
+<hr />
+<h2 id="heap-insert-example-step-1">HEAP-INSERT Example (Step-1)<a class="headerlink" href="#heap-insert-example-step-1" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_insert_1.drawio.svg" /></p>
+<hr />
+<h2 id="heap-insert-example-step-2">HEAP-INSERT Example (Step-2)<a class="headerlink" href="#heap-insert-example-step-2" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_insert_2.drawio.svg" /></p>
+<hr />
+<h2 id="heap-insert-example-step-3">HEAP-INSERT Example (Step-3)<a class="headerlink" href="#heap-insert-example-step-3" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_insert_3.drawio.svg" /></p>
+<hr />
+<h2 id="heap-insert-example-step-4">HEAP-INSERT Example (Step-4)<a class="headerlink" href="#heap-insert-example-step-4" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_insert_4.drawio.svg" /></p>
+<hr />
+<h2 id="heap-insert-example-step-5">HEAP-INSERT Example (Step-5)<a class="headerlink" href="#heap-insert-example-step-5" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_insert_5.drawio.svg" /></p>
+<hr />
+<h2 id="heap-increase-key">Heap Increase Key<a class="headerlink" href="#heap-increase-key" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Key value of <span class="arithmatex">\(i^{th}\)</span> element of heap is increased from <span class="arithmatex">\(A[i]\)</span> to <span class="arithmatex">\(key\)</span></li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">HEAP</span><span class="o">-</span><span class="n">INCREASE</span><span class="o">-</span><span class="nf">KEY</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>  <span class="n">if</span> <span class="n">key</span> <span class="o">&lt;</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="n">then</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="n">return</span> <span class="n">error</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>  <span class="n">while</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="m">1</span> <span class="n">and</span> <span class="n">A</span><span class="p">[</span><span class="nf">floor</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="m">2</span><span class="p">)]</span> <span class="o">&lt;</span> <span class="n">key</span> <span class="n">do</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="nf">floor</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="m">2</span><span class="p">)]</span> 
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    <span class="n">i</span> <span class="o">=</span> <span class="nf">floor</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="m">2</span><span class="p">)</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>  <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">key</span>
+</code></pre></div>
+<hr />
+<h2 id="heap-increase-key-example-step-1">HEAP-INCREASE-KEY Example (Step-1)<a class="headerlink" href="#heap-increase-key-example-step-1" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_increase_key_1.drawio.svg" /></p>
+<hr />
+<h2 id="heap-increase-key-example-step-2">HEAP-INCREASE-KEY Example (Step-2)<a class="headerlink" href="#heap-increase-key-example-step-2" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_increase_key_2.drawio.svg" /></p>
+<hr />
+<h2 id="heap-increase-key-example-step-3">HEAP-INCREASE-KEY Example (Step-3)<a class="headerlink" href="#heap-increase-key-example-step-3" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_increase_key_3.drawio.svg" /></p>
+<hr />
+<h2 id="heap-increase-key-example-step-4">HEAP-INCREASE-KEY Example (Step-4)<a class="headerlink" href="#heap-increase-key-example-step-4" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_increase_key_4.drawio.svg" /></p>
+<hr />
+<h2 id="heap-increase-key-example-step-5">HEAP-INCREASE-KEY Example (Step-5)<a class="headerlink" href="#heap-increase-key-example-step-5" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_increase_key_5.drawio.svg" /></p>
+<hr />
+<h2 id="heap-implementation-of-priority-queue-pq">Heap Implementation of Priority Queue (PQ)<a class="headerlink" href="#heap-implementation-of-priority-queue-pq" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_imp_pq.drawio.svg" /></p>
+<hr />
+<h2 id="summary-max-heap">Summary: <strong>Max Heap</strong><a class="headerlink" href="#summary-max-heap" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Heapify(A, i)</strong></li>
+<li>Works when both child subtrees of node i are heaps</li>
+<li>"<em>Floats down</em>" node i to satisfy the heap property</li>
+<li>Runtime: <span class="arithmatex">\(O(lgn)\)</span></li>
+<li><strong>Max(A, n)</strong></li>
+<li>Returns the max element of the heap (no modification)</li>
+<li>Runtime: <span class="arithmatex">\(O(1)\)</span></li>
+<li><strong>Extract-Max(A, n)</strong></li>
+<li>Returns and removes the max element of the heap</li>
+<li>Fills the gap in <span class="arithmatex">\(A[1]\)</span> with <span class="arithmatex">\(A[n]\)</span>, then calls <strong>Heapify(A,1)</strong></li>
+<li>Runtime: <span class="arithmatex">\(O(lgn)\)</span></li>
+</ul>
+<hr />
+<h2 id="summary-max-heap_1">Summary: <strong>Max Heap</strong><a class="headerlink" href="#summary-max-heap_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Build-Heap(A, n)</strong></li>
+<li>Given an arbitrary array, builds a heap from scratch</li>
+<li>Runtime: <span class="arithmatex">\(O(n)\)</span></li>
+<li><strong>Min(A, n)</strong></li>
+<li>How to return the min element in a max-heap?</li>
+<li>Worst case runtime: <span class="arithmatex">\(O(n)\)</span><ul>
+<li>because ~half of the heap elements are leaf nodes</li>
+</ul>
+</li>
+<li>Instead, use a min-heap for efficient min operations</li>
+<li><strong>Search(A, x)</strong></li>
+<li>For an arbitrary <span class="arithmatex">\(x\)</span> value, the worst-case runtime: <span class="arithmatex">\(O(n)\)</span></li>
+<li>Use a sorted array instead for efficient search operations</li>
+</ul>
+<hr />
+<h2 id="summary-max-heap_2">Summary: <strong>Max Heap</strong><a class="headerlink" href="#summary-max-heap_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Increase-Key(A, i, x)</strong></li>
+<li>Increase the key of node <span class="arithmatex">\(i\)</span> (from <span class="arithmatex">\(A[i]\)</span> to <span class="arithmatex">\(x\)</span>)</li>
+<li>“<em>Float up</em>” <span class="arithmatex">\(x\)</span> until heap property is satisfied</li>
+<li>Runtime: <span class="arithmatex">\(O(lgn)\)</span></li>
+<li><strong>Decrease-Key(A, i, x)</strong></li>
+<li>Decrease the key of node <span class="arithmatex">\(i\)</span> (from <span class="arithmatex">\(A[i]\)</span> to <span class="arithmatex">\(x\)</span>)</li>
+<li>Call <strong>Heapify(A, i)</strong></li>
+<li>Runtime: <span class="arithmatex">\(O(lgn)\)</span></li>
+</ul>
+<hr />
+<h2 id="phone-operator-problem"><strong>Phone Operator</strong> Problem<a class="headerlink" href="#phone-operator-problem" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:40% w:500px" src="../assets/ce100-week-4-heap-phone_operator.drawio.svg" /></p>
+<ul>
+<li>
+<p>A phone operator answering <strong><span class="arithmatex">\(n\)</span> phones</strong></p>
+</li>
+<li>
+<p>Each phone <span class="arithmatex">\(i\)</span> has <strong><span class="arithmatex">\(x_i\)</span> people waiting</strong> in line for their calls to be answered.</p>
+</li>
+<li>
+<p>Phone operator needs to answer the phone with the largest number of people waiting in line.</p>
+</li>
+<li>
+<p>New calls come continuously, and
+  some people hang up after waiting.</p>
+</li>
+</ul>
+<hr />
+<h2 id="phone-operator-solution"><strong>Phone Operator</strong> Solution<a class="headerlink" href="#phone-operator-solution" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>Step 1:</strong> Define the following array:</p>
+</li>
+<li>
+<p><span class="arithmatex">\(A[i]\)</span>: the ith element in heap</p>
+</li>
+<li>
+<p><span class="arithmatex">\(A[i].id\)</span>: the index of the corresponding phone</p>
+</li>
+<li>
+<p><span class="arithmatex">\(A[i].key\)</span>: <span class="arithmatex">\(\#\)</span> of people waiting in line for phone with index <span class="arithmatex">\(A[i].id\)</span></p>
+</li>
+</ul>
+<p><img alt="bg right:30% w:200px" src="../assets/ce100-week-4-heap-phone_operator_2.drawio.svg" /></p>
+<hr />
+<h2 id="phone-operator-solution_1"><strong>Phone Operator</strong> Solution<a class="headerlink" href="#phone-operator-solution_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Step 2:</strong> <span class="arithmatex">\(\text{Build-Max-Heap}(A, n)\)</span></li>
+<li><strong>Execution:</strong><ul>
+<li>When the operator wants to answer a phone:</li>
+<li><span class="arithmatex">\(id = A[1].id\)</span><ul>
+<li><span class="arithmatex">\(\text{Decrease-Key}(A, 1, A[1].key-1)\)</span></li>
+<li>answer phone with index <span class="arithmatex">\(id\)</span></li>
+</ul>
+</li>
+<li>When a new call comes in to phone i:<ul>
+<li><span class="arithmatex">\(\text{Increase-Key}(A, i, A[i].key+1)\)</span></li>
+</ul>
+</li>
+<li>When a call drops from phone i:<ul>
+<li><span class="arithmatex">\(\text{Decrease-Key}(A, i, A[i].key-1)\)</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="linked-lists">Linked Lists<a class="headerlink" href="#linked-lists" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Like arrays, Linked List is a linear data structure.</li>
+<li>Unlike arrays, linked list elements are not stored at a contiguous location; the elements are linked using pointers.</li>
+</ul>
+<p><img alt="bg right:60% w:730px" src="../assets/ce100-week-4-heap-linkedlist.drawio.svg" /></p>
+<hr />
+<h2 id="linked-lists-c-definition">Linked Lists - C Definition<a class="headerlink" href="#linked-lists-c-definition" title="Permanent link">&para;</a></h2>
+<ul>
+<li>C</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">// A linked list node</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">data</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span><span class="o">*</span><span class="w"> </span><span class="n">next</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h2 id="linked-lists-cpp-definition">Linked Lists - Cpp Definition<a class="headerlink" href="#linked-lists-cpp-definition" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Cpp</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Node</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">public</span><span class="o">:</span><span class="w"></span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">data</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span><span class="n">Node</span><span class="o">*</span><span class="w"> </span><span class="n">next</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h2 id="linked-lists-java-definition">Linked Lists - Java Definition<a class="headerlink" href="#linked-lists-java-definition" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Java</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">class</span> <span class="nc">LinkedList</span> <span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>  <span class="n">Node</span> <span class="n">head</span><span class="p">;</span> <span class="c1">// head of the list</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>  <span class="cm">/* Linked list Node*/</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>  <span class="kd">class</span> <span class="nc">Node</span> <span class="p">{</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>      <span class="kt">int</span> <span class="n">data</span><span class="p">;</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>      <span class="n">Node</span> <span class="n">next</span><span class="p">;</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>      <span class="c1">// Constructor to create a new node</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>      <span class="c1">// Next is by default initialized</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>      <span class="c1">// as null</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>      <span class="n">Node</span><span class="p">(</span><span class="kt">int</span> <span class="n">d</span><span class="p">)</span> <span class="p">{</span> <span class="n">data</span> <span class="o">=</span> <span class="n">d</span><span class="p">;</span> <span class="p">}</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>  <span class="p">}</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="linked-lists-csharp-definition">Linked Lists - Csharp Definition<a class="headerlink" href="#linked-lists-csharp-definition" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Csharp</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">LinkedList</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="c1">// The first node(head) of the linked list</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="c1">// Will be an object of type Node (null by default)</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">  </span><span class="n">Node</span><span class="w"> </span><span class="n">head</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">  </span><span class="k">class</span><span class="w"> </span><span class="nc">Node</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">data</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">      </span><span class="n">Node</span><span class="w"> </span><span class="n">next</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">      </span><span class="c1">// Constructor to create a new node</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">      </span><span class="n">Node</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h2 id="priority-queue-using-linked-list-methods">Priority Queue using <strong>Linked List</strong> Methods<a class="headerlink" href="#priority-queue-using-linked-list-methods" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Implement Priority Queue using Linked Lists. </li>
+<li><strong>push():</strong> This function is used to insert a new data into the queue.</li>
+<li><strong>pop():</strong> This function removes the element with the highest priority from the queue.</li>
+<li><strong>peek()/top():</strong> This function is used to get the highest priority element in the queue without removing it from the queue.</li>
+</ul>
+<hr />
+<h2 id="priority-queue-using-linked-list-algorithm">Priority Queue using <strong>Linked List</strong> Algorithm<a class="headerlink" href="#priority-queue-using-linked-list-algorithm" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nf">PUSH</span><span class="p">(</span><span class="n">HEAD</span><span class="p">,</span> <span class="n">DATA</span><span class="p">,</span> <span class="n">PRIORITY</span><span class="p">)</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>  <span class="n">Create</span> <span class="n">NEW.Data</span> <span class="o">=</span> <span class="n">DATA</span> <span class="o">&amp;</span> <span class="n">NEW.Priority</span> <span class="o">=</span> <span class="n">PRIORITY</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>  <span class="n">If</span> <span class="n">HEAD.priority</span> <span class="o">&lt;</span> <span class="n">NEW.Priority</span> 
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    <span class="n">NEW</span> <span class="o">-&gt;</span> <span class="n">NEXT</span> <span class="o">=</span> <span class="n">HEAD</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    <span class="n">HEAD</span> <span class="o">=</span> <span class="n">NEW</span> 
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>  <span class="n">Else</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    <span class="n">Set</span> <span class="n">TEMP</span> <span class="n">to</span> <span class="n">head</span> <span class="n">of</span> <span class="n">the</span> <span class="n">list</span> 
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>  <span class="n">Endif</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>  <span class="n">WHILE</span> <span class="n">TEMP</span> <span class="o">-&gt;</span> <span class="n">NEXT</span> <span class="o">!=</span> <span class="kc">NULL</span> <span class="n">and</span> <span class="n">TEMP</span> <span class="o">-&gt;</span> <span class="n">NEXT</span> <span class="o">-&gt;</span><span class="n">PRIORITY</span> <span class="o">&gt;</span> <span class="n">PRIORITY</span> <span class="n">THEN</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>    <span class="n">TEMP</span> <span class="o">=</span> <span class="n">TEMP</span> <span class="o">-&gt;</span> <span class="n">NEXT</span> 
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>  <span class="n">ENDWHILE</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>  <span class="n">NEW</span> <span class="o">-&gt;</span> <span class="n">NEXT</span> <span class="o">=</span> <span class="n">TEMP</span> <span class="o">-&gt;</span> <span class="n">NEXT</span> 
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>  <span class="n">TEMP</span> <span class="o">-&gt;</span> <span class="n">NEXT</span> <span class="o">=</span> <span class="n">NEW</span> 
+</code></pre></div>
+<hr />
+<h2 id="priority-queue-using-linked-list-algorithm_1">Priority Queue using <strong>Linked List</strong> Algorithm<a class="headerlink" href="#priority-queue-using-linked-list-algorithm_1" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nf">POP</span><span class="p">(</span><span class="n">HEAD</span><span class="p">)</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="o">//</span><span class="n">Set</span> <span class="n">the</span> <span class="n">head</span> <span class="n">of</span> <span class="n">the</span> <span class="n">list</span> <span class="n">to</span> <span class="n">the</span> <span class="n">next</span> <span class="n">node</span> <span class="n">in</span> <span class="n">the</span> <span class="n">list.</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">HEAD</span> <span class="o">=</span> <span class="n">HEAD</span> <span class="o">-&gt;</span> <span class="n">NEXT.</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">Free</span> <span class="n">the</span> <span class="n">node</span> <span class="n">at</span> <span class="n">the</span> <span class="n">head</span> <span class="n">of</span> <span class="n">the</span> <span class="n">list</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nf">PEEK</span><span class="p">(</span><span class="n">HEAD</span><span class="p">)</span><span class="o">:</span> 
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">Return</span> <span class="n">HEAD</span> <span class="o">-&gt;</span> <span class="n">DATA</span> 
+</code></pre></div>
+<hr />
+<h2 id="priority-queue-using-linked-list-notes">Priority Queue using <strong>Linked List</strong> Notes<a class="headerlink" href="#priority-queue-using-linked-list-notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>LinkedList is already sorted. </li>
+<li>Time Complexities and Comparison with Binary Heap</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>peek()</th>
+<th>push()</th>
+<th>pop()</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linked List</td>
+<td><span class="arithmatex">\(O(1)\)</span></td>
+<td><span class="arithmatex">\(O(n)\)</span></td>
+<td><span class="arithmatex">\(O(1)\)</span></td>
+</tr>
+<tr>
+<td>Binary Heap</td>
+<td><span class="arithmatex">\(O(1)\)</span></td>
+<td><span class="arithmatex">\(O(lgn)\)</span></td>
+<td><span class="arithmatex">\(O(lgn)\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="sorting-in-linear-time">Sorting in Linear Time<a class="headerlink" href="#sorting-in-linear-time" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="how-fast-can-we-sort">How Fast Can We Sort?<a class="headerlink" href="#how-fast-can-we-sort" title="Permanent link">&para;</a></h2>
 <hr />
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2427,20 +3720,27 @@ $$
 <p><a href="https://www.geeksforgeeks.org/insertion-sort/">Insertion Sort - GeeksforGeeks</a></p>
 </li>
 <li>
+<p><a href="https://www.geeksforgeeks.org/priority-queue-using-linked-list/">Priority Queue Using Linked List - GeeksforGeeks</a></p>
+</li>
+<li>
+<p><a href="https://www.javatpoint.com/priority-queue-using-linked-list">Priority Queue Using Linked List - JavatPoint</a></p>
+</li>
+<li>
 <p><a href="https://xlinux.nist.gov/dads/">NIST Dictionary of Algorithms and Data Structures</a></p>
 </li>
 <li>
 <p><a href="https://xlinux.nist.gov/dads/">NIST - Dictionary of Algorithms and Data Structures</a></p>
 </li>
 </ul>
-<p>TODO</p>
+<hr />
+<p><span class="arithmatex">\(EOF\)</span> </p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 10, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 11, 2022</span>
       
     
   </small>
