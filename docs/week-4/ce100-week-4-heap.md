@@ -50,6 +50,8 @@ math: katex
 
 <!-- paginate: false -->
 
+<!--  -->
+
 ## CE100 Algorithms and Programming II
 
 ## Week-4 (Heap/Heap Sort)
@@ -146,7 +148,7 @@ Download [DOC](ce100-week-4-heap.md_doc.pdf), [SLIDE](ce100-week-4-heap.md_slide
 - **Min heap:** For every node **i** other than **root**, $A[parent(i)] \leq A[i]$
   - Parent node is always smaller than the child nodes
 
-![alt:"alt" height:350px center](assets/ce100-week-4-heap-heap_min_heap.drawio.svg)
+![bg right:40% w:480](assets/ce100-week-4-heap-heap_min_heap.drawio.svg)
 
 ---
 
@@ -157,7 +159,7 @@ Download [DOC](ce100-week-4-heap.md_doc.pdf), [SLIDE](ce100-week-4-heap.md_slide
 - **Max heap:** For every node **i** other than **root**, $A[parent(i)] ≥ A[i]$
   - Parent node is always larger than the child nodes
 
-![alt:"alt" height:350px center](assets/ce100-week-4-heap-heap_max_heap.drawio.svg)
+![bg right:40% w:480](assets/ce100-week-4-heap-heap_max_heap.drawio.svg)
 
 ---
 
@@ -314,7 +316,7 @@ HEAPIFY(A, i, n)
 - $T(n) \leq T(|S_{L(i)}|) + \Theta(1)$ 
 - $S_{L(i)}$ and $S_{R(i)}$ are complete binary trees of heights  $h(i)-1$ and $h(i)-2$, respectively
 
-![alt:"alt" height:350px center](assets/ce100-week-4-heap-heap_analysis_1.drawio.svg)
+![bg right:50% w:600](assets/ce100-week-4-heap-heap_analysis_1.drawio.svg)
 
 ---
 
@@ -426,19 +428,202 @@ HEAPIFY(A, i, n)
   - Process nodes in bottom up order.
   - When $HEAPIFY$ is called on node $i$, the subtrees connected to the $left$ and $right$ subtrees already satisfy the heap property.
 
-  ![alt:"alt" height:300px center](assets/ce100-week-4-heap-heap_build_1.drawio.svg) 
+  ![bg right:25% w:300px](assets/ce100-week-4-heap-heap_build_common_1.drawio.svg) 
 
 ---
 
-## Storage of the leaves
+## Storage of the leaves (Lemma)
 
 - **Lemma:** The last $\lceil \frac{n}{2} \rceil$ nodes of a heap are all leaves. 
+
+<!-- 
 ![alt:"alt" height:450px center](assets/ce100-week-4-heap-heap_heap_leaves.drawio.svg) 
+-->
 
-
+![bg right:70% w:800](assets/ce100-week-4-heap-heap_heap_leaves.drawio.svg)
 
 ---
 
+##  Storage of the leaves (Proof of Lemma) (1)
+
+- **Lemma:** last $\lceil n/2 \rceil$ nodes of a heap are all leaves
+- Proof : 
+  - $m=2^{d-1}$: $\#$ nodes at level $d-1$
+  - $f$: $\#$ nodes at level $d$ (last level)
+- $\#$ of nodes with depth $d-1$ : $m$
+- $\#$ of nodes with depth $<d-1$ : $m-1$
+- $\#$ of nodes with depth $d$ : $f$
+- **Total** $\#$ of nodes :$n=f+2m-1$
+
+![bg right:40% w:480](assets/ce100-week-4-heap-heap_stored_leaves_lemma.drawio.svg)
+
+---
+##  Storage of the leaves (Proof of Lemma) (2)
+
+- **Total** $\#$ of nodes : $f=n-2m+1$
+
+$$
+\begin{align*}
+\text{\# of leaves: }&=f+m-\lceil f/2 \rceil \\
+&= m+\lfloor f/2 \rfloor \\
+&= m+\lfloor (n-2m+1)/2 \rfloor \\
+&= \lfloor (n+1)/2 \rfloor \\
+&= \lceil n/2 \rceil
+\end{align*}
+$$
+
+Proof is Completed
+
+![bg right:40% w:480](assets/ce100-week-4-heap-heap_stored_leaves_lemma.drawio.svg)
+
+---
+
+## Heap Operations: Building Heap
+
+```r
+BUILD-HEAP (A, n)
+  for i = ceil(n/2) downto 1 do
+    HEAPIFY(A, i, n)
+```
+
+- **Reminder:** The last $\lceil n/2 \rceil$ nodes of a heap are **all leaves**, which trivially satisfy the heap property
+
+---
+## Build-Heap Example (Step-1)
+
+![bg right:70% w:800px](assets/ce100-week-4-heap-heap_build_1.drawio.svg)
+
+---
+## Build-Heap Example (Step-2)
+
+![bg right:70% w:800px](assets/ce100-week-4-heap-heap_build_2.drawio.svg)
+
+---
+## Build-Heap Example (Step-3)
+
+![bg right:70% w:800px](assets/ce100-week-4-heap-heap_build_3.drawio.svg)
+
+---
+## Build-Heap Example (Step-4)
+
+![bg right:70% w:800px](assets/ce100-week-4-heap-heap_build_4.drawio.svg)
+
+---
+## Build-Heap Example (Step-5)
+
+![bg right:70% w:800px](assets/ce100-week-4-heap-heap_build_5.drawio.svg)
+
+---
+## Build-Heap Example (Step-6)
+
+![bg right:70% w:800px](assets/ce100-week-4-heap-heap_build_6.drawio.svg)
+
+---
+## Build-Heap Example (Step-7)
+
+![bg right:70% w:800px](assets/ce100-week-4-heap-heap_build_7.drawio.svg)
+
+---
+## Build-Heap Example (Step-8)
+
+![bg right:70% w:800px](assets/ce100-week-4-heap-heap_build_8.drawio.svg)
+
+---
+## Build-Heap Example (Step-9)
+
+![bg right:70% w:800px](assets/ce100-week-4-heap-heap_build_9.drawio.svg)
+
+---
+
+## Build-Heap: Runtime Analysis
+
+- Simple analysis:
+  - $O(n)$ calls to $HEAPIFY$, each of which takes $O(lgn)$ time
+  - $O(nlgn)$ $\Longrightarrow$ loose bound
+- In general, a good approach:
+  - Start by proving an easy bound
+  - Then, try to tighten it
+
+- Is there a tighter bound?
+
+---
+
+## Build-Heap: **Tighter** Running Time Analysis
+
+- If the heap is complete binary tree then $h_{\ell} = d – \ell$
+- Otherwise, nodes at a given level do not all have the same height, But we have $d – \ell – 1 \leq h_{\ell} \leq d – \ell$
+
+![alt:"alt" height:420px center](assets/ce100-week-4-heap-heap_tight_running_time_analysis.drawio.svg) 
+
+---
+## Build-Heap: **Tighter** Running Time Analysis
+
+- Assume that all nodes at level $\ell= d – 1$ are processed 
+
+$$
+\begin{align*}
+  T(n) &=\sum_{\ell=0}^{d-1}n_{\ell}O(h_{\ell})=O(\sum_{\ell=0}^{d-1}n_{\ell}h_{\ell})
+
+  \begin{cases}
+   n_{\ell}=2^{\ell} = \# \text{ of nodes at level }\ell \\
+
+   h_{\ell}=\text{height of nodes at level } \ell
+  \end{cases} \\
+
+\therefore T(n) &= O \bigg( \sum_{\ell=0}^{d-1}2^{\ell}(d-\ell) \bigg) \\
+
+\text{Let } & h=d-\ell \Longrightarrow \ell = d-h \text{ change of variables} \\ 
+
+T(n) &= O\bigg(\sum_{h=1}^{d}h2^{d-h} \bigg)=O\bigg(\sum_{h=1}^{d}h \frac{2^d}{2^h} \bigg) = O\bigg(2^d\sum_{h=1}^{d}h (1/2)^h\bigg) \\
+
+\text{ but } & 2^d = \Theta(n) \Longrightarrow O\bigg(n\sum_{h=1}^{d}h (1/2)^h \bigg)
+\end{align*}
+$$
+
+---
+## Build-Heap: **Tighter** Running Time Analysis
+
+$$
+\sum_{h=1}^{d}h(1/2)^h \leq  \sum_{h=0}^{d}h(1/2)^h \leq \sum_{h=0}^{\infty}h(1/2)^h 
+$$
+- recall infinite decreasing geometric series
+$$
+\sum_{k=0}^{\infty}x^k = \frac{1}{1-x} \text{ where } |x|<1 
+$$
+- differentiate both sides
+$$
+\sum_{k=0}^{\infty}kx^{k-1} = \frac{1}{(1-x)^2}  
+$$
+
+---
+## Build-Heap: **Tighter** Running Time Analysis
+
+$$
+\sum_{k=0}^{\infty}kx^{k-1} = \frac{1}{(1-x)^2}  
+$$
+- then, multiply both sides by $x$
+$$
+\sum_{k=0}^{\infty}kx^k = \frac{x}{(1-x)^2}  
+$$
+- in our case: $x = 1/2$ and $k = h$
+$$
+\therefore \sum_{h=0}^{\infty}h(1/2)^h = \frac{1/2}{(1-(1/2))^2}=2=O(1) \\
+\therefore T(n)=O(n\sum_{h=1}^{d}h(1/2)^h)=O(n)  
+$$
+
+---
+## Heapsort Algorithm Steps
+
+- **(1)** Build a heap on array $A[1 \dots n]$ by calling $BUILD-HEAP(A, n)$
+- **(2)** The largest element is stored at the root $A[1]$ 
+  - Put it into its correct final position $A[n]$ by $A[1] \longleftrightarrow A[n]$
+- **(3)** Discard node $n$ from the heap
+- **(4)** Subtrees $(S2 \& S3)$ rooted at children of root remain as heaps, but the new root element may violate the heap property. 
+  - Make $A[1 \dots n-1]$ a heap by calling $HEAPIFY(A,1,n-1)$
+- **(5)** $n \leftarrow n-1$
+- **(6)** Repeat steps **(2-4)** until $n=2$
+
+---
 ## References
 
 - [Introduction to Algorithms, Third Edition | The MIT Press](https://mitpress.mit.edu/books/introduction-algorithms-third-edition)
