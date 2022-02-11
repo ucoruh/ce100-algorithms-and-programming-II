@@ -75,6 +75,7 @@ We will first talk about,
 please read the syllabus carefully. 
 
 ---
+
 ## Outline (1/3)
 
 - Introduction to Analysis of Algorithms
@@ -83,6 +84,7 @@ please read the syllabus carefully.
   - Pseudocode
 
 ---
+
 ## Outline (2/3)
 
 - RAM (Random Access Machine Model) 
@@ -93,6 +95,7 @@ please read the syllabus carefully.
 - Merge Sort Analysis
 
 ---
+
 ## Outline (3/3)
 
 - Asymptotic Notation 
@@ -214,6 +217,7 @@ We often use a **loop invariant** to help us to understand why an algorithm give
 **Example:** (Insertion Sort) at the start of each iteration of the "outer" for loop - the loop indexed by $j$ - the subarray $A[1 \dots j-1]$ consist of the elements originally in $A[1\dots j-1]$ but in sorted order.
 
 ---
+
 ## Correctness (2)
 
 To use a loop invariant to prove correctness, we must show 3 things about it.
@@ -223,6 +227,7 @@ To use a loop invariant to prove correctness, we must show 3 things about it.
 - **Termination:** When the loop terminates, the invariant - usually along with the reason that the loop terminated - gives us a usefull property that helps show that the algorithm is correct.
 
 ---
+
 ## RAM (Random Access Machine Model)  $\Longrightarrow \Theta(1)$ (1)
 
 - Operations
@@ -232,18 +237,20 @@ To use a loop invariant to prove correctness, we must show 3 things about it.
   - Arithmetic
     - add, subtract, multiply, divide, remainder, floor, ceiling, 
     - shift left/shift right (good by multiply/dividing $2^k$)
-    
----
-## RAM (Random Access Machine Model)  $\Longrightarrow \Theta(1)$ (2) 
-
-  - Data Movement
-    - load, store, copy
-  - Control
-    - conditional / unconditional branch
-    - subroutine calls
-    - returns
 
 ---
+
+## RAM (Random Access Machine Model)  $\Longrightarrow \Theta(1)$ (2)
+
+- Data Movement
+  - load, store, copy
+- Control
+  - conditional / unconditional branch
+  - subroutine calls
+  - returns
+
+---
+
 ## RAM (Random Access Machine Model)  $\Longrightarrow \Theta(1)$ (3)
 
 - Each instruction take a constant amount of time
@@ -1360,7 +1367,6 @@ $f(n)=\Theta(g(n)) \Leftrightarrow f(n)=O(g(n)) \text{ and } f(n)=\Omega(g(n))$
 
 ![alt:"Summary Asymptotic Analysis" height:500px center](assets/ce100-week-1-intro-bigo_worst_avg_best_case.drawio.svg)
 
-
 ---
 
 ### Small-o / $o$-Notation : Asymptotic upper bound that is not tight (1)
@@ -1428,6 +1434,7 @@ f(n)= \omega(g(n)) \leftrightarrow a > b
 $$
 
 ---
+
 ### (Important) Analogy to compare of two real numbers (2)
 
 $O \approx \leq$
