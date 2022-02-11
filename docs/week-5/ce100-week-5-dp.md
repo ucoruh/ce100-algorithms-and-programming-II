@@ -128,4 +128,6 @@ Download [DOC](ce100-week-5-dp.md_doc.pdf), [SLIDE](ce100-week-5-dp.md_slide.pdf
 
 ## References
 
-TODO
+---
+
+$-End-Of-Week-5-Course-Module-$ 

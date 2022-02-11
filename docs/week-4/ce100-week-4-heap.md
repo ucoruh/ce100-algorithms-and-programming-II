@@ -587,19 +587,13 @@ BUILD-HEAP (A, n)
 $$
 \begin{align*}
   T(n) &=\sum_{\ell=0}^{d-1}n_{\ell}O(h_{\ell})=O(\sum_{\ell=0}^{d-1}n_{\ell}h_{\ell})
-
   \begin{cases}
    n_{\ell}=2^{\ell} = \# \text{ of nodes at level }\ell \\
-
    h_{\ell}=\text{height of nodes at level } \ell
   \end{cases} \\
-
 \therefore T(n) &= O \bigg( \sum_{\ell=0}^{d-1}2^{\ell}(d-\ell) \bigg) \\
-
 \text{Let } & h=d-\ell \Longrightarrow \ell = d-h \text{ change of variables} \\ 
-
 T(n) &= O\bigg(\sum_{h=1}^{d}h2^{d-h} \bigg)=O\bigg(\sum_{h=1}^{d}h \frac{2^d}{2^h} \bigg) = O\bigg(2^d\sum_{h=1}^{d}h (1/2)^h\bigg) \\
-
 \text{ but } & 2^d = \Theta(n) \Longrightarrow O\bigg(n\sum_{h=1}^{d}h (1/2)^h \bigg)
 \end{align*}
 $$
@@ -614,14 +608,15 @@ $$
 
 - recall infinite decreasing geometric series
   
-  $$
-  \sum_{k=0}^{\infty}x^k = \frac{1}{1-x} \text{ where } |x|<1 
-  $$
+$$
+\sum_{k=0}^{\infty} x^k = \frac{1}{1-x} \text{ where } |x|<1 
+$$
+
 - differentiate both sides
   
-  $$
-  \sum_{k=0}^{\infty}kx^{k-1} = \frac{1}{(1-x)^2}  
-  $$
+$$
+\sum_{k=0}^{\infty}kx^{k-1} = \frac{1}{(1-x)^2}  
+$$
 
 ---
 
@@ -633,15 +628,16 @@ $$
 
 - then, multiply both sides by $x$
   
-  $$
-  \sum_{k=0}^{\infty}kx^k = \frac{x}{(1-x)^2}  
-  $$
+$$
+\sum_{k=0}^{\infty}kx^k = \frac{x}{(1-x)^2}  
+$$
+
 - in our case: $x = 1/2$ and $k = h$
   
-  $$
-  \therefore \sum_{h=0}^{\infty}h(1/2)^h = \frac{1/2}{(1-(1/2))^2}=2=O(1) \\
+$$
+\therefore \sum_{h=0}^{\infty}h(1/2)^h = \frac{1/2}{(1-(1/2))^2}=2=O(1) \\
 \therefore T(n)=O(n\sum_{h=1}^{d}h(1/2)^h)=O(n)  
-  $$
+$$
 
 ---
 
@@ -1221,7 +1217,574 @@ Return HEAD -> DATA
 ## Sorting in Linear Time
 
 ---
+
 ## How Fast Can We Sort?
+
+- The algorithms we have seen so far:
+  - Based on comparison of elements
+  - We only care about the relative ordering between the elements (not the actual values)
+  - The smallest worst-case runtime we have seen so far: $O(nlgn)$
+  - Is $O(nlgn)$ the best we can do?
+
+- **Comparison sorts:** Only use comparisons to determine the relative order of elements.
+
+---
+
+## Decision Trees for Comparison Sorts
+
+- Represent a sorting algorithm abstractly in terms of a **decision tree**
+  - A **binary tree** that represents the **comparisons between** elements in the sorting algorithm
+  - Control, data movement, and other aspects are ignored
+
+- One decision tree corresponds to one sorting algorithm and one value of $n$ (*input size*)
+
+---
+
+## Reminder: Insertion Sort Step-By-Step Description (1)
+
+![bg right:60% w:700px](assets/ce100-week-4-heap-ins_sort_3.drawio.svg)
+
+---
+
+## Reminder: Insertion Sort Step-By-Step Description (2)
+
+![bg right:60% w:700px](assets/ce100-week-4-heap-ins_sort_4.drawio.svg)
+
+---
+
+## Reminder: Insertion Sort Step-By-Step Description (3)
+
+![bg right:60% w:700px](assets/ce100-week-4-heap-ins_sort_5.drawio.svg)
+
+---
+
+## Different Outcomes for Insertion Sort and n=3
+- Input : 
+$<a_1,a_2,a_3>$
+
+![bg right:65% w:760px](assets/ce100-week-4-heap-ins_sort_outcomes.drawio.svg)
+
+---
+
+## Decision Tree for Insertion Sort and n=3
+
+![bg right:70% w:850px](assets/ce100-week-4-heap-ins_sort_comp.drawio.svg)
+
+
+---
+
+## Decision Tree Model for Comparison Sorts
+
+- **Internal node $(i:j)$:** Comparison between elements $a_i$ and $a_j$
+
+- **Leaf node:** An output of the sorting algorithm
+
+- **Path from root to a leaf:** The execution of the sorting algorithm for a given input
+
+- **All possible executions** are captured by the decision tree
+
+- **All possible outcomes (permutations)** are in the leaf nodes
+
+---
+
+## Decision Tree for Insertion Sort and n=3
+- Input:
+$<9, 4, 6>$
+
+![bg right:70% w:850px](assets/ce100-week-4-heap-ins_sort_comp_2.drawio.svg)
+
+---
+
+## Decision Tree Model
+
+- A decision tree can model the execution of any comparison sort:
+  - One tree for each input size $n$
+  - View the algorithm as **splitting** whenever it compares two elements
+  - The tree contains the **comparisons along all possible** instruction traces
+
+- **The running time of the algorithm** $=$ *the length of the path taken*
+- **Worst case running time** $=$ *height of the tree*
+
+---
+
+## Counting Sort
+
+
+---
+
+## Lower Bound for Comparison Sorts
+
+- Let $n$ be the number of elements in the input array.
+- What is the $min$ number of leaves in the decision tree?
+	- $n!$ **(because there are n! permutations of the input array, and all possible outputs must be captured in the leaves)**
+- What is the max number of leaves in a binary tree of height $h$? $\Longrightarrow$ $2^h$ 
+- So, we must have:
+$$
+2^h \geq n!
+$$
+
+---
+
+## Lower Bound for Decision Tree Sorting
+
+- **Theorem:** Any comparison sort algorithm requires 
+$\Omega(nlgn)$ comparisons in the worst case.
+- **Proof:** We’ll prove that any decision tree corresponding to a comparison sort algorithm must have height $\Omega(nlgn)$
+$$
+\begin{align*}
+2^h & \geq n! \\
+h & \geq lg(n!) \\
+& \geq lg((n/e)^n) (Stirling Approximation) \\
+& = nlgn - nlge \\
+& = \Omega(nlgn)
+
+\end{align*}
+$$
+
+---
+
+## Lower Bound for Decision Tree Sorting
+
+**Corollary:** Heapsort and merge sort are asymptotically optimal comparison sorts.
+
+**Proof:** The $O(nlgn)$ upper bounds on the runtimes for heapsort and merge sort match the $\Omega(nlgn)$ **worst-case** lower bound from the previous theorem.
+
+---
+
+## Sorting in Linear Time
+
+- **Counting sort:** No comparisons between elements
+
+  - **Input:** $A[1 \dots n]$, where $A[j] \in \{1, 2,\dots, k\}$
+  - **Output:** $B[1 \dots n]$, sorted
+  - **Auxiliary storage:** $C[1 \dots k]$
+
+---
+
+## Counting Sort-1
+
+![bg right:60% w:750px](assets/ce100-week-4-heap-counting_sort_1.drawio.svg)
+
+---
+
+## Counting Sort-2
+- **Step 1:** Initialize all counts to 0
+
+![bg right:60% w:750px](assets/ce100-week-4-heap-counting_sort_2.drawio.svg)
+
+---
+
+## Counting Sort-3
+- **Step 2:** Count the number of occurrences
+of each value in the input array
+
+![bg right:60% w:750px](assets/ce100-week-4-heap-counting_sort_3.drawio.svg)
+
+---
+
+## Counting Sort-4
+
+- **Step 3:** Compute the number of elements
+less than or equal to each value
+
+![bg right:60% w:750px](assets/ce100-week-4-heap-counting_sort_4.drawio.svg)
+
+---
+
+## Counting Sort-5
+
+- **Step 4:** Populate the output array
+  - There are $C[3] = 3$ elements that are $\leq 3$
+
+![bg right:60% w:750px](assets/ce100-week-4-heap-counting_sort_5.drawio.svg)
+
+---
+
+## Counting Sort-6
+
+- **Step 4:** Populate the output array
+  - There are $C[4]=5$ elements that are $\leq 4$
+
+![bg right:60% w:750px](assets/ce100-week-4-heap-counting_sort_6.drawio.svg)
+
+---
+
+## Counting Sort-7
+
+- **Step 4:** Populate the output array
+  - There are $C[3]=2$ elements that are $\leq 3$
+
+![bg right:60% w:750px](assets/ce100-week-4-heap-counting_sort_7.drawio.svg)
+
+---
+
+## Counting Sort-8
+
+- **Step 4:** Populate the output array
+  - There are $C[1]=1$ elements that are $\leq 1$
+
+![bg right:60% w:750px](assets/ce100-week-4-heap-counting_sort_8.drawio.svg)
+
+---
+
+## Counting Sort-9
+
+- **Step 4:** Populate the output array
+  - There are $C[4]=4$ elements that are $\leq 4$
+
+![bg right:60% w:750px](assets/ce100-week-4-heap-counting_sort_9.drawio.svg)
+
+---
+
+## Counting Sort: Runtime Analysis
+
+- **Total Runtime:** $\Theta(n+k)$
+  - $n$ : size of the input array
+  - $k$ : the range of input values
+
+![bg right:60% w:550px](assets/ce100-week-4-heap-counting_sort_10.drawio.svg)
+
+---
+
+## Counting Sort: Runtime
+
+- Runtime is $\Theta(n+k)$
+  - If $k=O(n)$, then counting sort takes $\Theta(n)$
+- **Question:** We proved a lower bound of $\Theta(nlgn)$ before! Where is the fallacy?
+- **Answer:** 
+  - $\Theta(nlgn)$ lower bound is for comparison-based sorting
+  - Counting sort is not a comparison sort
+  - In fact, not a single comparison between elements occurs!
+
+---
+
+## Stable Sorting
+
+- Counting sort is a **stable sort:** It preserves the input order among equal elements.
+  - i.e. The numbers with the same value appear in the output array in the same order as they do in the input array.
+- **Note**: Which other sorting algorithms have this property?
+
+![ center h:300px](assets/ce100-week-4-heap-stable-sorting.drawio.svg)
+
+---
+
+## Radix Sort
+
+- **Origin:** Herman Hollerith’s card-sorting machine for the 1890 US Census.
+- **Basic idea:** Digit-by-digit sorting
+
+- Two variations:
+  - Sort from **MSD** to **LSD** (bad idea)
+  - Sort from **LSD** to **MSD** (good idea)
+
+(*LSD/MSD: Least/most significant digit*)
+
+---
+
+## Herman Hollerith (1860-1929)
+
+- The 1880 U.S. Census took **almost 10 years** to process. 
+- While a lecturer at MIT, Hollerith prototyped **punched-card technology**. 
+- His machines, including a **card sorter**, allowed the 1890 census total to be reported in **6 weeks**. 
+- He founded the **Tabulating Machine Company** in 1911, which merged with other companies in 1924 to form **International Business Machines(IBM)**. 
+
+![ center h:250px](assets/herman-hollerith.png)
+
+---
+
+## Hollerith Punched Card
+
+- **Punched card:** A piece of stiff paper that contains digital information represented by the presence or absence of holes.
+  - 12 rows and 24 columns
+  - coded for age, state of residency, gender, etc.
+
+![ center h:300px](assets/punched-card.png)
+
+---
+
+## **Modern** IBM card
+
+- One character per column
+  - So, that’s why text windows have 80 columns!
+
+  ![ center h:350px](assets/ibm-punch-card.png)
+
+- for more samples visit https://en.wikipedia.org/wiki/Punched_card
+
+---
+
+## Hollerith Tabulating Machine and Sorter
+
+- Mechanically sorts the cards based on the hole locations.
+- Sorting performed for one column at a time
+- Human operator needed to load/retrieve/move cards at each stage
+
+![ center h:350px](assets/tabulating-machine.png)
+
+---
+
+## Hollerith’s MSD-First Radix Sort
+- Sort starting from the most significant digit (MSD)
+- Then, sort each of the resulting bins recursively
+- At the end, combine the decks in order
+
+![center h:350px](assets/ce100-week-4-heap-msd-first-radix-sort.drawio.svg)
+
+---
+
+## Hollerith’s MSD-First Radix Sort
+
+- To sort a subset of cards recursively:
+  - All the other cards need to be removed from the machine, because the machine can handle only one sorting problem at a time.
+  - The human operator needs to keep track of the intermediate card piles
+
+  ![center h:300px](assets/ce100-week-4-heap-msd-radix-sort-2.drawio.svg)
+
+---
+
+## Hollerith’s MSD-First Radix Sort
+
+- MSD-first sorting may require:
+  - very large number of sorting passes
+  - very large number of intermediate card piles to maintain
+- **S(d):** 
+  - $\#$ of passes needed to sort d-digit numbers (worst-case)
+- **Recurrence:** 
+  - $S(d)=10S(d-1)+1$ with $S(1)=1$
+    - **Reminder:** Recursive call made to each subset with the same most significant digit(MSD)
+
+---
+
+## Hollerith’s MSD-First Radix Sort
+
+- **Recurrence:**  $S(d)=10S(d-1)+1$
+
+$$
+\begin{align*}
+S(d) &= 10 S(d-1) + 1 \\
+     & = 10 \bigg(10 S(d-2) + 1 \bigg) + 1 \\
+     & = 10 \Big(10 \bigg(10 S(d-3) + 1\bigg) + 1 \Big) + 1 \\
+     & = 10i S(d-i) + 10i-1 + 10i-2 + \dots +  101 + 100 \\
+     &=\sum_{i=0}^{d-1}10^i
+\end{align*}
+$$
+
+- Iteration terminates when  $i = d-1$ with  $S(d-(d-1)) = S(1) = 1$
+
+---
+
+## Hollerith’s MSD-First Radix Sort
+
+- **Recurrence:**  $S(d)=10S(d-1)+1$
+
+$$
+\begin{align*}
+ S(d) &=\sum_{i=0}^{d-1}10^i \\
+ & = \frac{10^d-1}{10-1} \\
+ & = \frac{1}{9}(10^d-1)\\
+ & \Downarrow \\
+S(d)&=\frac{1}{9}(10^d-1)
+\end{align*}
+$$
+
+---
+
+## Hollerith’s MSD-First Radix Sort
+
+- $P(d)$: $\#$ of intermediate card piles maintained (worst-case)
+- **Reminder:** Each routing pass generates 9 intermediate piles except the sorting passes on least significant digits (LSDs)
+  - There are $10^{d-1}$ sorting calls to LSDs
+
+$$
+\begin{align*}
+P(d) &= 9(S(d)–10^{d-1}) \\
+     &= 9\frac{(10^{d–1})}{9– 10^{d-1}} \\
+     &= (10^{d–1}–9 * 10^{d-1}) \\
+     &= 10^{d-1} - 1
+\end{align*}
+$$
+
+---
+
+## Hollerith’s MSD-First Radix Sort
+
+$$
+\begin{align*}
+P(d) &= 10^{d-1} - 1
+\end{align*}
+$$
+
+**Alternative solution:** Solve the recurrence
+
+$$
+\begin{align*}
+P(d) &= 10P(d-1)+9 \\
+P(1) &= 0 \\
+\end{align*}
+$$
+
+---
+
+## Hollerith’s MSD-First Radix Sort
+
+- **Example:** To sort $3$ digit numbers, in the worst case:
+	- $S(d) = (1/9) (103-1) = 111$ sorting passes needed
+	- $P(d) = 10d-1-1 = 99$ intermediate card piles generated
+
+- MSD-first approach has more recursive calls and intermediate storage requirement
+  - Expensive for a **tabulating machine** to sort punched cards
+  - Overhead of recursive calls in a modern computer
+
+---
+
+## LSD-First Radix Sort
+
+- Least significant digit (**LSD**)-first radix sort seems to be a folk invention originated by machine operators.
+- It is the counter-intuitive, but the better algorithm.
+- **Basic Algorithm:**
+```r
+  Sort numbers on their LSD first   (Stable Sorting Needed)
+  Combine the cards into a single deck in order 
+  Continue this sorting process for the other digits
+    from the LSD to MSD
+```
+- Requires only $d$ sorting passes
+- No intermediate card pile generated
+
+---
+
+## LSD-first Radix Sort **Example**
+
+![center h:500px](assets/ce100-week-4-heap-lsd-first-radix.drawio.svg)
+
+---
+
+## Correctness of Radix Sort **(LSD-first)**
+
+- **Proof by induction:** 
+  - **Base case:** $d=1$ is correct (**trivial**)
+  - **Inductive hyp:** Assume the first $d-1$ digits are sorted correctly
+- Prove that all $d$ digits are sorted correctly after sorting digit $d$
+- Two numbers that differ in digit $d$ are correctly sorted (**e.g. 355 and 657**) 
+- Two numbers equal in digit d are put in the same order as the input 
+  - (**correct order**)
+
+![bg right:39% h:450px](assets/ce100-week-4-heap-lsd-first-radix-2.drawio.svg)
+
+---
+
+## Radix Sort **Runtime**
+
+- Use counting-sort to sort each digit
+- **Reminder:** Counting sort complexity: $\Theta(n+k)$
+  - $n$: size of input array
+  - $k$: the range of the values
+- Radix sort runtime: $\Theta(d(n+k))$
+  - $d$: $\#$ of digits
+
+**How to choose the $d$ and $k$?**
+
+---
+
+## Radix Sort: Runtime – **Example 1**
+
+- We have flexibility in choosing $d$ and $k$
+- Assume we are trying to sort **32-bit words**
+  - We can define each digit to be **4 bits**
+  - Then, the range for each digit $k=2^4=16$
+    - So, counting sort will take $\Theta(n+16)$
+  - The number of digits $d =32/4=8$
+  - Radix sort runtime: $\Theta(8(n+16)) = \Theta(n)$
+
+- $\overbrace{[4bits|4bits|4bits|4bits|4bits|4bits|4bits|4bits]}^{\text{32-bits}}$
+
+---
+
+## Radix Sort: Runtime – **Example 2**
+
+- We have flexibility in choosing $d$ and $k$
+- Assume we are trying to sort **32-bit words**
+  - Or, we can define each digit to be **8 bits**
+  - Then, the range for each digit $k = 2^8 = 256$
+	  - So, counting sort will take $\Theta(n+256)$
+  - The number of digits $d = 32/8 = 4$
+  - Radix sort runtime: $\Theta(4(n+256)) = \Theta(n)$
+
+- $\overbrace{[8bits|8bits|8bits|8bits]}^{\text{32-bits}}$
+
+---
+
+## Radix Sort: **Runtime**
+
+- Assume we are trying to sort **$b$-bit** words
+  - Define each digit to be **$r$ bits**
+  - Then, the range for each digit $k = 2^r$
+    - So, **counting sort will take** $\Theta(n+2^r)$
+  - The number of digits $d = b/r$
+    - **Radix sort runtime:** 
+    $$
+    \begin{align*}
+    T(n,b)&=\Theta \bigg( \frac{b}{r}(n+2^r) \bigg)
+    \end{align*}
+    $$
+
+- $\overbrace{[rbits|rbits|rbits|rbits]}^{b/r \text{ bits}}$
+
+---
+
+## Radix Sort: **Runtime Analysis**
+
+$$
+\begin{align*}
+T(n,b)&=\Theta \bigg( \frac{b}{r}(n+2^r) \bigg)
+\end{align*}
+$$
+
+- Minimize $T(n,b)$ by differentiating and setting to $0$
+- Or, intuitively: 
+  - We want to balance the terms $(b/r)$ and $(n + 2^r)$
+  - **Choose $r \approx lgn$**
+      - If we choose $r << lgn \Longrightarrow (n + 2^r)$ term **doesn’t improve**
+      - If we choose $r >> lgn \Longrightarrow (n + 2^r)$ increases **exponentially**
+
+---
+
+## Radix Sort: **Runtime Analysis**
+
+$$
+\begin{align*}
+T(n,b)&=\Theta \bigg( \frac{b}{r}(n+2^r) \bigg)
+\end{align*}
+$$
+
+$$
+\begin{align*}
+\text{Choose } r=lgn \Longrightarrow T(n,b)=\Theta(bn/lgn)
+\end{align*}
+$$
+
+- For numbers in the range from $0$ to $n^d – 1$, we have:
+  - The number of bits $b = lg(nd ) = d lgn$ 
+    - Radix sort runs in $\Theta(dn)$
+
+---
+
+## Radix Sort: **Conclusions**
+
+$$
+\begin{align*}
+\text{Choose } r=lgn \Longrightarrow T(n,b)=\Theta(bn/lgn)
+\end{align*}
+$$
+
+- **Example:** Compare radix sort with merge sort/heapsort
+  - $1$ million ($2^{20}$), $32$-bit numbers $(n = 2^{20}, b = 32)$
+    - **Radix sort:** $\lfloor 32/20 \rfloor  = 2$ passes
+    - **Merge sort/heap sort:** $lgn = 20$ passes
+- **Downsides:**
+  - Radix sort has **little locality of reference** (more cache misses)
+  - The version that uses counting sort is not in-place
+- On modern processors, a well-tuned quicksort implementation  typically runs faster.
 
 ---
 
@@ -1245,4 +1808,4 @@ Return HEAD -> DATA
 
 ---
 
-$EOF$ 
+$-End-Of-Week-4-Course-Module-$ 

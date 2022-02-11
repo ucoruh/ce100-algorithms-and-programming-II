@@ -363,6 +363,7 @@ $$
 **Ind. hyp:** Assume that $T(k) \leq c_1k^2 – c_2k$  for $k < n$
 
 Prove the general case: $T(n) ≤ c_1n^2 – c_2n$
+
 $$
 \begin{align*}
 T(n) & = 4T(n/2) + n \\
@@ -1141,3 +1142,7 @@ POWER(a, n)
 - [NIST - big-O notation](https://xlinux.nist.gov/dads/HTML/bigOnotation.html)
 
 - [NIST - big-Omega notation](https://xlinux.nist.gov/dads/HTML/omegaCapital.html)
+
+---
+
+$-End-Of-Week-2-Course-Module-$ 

@@ -1188,11 +1188,12 @@ Compare 2-successive levels of avg case vs. 1 level of best case
 ## Intuition for the Average Case (5)
 
 - Another way of looking at it:
-  - Suppose we alternate lucky, unlucky, lucky, unlucky, …
+  - Suppose we alternate lucky, unlucky, lucky, unlucky, $\dots$
   - We can write the recurrence as:
     - $L(n) = 2U(n/2) + \Theta(n)$	lucky split (best)
     - $U(n) = L(n-1) + \Theta(n)$		unlucky split (worst)
   - Solving:
+
   $$
   \begin{align*} 
     L(n) & = 2(L(n/2-1) + \Theta(n/2)) + \Theta(n) \\
@@ -1200,6 +1201,7 @@ Compare 2-successive levels of avg case vs. 1 level of best case
 	        & = Θ(nlgn) 
   \end{align*} 
   $$
+
 - How can we make sure we are usually lucky for all inputs?
 
 ---
@@ -1207,6 +1209,7 @@ Compare 2-successive levels of avg case vs. 1 level of best case
 ## Summary: Quicksort Runtime Analysis (1)
 
 - **Worst case:** Unbalanced split at every recursive call
+
 $$
 \begin{align*} 
 T(n) & = T(1) + T(n-1) + \Theta(n) \\
@@ -1228,6 +1231,7 @@ $$
 ## Summary: Quicksort Runtime Analysis (2)
 
 - **Almost-best case:** Almost-balanced split at every recursive call
+
 $$
 \begin{align*} 
 T(n) &=T(n/10)+T(9n/10)+ \Theta(n) \\
@@ -1402,12 +1406,10 @@ $pivot=x=5$
 - $x: pivot$
 - $|L|: \text{size of left region}$
 - $P(rank(x) = i) = 1/n  \text{ for } 1 \leq i \leq n$
-  - $\text{if } rank(x) = 1 \text{ then } |L| = 1
-$
+  - $\text{if } rank(x) = 1 \text{ then } |L| = 1$
   - $\text{if } rank(x) > 1 \text{ then } |L| = rank(x) - 1$
 
-- $P(|L| = 1) = P(rank(x) = 1) + P(rank(x) = 2)
-$
+- $P(|L| = 1) = P(rank(x) = 1) + P(rank(x) = 2)$
   - $P(|L| = 1) = 2/n$
 
 - $P(|L| = i) = P(rank(x) = i+1) \text{ for } 1< i < n$
@@ -1424,6 +1426,7 @@ $
 ## Average - Case Analysis: Recurrence (1)
 
 $x=pivot$
+
 $$
 \begin{align*} 
 T(n) & = \frac{1}{n}(T(1)+t(n-1) ) & rank:1 \\
@@ -1527,6 +1530,7 @@ T(n) & \leq anlgn \\
 T(n) & = O(nlgn)
 \end{align*} 
 $$
+
 Q.E.D.
 
 ---
@@ -1539,6 +1543,7 @@ Q.E.D.
 - **maximum:** $n^{th}$ order statistic
 
 - **median:** “halfway point” of the set
+
 $$
 \begin{align*} 
 i & = \lfloor \frac{(n+1)}{2} \rfloor \\ 
@@ -1593,6 +1598,7 @@ A & = \{\underbrace{2,3,5,}_{\text{left subarray}
 }\underbrace{13,8,10,6,11}_{\text{right subarray}}\} 
 \end{align*} 
 $$
+
 - make a recursive call to select the **$2^{nd}$ smallest** element in **left subarray**
 
 ---
@@ -1616,6 +1622,7 @@ A & = \{\underbrace{2,3,5,}_{\text{left subarray}
 }\underbrace{13,8,10,6,11}_{\text{right subarray}}\} 
 \end{align*} 
 $$
+
 - make a recursive call to select the **$4^{th}$ smallest** element in **right subarray**
 
 ---
@@ -1756,9 +1763,7 @@ $$
 \begin{align*}
 T(n) &\leq \frac{1}{n}T(max(1,n-1))+\frac{1}{n}\sum_{q=1}^{n-1}T(max(q,n-q))+O(n) \\
 Note: & \frac{1}{n}T(max(1,n-1)) = \frac{1}{n}T(n-1)=\frac{1}{n}O(n^2) = O(n) \\
-
 \therefore \text{(3 dot mean therefore) } & T(n) \leq \frac{1}{n}\sum_{q=1}^{n-1}T(max(q,n-q))+O(n)
-
 \end{align*}
 $$
 
@@ -1790,6 +1795,7 @@ $$
 ## Average-Case Analysis of Randomized Select (3)
 
 - Hence, in both cases: 
+
 $$
 \begin{align*}
 \sum_{q=1}^{n-1} T(max(q,n-q))+O(n) & \leq 2\sum_{q=\lceil n/2 \rceil}^{n-1} T(q)+O(n) \\
@@ -2107,6 +2113,7 @@ SELECT(S, n, i)
   - $T(n) \leq T \big( \lceil \frac{n}{5} \rceil \big) + T\big( \frac{7n}{10}+6 \big) + \Theta(n)$
 - Guess $T(n)=O(n)$ and prove by induction
 - Inductive step:
+
 $$
 \begin{align*}
 T(n) & \leq c \lceil n/5 \rceil + c(7n/10+6)+\Theta(n) \\
@@ -2139,3 +2146,6 @@ $$
 
 - [NIST - big-Omega notation](https://xlinux.nist.gov/dads/HTML/omegaCapital.html)
 
+---
+
+$-End-Of-Week-3-Course-Module-$ 

@@ -76,7 +76,7 @@ please read the syllabus carefully.
 
 ---
 
-## Outline (1/3)
+## Outline (1)
 
 - Introduction to Analysis of Algorithms
   - Algorithm Basics
@@ -85,7 +85,7 @@ please read the syllabus carefully.
 
 ---
 
-## Outline (2/3)
+## Outline (2)
 
 - RAM (Random Access Machine Model) 
 - Sorting Problem
@@ -96,7 +96,7 @@ please read the syllabus carefully.
 
 ---
 
-## Outline (3/3)
+## Outline (3)
 
 - Asymptotic Notation 
   - Big O Notation 
@@ -107,7 +107,7 @@ please read the syllabus carefully.
 
 ---
 
-## We Need Mathematical Proofs (1/2)
+## We Need Mathematical Proofs (1)
 
 - Direct proof
 - Proof by mathematical induction
@@ -118,7 +118,7 @@ please read the syllabus carefully.
 
 ---
 
-## We Need Mathematical Proofs (2/2)
+## We Need Mathematical Proofs (2)
 
 - Probabilistic proof
 - Combinatorial proof
@@ -473,11 +473,10 @@ For insertion sort, worst-case time depends on the speed of primitive operations
 e.g
 
 $$
-2n^2 + 5n + 3 = \Theta(n^2)
-$$
-
-$$
-3n^3+90n^2-2n+5=\Theta(n^3)
+\begin{align*}
+2n^2 + 5n + 3 & = \Theta(n^2) \\
+3n^3+90n^2-2n+5 &=\Theta(n^3)
+\end{align*}
 $$
 
 - As $n$ gets large, a $\Theta(n^2)$ algorithm runs faster than a $\Theta(n^3)$ algorithm
@@ -519,31 +518,48 @@ for operation counts
 
 cost function can be evaluated as follow;
 
-$T(n)=c_1n+c_2(n-1)+0(n-1)+c_4(n-1)+c_5\sum_{j=2}^n{t_j}+c_6\sum_{j=2}^n{t_i-1}+c_7\sum_{j=2}^n{t_i-1}+c_8(n-1)$
+$$
+\begin{align*}
+T(n) &=c_1n+c_2(n-1)+ 0(n-1)+c_4(n-1) \\
+  & +c_5\sum_{j=2}^n{t_j}+c_6\sum_{j=2}^n{t_i-1} \\
+  & +c_7\sum_{j=2}^n{t_i-1}+c_8(n-1)
+\end{align*}
+$$
 
 ---
 
 ## Insertion Sort - Runtime Analysis (3)
 
-$\sum_{j=2}^n j = (n(n+1)/2)- 1$ **and** $\sum_{j=2}^n {j-1} = n(n-1)/2$
+$$
+\begin{align*}
+\sum_{j=2}^n j &= (n(n+1)/2)- 1 \\
+& \text{ and } \\
+\sum_{j=2}^n {j-1} &= n(n-1)/2
+\end{align*}
+$$
 
 ---
 
 ## Insertion Sort - Runtime Analysis (4)
 
-$T(n)=(c_5/2 + c_6/2 + c_7/2)n^2 + (c_1+c_2+c_4+c_5/2-c_6/2-c_7/2+c_8)n-(c_2 + c_4 + c_5 + c_6)$
+$$
+\begin{align*}
+T(n) & =(c_5/2 + c_6/2 + c_7/2)n^2 \\
+& + (c_1+c_2+c_4+c_5/2-c_6/2-c_7/2+c_8)n \\
+& -(c_2 + c_4 + c_5 + c_6)
+\end{align*}
+$$
 
 ---
 
 ## Insertion Sort - Runtime Analysis (5)
 
-$T(n)= an^2 + bn + c$
-
----
-
-## Insertion Sort - Runtime Analysis (6)
-
-$O(n^2)$
+$$
+\begin{align*}
+T(n) &= an^2 + bn + c \\
+&=O(n^2)
+\end{align*}
+$$
 
 ---
 
@@ -561,15 +577,24 @@ $t_j=1$
 
 *Parameters are taken from image*
 
-$T(n)=c_1n+c_2(n-1)+c_3(n-1)+c_4\sum_{j=2}^nt_j+c_5\sum_{j=2}^n(t_j-1)+c_6\sum_{j=2}^n(t_j-1)+c_7(n-1)$
+$$
+\begin{align*}
+T(n) &=c_1n+c_2(n-1)+c_3(n-1) \\
+& +c_4\sum_{j=2}^nt_j+c_5\sum_{j=2}^n(t_j-1) \\
+& +c_6\sum_{j=2}^n(t_j-1)+c_7(n-1)
+\end{align*}
+$$
 
 $t_j=1$ for all $j$ 
 
-$T(n)=(c_1+c_2+c_3+c_4+c_7)n-(c_2+c_3+c_4+c_7)$
-
-$T(n)=an-b$
-
-$\Omega(n)$
+$$
+\begin{align*}
+T(n) &= (c_1+c_2+c_3+c_4+c_7)n \\
+&-(c_2+c_3+c_4+c_7) \\
+T(n) &=an-b \\
+&=\Omega(n)
+\end{align*}
+$$
 
 ---
 
@@ -587,11 +612,14 @@ $t_j=?$
 
 The input array is reverse sorted $t_j=j$ for all $j$ after calculation worst case runtime will be
 
-$T(n)=1/2(c_4+c_5+c_6)n^2+(c_1+c_2+c_3+1/2(c_4-c_5-c_6)+c_7)n-(c_2+c_3+c_4+c_7)$
-
-$T(n)=1/2an^2+bn-c$
-
-$O(n^2)$
+$$
+\begin{align*}
+T(n) &=1/2(c_4+c_5+c_6)n^2 \\
+& +(c_1+c_2+c_3+1/2(c_4-c_5-c_6)+c_7)n -(c_2+c_3+c_4+c_7) \\
+T(n) &=1/2an^2+bn-c \\
+&= O(n^2)
+\end{align*}
+$$
 
 ---
 
@@ -605,7 +633,13 @@ $O(n^2)$
 
 Inner Loop is $\Theta(j)$ 
 
-$T(n)=\sum_{j=2}^n\Theta(j)=\Theta(\sum_{j=2}^nj)=\Theta(n^2)$
+$$
+\begin{align*}
+T(n) &=\sum_{j=2}^n\Theta(j) \\
+&=\Theta(\sum_{j=2}^nj) \\
+&=\Theta(n^2)
+\end{align*}
+$$
 
 ---
 
@@ -613,7 +647,13 @@ $T(n)=\sum_{j=2}^n\Theta(j)=\Theta(\sum_{j=2}^nj)=\Theta(n^2)$
 
 Inner Loop is $\Theta(j/2)$
 
-$T(n)=\sum_{j=2}^n\Theta(j/2)=\sum_{j=2}^n\Theta(j)=\Theta(n^2)$
+$$
+\begin{align*}
+T(n) &=\sum_{j=2}^n\Theta(j/2) \\
+&=\sum_{j=2}^n\Theta(j) \\
+&=\Theta(n^2)
+\end{align*}
+$$
 
 ---
 
@@ -874,31 +914,15 @@ Let $n$ be the number of nodes in the tree and let $l_k$ denote the number of no
 **The total number of nodes** in the tree is equal to the sum of the nodes on all the levels: nodes $n$ 
 
 $$
-1+2^1+2^2+2^3+...+2^h=n
-$$
-
-$$
-1+2^1+2^2+2^3+...+2^h=2^{h+1}-1
-$$
-
-$$
-2^{h+1}-1=n
-$$
-
-$$
-2^{h+1}=n+1
-$$
-
-$$
-log_2{2^{h+1}} = log_2{(n+1)}
-$$
-
-$$
-h+1 = log_2{(n+1)}
-$$
-
-$$
-h = log_2{(n+1)}-1
+\begin{align*}
+1+2^1+2^2+2^3+...+2^h &= n \\
+1+2^1+2^2+2^3+...+2^h &= 2^{h+1}-1 \\
+2^{h+1}-1 &= n\\
+2^{h+1} &= n+1\\
+log_2{2^{h+1}} &= log_2{(n+1)} \\
+h+1 &= log_2{(n+1)} \\
+h &= log_2{(n+1)}-1
+\end{align*}
 $$
 
 ---
@@ -1213,7 +1237,10 @@ $0 \leq 10^{-9}n^2 \leq 10^{-9}n^{2.0001} \text{ for } n \geq 1$
 
 ### Big-Theta /$\Theta$-Notation : Asymptotically tight bound (Average Case) (1)
 
-$f(n)=\Theta(g(n))$ if $\exists$ positive constants $c_1,c_2,n_0$ such that $0 \leq c_1g(n) \leq f(n) \leq c_2g(n), \forall n \geq n_0$
+
+$f(n)=\Theta(g(n))$ 
+if $\exists$ positive constants $c_1,c_2,n_0$ 
+such that $0 \leq c_1g(n) \leq f(n) \leq c_2g(n), \forall n \geq n_0$
 
 ---
 
@@ -1305,7 +1332,9 @@ $10^9n^{2.0001} = \Theta(n^2)$ **INCORRECT**
 
 $\Theta(g(n))$ is the set of functions that have asymptotically tight bound $g(n)$
 
-$\Theta(g(n))=\{ f(n): \exists \text{ positive constants } c_1,c_2, n_0 \text{ such that } 0 \leq c_1g(n) \leq  f(n) \leq  c_2g(n), \forall n \geq n_0 \}$
+$\Theta(g(n))=\{ f(n):$ $\exists$ 
+positive constants  $c_1,c_2, n_0$ such that
+ $0 \leq c_1g(n) \leq  f(n) \leq  c_2g(n), \forall n \geq n_0 \}$
 
 ---
 
@@ -1389,7 +1418,13 @@ According to this small-$o$ notation is an upper bound that is not asymptoticall
 
 **Note that in equations equality is removed in small notations**
 
-$o(g(n))=\{ f(n): \text{ for any constant} c > 0, \exists \text{ a constant } n_0 > 0, \text{ such that } 0 \leq f(n) < cg(n), \forall n \geq n_0 \}$
+$$
+\begin{align*}
+o(g(n)) &=\{ f(n): \text{ for any constant} c > 0, \exists \text{ a constant } n_0 > 0, \\
+& \text{ such that } 0 \leq f(n) < cg(n), \\
+& \forall n \geq n_0 \}
+\end{align*}
+$$
 
 $$
 \lim_{n \to \infty} \frac{f(n)}{g(n)} = 0
@@ -1401,7 +1436,13 @@ e.g $2n=o(n^2)$ any positive $c$ satisfies but $2n^2 \neq o(n^2)$  $c=2$ does no
 
 ### Small-omega / $\omega$-Notation: Asymptotic lower bound that is not tight (1)
 
-$\omega(g(n))=\{ f(n): \text{ for any constant } c > 0, \exists \text{ a constant } n_0>0, \text{ such that } 0 \leq cg(n) < f(n), \forall n \geq n_0$
+$$
+\begin{align*}
+\omega(g(n)) &= \{ f(n): \text{ for any constant } c > 0, \exists \text{ a constant } n_0>0, \\
+ & \text{ such that } 0 \leq cg(n) < f(n), \\
+ &  \forall n \geq n_0
+\end{align*}
+$$
 
 $$
 \lim_{n \to \infty} \frac{f(n)}{g(n)} = \infty
@@ -1414,38 +1455,28 @@ e.g. $n^2/2=\omega(n)$, any positive $c$ satisfies but $n^2/2 \neq \omega(n^2)$,
 ### (Important) Analogy to compare of two real numbers (1)
 
 $$
-f(n)= O(g(n)) \leftrightarrow a \leq b 
-$$
-
-$$
-f(n)= \Omega(g(n)) \leftrightarrow a \geq b 
-$$
-
-$$
-f(n)= \Theta(g(n)) \leftrightarrow a = b 
-$$
-
-$$
-f(n)= o(g(n)) \leftrightarrow a < b 
-$$
-
-$$
-f(n)= \omega(g(n)) \leftrightarrow a > b 
+\begin{align*}
+f(n) &= O(g(n)) \leftrightarrow a \leq b \\
+f(n) &= \Omega(g(n)) \leftrightarrow a \geq b \\
+f(n) &= \Theta(g(n)) \leftrightarrow a = b \\
+f(n) &= o(g(n)) \leftrightarrow a < b  \\
+f(n) &= \omega(g(n)) \leftrightarrow a > b \\
+\end{align*}
 $$
 
 ---
 
 ### (Important) Analogy to compare of two real numbers (2)
 
-$O \approx \leq$
-
-$\Theta \approx =$
-
-$\Omega \approx \geq$
-
-$\omega \approx >$
-
-$o \approx <$
+$$
+\begin{align*}
+ O \approx \leq \\
+ \Theta \approx = \\
+ \Omega \approx \geq \\
+ \omega \approx > \\
+ o \approx <  
+\end{align*}
+$$
 
 ---
 
@@ -1569,11 +1600,11 @@ Insertion sort has best-case runtime of $\Omega(n)$
 
 Consider 2 cases about the runtime of an algorithm
 
-- Case 1: Worst-case and best-case not asymptotically equal
+- **Case 1:** Worst-case and best-case not asymptotically equal
   
   - Use $\Theta$-notation to bound worst-case and best-case runtimes separately
 
-- Case 2: Worst-case and best-case asymptotically equal 
+- **Case 2:** Worst-case and best-case asymptotically equal 
   
   - Use $\Theta$-notation to bound the runtime for any input
 
@@ -1581,7 +1612,7 @@ Consider 2 cases about the runtime of an algorithm
 
 ### Using $\Theta$-Notation to Describe Running Times (2)
 
-- Case 1: Worst-case and best-case not asymptotically equal
+- **Case 1:** Worst-case and best-case not asymptotically equal
   - Use $\Theta$-notation to bound the worst-case and best-case runtimes separately
   - We can say: 
     - "The worst-case runtime of insertion sort is $\Theta(n^2)$"
@@ -1694,3 +1725,7 @@ stands for some anonymous function in the set
 - [NIST - big-O notation](https://xlinux.nist.gov/dads/HTML/bigOnotation.html)
 
 - [NIST - big-Omega notation](https://xlinux.nist.gov/dads/HTML/omegaCapital.html)
+
+---
+
+$-End-Of-Week-1-Course-Module-$ 
