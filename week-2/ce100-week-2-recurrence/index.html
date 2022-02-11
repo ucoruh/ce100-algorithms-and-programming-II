@@ -2508,17 +2508,17 @@ T(n) &amp; = 4T(n/2) + n  \\
 <h2 id="example-a-tighter-upper-bound-5">Example: A tighter upper bound? (5)<a class="headerlink" href="#example-a-tighter-upper-bound-5" title="Permanent link">&para;</a></h2>
 <p><strong>Original recurrence:</strong> <span class="arithmatex">\(T(n) = 4T(n/2) + n\)</span></p>
 <p><strong>Ind. hyp:</strong> Assume that <span class="arithmatex">\(T(k) \leq c_1k^2 – c_2k\)</span>  for <span class="arithmatex">\(k &lt; n\)</span></p>
-<p>Prove the general case: <span class="arithmatex">\(T(n) ≤ c_1n^2 – c_2n\)</span>
-$$
+<p>Prove the general case: <span class="arithmatex">\(T(n) ≤ c_1n^2 – c_2n\)</span></p>
+<div class="arithmatex">\[
 \begin{align*}
-T(n) &amp; = 4T(n/2) + n \
-&amp; \leq 4 (c_1(n/2)^2 – c_2(n/2)) + n \
-&amp; = c_1n^2 – 2c_2n + n \
-&amp; = c_1n^2 – c_2n – (c_2n – n) \
-&amp; \leq  c_1n^2 – c_2n \text{ for }  n(c_2 – 1) \geq 0 \
+T(n) &amp; = 4T(n/2) + n \\
+&amp; \leq 4 (c_1(n/2)^2 – c_2(n/2)) + n \\
+&amp; = c_1n^2 – 2c_2n + n \\
+&amp; = c_1n^2 – c_2n – (c_2n – n) \\
+&amp; \leq  c_1n^2 – c_2n \text{ for }  n(c_2 – 1) \geq 0 \\
 &amp; \text{choose } c2 \geq 1 
 \end{align*}
-$$</p>
+\]</div>
 <hr />
 <h2 id="example-a-tighter-upper-bound-6">Example: A tighter upper bound? (6)<a class="headerlink" href="#example-a-tighter-upper-bound-6" title="Permanent link">&para;</a></h2>
 <p>We now need to prove
@@ -3193,13 +3193,15 @@ a^n=\begin{cases}
 <p><a href="https://xlinux.nist.gov/dads/HTML/omegaCapital.html">NIST - big-Omega notation</a></p>
 </li>
 </ul>
+<hr />
+<p><span class="arithmatex">\(-End-Of-Week-2-Course-Module-\)</span> </p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 7, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 12, 2022</span>
       
     
   </small>

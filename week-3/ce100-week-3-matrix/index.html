@@ -4401,37 +4401,37 @@ Probability &amp; =\sum_{q=\alpha n+1}^{(1-\alpha)n-1}\frac{1}{n} \\
 <h2 id="intuition-for-the-average-case-5">Intuition for the Average Case (5)<a class="headerlink" href="#intuition-for-the-average-case-5" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Another way of looking at it:</li>
-<li>Suppose we alternate lucky, unlucky, lucky, unlucky, …</li>
+<li>Suppose we alternate lucky, unlucky, lucky, unlucky, <span class="arithmatex">\(\dots\)</span></li>
 <li>We can write the recurrence as:<ul>
 <li><span class="arithmatex">\(L(n) = 2U(n/2) + \Theta(n)\)</span>  lucky split (best)</li>
 <li><span class="arithmatex">\(U(n) = L(n-1) + \Theta(n)\)</span>       unlucky split (worst)</li>
 </ul>
 </li>
-<li>Solving:
-  $$
+<li>Solving:</li>
+</ul>
+<p>$$
   \begin{align*} 
     L(n) &amp; = 2(L(n/2-1) + \Theta(n/2)) + \Theta(n) \
             &amp; = 2L(n/2-1) + \Theta(n) \
             &amp; = Θ(nlgn) 
   \end{align*} 
-  $$</li>
+  $$</p>
+<ul>
 <li>How can we make sure we are usually lucky for all inputs?</li>
 </ul>
 <hr />
 <h2 id="summary-quicksort-runtime-analysis-1">Summary: Quicksort Runtime Analysis (1)<a class="headerlink" href="#summary-quicksort-runtime-analysis-1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p><strong>Worst case:</strong> Unbalanced split at every recursive call
-$$
+<li><strong>Worst case:</strong> Unbalanced split at every recursive call</li>
+</ul>
+<div class="arithmatex">\[
 \begin{align*} 
-T(n) &amp; = T(1) + T(n-1) + \Theta(n) \
+T(n) &amp; = T(1) + T(n-1) + \Theta(n) \\
 T(n) &amp; = \Theta(n2)
 \end{align*} 
-$$</p>
-</li>
-<li>
-<p><strong>Best case:</strong> Balanced split at every recursive call (<em>extremely lucky</em>)</p>
-</li>
+\]</div>
+<ul>
+<li><strong>Best case:</strong> Balanced split at every recursive call (<em>extremely lucky</em>)</li>
 </ul>
 <div class="arithmatex">\[
 \begin{align*} 
@@ -4442,15 +4442,15 @@ T(n) &amp; = \Theta(nlgn)
 <hr />
 <h2 id="summary-quicksort-runtime-analysis-2">Summary: Quicksort Runtime Analysis (2)<a class="headerlink" href="#summary-quicksort-runtime-analysis-2" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Almost-best case:</strong> Almost-balanced split at every recursive call
-$$
+<li><strong>Almost-best case:</strong> Almost-balanced split at every recursive call</li>
+</ul>
+<div class="arithmatex">\[
 \begin{align*} 
-T(n) &amp;=T(n/10)+T(9n/10)+ \Theta(n) \
-\text{or } T(n) &amp;= T(n/100) + T(99n/100) + Θ(n) \
+T(n) &amp;=T(n/10)+T(9n/10)+ \Theta(n) \\
+\text{or } T(n) &amp;= T(n/100) + T(99n/100) + Θ(n) \\
 \text{or } T(n) &amp;= T(\alpha n) + T((1-\alpha n)+ \Theta(n)
 \end{align*} 
-$$</li>
-</ul>
+\]</div>
 <p>for any constant <span class="arithmatex">\(\alpha, 0 &lt; \alpha \leq 0.5\)</span></p>
 <hr />
 <h2 id="summary-quicksort-runtime-analysis-3">Summary: Quicksort Runtime Analysis (3)<a class="headerlink" href="#summary-quicksort-runtime-analysis-3" title="Permanent link">&para;</a></h2>
@@ -4609,14 +4609,12 @@ $$</li>
 <li><span class="arithmatex">\(x: pivot\)</span></li>
 <li><span class="arithmatex">\(|L|: \text{size of left region}\)</span></li>
 <li><span class="arithmatex">\(P(rank(x) = i) = 1/n  \text{ for } 1 \leq i \leq n\)</span></li>
-<li>$\text{if } rank(x) = 1 \text{ then } |L| = 1
-$</li>
+<li><span class="arithmatex">\(\text{if } rank(x) = 1 \text{ then } |L| = 1\)</span></li>
 <li>
 <p><span class="arithmatex">\(\text{if } rank(x) &gt; 1 \text{ then } |L| = rank(x) - 1\)</span></p>
 </li>
 <li>
-<p>$P(|L| = 1) = P(rank(x) = 1) + P(rank(x) = 2)
-$</p>
+<p><span class="arithmatex">\(P(|L| = 1) = P(rank(x) = 1) + P(rank(x) = 2)\)</span></p>
 </li>
 <li>
 <p><span class="arithmatex">\(P(|L| = 1) = 2/n\)</span></p>
@@ -4631,19 +4629,19 @@ $</p>
 <p><img alt="alt:&quot;alt&quot; h:450px center" src="../assets/ce100-week-3-matrix-quicksort-h-part-sum.drawio.svg" /></p>
 <hr />
 <h2 id="average-case-analysis-recurrence-1">Average - Case Analysis: Recurrence (1)<a class="headerlink" href="#average-case-analysis-recurrence-1" title="Permanent link">&para;</a></h2>
-<p><span class="arithmatex">\(x=pivot\)</span>
-$$
+<p><span class="arithmatex">\(x=pivot\)</span></p>
+<div class="arithmatex">\[
 \begin{align*} 
-T(n) &amp; = \frac{1}{n}(T(1)+t(n-1) ) &amp; rank:1 \
-&amp; + \frac{1}{n}(T(1)+t(n-1) ) &amp; rank:2 \
-&amp; + \frac{1}{n}(T(2)+t(n-2) ) &amp; rank:3 \
-&amp; \vdots &amp; \vdots \
-&amp; + \frac{1}{n}(T(i)+t(n-i) ) &amp; rank:i+1 \
-&amp; \vdots &amp; \vdots \
-&amp; + \frac{1}{n}(T(n-1)+t(1) ) &amp; rank:n \
+T(n) &amp; = \frac{1}{n}(T(1)+t(n-1) ) &amp; rank:1 \\
+&amp; + \frac{1}{n}(T(1)+t(n-1) ) &amp; rank:2 \\
+&amp; + \frac{1}{n}(T(2)+t(n-2) ) &amp; rank:3 \\
+&amp; \vdots &amp; \vdots \\
+&amp; + \frac{1}{n}(T(i)+t(n-i) ) &amp; rank:i+1 \\
+&amp; \vdots &amp; \vdots \\
+&amp; + \frac{1}{n}(T(n-1)+t(1) ) &amp; rank:n \\
 &amp; + \Theta(n)
 \end{align*} 
-$$</p>
+\]</div>
 <hr />
 <h2 id="average-case-analysis-recurrence-2">Average - Case Analysis: Recurrence (2)<a class="headerlink" href="#average-case-analysis-recurrence-2" title="Permanent link">&para;</a></h2>
 <div class="arithmatex">\[
@@ -4727,13 +4725,13 @@ T(n) &amp; \leq \frac{2a}{n}\sum_{k=1}^{n-1}klgk+\Theta(n)\\
 <ul>
 <li>We can choose a large enough so that <span class="arithmatex">\(\frac{a}{4}n \geq \Theta(n)\)</span> </li>
 </ul>
-<p>$$
+<div class="arithmatex">\[
 \begin{align*} 
-T(n) &amp; \leq anlgn \
+T(n) &amp; \leq anlgn \\
 T(n) &amp; = O(nlgn)
 \end{align*} 
-$$
-Q.E.D.</p>
+\]</div>
+<p>Q.E.D.</p>
 <hr />
 <h2 id="medians-and-order-statistics">Medians and Order Statistics<a class="headerlink" href="#medians-and-order-statistics" title="Permanent link">&para;</a></h2>
 <ul>
@@ -4747,16 +4745,16 @@ Q.E.D.</p>
 <p><strong>maximum:</strong> <span class="arithmatex">\(n^{th}\)</span> order statistic</p>
 </li>
 <li>
-<p><strong>median:</strong> “halfway point” of the set
-$$
-\begin{align*} 
-i &amp; = \lfloor \frac{(n+1)}{2} \rfloor \ 
-\text{ or } \
-i &amp; = \lceil \frac{(n+1)}{2}  \rceil
- \end{align*} 
-$$</p>
+<p><strong>median:</strong> “halfway point” of the set</p>
 </li>
 </ul>
+<div class="arithmatex">\[
+\begin{align*} 
+i &amp; = \lfloor \frac{(n+1)}{2} \rfloor \\ 
+\text{ or } \\
+i &amp; = \lceil \frac{(n+1)}{2}  \rceil
+ \end{align*} 
+\]</div>
 <hr />
 <h2 id="selection-problem">Selection Problem<a class="headerlink" href="#selection-problem" title="Permanent link">&para;</a></h2>
 <ul>
@@ -4807,13 +4805,15 @@ i &amp; = 2 \\
 <ul>
 <li>Partition the input array:</li>
 </ul>
-<p>$$
+<div class="arithmatex">\[
 \begin{align*} 
-A &amp; = {\underbrace{2,3,5,}<em _text_right="\text{right" subarray="subarray">{\text{left subarray}
-}\underbrace{13,8,10,6,11}</em>}} 
+A &amp; = \{\underbrace{2,3,5,}_{\text{left subarray}
+}\underbrace{13,8,10,6,11}_{\text{right subarray}}\} 
 \end{align*} 
-$$
-- make a recursive call to select the <strong><span class="arithmatex">\(2^{nd}\)</span> smallest</strong> element in <strong>left subarray</strong></p>
+\]</div>
+<ul>
+<li>make a recursive call to select the <strong><span class="arithmatex">\(2^{nd}\)</span> smallest</strong> element in <strong>left subarray</strong></li>
+</ul>
 <hr />
 <h2 id="selection-in-expected-linear-time-example-2">Selection in Expected Linear Time: Example 2<a class="headerlink" href="#selection-in-expected-linear-time-example-2" title="Permanent link">&para;</a></h2>
 <ul>
@@ -4828,13 +4828,15 @@ i &amp; = 7 \\
 <ul>
 <li>Partition the input array:</li>
 </ul>
-<p>$$
+<div class="arithmatex">\[
 \begin{align*} 
-A &amp; = {\underbrace{2,3,5,}<em _text_right="\text{right" subarray="subarray">{\text{left subarray}
-}\underbrace{13,8,10,6,11}</em>}} 
+A &amp; = \{\underbrace{2,3,5,}_{\text{left subarray}
+}\underbrace{13,8,10,6,11}_{\text{right subarray}}\} 
 \end{align*} 
-$$
-- make a recursive call to select the <strong><span class="arithmatex">\(4^{th}\)</span> smallest</strong> element in <strong>right subarray</strong></p>
+\]</div>
+<ul>
+<li>make a recursive call to select the <strong><span class="arithmatex">\(4^{th}\)</span> smallest</strong> element in <strong>right subarray</strong></li>
+</ul>
 <hr />
 <h2 id="selection-in-expected-linear-time-1">Selection in Expected Linear Time (1)<a class="headerlink" href="#selection-in-expected-linear-time-1" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">R</span><span class="o">-</span><span class="nf">SELECT</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
@@ -4960,13 +4962,13 @@ x &amp; = pivot
 \end{cases}
 \]</div>
 <p><strong>Upper bound:</strong> Assume <span class="arithmatex">\(i^{th}\)</span> element always falls into the larger part.</p>
-<p>$$
+<div class="arithmatex">\[
 \begin{align*}
-T(n) &amp;\leq \frac{1}{n}T(max(1,n-1))+\frac{1}{n}\sum_{q=1}^{n-1}T(max(q,n-q))+O(n) \
-Note: &amp; \frac{1}{n}T(max(1,n-1)) = \frac{1}{n}T(n-1)=\frac{1}{n}O(n^2) = O(n) \</p>
-<p>\therefore \text{(3 dot mean therefore) } &amp; T(n) \leq \frac{1}{n}\sum_{q=1}^{n-1}T(max(q,n-q))+O(n)</p>
-<p>\end{align*}
-$$</p>
+T(n) &amp;\leq \frac{1}{n}T(max(1,n-1))+\frac{1}{n}\sum_{q=1}^{n-1}T(max(q,n-q))+O(n) \\
+Note: &amp; \frac{1}{n}T(max(1,n-1)) = \frac{1}{n}T(n-1)=\frac{1}{n}O(n^2) = O(n) \\
+\therefore \text{(3 dot mean therefore) } &amp; T(n) \leq \frac{1}{n}\sum_{q=1}^{n-1}T(max(q,n-q))+O(n)
+\end{align*}
+\]</div>
 <hr />
 <h2 id="average-case-analysis-of-randomized-select-2">Average-Case Analysis of Randomized Select (2)<a class="headerlink" href="#average-case-analysis-of-randomized-select-2" title="Permanent link">&para;</a></h2>
 <p>$$
@@ -4988,14 +4990,14 @@ n-q &amp; \text{ if } q &lt; \lceil n/2 \rceil \\
 <hr />
 <h2 id="average-case-analysis-of-randomized-select-3">Average-Case Analysis of Randomized Select (3)<a class="headerlink" href="#average-case-analysis-of-randomized-select-3" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Hence, in both cases: 
-$$
+<li>Hence, in both cases: </li>
+</ul>
+<div class="arithmatex">\[
 \begin{align*}
-\sum_{q=1}^{n-1} T(max(q,n-q))+O(n) &amp; \leq 2\sum_{q=\lceil n/2 \rceil}^{n-1} T(q)+O(n) \
+\sum_{q=1}^{n-1} T(max(q,n-q))+O(n) &amp; \leq 2\sum_{q=\lceil n/2 \rceil}^{n-1} T(q)+O(n) \\
 \therefore T(n) &amp; \leq \frac{2}{n} \sum_{q=\lceil n/2 \rceil}^{n-1}T(q)+O(n)
 \end{align*}
-$$</li>
-</ul>
+\]</div>
 <hr />
 <h2 id="average-case-analysis-of-randomized-select-4">Average-Case Analysis of Randomized Select (4)<a class="headerlink" href="#average-case-analysis-of-randomized-select-4" title="Permanent link">&para;</a></h2>
 <div class="arithmatex">\[
@@ -5252,20 +5254,18 @@ of sizes <span class="arithmatex">\(\sim 3n/10\)</span> and <span class="arithma
 <li>Thus recurrence becomes</li>
 <li><span class="arithmatex">\(T(n) \leq T \big( \lceil \frac{n}{5} \rceil \big) + T\big( \frac{7n}{10}+6 \big) + \Theta(n)\)</span></li>
 <li>Guess <span class="arithmatex">\(T(n)=O(n)\)</span> and prove by induction</li>
-<li>
-<p>Inductive step:
-$$
+<li>Inductive step:</li>
+</ul>
+<div class="arithmatex">\[
 \begin{align*}
-T(n) &amp; \leq c \lceil n/5 \rceil + c(7n/10+6)+\Theta(n) \
-&amp; \leq cn/5 + c + 7cn/10 + 6c + \Theta(n) \
-&amp; = 9cn/10 + 7c + \Theta(n) \
+T(n) &amp; \leq c \lceil n/5 \rceil + c(7n/10+6)+\Theta(n) \\
+&amp; \leq cn/5 + c + 7cn/10 + 6c + \Theta(n) \\
+&amp; = 9cn/10 + 7c + \Theta(n) \\
 &amp; = cn - [c(n/10-7)-\Theta(n)] \leq cn &amp;\text{( for large c)}
 \end{align*}
-$$</p>
-</li>
-<li>
-<p>Work at each level of recursion is a constant factor <span class="arithmatex">\((9/10)\)</span> smaller</p>
-</li>
+\]</div>
+<ul>
+<li>Work at each level of recursion is a constant factor <span class="arithmatex">\((9/10)\)</span> smaller</li>
 </ul>
 <hr />
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
@@ -5295,13 +5295,15 @@ $$</p>
 <p><a href="https://xlinux.nist.gov/dads/HTML/omegaCapital.html">NIST - big-Omega notation</a></p>
 </li>
 </ul>
+<hr />
+<p><span class="arithmatex">\(-End-Of-Week-3-Course-Module-\)</span> </p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 7, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 12, 2022</span>
       
     
   </small>
