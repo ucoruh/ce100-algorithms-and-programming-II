@@ -352,7 +352,6 @@ c_{12} & = P_1 + P_2 \\
 \end{align*}
 $$
 
-
 ---
 
 ## Strassen’s Algorithm
@@ -794,6 +793,7 @@ $A[p \dots i_m-1] \leq x$ and $A[j_m-1 \dots r] \geq x$
     - such that:
       - every element in $A[p \dots i]  \leq pivot$
       - every element in $A[i+1 \dots j] > pivot$
+
 ---
 
 ## Lomuto’s Partitioning Algorithm (2)
@@ -927,12 +927,14 @@ Initial invocation: `QUICKSORT(A,1,n)`
 ## Comparison of Hoare’s & Lomuto’s Algorithms (2)
 
 - **$\#$ of element comparisons: $c_e(n)$**
+  
   - **Hoare**: $n+1 \leq c_e(n) \leq n+2$
     - **Best**: $i_k=j_k$
     - **Worst**: $i_k=j_k+1$
   - **Lomuto**: $c_e(n)=n-1$
 
 - **$\#$ of index comparisons: $c_i(n)$**
+  
   - **Hoare**: $1 \leq c_i(n) \leq \lfloor \frac{n}{2} \rfloor + 1 | (c_i(n)=e(n)+1)$
   - **Lomuto**: $c_i(n)=n-1$
 
@@ -941,11 +943,14 @@ Initial invocation: `QUICKSORT(A,1,n)`
 ## Comparison of Hoare’s & Lomuto’s Algorithms (3)
 
 - **$\#$ of index increment/decrement operations: $a(n)$**
+  
   - **Hoare**: $n+1 \leq a(n) \leq n+2 | (a(n)=c_e(n))$
   - **Lomuto**: $n \leq a(n) \leq 2n-1 | (a(n)=e(n)+(n-1))$
 
 - Hoare’s algorithm is in general faster 
+
 - Hoare behaves better when pivot is repeated in $A[p \dots r]$
+  
   - **Hoare**: Evenly distributes them between left & right regions
   - **Lomuto**: Puts all of them to the left region
 
@@ -984,6 +989,7 @@ Partitioning always leads to $2$ parts of size $1$ and $n-1$
 ![alt:"alt" height:450px center](assets/ce100-week-3-matrix-quicksort_analysis_1.drawio.svg)
 
 ---
+
 ## Worst Case Analysis of Quicksort
 
 - **Worst case** is when the **PARTITION** algorithm always returns **imbalanced partitions** (of size $1$ and $n-1$) in every recursive call.
@@ -1011,22 +1017,27 @@ $$
 ---
 
 ## Best Case Analysis (for intuition only)
+
 - If we’re extremely lucky, **H-PARTITION** splits the array evenly at every recursive call
-$$
-\begin{align*} 
-T(n) &= 2T(n/2) + \Theta(n) \\
+  $$
+  \begin{align*} 
+  T(n) &= 2T(n/2) + \Theta(n) \\
+  
         &= \Theta(nlgn)
-\end{align*}
-$$ 
-(same as merge sort)
+  
+  \end{align*}
+  $$ 
+  (same as merge sort)
 
 - Instead of splitting $0.5:0.5$, if we split $0.1:0.9$ then we need solve following equation.
-$$
-\begin{align*} 
-T(n) &= T(n/10) + T(9n/10) + \Theta(n) \\
+  $$
+  \begin{align*} 
+  T(n) &= T(n/10) + T(9n/10) + \Theta(n) \\
+  
         &= \Theta(nlgn)
-\end{align*}
-$$ 
+  
+  \end{align*}
+  $$ 
 
 ---
 
@@ -1039,11 +1050,13 @@ $$
 ## Balanced Partitioning (1)
 
 - We have seen that if **H-PARTITION** always splits the array with $0.1-to-0.9$ ratio, the runtime will be $\Theta(nlgn)$.
+
 - Same is true with a split ratio of $0.01-to-0.99$, etc.
 
 - Possible to show that if the split has always constant $(\Theta(1))$ proportionality, then the runtime will be $\Theta(nlgn)$.
 
 - In other words, for a **constant** $\alpha | (0 < \alpha ≤ 0.5)$: 
+  
   - $\alpha–to–(1-\alpha)$ proportional split yields $\Theta(nlgn)$ total runtime
 
 ---
@@ -1077,9 +1090,11 @@ $$
 ## Balanced Partitioning (5)
 
 - **Question:** What is the probability that the **pivot** selected is the $m^{th}$ smallest value in the array of size $n$? 
+  
   - $1/n$ (*since all input permutations are equally likely*)
 
 - **Question:** What is the probability that the left partition returned by **H-PARTITION** has size $m$, where $1<m<n$?
+  
   - $1/n$ (*due to the answers to the previous 2 questions*)
 
 ---
@@ -1115,9 +1130,7 @@ $$
 
 - **Question:** What is the probability that H-PARTITION returns a split that is more balanced than $\alpha-to-(1-\alpha)$?
 
-
 ![alt:"alt" h:410px center](assets/ce100-week-3-matrix-quicksort_question_2.drawio.svg)
-
 
 $$
 \begin{align*} 
@@ -1147,14 +1160,19 @@ $$
 ## Intuition for the Average Case (1)
 
 - **Assumption:** All permutations are equally likely
+  
   - Only for intuition; we’ll revisit this assumption later
+
 - **Unlikely:** Splits always the same way at every level
 
 - **Expectation:**
-	- Some splits will be reasonably balanced
-	- Some splits will be fairly unbalanced
+  
+  - Some splits will be reasonably balanced
+  - Some splits will be fairly unbalanced
+
 - **Average case:** A mix of good and bad splits
-	- **Good** and **bad** splits distributed randomly thru the tree
+  
+  - **Good** and **bad** splits distributed randomly thru the tree
 
 ---
 
@@ -1177,10 +1195,13 @@ Compare 2-successive levels of avg case vs. 1 level of best case
 ## Intuition for the Average Case (4)
 
 - In terms of the remaining subproblems, **two levels of avg case** is slightly better than the **single level of the best case**
+
 - The avg case has **extra divide cost of $\Theta(n)$** at alternate levels
 
 - The extra divide cost $\Theta(n)$ of bad splits absorbed into the $\Theta(n)$ of good splits.
+
 - Running time is still $\Theta(nlgn)$
+  
   - But, slightly larger hidden constants, because the height of the recursion tree is about twice of that of best case.
 
 ---
@@ -1188,18 +1209,19 @@ Compare 2-successive levels of avg case vs. 1 level of best case
 ## Intuition for the Average Case (5)
 
 - Another way of looking at it:
+  
   - Suppose we alternate lucky, unlucky, lucky, unlucky, $\dots$
   - We can write the recurrence as:
-    - $L(n) = 2U(n/2) + \Theta(n)$	lucky split (best)
-    - $U(n) = L(n-1) + \Theta(n)$		unlucky split (worst)
+    - $L(n) = 2U(n/2) + \Theta(n)$    lucky split (best)
+    - $U(n) = L(n-1) + \Theta(n)$        unlucky split (worst)
   - Solving:
-
+  
   $$
   \begin{align*} 
-    L(n) & = 2(L(n/2-1) + \Theta(n/2)) + \Theta(n) \\
-	        & = 2L(n/2-1) + \Theta(n) \\
-	        & = Θ(nlgn) 
-  \end{align*} 
+  L(n) & = 2(L(n/2-1) + \Theta(n/2)) + \Theta(n) \\
+          & = 2L(n/2-1) + \Theta(n) \\
+          & = Θ(nlgn) 
+\end{align*} 
   $$
 
 - How can we make sure we are usually lucky for all inputs?
@@ -1239,7 +1261,7 @@ T(n) &=T(n/10)+T(9n/10)+ \Theta(n) \\
 \text{or } T(n) &= T(\alpha n) + T((1-\alpha n)+ \Theta(n)
 \end{align*} 
 $$
-					
+
 for any constant $\alpha, 0 < \alpha \leq 0.5$
 
 ---
@@ -1250,15 +1272,19 @@ for any constant $\alpha, 0 < \alpha \leq 0.5$
   - more balanced than   $0.1 – to – 0.9 : 80\%$
   - more balanced than $0.01 – to – 0.99  :  98\%$
   - more balanced than $\alpha – to – (1-\alpha) : 1 – 2\alpha$
-				for any constant $\alpha, 0 < \alpha \leq 0.5$
+    
+                for any constant $\alpha, 0 < \alpha \leq 0.5$
+
 ---
 
 ## Summary: Quicksort Runtime Analysis (4)
 
 - **Avg case intuition:** Different splits expected at different levels
+  
   - some balanced (good), some unbalanced (bad)
 
 - **Avg case intuition:** Assume the good and bad splits alternate
+  
   - i.e. good split -> bad split -> good split -> …
   - $T(n) = \Theta(nlgn)$
     - (informal analysis for intuition)
@@ -1316,6 +1342,7 @@ R-PARTITION(A, p, r)
   exchange A[p] with A[s]
   return H-PARTITION(A, p, r)
 ```
+
 - Alternatively, permuting the whole array would also work
   - but, would be more difficult to analyze
 
@@ -1348,23 +1375,30 @@ R-PARTITION(A, p, r)
 ## Notations for Formal Analysis
 
 - Assume all elements in $A[p \dots r]$ are distinct  
+  
   - Let $n = r – p + 1$
-- Let $rank(x) = |{A[i]: p \leq i \leq r \text{ and } A[i] \leq x}|$
-- i.e. $rank(x)$ is the number of array elements with value less than or equal to $x$
 
+- Let $rank(x) = |{A[i]: p \leq i \leq r \text{ and } A[i] \leq x}|$
+
+- i.e. $rank(x)$ is the number of array elements with value less than or equal to $x$
+  
   - $A=\{5,9,7,6,8,1,4\}$
   - $p=5,r=4$
   - $rank(5)=3$
     - i.e. it is the $3^{rd}$ smallest element in the array
+
 ---
 
 ## Formal Analysis for Average Case
 
 - The following analysis will be for **Quicksort** using **Hoare’s** partitioning algorithm.
+
 - **Reminder:** The **pivot** is selected **randomly** and exchanged with $A[p]$ before calling **H-PARTITION**
 
 - Let $x$ be the **random pivot** chosen.
+
 - What is the probability that $rank(x) = i$ for $i = 1, 2, \dots n$ ?
+  
   - $P(rank(x) = i) = 1/n$
 
 ---
@@ -1391,7 +1425,7 @@ $pivot=x=2$
   - i.e. the random pivot chosen is not the smallest element
   - What will be the size of the left partition $(|L|)$?
   - **Reminder:** Only the elements less than or equal to $x$ will be in the left partition.
-  - **Reminder:** The pivot will stay in the right region 	after **H-PARTITION** if $rank(x)>1$
+  - **Reminder:** The pivot will stay in the right region     after **H-PARTITION** if $rank(x)>1$
 
 $A=\{\overbrace{2}^{p}, 4 \underbrace{,}_{\Longrightarrow|L|=rank(x)-1}7,6,8,\overbrace{5,}^{pivot}\overbrace{9}^r\}$
 
@@ -1403,16 +1437,22 @@ $pivot=x=5$
 ---
 
 ## Various Outcomes of H-PARTITION - Summary (1)
+
 - $x: pivot$
+
 - $|L|: \text{size of left region}$
+
 - $P(rank(x) = i) = 1/n  \text{ for } 1 \leq i \leq n$
+  
   - $\text{if } rank(x) = 1 \text{ then } |L| = 1$
   - $\text{if } rank(x) > 1 \text{ then } |L| = rank(x) - 1$
 
 - $P(|L| = 1) = P(rank(x) = 1) + P(rank(x) = 2)$
+  
   - $P(|L| = 1) = 2/n$
 
 - $P(|L| = i) = P(rank(x) = i+1) \text{ for } 1< i < n$
+  
   - $P(|L| = i) = 1/n \text{ for } 1< i < n$
 
 ---
@@ -1492,7 +1532,7 @@ $$
 - **Splitting summations:** ignore ceilings for simplicity
 
 - $\sum_{k=1}^{n-1}klgk \leq \sum_{k=1}^{n/2-1}klgk + \sum_{k=n/2}^{n-1}klgk$
-
+  
   - **First summation**: $lgk < lg(n/2)=lgn-1$
   - **Second summation**: $lgk < lgn$
 
@@ -1501,11 +1541,11 @@ $$
 ## Splitting: $\sum_{k=1}^{n-1}klgk \leq \sum_{k=1}^{n/2-1}klgk + \sum_{k=n/2}^{n-1}klgk$ (3)
 
 - $\sum_{k=1}^{n-1}klgk \leq (lg(n-1))\sum_{k=1}^{n/2-1}k + lgn \sum_{k=n/2}^{n-1}k$
-
+  
   - $=lgn \sum_{k=1}^{n-1}k- \sum_{k=1}^{n/2-1}k$
-
+  
   - $= \frac{1}{2}n(n-1)lgn- \frac{1}{2} \frac{n}{2}(\frac{n}{2}-1)$
-
+  
   - $=\frac{1}{2}n^2lgn- \frac{1}{8}n^2- \frac{1}{2}n(lgn-1/2)$
 
 - $\sum_{k=1}^{n-1}klgk \leq \frac{1}{2}n^2lgn-\frac{1}{8}n^2$ for $lgn \geq 1/2 \Longrightarrow n \geq \sqrt{2}$
@@ -1540,6 +1580,7 @@ Q.E.D.
 - **ith order statistic**: $i^{th}$ smallest element of a set of $n$ elements
 
 - **minimum:** *first* order statistic
+
 - **maximum:** $n^{th}$ order statistic
 
 - **median:** “halfway point” of the set
@@ -1559,8 +1600,10 @@ $$
 - **Selection problem:** Select the $i^{th}$ smallest of $n$ elements
 
 - **Naïve algorithm:**  Sort the input array $A$; then return $A[i]$
+  
   - $T(n) = \theta(nlgn)$
     - *using e.g. merge sort (but not quicksort)*
+
 - Can we do any better?
 
 ---
@@ -1570,11 +1613,13 @@ $$
 - Randomized algorithm using divide and conquer
 
 - Similar to randomized quicksort
+  
   - **Like quicksort:** Partitions input array recursively
   - **Unlike quicksort:** Makes a single recursive call
     - **Reminder:** *Quicksort makes two recursive calls*
 
 - Expected runtime: $\Theta(n)$
+  
   - **Reminder:** *Expected runtime of quicksort: $\Theta(nlgn)$*
 
 ---
@@ -1659,8 +1704,8 @@ x & = pivot
 \end{align*} 
 $$
 
- - All elements in $L \leq$  all elements in $R$ 
- - $L$ contains:
+- All elements in $L \leq$  all elements in $R$ 
+- $L$ contains:
   - $|L| = q–p+1$  $=$ k smallest elements of $A[p...r]$
   - if $i \leq |L| = k$  then
     - **search** $L$ recursively for its $i^{th}$ smallest element 
@@ -1712,15 +1757,20 @@ $$
 ## Reminder: Various Outcomes of H-PARTITION
 
 - $x: pivot$
+
 - $|L|: \text{size of left region}$
+
 - $P(rank(x) = i) = 1/n  \text{ for } 1 \leq i \leq n$
+  
   - $\text{if } rank(x) = 1 \text{ then } |L| = 1$
   - $\text{if } rank(x) > 1 \text{ then } |L| = rank(x) - 1$
 
 - $P(|L| = 1) = P(rank(x) = 1) + P(rank(x) = 2)$
+  
   - $P(|L| = 1) = 2/n$
 
 - $P(|L| = i) = P(rank(x) = i+1) \text{ for } 1< i < n$
+  
   - $P(|L| = i) = 1/n \text{ for } 1< i < n$
 
 ---
@@ -1844,9 +1894,9 @@ $$
 
 ## Summary of Randomized Order-Statistic Selection
 
- - Works fast: linear expected time
- - Excellent algorithm in practise
- - But, the worst case is very bad: $\Theta(n^2)$
+- Works fast: linear expected time
+- Excellent algorithm in practise
+- But, the worst case is very bad: $\Theta(n^2)$
 
 - **Blum, Floyd, Pratt, Rivest & Tarjan[1973]** algorithms are runs in **linear time** in the **worst case**.
 
@@ -1859,11 +1909,11 @@ $$
 ```r
 //return i-th element in set S with n elements
 SELECT(S, n, i)  
-  
+
   if n <= 5 then
-    
+
     SORT S and return the i-th element
-    
+
   DIVIDE S into ceil(n/5) groups
   //first ceil(n/5) groups are of size 5, last group is of size n mod 5
 
@@ -1879,6 +1929,7 @@ SELECT(S, n, i)
   else
     return  SELECT(R, n–|L|, i–|L|)
 ```
+
 ---
 
 ## Selection in Worst Case Linear Time - Example (1)
@@ -1947,9 +1998,11 @@ $$
 $x \leftarrow SELECT(M,|M|,\lfloor (|M|+1)/2 \rfloor)$ where $|M|=\lceil n/5 \rceil$ 
 
 - Let $M$ be the set of the medians computed: 
+  
   - $M = \{11, 27, 32, 17, 19, 10, 29, \overbrace{24}^{Median}, 35\}$
 
 - $Median = 24$
+
 - The runtime of the recursive call: $T(|M|)=T(\lceil n/5 \rceil)$
 
 ---
@@ -2015,7 +2068,7 @@ $$S =
 $$
 
 - Partitioning $S$ around $x = 24$ will lead to partitions
-of sizes $\sim 3n/10$ and $\sim 7n/10$ in the **worst case**. 
+  of sizes $\sim 3n/10$ and $\sim 7n/10$ in the **worst case**. 
 
 **Step 5:** Make a recursive call to one of the partitions
 
@@ -2025,6 +2078,7 @@ if i <= |L| then
 else 
   return SELECT(R,n-|L|,i-|L|)
 ```
+
 ---
 
 ## Selection in Worst Case Linear Time
@@ -2032,11 +2086,11 @@ else
 ```r
 //return i-th element in set S with n elements
 SELECT(S, n, i)  
-  
+
   if n <= 5 then
-    
+
     SORT S and return the i-th element
-    
+
   DIVIDE S into ceil(n/5) groups
   //first ceil(n/5) groups are of size 5, last group is of size n mod 5
 
@@ -2052,6 +2106,7 @@ SELECT(S, n, i)
   else
     return  SELECT(R, n–|L|, i–|L|)
 ```
+
 ---
 
 ## Choosing the Pivot (1)
@@ -2095,13 +2150,11 @@ SELECT(S, n, i)
 - Similarly $|L| \geq \frac{3n}{10}– 6$
 - Therefore, **SELECT** is recursively called on at most $n-(\frac{3n}{10}-6)=\frac{7n}{10}+6$ elements
 
-
 ![alt:"alt" h:400px center](assets/ce100-week-3-matrix-choose_pivot_5.drawio.svg)
 
 ---
 
 ## Selection in Worst Case Linear Time (1)
-
 
 ![alt:"alt" h:500px center](assets/ce100-week-3-matrix-select_func.drawio.svg)
 
@@ -2124,7 +2177,6 @@ T(n) & \leq c \lceil n/5 \rceil + c(7n/10+6)+\Theta(n) \\
 $$
 
 - Work at each level of recursion is a constant factor $(9/10)$ smaller
-
 
 ---
 

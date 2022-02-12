@@ -474,8 +474,8 @@ e.g
 
 $$
 \begin{align*}
-2n^2 + 5n + 3 & = \Theta(n^2) \\
-3n^3+90n^2-2n+5 &=\Theta(n^3)
+  2n^2+5n+3 &= \Theta(n^2) \\
+  3n^3+90n^2-2n+5 &= \Theta(n^3)
 \end{align*}
 $$
 
@@ -1236,7 +1236,6 @@ $0 \leq 10^{-9}n^2 \leq 10^{-9}n^{2.0001} \text{ for } n \geq 1$
 ---
 
 ### Big-Theta /$\Theta$-Notation : Asymptotically tight bound (Average Case) (1)
-
 
 $f(n)=\Theta(g(n))$ 
 if $\exists$ positive constants $c_1,c_2,n_0$ 

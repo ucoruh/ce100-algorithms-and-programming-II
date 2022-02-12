@@ -607,13 +607,13 @@ $$
 $$
 
 - recall infinite decreasing geometric series
-  
+
 $$
 \sum_{k=0}^{\infty} x^k = \frac{1}{1-x} \text{ where } |x|<1 
 $$
 
 - differentiate both sides
-  
+
 $$
 \sum_{k=0}^{\infty}kx^{k-1} = \frac{1}{(1-x)^2}  
 $$
@@ -627,13 +627,13 @@ $$
 $$
 
 - then, multiply both sides by $x$
-  
+
 $$
 \sum_{k=0}^{\infty}kx^k = \frac{x}{(1-x)^2}  
 $$
 
 - in our case: $x = 1/2$ and $k = h$
-  
+
 $$
 \therefore \sum_{h=0}^{\infty}h(1/2)^h = \frac{1/2}{(1-(1/2))^2}=2=O(1) \\
 \therefore T(n)=O(n\sum_{h=1}^{d}h(1/2)^h)=O(n)  
@@ -1221,6 +1221,7 @@ Return HEAD -> DATA
 ## How Fast Can We Sort?
 
 - The algorithms we have seen so far:
+  
   - Based on comparison of elements
   - We only care about the relative ordering between the elements (not the actual values)
   - The smallest worst-case runtime we have seen so far: $O(nlgn)$
@@ -1233,6 +1234,7 @@ Return HEAD -> DATA
 ## Decision Trees for Comparison Sorts
 
 - Represent a sorting algorithm abstractly in terms of a **decision tree**
+  
   - A **binary tree** that represents the **comparisons between** elements in the sorting algorithm
   - Control, data movement, and other aspects are ignored
 
@@ -1259,8 +1261,9 @@ Return HEAD -> DATA
 ---
 
 ## Different Outcomes for Insertion Sort and n=3
+
 - Input : 
-$<a_1,a_2,a_3>$
+  $<a_1,a_2,a_3>$
 
 ![bg right:65% w:760px](assets/ce100-week-4-heap-ins_sort_outcomes.drawio.svg)
 
@@ -1269,7 +1272,6 @@ $<a_1,a_2,a_3>$
 ## Decision Tree for Insertion Sort and n=3
 
 ![bg right:70% w:850px](assets/ce100-week-4-heap-ins_sort_comp.drawio.svg)
-
 
 ---
 
@@ -1288,8 +1290,9 @@ $<a_1,a_2,a_3>$
 ---
 
 ## Decision Tree for Insertion Sort and n=3
+
 - Input:
-$<9, 4, 6>$
+  $<9, 4, 6>$
 
 ![bg right:70% w:850px](assets/ce100-week-4-heap-ins_sort_comp_2.drawio.svg)
 
@@ -1298,45 +1301,51 @@ $<9, 4, 6>$
 ## Decision Tree Model
 
 - A decision tree can model the execution of any comparison sort:
+  
   - One tree for each input size $n$
   - View the algorithm as **splitting** whenever it compares two elements
   - The tree contains the **comparisons along all possible** instruction traces
 
 - **The running time of the algorithm** $=$ *the length of the path taken*
+
 - **Worst case running time** $=$ *height of the tree*
 
 ---
 
 ## Counting Sort
 
-
 ---
 
 ## Lower Bound for Comparison Sorts
 
 - Let $n$ be the number of elements in the input array.
+
 - What is the $min$ number of leaves in the decision tree?
-	- $n!$ **(because there are n! permutations of the input array, and all possible outputs must be captured in the leaves)**
+  
+  - $n!$ **(because there are n! permutations of the input array, and all possible outputs must be captured in the leaves)**
+
 - What is the max number of leaves in a binary tree of height $h$? $\Longrightarrow$ $2^h$ 
+
 - So, we must have:
-$$
-2^h \geq n!
-$$
+  
+  $$
+  2^h \geq n!
+  $$
 
 ---
 
 ## Lower Bound for Decision Tree Sorting
 
 - **Theorem:** Any comparison sort algorithm requires 
-$\Omega(nlgn)$ comparisons in the worst case.
+  $\Omega(nlgn)$ comparisons in the worst case.
 - **Proof:** We’ll prove that any decision tree corresponding to a comparison sort algorithm must have height $\Omega(nlgn)$
-$$
-\begin{align*}
-2^h & \geq n! \\
-h & \geq lg(n!) \\
-& \geq lg((n/e)^n) (Stirling Approximation) \\
-& = nlgn - nlge \\
-& = \Omega(nlgn)
+  $$
+  \begin{align*}
+  2^h & \geq n! \\
+  h & \geq lg(n!) \\
+  & \geq lg((n/e)^n) (Stirling Approximation) \\
+  & = nlgn - nlge \\
+  & = \Omega(nlgn)
 
 \end{align*}
 $$
@@ -1354,7 +1363,7 @@ $$
 ## Sorting in Linear Time
 
 - **Counting sort:** No comparisons between elements
-
+  
   - **Input:** $A[1 \dots n]$, where $A[j] \in \{1, 2,\dots, k\}$
   - **Output:** $B[1 \dots n]$, sorted
   - **Auxiliary storage:** $C[1 \dots k]$
@@ -1368,6 +1377,7 @@ $$
 ---
 
 ## Counting Sort-2
+
 - **Step 1:** Initialize all counts to 0
 
 ![bg right:60% w:750px](assets/ce100-week-4-heap-counting_sort_2.drawio.svg)
@@ -1375,8 +1385,9 @@ $$
 ---
 
 ## Counting Sort-3
+
 - **Step 2:** Count the number of occurrences
-of each value in the input array
+  of each value in the input array
 
 ![bg right:60% w:750px](assets/ce100-week-4-heap-counting_sort_3.drawio.svg)
 
@@ -1385,7 +1396,7 @@ of each value in the input array
 ## Counting Sort-4
 
 - **Step 3:** Compute the number of elements
-less than or equal to each value
+  less than or equal to each value
 
 ![bg right:60% w:750px](assets/ce100-week-4-heap-counting_sort_4.drawio.svg)
 
@@ -1471,9 +1482,11 @@ less than or equal to each value
 ## Radix Sort
 
 - **Origin:** Herman Hollerith’s card-sorting machine for the 1890 US Census.
+
 - **Basic idea:** Digit-by-digit sorting
 
 - Two variations:
+  
   - Sort from **MSD** to **LSD** (bad idea)
   - Sort from **LSD** to **MSD** (good idea)
 
@@ -1505,8 +1518,9 @@ less than or equal to each value
 ## **Modern** IBM card
 
 - One character per column
+  
   - So, that’s why text windows have 80 columns!
-
+  
   ![ center h:350px](assets/ibm-punch-card.png)
 
 - for more samples visit https://en.wikipedia.org/wiki/Punched_card
@@ -1524,6 +1538,7 @@ less than or equal to each value
 ---
 
 ## Hollerith’s MSD-First Radix Sort
+
 - Sort starting from the most significant digit (MSD)
 - Then, sort each of the resulting bins recursively
 - At the end, combine the decks in order
@@ -1535,9 +1550,10 @@ less than or equal to each value
 ## Hollerith’s MSD-First Radix Sort
 
 - To sort a subset of cards recursively:
+  
   - All the other cards need to be removed from the machine, because the machine can handle only one sorting problem at a time.
   - The human operator needs to keep track of the intermediate card piles
-
+  
   ![center h:300px](assets/ce100-week-4-heap-msd-radix-sort-2.drawio.svg)
 
 ---
@@ -1628,10 +1644,12 @@ $$
 ## Hollerith’s MSD-First Radix Sort
 
 - **Example:** To sort $3$ digit numbers, in the worst case:
-	- $S(d) = (1/9) (103-1) = 111$ sorting passes needed
-	- $P(d) = 10d-1-1 = 99$ intermediate card piles generated
+  
+  - $S(d) = (1/9) (103-1) = 111$ sorting passes needed
+  - $P(d) = 10d-1-1 = 99$ intermediate card piles generated
 
 - MSD-first approach has more recursive calls and intermediate storage requirement
+  
   - Expensive for a **tabulating machine** to sort punched cards
   - Overhead of recursive calls in a modern computer
 
@@ -1640,15 +1658,20 @@ $$
 ## LSD-First Radix Sort
 
 - Least significant digit (**LSD**)-first radix sort seems to be a folk invention originated by machine operators.
+
 - It is the counter-intuitive, but the better algorithm.
+
 - **Basic Algorithm:**
-```r
+  
+  ```r
   Sort numbers on their LSD first   (Stable Sorting Needed)
   Combine the cards into a single deck in order 
   Continue this sorting process for the other digits
     from the LSD to MSD
-```
+  ```
+
 - Requires only $d$ sorting passes
+
 - No intermediate card pile generated
 
 ---
@@ -1689,7 +1712,9 @@ $$
 ## Radix Sort: Runtime – **Example 1**
 
 - We have flexibility in choosing $d$ and $k$
+
 - Assume we are trying to sort **32-bit words**
+  
   - We can define each digit to be **4 bits**
   - Then, the range for each digit $k=2^4=16$
     - So, counting sort will take $\Theta(n+16)$
@@ -1703,10 +1728,12 @@ $$
 ## Radix Sort: Runtime – **Example 2**
 
 - We have flexibility in choosing $d$ and $k$
+
 - Assume we are trying to sort **32-bit words**
+  
   - Or, we can define each digit to be **8 bits**
   - Then, the range for each digit $k = 2^8 = 256$
-	  - So, counting sort will take $\Theta(n+256)$
+    - So, counting sort will take $\Theta(n+256)$
   - The number of digits $d = 32/8 = 4$
   - Radix sort runtime: $\Theta(4(n+256)) = \Theta(n)$
 
@@ -1717,16 +1744,22 @@ $$
 ## Radix Sort: **Runtime**
 
 - Assume we are trying to sort **$b$-bit** words
+  
   - Define each digit to be **$r$ bits**
+  
   - Then, the range for each digit $k = 2^r$
+    
     - So, **counting sort will take** $\Theta(n+2^r)$
+  
   - The number of digits $d = b/r$
+    
     - **Radix sort runtime:** 
-    $$
-    \begin{align*}
-    T(n,b)&=\Theta \bigg( \frac{b}{r}(n+2^r) \bigg)
-    \end{align*}
-    $$
+      
+      $$
+      \begin{align*}
+T(n,b)&=\Theta \bigg( \frac{b}{r}(n+2^r) \bigg)
+\end{align*}
+      $$
 
 - $\overbrace{[rbits|rbits|rbits|rbits]}^{b/r \text{ bits}}$
 
@@ -1744,8 +1777,8 @@ $$
 - Or, intuitively: 
   - We want to balance the terms $(b/r)$ and $(n + 2^r)$
   - **Choose $r \approx lgn$**
-      - If we choose $r << lgn \Longrightarrow (n + 2^r)$ term **doesn’t improve**
-      - If we choose $r >> lgn \Longrightarrow (n + 2^r)$ increases **exponentially**
+    - If we choose $r << lgn \Longrightarrow (n + 2^r)$ term **doesn’t improve**
+    - If we choose $r >> lgn \Longrightarrow (n + 2^r)$ increases **exponentially**
 
 ---
 

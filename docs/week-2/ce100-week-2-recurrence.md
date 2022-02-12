@@ -311,7 +311,6 @@ But, the proof is not complete yet.
 
 ## Example: A tighter upper bound? (2)
 
-
 Original recurrence: $T(n) = 4T(n/2) + n$
 Ind. hyp: Assume that $T(k) \leq ck^2$  for $k < n$ 
 Prove the general case: $T(n) \leq cn^2$
@@ -374,7 +373,6 @@ T(n) & = 4T(n/2) + n \\
 & \text{choose } c2 \geq 1 
 \end{align*}
 $$
-
 
 ---
 
@@ -1108,7 +1106,7 @@ POWER(a, n)
 
 ---
 
-## Example Correctness Proof: Powering a Number 
+## Example Correctness Proof: Powering a Number
 
 - **Base Case:** $POWER(a, 0)$ is correct, because it returns $1$
 - **Ind. Hyp:** Assume $POWER(a, k)$ is correct for any $k<n$
@@ -1121,7 +1119,6 @@ POWER(a, n)
       - $val = a^{(n-1)/2}$ (due to ind. hyp.)
       - it returns $val*val*a = a^n$
 - The correctness proof is complete
-
 
 ---
 
