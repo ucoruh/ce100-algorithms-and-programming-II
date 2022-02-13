@@ -1621,15 +1621,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#splitting-sum_k1n-1klgk-leq-sum_k1n2-1klgk-sum_kn2n-1klgk-3" class="md-nav__link">
-    Splitting: \(\sum_{k=1}^{n-1}klgk \leq \sum_{k=1}^{n/2-1}klgk + \sum_{k=n/2}^{n-1}klgk\) (3)
+  <a href="#splitting-sum-limits_k1n-1klgk-leq-sum-limits_k1n2-1klgk-sum-limits_kn2n-1klgk-3" class="md-nav__link">
+    Splitting: \(\sum \limits_{k=1}^{n-1}klgk \leq \sum \limits_{k=1}^{n/2-1}klgk + \sum \limits_{k=n/2}^{n-1}klgk\) (3)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#substituting-sum_k1n-1klgk-leq-frac12n2lgn-frac18n2-4" class="md-nav__link">
-    Substituting: - \(\sum_{k=1}^{n-1}klgk \leq \frac{1}{2}n^2lgn-\frac{1}{8}n^2\) (4)
+  <a href="#substituting-sum-limits_k1n-1klgk-leq-frac12n2lgn-frac18n2-4" class="md-nav__link">
+    Substituting: - \(\sum \limits_{k=1}^{n-1}klgk \leq \frac{1}{2}n^2lgn-\frac{1}{8}n^2\) (4)
   </a>
   
 </li>
@@ -2984,15 +2984,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#splitting-sum_k1n-1klgk-leq-sum_k1n2-1klgk-sum_kn2n-1klgk-3" class="md-nav__link">
-    Splitting: \(\sum_{k=1}^{n-1}klgk \leq \sum_{k=1}^{n/2-1}klgk + \sum_{k=n/2}^{n-1}klgk\) (3)
+  <a href="#splitting-sum-limits_k1n-1klgk-leq-sum-limits_k1n2-1klgk-sum-limits_kn2n-1klgk-3" class="md-nav__link">
+    Splitting: \(\sum \limits_{k=1}^{n-1}klgk \leq \sum \limits_{k=1}^{n/2-1}klgk + \sum \limits_{k=n/2}^{n-1}klgk\) (3)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#substituting-sum_k1n-1klgk-leq-frac12n2lgn-frac18n2-4" class="md-nav__link">
-    Substituting: - \(\sum_{k=1}^{n-1}klgk \leq \frac{1}{2}n^2lgn-\frac{1}{8}n^2\) (4)
+  <a href="#substituting-sum-limits_k1n-1klgk-leq-frac12n2lgn-frac18n2-4" class="md-nav__link">
+    Substituting: - \(\sum \limits_{k=1}^{n-1}klgk \leq \frac{1}{2}n^2lgn-\frac{1}{8}n^2\) (4)
   </a>
   
 </li>
@@ -3371,7 +3371,7 @@
 <h2 id="matrix-multiplication-2">Matrix Multiplication (2)<a class="headerlink" href="#matrix-multiplication-2" title="Permanent link">&para;</a></h2>
 <p><img alt="alt:&quot;alt&quot; height:450px center" src="../assets/ce100-week-3-matrix.drawio.svg" /></p>
 <ul>
-<li><span class="arithmatex">\(c_{ij}=\sum_{1\leq k \leq n}a_{ik}.b_{kj}\)</span></li>
+<li><span class="arithmatex">\(c_{ij}=\sum \limits_{1\leq k \leq n}^{}a_{ik}.b_{kj}\)</span></li>
 </ul>
 <hr />
 <h2 id="matrix-multiplication-standard-algorithm">Matrix Multiplication: Standard Algorithm<a class="headerlink" href="#matrix-multiplication-standard-algorithm" title="Permanent link">&para;</a></h2>
@@ -3495,6 +3495,8 @@
 \end{cases}
 \]</div>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="matrix-multiplication-strassens-idea-2">Matrix Multiplication: Strassen’s Idea (2)<a class="headerlink" href="#matrix-multiplication-strassens-idea-2" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Reminder:</strong> </li>
@@ -3514,6 +3516,8 @@
 \end{align*}
 \]</div>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="matrix-multiplication-strassens-idea-3">Matrix Multiplication: Strassen’s Idea (3)<a class="headerlink" href="#matrix-multiplication-strassens-idea-3" title="Permanent link">&para;</a></h2>
 <div class="arithmatex">\[
 \begin{align*} 
@@ -3669,6 +3673,8 @@ c_{12} &amp; = P_1 + P_2 \\
 <p><strong>Key:</strong> Linear-time <span class="arithmatex">\((\Theta(n))\)</span> partitioning algorithm</p>
 <p><img alt="alt:&quot;alt&quot; height:200px center" src="../assets/ce100-week-3-matrix-quicksort_1.drawio.svg" /></p>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="divide-partition-the-array-around-a-pivot-element">Divide: Partition the array around a pivot element<a class="headerlink" href="#divide-partition-the-array-around-a-pivot-element" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
@@ -3682,13 +3688,15 @@ c_{12} &amp; = P_1 + P_2 \\
 </li>
 <li>Right subarray: All elements <span class="arithmatex">\(\geq x\)</span></li>
 </ul>
-<p><img alt="alt:&quot;alt&quot; height:400px center" src="../assets/ce100-week-3-matrix-quicksort_arr_1.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:350px center" src="../assets/ce100-week-3-matrix-quicksort_arr_1.drawio.svg" /></p>
 <hr />
 <h2 id="conquer-recursively-sort-the-subarrays">Conquer: Recursively Sort the Subarrays<a class="headerlink" href="#conquer-recursively-sort-the-subarrays" title="Permanent link">&para;</a></h2>
 <p>Note: Everything in the left subarray ≤ everything in the right subarray</p>
-<p><img alt="alt:&quot;alt&quot; height:400px center" src="../assets/ce100-week-3-matrix-quicksort_arr_2.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:350px center" src="../assets/ce100-week-3-matrix-quicksort_arr_2.drawio.svg" /></p>
 <p>Note: Combine is trivial after conquer. Array already sorted.</p>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="two-partitioning-algorithms">Two partitioning algorithms<a class="headerlink" href="#two-partitioning-algorithms" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Hoare’s algorithm:</strong> 
@@ -3722,6 +3730,8 @@ c_{12} &amp; = P_1 + P_2 \\
 <h2 id="hoares-partitioning-algorithm-2">Hoare’s Partitioning Algorithm (2)<a class="headerlink" href="#hoares-partitioning-algorithm-2" title="Permanent link">&para;</a></h2>
 <p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_hoare_steps.drawio.svg" /></p>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="hoares-partitioning-algorithm-3">Hoare’s Partitioning Algorithm (3)<a class="headerlink" href="#hoares-partitioning-algorithm-3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Elements are exchanged when</li>
@@ -3746,41 +3756,43 @@ c_{12} &amp; = P_1 + P_2 \\
 </code></pre></div>
 <hr />
 <h2 id="hoares-partitioning-algorithm-example-step-1">Hoare’s Partitioning Algorithm Example (Step-1)<a class="headerlink" href="#hoares-partitioning-algorithm-example-step-1" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_hoare_ex1.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_hoare_ex1.drawio.svg" /></p>
 <hr />
 <h2 id="hoares-partitioning-algorithm-example-step-2">Hoare’s Partitioning Algorithm Example (Step-2)<a class="headerlink" href="#hoares-partitioning-algorithm-example-step-2" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_hoare_ex2.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_hoare_ex2.drawio.svg" /></p>
 <hr />
 <h2 id="hoares-partitioning-algorithm-example-step-3">Hoare’s Partitioning Algorithm Example (Step-3)<a class="headerlink" href="#hoares-partitioning-algorithm-example-step-3" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_hoare_ex3.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_hoare_ex3.drawio.svg" /></p>
 <hr />
 <h2 id="hoares-partitioning-algorithm-example-step-4">Hoare’s Partitioning Algorithm Example (Step-4)<a class="headerlink" href="#hoares-partitioning-algorithm-example-step-4" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_hoare_ex4.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_hoare_ex4.drawio.svg" /></p>
 <hr />
 <h2 id="hoares-partitioning-algorithm-example-step-5">Hoare’s Partitioning Algorithm Example (Step-5)<a class="headerlink" href="#hoares-partitioning-algorithm-example-step-5" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_hoare_ex5.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_hoare_ex5.drawio.svg" /></p>
 <hr />
 <h2 id="hoares-partitioning-algorithm-example-step-6">Hoare’s Partitioning Algorithm Example (Step-6)<a class="headerlink" href="#hoares-partitioning-algorithm-example-step-6" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_hoare_ex6.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_hoare_ex6.drawio.svg" /></p>
 <hr />
 <h2 id="hoares-partitioning-algorithm-example-step-7">Hoare’s Partitioning Algorithm Example (Step-7)<a class="headerlink" href="#hoares-partitioning-algorithm-example-step-7" title="Permanent link">&para;</a></h2>
 <p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_hoare_ex7.drawio.svg" /></p>
 <hr />
 <h2 id="hoares-partitioning-algorithm-example-step-8">Hoare’s Partitioning Algorithm Example (Step-8)<a class="headerlink" href="#hoares-partitioning-algorithm-example-step-8" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_hoare_ex8.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_hoare_ex8.drawio.svg" /></p>
 <hr />
 <h2 id="hoares-partitioning-algorithm-example-step-9">Hoare’s Partitioning Algorithm Example (Step-9)<a class="headerlink" href="#hoares-partitioning-algorithm-example-step-9" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_hoare_ex9.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_hoare_ex9.drawio.svg" /></p>
 <hr />
 <h2 id="hoares-partitioning-algorithm-example-step-10">Hoare’s Partitioning Algorithm Example (Step-10)<a class="headerlink" href="#hoares-partitioning-algorithm-example-step-10" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_hoare_ex10.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_hoare_ex10.drawio.svg" /></p>
 <hr />
 <h2 id="hoares-partitioning-algorithm-example-step-11">Hoare’s Partitioning Algorithm Example (Step-11)<a class="headerlink" href="#hoares-partitioning-algorithm-example-step-11" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_hoare_ex11.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_hoare_ex11.drawio.svg" /></p>
 <hr />
 <h2 id="hoares-partitioning-algorithm-example-step-12">Hoare’s Partitioning Algorithm Example (Step-12)<a class="headerlink" href="#hoares-partitioning-algorithm-example-step-12" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_hoare_ex12.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_hoare_ex12.drawio.svg" /></p>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="hoares-partitioning-algorithm-notes">Hoare’s Partitioning Algorithm - Notes<a class="headerlink" href="#hoares-partitioning-algorithm-notes" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Elements are exchanged when</li>
@@ -3803,6 +3815,8 @@ c_{12} &amp; = P_1 + P_2 \\
 <a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>          <span class="n">else</span> <span class="n">return</span> <span class="n">j</span>
 </code></pre></div>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="quicksort-with-hoares-partitioning-algorithm">Quicksort with Hoare’s Partitioning Algorithm<a class="headerlink" href="#quicksort-with-hoares-partitioning-algorithm" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nf">QUICKSORT </span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  <span class="n">if</span> <span class="n">p</span> <span class="o">&lt;</span> <span class="n">r</span> <span class="n">then</span>
@@ -3814,6 +3828,8 @@ c_{12} &amp; = P_1 + P_2 \\
 <p>Initial invocation: <code>QUICKSORT(A,1,n)</code></p>
 <p><img alt="alt:&quot;alt&quot; height:150px center" src="../assets/ce100-week-3-matrix-quicksort_1.drawio.svg" /></p>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="hoares-partitioning-algorithm-pivot-selection">Hoare’s Partitioning Algorithm: Pivot Selection<a class="headerlink" href="#hoares-partitioning-algorithm-pivot-selection" title="Permanent link">&para;</a></h2>
 <ul>
 <li>if we select pivot to be <span class="arithmatex">\(A[r]\)</span> instead of <span class="arithmatex">\(A[p]\)</span> in <strong>H-PARTITION</strong></li>
@@ -3881,6 +3897,8 @@ c_{12} &amp; = P_1 + P_2 \\
 </ul>
 <p><strong>By contradiction</strong>, assume there is a run with <span class="arithmatex">\(i_k – j_k &gt; 1\)</span></p>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="correctness-of-hoares-algorithm-4">Correctness of Hoare’s Algorithm (4)<a class="headerlink" href="#correctness-of-hoares-algorithm-4" title="Permanent link">&para;</a></h2>
 <p><strong>Original correctness claims:</strong></p>
 <ul>
@@ -3897,6 +3915,8 @@ c_{12} &amp; = P_1 + P_2 \\
 </ul>
 <p><strong>The proof of claims (a) and (b) complete</strong></p>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="correctness-of-hoares-algorithm-5">Correctness of Hoare’s Algorithm (5)<a class="headerlink" href="#correctness-of-hoares-algorithm-5" title="Permanent link">&para;</a></h2>
 <p><strong>Lemma 2:</strong> At the end of iteration <span class="arithmatex">\(m\)</span>, where <span class="arithmatex">\(m&lt;k\)</span> (<em>i.e. m is not the last iteration</em>), we must have:
 <span class="arithmatex">\(A[p \dots i_m] \leq x\)</span>  and  <span class="arithmatex">\(A[j_m \dots r] \geq x\)</span></p>
@@ -3939,52 +3959,52 @@ c_{12} &amp; = P_1 + P_2 \\
 </ul>
 <hr />
 <h2 id="lomutos-partitioning-algorithm-2">Lomuto’s Partitioning Algorithm (2)<a class="headerlink" href="#lomutos-partitioning-algorithm-2" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_steps.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_steps.drawio.svg" /></p>
 <hr />
 <h2 id="lomutos-partitioning-algorithm-ex-step-1">Lomuto’s Partitioning Algorithm Ex. (Step-1)<a class="headerlink" href="#lomutos-partitioning-algorithm-ex-step-1" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex1.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex1.drawio.svg" /></p>
 <hr />
 <h2 id="lomutos-partitioning-algorithm-ex-step-2">Lomuto’s Partitioning Algorithm Ex. (Step-2)<a class="headerlink" href="#lomutos-partitioning-algorithm-ex-step-2" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex2.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex2.drawio.svg" /></p>
 <hr />
 <h2 id="lomutos-partitioning-algorithm-ex-step-3">Lomuto’s Partitioning Algorithm Ex. (Step-3)<a class="headerlink" href="#lomutos-partitioning-algorithm-ex-step-3" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex3.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex3.drawio.svg" /></p>
 <hr />
 <h2 id="lomutos-partitioning-algorithm-ex-step-4">Lomuto’s Partitioning Algorithm Ex. (Step-4)<a class="headerlink" href="#lomutos-partitioning-algorithm-ex-step-4" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex4.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex4.drawio.svg" /></p>
 <hr />
 <h2 id="lomutos-partitioning-algorithm-ex-step-5">Lomuto’s Partitioning Algorithm Ex. (Step-5)<a class="headerlink" href="#lomutos-partitioning-algorithm-ex-step-5" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex5.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex5.drawio.svg" /></p>
 <hr />
 <h2 id="lomutos-partitioning-algorithm-ex-step-6">Lomuto’s Partitioning Algorithm Ex. (Step-6)<a class="headerlink" href="#lomutos-partitioning-algorithm-ex-step-6" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex6.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex6.drawio.svg" /></p>
 <hr />
 <h2 id="lomutos-partitioning-algorithm-ex-step-7">Lomuto’s Partitioning Algorithm Ex. (Step-7)<a class="headerlink" href="#lomutos-partitioning-algorithm-ex-step-7" title="Permanent link">&para;</a></h2>
 <p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex7.drawio.svg" /></p>
 <hr />
 <h2 id="lomutos-partitioning-algorithm-ex-step-8">Lomuto’s Partitioning Algorithm Ex. (Step-8)<a class="headerlink" href="#lomutos-partitioning-algorithm-ex-step-8" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex8.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex8.drawio.svg" /></p>
 <hr />
 <h2 id="lomutos-partitioning-algorithm-ex-step-9">Lomuto’s Partitioning Algorithm Ex. (Step-9)<a class="headerlink" href="#lomutos-partitioning-algorithm-ex-step-9" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex9.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex9.drawio.svg" /></p>
 <hr />
 <h2 id="lomutos-partitioning-algorithm-ex-step-10">Lomuto’s Partitioning Algorithm Ex. (Step-10)<a class="headerlink" href="#lomutos-partitioning-algorithm-ex-step-10" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex10.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex10.drawio.svg" /></p>
 <hr />
 <h2 id="lomutos-partitioning-algorithm-ex-step-11">Lomuto’s Partitioning Algorithm Ex. (Step-11)<a class="headerlink" href="#lomutos-partitioning-algorithm-ex-step-11" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex11.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex11.drawio.svg" /></p>
 <hr />
 <h2 id="lomutos-partitioning-algorithm-ex-step-12">Lomuto’s Partitioning Algorithm Ex. (Step-12)<a class="headerlink" href="#lomutos-partitioning-algorithm-ex-step-12" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex12.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex12.drawio.svg" /></p>
 <hr />
 <h2 id="lomutos-partitioning-algorithm-ex-step-13">Lomuto’s Partitioning Algorithm Ex. (Step-13)<a class="headerlink" href="#lomutos-partitioning-algorithm-ex-step-13" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex13.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex13.drawio.svg" /></p>
 <hr />
 <h2 id="lomutos-partitioning-algorithm-ex-step-14">Lomuto’s Partitioning Algorithm Ex. (Step-14)<a class="headerlink" href="#lomutos-partitioning-algorithm-ex-step-14" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex14.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex14.drawio.svg" /></p>
 <hr />
 <h2 id="lomutos-partitioning-algorithm-ex-step-15">Lomuto’s Partitioning Algorithm Ex. (Step-15)<a class="headerlink" href="#lomutos-partitioning-algorithm-ex-step-15" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;alt&quot; height:550px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex15.drawio.svg" /></p>
+<p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_lomuto_ex15.drawio.svg" /></p>
 <hr />
 <h2 id="quicksort-with-lomutos-partitioning-algorithm">Quicksort with Lomuto’s Partitioning Algorithm<a class="headerlink" href="#quicksort-with-lomutos-partitioning-algorithm" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nf">QUICKSORT </span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
@@ -4185,18 +4205,19 @@ T(n) = T(1) + T(n-1) + cn
 </ul>
 <hr />
 <h2 id="balanced-partitioning-6">Balanced Partitioning (6)<a class="headerlink" href="#balanced-partitioning-6" title="Permanent link">&para;</a></h2>
+<p><style scoped>section{ font-size: 25px; }</style></p>
 <ul>
 <li><strong>Question:</strong> What is the probability that H-PARTITION returns a split that is more balanced than <span class="arithmatex">\(0.1-to-0.9\)</span>?</li>
 </ul>
-<p><img alt="alt:&quot;alt&quot; h:200px center" src="../assets/ce100-week-3-matrix-quicksort_question_1.drawio.svg" /></p>
 <div class="arithmatex">\[
 \begin{align*} 
-Probability=\sum_{q=0.1n+1}^{0.9n-1}\frac{1}{n} 
-=\frac{1}{n}(0.9n-1-0.1n-1+1) \\ 
-= 0.8-\frac{1}{n} \\ 
-\approx 0.8 \text{ for large n}
+Probability &amp;=\sum \limits_{q=0.1n+1}^{0.9n-1}\frac{1}{n} \\
+&amp;=\frac{1}{n}(0.9n-1-0.1n-1+1) \\ 
+&amp;= 0.8-\frac{1}{n} \\ 
+&amp; \approx 0.8 \text{ for large n}
 \end{align*} 
 \]</div>
+<p><img alt="bg right:50% w:500px" src="../assets/ce100-week-3-matrix-quicksort_question_1.drawio.svg" /></p>
 <hr />
 <h2 id="balanced-partitioning-7">Balanced Partitioning (7)<a class="headerlink" href="#balanced-partitioning-7" title="Permanent link">&para;</a></h2>
 <ul>
@@ -4211,14 +4232,16 @@ Probability=\sum_{q=0.1n+1}^{0.9n-1}\frac{1}{n}
 </li>
 </ul>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="balanced-partitioning-8">Balanced Partitioning (8)<a class="headerlink" href="#balanced-partitioning-8" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Question:</strong> What is the probability that H-PARTITION returns a split that is more balanced than <span class="arithmatex">\(\alpha-to-(1-\alpha)\)</span>?</li>
 </ul>
-<p><img alt="alt:&quot;alt&quot; h:410px center" src="../assets/ce100-week-3-matrix-quicksort_question_2.drawio.svg" /></p>
+<p><img alt="bg right:40% w:500px" src="../assets/ce100-week-3-matrix-quicksort_question_2.drawio.svg" /></p>
 <div class="arithmatex">\[
 \begin{align*} 
-Probability &amp; =\sum_{q=\alpha n+1}^{(1-\alpha)n-1}\frac{1}{n} \\
+Probability &amp; =\sum \limits_{q=\alpha n+1}^{(1-\alpha)n-1}\frac{1}{n} \\
 &amp; =\frac{1}{n}((1-\alpha)n-1- \alpha n-1+1) \\ 
 &amp; = (1-2\alpha)-\frac{1}{n} \\ 
 &amp; \approx (1-2\alpha) \text{ for large n}
@@ -4320,7 +4343,7 @@ Probability &amp; =\sum_{q=\alpha n+1}^{(1-\alpha)n-1}\frac{1}{n} \\
   L(n) &amp; = 2(L(n/2-1) + \Theta(n/2)) + \Theta(n) \
           &amp; = 2L(n/2-1) + \Theta(n) \
           &amp; = Θ(nlgn) 
-\end{align*} 
+  \end{align*} 
   $$</p>
 <ul>
 <li>How can we make sure we are usually lucky for all inputs?</li>
@@ -4364,8 +4387,11 @@ T(n) &amp;=T(n/10)+T(9n/10)+ \Theta(n) \\
 <li>For a random input array, the probability of having a split </li>
 <li>more balanced than   <span class="arithmatex">\(0.1 – to – 0.9 : 80\%\)</span></li>
 <li>more balanced than <span class="arithmatex">\(0.01 – to – 0.99  :  98\%\)</span></li>
-<li>more balanced than <span class="arithmatex">\(\alpha – to – (1-\alpha) : 1 – 2\alpha\)</span><div class="highlight"><pre><span></span><code>        for any constant $\alpha, 0 &lt; \alpha \leq 0.5$
-</code></pre></div>
+<li>
+<p>more balanced than <span class="arithmatex">\(\alpha – to – (1-\alpha) : 1 – 2 \alpha\)</span></p>
+</li>
+<li>
+<p>for any constant <span class="arithmatex">\(\alpha, 0 &lt; \alpha \leq 0.5\)</span></p>
 </li>
 </ul>
 <hr />
@@ -4421,6 +4447,8 @@ T(n) &amp;=T(n/10)+T(9n/10)+ \Theta(n) \\
 <li>Worst-case should be determined only by output of a random number generator.</li>
 </ul>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="randomized-quicksort-1">Randomized Quicksort (1)<a class="headerlink" href="#randomized-quicksort-1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Using Hoare’s partitioning algorithm:</li>
@@ -4441,6 +4469,8 @@ T(n) &amp;=T(n/10)+T(9n/10)+ \Theta(n) \\
 <li>but, would be more difficult to analyze</li>
 </ul>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="randomized-quicksort-2">Randomized Quicksort (2)<a class="headerlink" href="#randomized-quicksort-2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Using Lomuto’s partitioning algorithm:</li>
@@ -4504,6 +4534,8 @@ T(n) &amp;=T(n/10)+T(9n/10)+ \Theta(n) \\
 </li>
 </ul>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="various-outcomes-of-h-partition-1">Various Outcomes of H-PARTITION (1)<a class="headerlink" href="#various-outcomes-of-h-partition-1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Assume that <span class="arithmatex">\(rank(x)=1\)</span></li>
@@ -4516,6 +4548,8 @@ T(n) &amp;=T(n/10)+T(9n/10)+ \Theta(n) \\
 <span class="arithmatex">\(pivot=x=2\)</span></p>
 <p><strong>TODO: convert to image...S6_P9</strong></p>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="various-outcomes-of-h-partition-2">Various Outcomes of H-PARTITION (2)<a class="headerlink" href="#various-outcomes-of-h-partition-2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Assume that <span class="arithmatex">\(rank(x)&gt;1\)</span></li>
@@ -4563,6 +4597,8 @@ T(n) &amp;=T(n/10)+T(9n/10)+ \Theta(n) \\
 <h2 id="various-outcomes-of-h-partition-summary-2">Various Outcomes of H-PARTITION - Summary (2)<a class="headerlink" href="#various-outcomes-of-h-partition-summary-2" title="Permanent link">&para;</a></h2>
 <p><img alt="alt:&quot;alt&quot; h:450px center" src="../assets/ce100-week-3-matrix-quicksort-h-part-sum.drawio.svg" /></p>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="average-case-analysis-recurrence-1">Average - Case Analysis: Recurrence (1)<a class="headerlink" href="#average-case-analysis-recurrence-1" title="Permanent link">&para;</a></h2>
 <p><span class="arithmatex">\(x=pivot\)</span></p>
 <div class="arithmatex">\[
@@ -4578,17 +4614,19 @@ T(n) &amp; = \frac{1}{n}(T(1)+t(n-1) ) &amp; rank:1 \\
 \end{align*} 
 \]</div>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="average-case-analysis-recurrence-2">Average - Case Analysis: Recurrence (2)<a class="headerlink" href="#average-case-analysis-recurrence-2" title="Permanent link">&para;</a></h2>
 <div class="arithmatex">\[
 \begin{align*} 
-T(n) &amp;= \frac{1}{n}\sum_{q=1}^{n-1}(T(q)+T(n-q))+\frac{1}{n}(T(1)+T(n-1))+\Theta(n)\\
+T(n) &amp;= \frac{1}{n}\sum \limits_{q=1}^{n-1}(T(q)+T(n-q))+\frac{1}{n}(T(1)+T(n-1))+\Theta(n)\\
 &amp; \text{Note: } \frac{1}{n}(T(1)+T(n-1))=\frac{1}{n}(\Theta(1)+O(n^2))=O(n) \\
-T(n) &amp;= \frac{1}{n}\sum_{q=1}^{n-1}(T(q)+T(n-q))+\Theta(n)
+T(n) &amp;= \frac{1}{n}\sum \limits_{q=1}^{n-1}(T(q)+T(n-q))+\Theta(n)
 \end{align*} 
 \]</div>
 <p>for <span class="arithmatex">\(k=1,2,\dots,n-1\)</span> each term <span class="arithmatex">\(T(k)\)</span> appears twice once for <span class="arithmatex">\(q = k\)</span> and once for <span class="arithmatex">\(q = n−k\)</span></p>
 <div class="arithmatex">\[
-T(n) = \frac{2}{n}\sum_{k=1}^{n-1} T(k)+\Theta(n)
+T(n) = \frac{2}{n}\sum \limits_{k=1}^{n-1} T(k)+\Theta(n)
 \]</div>
 <hr />
 <h2 id="average-case-analysis-solving-recurrence-substitution">Average - Case Analysis -Solving Recurrence: Substitution<a class="headerlink" href="#average-case-analysis-solving-recurrence-substitution" title="Permanent link">&para;</a></h2>
@@ -4598,9 +4636,9 @@ T(n) = \frac{2}{n}\sum_{k=1}^{n-1} T(k)+\Theta(n)
 </ul>
 <div class="arithmatex">\[
 \begin{align*} 
-T(n) &amp;= \frac{2}{n}\sum_{k=1}^{n-1} T(k)+\Theta(n) \\
-&amp; \leq \frac{2}{n}\sum_{k=1}^{n-1} aklgk+\Theta(n) \\
-&amp; \leq \frac{2a}{n}\sum_{k=1}^{n-1} klgk+\Theta(n) 
+T(n) &amp;= \frac{2}{n} \sum \limits_{k=1}^{n-1} T(k)+\Theta(n) \\
+&amp; \leq \frac{2}{n} \sum \limits_{k=1}^{n-1} aklgk+\Theta(n) \\
+&amp; \leq \frac{2a}{n}  \sum \limits_{k=1}^{n-1} klgk+\Theta(n) 
 \end{align*} 
 \]</div>
 <ul>
@@ -4610,7 +4648,7 @@ T(n) &amp;= \frac{2}{n}\sum_{k=1}^{n-1} T(k)+\Theta(n) \\
 <h2 id="tight-bound-for-sum-klgk-1">Tight bound for <span class="arithmatex">\(\sum klgk\)</span> (1)<a class="headerlink" href="#tight-bound-for-sum-klgk-1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Bounding the terms</li>
-<li><span class="arithmatex">\(\sum_{k=1}^{n-1}klgk \leq \sum_{k=1}^{n-1}nlgn = n(n-1)lgn \leq n^2lgn\)</span></li>
+<li><span class="arithmatex">\(\ \sum \limits_{k=1}^{n-1}klgk \leq \sum \limits_{k=1}^{n-1}nlgn = n(n-1)lgn \leq n^2lgn\)</span></li>
 <li>This bound <strong>is not strong</strong> enough because</li>
 <li><span class="arithmatex">\(T(n) \leq \frac{2a}{n}n^2lgn+\Theta(n)\)</span></li>
 <li><span class="arithmatex">\(=2anlgn+\Theta(n)\)</span> <span class="arithmatex">\(\Longrightarrow\)</span> couldn’t prove <span class="arithmatex">\(T(n) \leq anlgn\)</span></li>
@@ -4619,10 +4657,10 @@ T(n) &amp;= \frac{2}{n}\sum_{k=1}^{n-1} T(k)+\Theta(n) \\
 <h2 id="tight-bound-for-sum-klgk-2">Tight bound for <span class="arithmatex">\(\sum klgk\)</span> (2)<a class="headerlink" href="#tight-bound-for-sum-klgk-2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p><strong>Splitting summations:</strong> ignore ceilings for simplicity</p>
-</li>
-<li>
-<p><span class="arithmatex">\(\sum_{k=1}^{n-1}klgk \leq \sum_{k=1}^{n/2-1}klgk + \sum_{k=n/2}^{n-1}klgk\)</span></p>
+<p><strong>Splitting summations:</strong> ignore ceilings for simplicity
+$$
+\sum \limits_{k=1}^{n-1}klgk \leq \sum \limits_{k=1}^{n/2-1}klgk + \sum \limits_{k=n/2}^{n-1}klgk
+$$</p>
 </li>
 <li>
 <p><strong>First summation</strong>: <span class="arithmatex">\(lgk &lt; lg(n/2)=lgn-1\)</span></p>
@@ -4630,29 +4668,27 @@ T(n) &amp;= \frac{2}{n}\sum_{k=1}^{n-1} T(k)+\Theta(n) \\
 <li><strong>Second summation</strong>: <span class="arithmatex">\(lgk &lt; lgn\)</span></li>
 </ul>
 <hr />
-<h2 id="splitting-sum_k1n-1klgk-leq-sum_k1n2-1klgk-sum_kn2n-1klgk-3">Splitting: <span class="arithmatex">\(\sum_{k=1}^{n-1}klgk \leq \sum_{k=1}^{n/2-1}klgk + \sum_{k=n/2}^{n-1}klgk\)</span> (3)<a class="headerlink" href="#splitting-sum_k1n-1klgk-leq-sum_k1n2-1klgk-sum_kn2n-1klgk-3" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p><span class="arithmatex">\(\sum_{k=1}^{n-1}klgk \leq (lg(n-1))\sum_{k=1}^{n/2-1}k + lgn \sum_{k=n/2}^{n-1}k\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(=lgn \sum_{k=1}^{n-1}k- \sum_{k=1}^{n/2-1}k\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(= \frac{1}{2}n(n-1)lgn- \frac{1}{2} \frac{n}{2}(\frac{n}{2}-1)\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(=\frac{1}{2}n^2lgn- \frac{1}{8}n^2- \frac{1}{2}n(lgn-1/2)\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(\sum_{k=1}^{n-1}klgk \leq \frac{1}{2}n^2lgn-\frac{1}{8}n^2\)</span> for <span class="arithmatex">\(lgn \geq 1/2 \Longrightarrow n \geq \sqrt{2}\)</span></p>
-</li>
-</ul>
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="splitting-sum-limits_k1n-1klgk-leq-sum-limits_k1n2-1klgk-sum-limits_kn2n-1klgk-3">Splitting: <span class="arithmatex">\(\sum \limits_{k=1}^{n-1}klgk \leq \sum \limits_{k=1}^{n/2-1}klgk + \sum \limits_{k=n/2}^{n-1}klgk\)</span> (3)<a class="headerlink" href="#splitting-sum-limits_k1n-1klgk-leq-sum-limits_k1n2-1klgk-sum-limits_kn2n-1klgk-3" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[
+\begin{align*}
+&amp; \sum \limits_{k=1}^{n-1}klgk \leq (lg(n-1))\sum \limits_{k=1}^{n/2-1}k + lgn \sum \limits_{k=n/2}^{n-1}k \\
+&amp;= lgn \sum \limits_{k=1}^{n-1}k- \sum \limits_{k=1}^{n/2-1}k \\
+&amp;= \frac{1}{2}n(n-1)lgn - \frac{1}{2} \frac{n}{2}(\frac{n}{2}-1) \\
+&amp;= \frac{1}{2}n^2lgn - \frac{1}{8}n^2 - \frac{1}{2}n(lgn-1/2) \\
+\end{align*}
+\]</div>
+<div class="arithmatex">\[
+\begin{align*}
+&amp; \sum \limits_{k=1}^{n-1} klgk \leq \frac{1}{2}n^2lgn-\frac{1}{8}n^2 \ for \ lgn \geq 1/2 \Longrightarrow n \geq \sqrt{2} 
+\end{align*}
+\]</div>
 <hr />
-<h2 id="substituting-sum_k1n-1klgk-leq-frac12n2lgn-frac18n2-4">Substituting: - <span class="arithmatex">\(\sum_{k=1}^{n-1}klgk \leq \frac{1}{2}n^2lgn-\frac{1}{8}n^2\)</span> (4)<a class="headerlink" href="#substituting-sum_k1n-1klgk-leq-frac12n2lgn-frac18n2-4" title="Permanent link">&para;</a></h2>
+<h2 id="substituting-sum-limits_k1n-1klgk-leq-frac12n2lgn-frac18n2-4">Substituting: - <span class="arithmatex">\(\sum \limits_{k=1}^{n-1}klgk \leq \frac{1}{2}n^2lgn-\frac{1}{8}n^2\)</span> (4)<a class="headerlink" href="#substituting-sum-limits_k1n-1klgk-leq-frac12n2lgn-frac18n2-4" title="Permanent link">&para;</a></h2>
 <div class="arithmatex">\[
 \begin{align*} 
-T(n) &amp; \leq \frac{2a}{n}\sum_{k=1}^{n-1}klgk+\Theta(n)\\
+T(n) &amp; \leq \frac{2a}{n}\sum \limits_{k=1}^{n-1}klgk+\Theta(n)\\
 &amp; \leq \frac{2a}{n}(\frac{1}{2}n^2lgn-\frac{1}{8}n^2)+\Theta(n) \\
 &amp; = anlgn - (\frac{a}{4}n-\Theta(n))
 \end{align*} 
@@ -4857,6 +4893,8 @@ T(n) &amp;= \Theta(n)
 <li><strong>Avg case:</strong> Expected runtime – need analysis T.B.D.</li>
 </ul>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="reminder-various-outcomes-of-h-partition">Reminder: Various Outcomes of H-PARTITION<a class="headerlink" href="#reminder-various-outcomes-of-h-partition" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
@@ -4917,16 +4955,16 @@ x &amp; = pivot
 <p><strong>Upper bound:</strong> Assume <span class="arithmatex">\(i^{th}\)</span> element always falls into the larger part.</p>
 <div class="arithmatex">\[
 \begin{align*}
-T(n) &amp;\leq \frac{1}{n}T(max(1,n-1))+\frac{1}{n}\sum_{q=1}^{n-1}T(max(q,n-q))+O(n) \\
+T(n) &amp;\leq \frac{1}{n}T(max(1,n-1))+\frac{1}{n}\sum \limits_{q=1}^{n-1}T(max(q,n-q))+O(n) \\
 Note: &amp; \frac{1}{n}T(max(1,n-1)) = \frac{1}{n}T(n-1)=\frac{1}{n}O(n^2) = O(n) \\
-\therefore \text{(3 dot mean therefore) } &amp; T(n) \leq \frac{1}{n}\sum_{q=1}^{n-1}T(max(q,n-q))+O(n)
+\therefore \text{(3 dot mean therefore) } &amp; T(n) \leq \frac{1}{n}\sum \limits_{q=1}^{n-1}T(max(q,n-q))+O(n)
 \end{align*}
 \]</div>
 <hr />
 <h2 id="average-case-analysis-of-randomized-select-2">Average-Case Analysis of Randomized Select (2)<a class="headerlink" href="#average-case-analysis-of-randomized-select-2" title="Permanent link">&para;</a></h2>
 <p>$$
 \begin{align*}</p>
-<p>\therefore T(n) \leq \frac{1}{n}\sum_{q=1}^{n-1}T(max(q,n-q))+O(n)</p>
+<p>\therefore T(n) \leq \frac{1}{n}\sum \limits_{q=1}^{n-1}T(max(q,n-q))+O(n)</p>
 <p>\end{align*}
 $$</p>
 <div class="arithmatex">\[
@@ -4947,15 +4985,17 @@ n-q &amp; \text{ if } q &lt; \lceil n/2 \rceil \\
 </ul>
 <div class="arithmatex">\[
 \begin{align*}
-\sum_{q=1}^{n-1} T(max(q,n-q))+O(n) &amp; \leq 2\sum_{q=\lceil n/2 \rceil}^{n-1} T(q)+O(n) \\
-\therefore T(n) &amp; \leq \frac{2}{n} \sum_{q=\lceil n/2 \rceil}^{n-1}T(q)+O(n)
+\sum \limits_{q=1}^{n-1} T(max(q,n-q))+O(n) &amp; \leq 2\sum \limits_{q=\lceil n/2 \rceil}^{n-1} T(q)+O(n) \\
+\therefore T(n) &amp; \leq \frac{2}{n} \sum \limits_{q=\lceil n/2 \rceil}^{n-1}T(q)+O(n)
 \end{align*}
 \]</div>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="average-case-analysis-of-randomized-select-4">Average-Case Analysis of Randomized Select (4)<a class="headerlink" href="#average-case-analysis-of-randomized-select-4" title="Permanent link">&para;</a></h2>
 <div class="arithmatex">\[
 \begin{align*}
-T(n) &amp; \leq \frac{2}{n} \sum_{q=\lceil n/2 \rceil}^{n-1}T(q)+O(n)
+T(n) &amp; \leq \frac{2}{n} \sum \limits_{q=\lceil n/2 \rceil}^{n-1}T(q)+O(n)
 \end{align*}
 \]</div>
 <ul>
@@ -4964,8 +5004,8 @@ T(n) &amp; \leq \frac{2}{n} \sum_{q=\lceil n/2 \rceil}^{n-1}T(q)+O(n)
 </ul>
 <div class="arithmatex">\[
 \begin{align*}
-T(n) &amp; \leq \frac{2}{n} \sum_{q=\lceil n/2 \rceil}^{n-1}ck+O(n) \\
-&amp; = \frac{2c}{n} \Bigg(\sum_{k=1}^{n-1}k-\sum_{k=1}^{\lceil n/2 \rceil-1}k \Bigg)+ O(n) \\
+T(n) &amp; \leq \frac{2}{n} \sum \limits_{q=\lceil n/2 \rceil}^{n-1}ck+O(n) \\
+&amp; = \frac{2c}{n} \Bigg(\sum \limits_{k=1}^{n-1}k-\sum \limits_{k=1}^{\lceil n/2 \rceil-1}k \Bigg)+ O(n) \\
 &amp; = \frac{2c}{n} \Bigg(\frac{1}{2}n(n-1)-\frac{1}{2} \lceil \frac{n}{2} \rceil \bigg( \frac{n}{2}-1 \bigg) \Bigg)+ O(n)
 \end{align*}
 \]</div>
@@ -4999,6 +5039,7 @@ T(n)&amp; \leq \frac{2c}{n} \Bigg(\frac{1}{2}n(n-1)-\frac{1}{2} \lceil \frac{n}{
 </li>
 </ul>
 <hr />
+<p><style scoped>section{ font-size: 25px; }</style></p>
 <h2 id="selection-in-worst-case-linear-time">Selection in Worst Case Linear Time<a class="headerlink" href="#selection-in-worst-case-linear-time" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="o">//</span><span class="n">return</span> <span class="n">i</span><span class="o">-</span><span class="n">th</span> <span class="n">element</span> <span class="n">in</span> <span class="n">set</span> <span class="n">S</span> <span class="n">with</span> <span class="n">n</span> <span class="n">elements</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nf">SELECT</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>  
@@ -5053,6 +5094,8 @@ T(n)&amp; \leq \frac{2c}{n} \Bigg(\frac{1}{2}n(n-1)-\frac{1}{2} \lceil \frac{n}{
 }^{\text{group size}=5}
 \]</div>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="selection-in-worst-case-linear-time-example-3">Selection in Worst Case Linear Time - Example (3)<a class="headerlink" href="#selection-in-worst-case-linear-time-example-3" title="Permanent link">&para;</a></h2>
 <p><strong>Step 2:</strong> Compute the median of each group (<span class="arithmatex">\(\Theta(n)\)</span>)</p>
 <div class="arithmatex">\[
@@ -5102,6 +5145,8 @@ T(n)&amp; \leq \frac{2c}{n} \Bigg(\frac{1}{2}n(n-1)-\frac{1}{2} \lceil \frac{n}{
 <p>Partition <span class="arithmatex">\(S\)</span> around <span class="arithmatex">\(x = 24\)</span></p>
 <p><strong>Claim:</strong> Partitioning around x is guaranteed to be <strong>well-balanced.</strong></p>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="selection-in-worst-case-linear-time-example-6">Selection in Worst Case Linear Time - Example (6)<a class="headerlink" href="#selection-in-worst-case-linear-time-example-6" title="Permanent link">&para;</a></h2>
 <ul>
 <li><span class="arithmatex">\(M\)</span> : Median, <span class="arithmatex">\(M^*\)</span> : Median of Medians</li>
@@ -5147,6 +5192,8 @@ T(n)&amp; \leq \frac{2c}{n} \Bigg(\frac{1}{2}n(n-1)-\frac{1}{2} \lceil \frac{n}{
 <a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>  <span class="n">return</span> <span class="nf">SELECT</span><span class="p">(</span><span class="n">R</span><span class="p">,</span><span class="n">n</span><span class="o">-|</span><span class="n">L</span><span class="o">|</span><span class="p">,</span><span class="n">i</span><span class="o">-|</span><span class="n">L</span><span class="o">|</span><span class="p">)</span>
 </code></pre></div>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="selection-in-worst-case-linear-time_1">Selection in Worst Case Linear Time<a class="headerlink" href="#selection-in-worst-case-linear-time_1" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="o">//</span><span class="n">return</span> <span class="n">i</span><span class="o">-</span><span class="n">th</span> <span class="n">element</span> <span class="n">in</span> <span class="n">set</span> <span class="n">S</span> <span class="n">with</span> <span class="n">n</span> <span class="n">elements</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nf">SELECT</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>  
@@ -5263,7 +5310,7 @@ T(n) &amp; \leq c \lceil n/5 \rceil + c(7n/10+6)+\Theta(n) \\
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 12, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 14, 2022</span>
       
     
   </small>

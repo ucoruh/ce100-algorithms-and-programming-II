@@ -2290,6 +2290,8 @@ T(\lceil{n/2}\rceil)+ 1 &amp;\text{if n&gt;1}
 \end{cases}
 \]</div>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="recurrence-example">Recurrence Example<a class="headerlink" href="#recurrence-example" title="Permanent link">&para;</a></h2>
 <div class="arithmatex">\[
 T(n)=
@@ -2349,6 +2351,8 @@ T(n)=
 <li><span class="arithmatex">\(T(n)=\Theta(1)\)</span> for sufficiently small <span class="arithmatex">\(n\)</span></li>
 </ul>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="example-when-boundary-conditions-matter">Example: When Boundary Conditions Matter<a class="headerlink" href="#example-when-boundary-conditions-matter" title="Permanent link">&para;</a></h2>
 <p>Exponential function: <span class="arithmatex">\(T(n) = (T(n/2))2\)</span>
 Assume<br />
@@ -2533,6 +2537,8 @@ $$</p>
 </ul>
 <p>We have proved that <span class="arithmatex">\(T(n) = O(n^2)\)</span></p>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="substitution-method-example-2-1">Substitution Method: Example 2 (1)<a class="headerlink" href="#substitution-method-example-2-1" title="Permanent link">&para;</a></h2>
 <p>For the recurrence <span class="arithmatex">\(T(n) = 4T(n/2) + n\)</span>, </p>
 <p>prove that <span class="arithmatex">\(T(n) = \Omega(n^2)\)</span></p>
@@ -2767,9 +2773,9 @@ for the base cases
 </ul>
 <hr />
 <h2 id="general-method-akra-bazzi">General Method (Akra-Bazzi)<a class="headerlink" href="#general-method-akra-bazzi" title="Permanent link">&para;</a></h2>
-<p><span class="arithmatex">\(T(n)=\sum_{i=1}^k{a_iT(n/b_i)}+f(n)\)</span></p>
+<p><span class="arithmatex">\(T(n)=\sum \limits_{i=1}^k{a_iT(n/b_i)}+f(n)\)</span></p>
 <p>Let <span class="arithmatex">\(p\)</span> be the unique solution to</p>
-<p><span class="arithmatex">\(\sum_{i=1}^k{(a_i/b^p_i)}=1\)</span></p>
+<p><span class="arithmatex">\(\sum \limits_{i=1}^k{(a_i/b^p_i)}=1\)</span></p>
 <p>Then, the answers are the same as for the master method, but with <span class="arithmatex">\(n^p\)</span> instead of <span class="arithmatex">\(n^{log_b^a}\)</span>
 <em>(Akra and Bazzi also prove an even more general result.)</em></p>
 <hr />
@@ -2794,9 +2800,9 @@ for the base cases
 <li>Recall from the recursion tree (note <span class="arithmatex">\(h = lg_bn =\text{tree height}\)</span>)</li>
 </ul>
 <p><span class="arithmatex">\(\text{Leaf Cost}=\Theta(n^{log_b^a})\)</span>
-<span class="arithmatex">\(\text{Non-leaf Cost}=g(n)=\sum_{i=0}^{h-1}a^if(n/{b^i})\)</span></p>
+<span class="arithmatex">\(\text{Non-leaf Cost}=g(n)=\sum \limits_{i=0}^{h-1}a^if(n/{b^i})\)</span></p>
 <p><span class="arithmatex">\(T(n)=\text{Leaf Cost} + \text{Non-leaf Cost}\)</span></p>
-<p><span class="arithmatex">\(T(n)=\Theta(n^{log_b^a}) + \sum_{i=0}^{h-1}a^if(n/{b^i})\)</span></p>
+<p><span class="arithmatex">\(T(n)=\Theta(n^{log_b^a}) + \sum \limits_{i=0}^{h-1}a^if(n/{b^i})\)</span></p>
 <hr />
 <h2 id="proof-of-master-theorem-case-1-1">Proof of Master Theorem Case 1 (1)<a class="headerlink" href="#proof-of-master-theorem-case-1-1" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2807,16 +2813,16 @@ for the base cases
 <p><span class="arithmatex">\(\frac{n^{log_b^a}}{f(n)}=\Omega(n^{\varepsilon}) \Longrightarrow O(n^{-\varepsilon}) \Longrightarrow f(n) = O(n^{log_b^{a-\varepsilon}})\)</span></p>
 </li>
 <li>
-<p><span class="arithmatex">\(g(n)=\sum_{i=0}^{h-1}a^iO((n/{b^i})^{log_b^{a-\varepsilon}})=O(\sum_{i=0}^{h-1}a^i(n/{b^i})^{log_b^{a-\varepsilon}})\)</span></p>
+<p><span class="arithmatex">\(g(n)=\sum \limits_{i=0}^{h-1}a^iO((n/{b^i})^{log_b^{a-\varepsilon}})=O(\sum \limits_{i=0}^{h-1}a^i(n/{b^i})^{log_b^{a-\varepsilon}})\)</span></p>
 </li>
 <li>
-<p><span class="arithmatex">\(O(n^{log_b^{a-\varepsilon}}\sum_{i=0}^{h-1}a^ib^{i\varepsilon}/b^{ilog_b^{a-\varepsilon}})\)</span></p>
+<p><span class="arithmatex">\(O(n^{log_b^{a-\varepsilon}}\sum \limits_{i=0}^{h-1}a^ib^{i\varepsilon}/b^{ilog_b^{a-\varepsilon}})\)</span></p>
 </li>
 </ul>
 <hr />
 <h2 id="proof-of-master-theorem-case-1-2">Proof of Master Theorem Case 1 (2)<a class="headerlink" href="#proof-of-master-theorem-case-1-2" title="Permanent link">&para;</a></h2>
 <ul>
-<li><span class="arithmatex">\(\sum_{i=0}^{h-1} \frac{a^ib^{i\varepsilon}}{b^{ilog_b^a}} =\sum_{i=0}^{h-1} a^i\frac{(b^\varepsilon)^i}{(b^{log_b^a})^i} =\sum a^i\frac{b^{i\varepsilon}}{a^i}=\sum_{i=0}^{h-1}(b^{\varepsilon})^i\)</span></li>
+<li><span class="arithmatex">\(\sum \limits_{i=0}^{h-1} \frac{a^ib^{i\varepsilon}}{b^{ilog_b^a}} =\sum \limits_{i=0}^{h-1} a^i\frac{(b^\varepsilon)^i}{(b^{log_b^a})^i} =\sum a^i\frac{b^{i\varepsilon}}{a^i}=\sum \limits_{i=0}^{h-1}(b^{\varepsilon})^i\)</span></li>
 </ul>
 <p>= An increasing geometric series since <span class="arithmatex">\(b &gt; 1\)</span></p>
 <p><span class="arithmatex">\(\frac{b^{h\varepsilon}-1}{b^{\varepsilon}-1}=\frac{(b^h)^{\varepsilon}-1}{b^{\varepsilon}-1} = \frac{(b^{log_b^n})^{\varepsilon}-1}{b^{\varepsilon}-1}=\frac{n^{\varepsilon}-1}{b^{\varepsilon}-1} = O(n^{\varepsilon})\)</span></p>
@@ -2829,14 +2835,16 @@ for the base cases
 <p><strong>Q.E.D.</strong>
 (Quod Erat Demonstrandum)</p>
 <hr />
+<style scoped>section{ font-size: 22px; }</style>
+
 <h2 id="proof-of-master-theorem-case-2-limited-to-k0">Proof of Master Theorem Case 2 (limited to k=0)<a class="headerlink" href="#proof-of-master-theorem-case-2-limited-to-k0" title="Permanent link">&para;</a></h2>
 <ul>
 <li><span class="arithmatex">\(\frac{f(n)}{n^log_b^a}=\Theta(lg^0n)=\Theta(1) \Longrightarrow f(n)=\Theta(n^{log_b^a}) \Longrightarrow f(n/b^i)=\Theta((n/b^i)^{log_b^a})\)</span></li>
-<li><span class="arithmatex">\(g(n)=\sum_{i=0}^{h-1}a^i\Theta((n/b^i)^{log_b^a})\)</span></li>
-<li><span class="arithmatex">\(= \Theta(\sum_{i=0}^{h-1}a^i\frac{n^{log_b^a}}{b^{ilog_b^a}})\)</span></li>
-<li><span class="arithmatex">\(=\Theta(n^{log_b^a}\sum_{i=0}^{h-1}a^i\frac{1}{(b^{log_b^a})^i})\)</span></li>
-<li><span class="arithmatex">\(=\Theta(n^{log_b^a}\sum_{i=0}^{h-1}a^i\frac{1}{a^i})\)</span></li>
-<li><span class="arithmatex">\(=\Theta(n^{log_b^a}\sum_{i=0}^{log_b^{n-1}}1) = \Theta(n^{log_b^a}log_bn)=\Theta(n^{log_b^a}lgn)\)</span></li>
+<li><span class="arithmatex">\(g(n)=\sum \limits_{i=0}^{h-1}a^i\Theta((n/b^i)^{log_b^a})\)</span></li>
+<li><span class="arithmatex">\(= \Theta(\sum \limits_{i=0}^{h-1}a^i\frac{n^{log_b^a}}{b^{ilog_b^a}})\)</span></li>
+<li><span class="arithmatex">\(=\Theta(n^{log_b^a}\sum \limits_{i=0}^{h-1}a^i\frac{1}{(b^{log_b^a})^i})\)</span></li>
+<li><span class="arithmatex">\(=\Theta(n^{log_b^a}\sum \limits_{i=0}^{h-1}a^i\frac{1}{a^i})\)</span></li>
+<li><span class="arithmatex">\(=\Theta(n^{log_b^a}\sum \limits_{i=0}^{log_b^{n-1}}1) = \Theta(n^{log_b^a}log_bn)=\Theta(n^{log_b^a}lgn)\)</span></li>
 <li><span class="arithmatex">\(T(n)=n^{log_b^a}+\Theta(n^{log_b^a}lgn)\)</span></li>
 <li><span class="arithmatex">\(=\Theta(n^{log_b^a}lgn)\)</span></li>
 </ul>
@@ -2916,6 +2924,8 @@ T(n)=\Theta(n^2)
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">Merge</span><span class="o">-</span><span class="nf">Sort</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
 </code></pre></div>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="merge-sort-algorithm-internal-iterations">Merge Sort Algorithm (internal iterations)<a class="headerlink" href="#merge-sort-algorithm-internal-iterations" title="Permanent link">&para;</a></h2>
 <p>internal iterations</p>
 <p><span class="arithmatex">\(p = start-point\)</span>
@@ -3149,6 +3159,8 @@ a^n=\begin{cases}
 </li>
 </ul>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="example-correctness-proof-powering-a-number">Example Correctness Proof: Powering a Number<a class="headerlink" href="#example-correctness-proof-powering-a-number" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Base Case:</strong> <span class="arithmatex">\(POWER(a, 0)\)</span> is correct, because it returns <span class="arithmatex">\(1\)</span></li>
@@ -3201,7 +3213,7 @@ a^n=\begin{cases}
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 12, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 14, 2022</span>
       
     
   </small>

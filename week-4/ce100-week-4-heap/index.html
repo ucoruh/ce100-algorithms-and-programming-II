@@ -3394,7 +3394,7 @@
 <h2 id="ce100-algorithms-and-programming-ii">CE100 Algorithms and Programming II<a class="headerlink" href="#ce100-algorithms-and-programming-ii" title="Permanent link">&para;</a></h2>
 <h2 id="week-4-heapheap-sort">Week-4 (Heap/Heap Sort)<a class="headerlink" href="#week-4-heapheap-sort" title="Permanent link">&para;</a></h2>
 <h4 id="spring-semester-2021-2022">Spring Semester, 2021-2022<a class="headerlink" href="#spring-semester-2021-2022" title="Permanent link">&para;</a></h4>
-<p>Download <a href="../ce100-week-4-heap.md_doc.pdf">DOC</a>, <a href="../ce100-week-4-heap.md_slide.pdf">SLIDE</a>, <a href="../ce100-week-4-heap.md_slide.pptx">PPTX</a></p>
+<p>Download <a href="ce100-week-4-heap.md_doc.pdf">DOC</a>, <a href="../ce100-week-4-heap.md_slide.pdf">SLIDE</a>, <a href="../ce100-week-4-heap.md_slide.pptx">PPTX</a></p>
 <iframe width=700, height=500 frameBorder=0 src="../ce100-week-4-heap.md_slide.html"></iframe>
 
 <hr />
@@ -3849,6 +3849,7 @@ T(n) &amp;= O(lgn)
 </li>
 </ul>
 <hr />
+<p><style scoped>section{ font-size: 25px; }</style></p>
 <h2 id="build-heap-tighter-running-time-analysis">Build-Heap: <strong>Tighter</strong> Running Time Analysis<a class="headerlink" href="#build-heap-tighter-running-time-analysis" title="Permanent link">&para;</a></h2>
 <ul>
 <li>If the heap is complete binary tree then <span class="arithmatex">\(h_{\ell} = d – \ell\)</span></li>
@@ -3856,57 +3857,61 @@ T(n) &amp;= O(lgn)
 </ul>
 <p><img alt="alt:&quot;alt&quot; height:420px center" src="../assets/ce100-week-4-heap-heap_tight_running_time_analysis.drawio.svg" /> </p>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="build-heap-tighter-running-time-analysis_1">Build-Heap: <strong>Tighter</strong> Running Time Analysis<a class="headerlink" href="#build-heap-tighter-running-time-analysis_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Assume that all nodes at level <span class="arithmatex">\(\ell= d – 1\)</span> are processed </li>
 </ul>
 <div class="arithmatex">\[
 \begin{align*}
-  T(n) &amp;=\sum_{\ell=0}^{d-1}n_{\ell}O(h_{\ell})=O(\sum_{\ell=0}^{d-1}n_{\ell}h_{\ell})
+  T(n) &amp;=\sum \limits_{\ell=0}^{d-1}n_{\ell}O(h_{\ell})=O(\sum \limits_{\ell=0}^{d-1}n_{\ell}h_{\ell})
   \begin{cases}
    n_{\ell}=2^{\ell} = \# \text{ of nodes at level }\ell \\
    h_{\ell}=\text{height of nodes at level } \ell
   \end{cases} \\
-\therefore T(n) &amp;= O \bigg( \sum_{\ell=0}^{d-1}2^{\ell}(d-\ell) \bigg) \\
+\therefore T(n) &amp;= O \bigg( \sum \limits_{\ell=0}^{d-1}2^{\ell}(d-\ell) \bigg) \\
 \text{Let } &amp; h=d-\ell \Longrightarrow \ell = d-h \text{ change of variables} \\ 
-T(n) &amp;= O\bigg(\sum_{h=1}^{d}h2^{d-h} \bigg)=O\bigg(\sum_{h=1}^{d}h \frac{2^d}{2^h} \bigg) = O\bigg(2^d\sum_{h=1}^{d}h (1/2)^h\bigg) \\
-\text{ but } &amp; 2^d = \Theta(n) \Longrightarrow O\bigg(n\sum_{h=1}^{d}h (1/2)^h \bigg)
+T(n) &amp;= O\bigg(\sum \limits_{h=1}^{d}h2^{d-h} \bigg)=O\bigg(\sum \limits_{h=1}^{d}h \frac{2^d}{2^h} \bigg) = O\bigg(2^d\sum \limits_{h=1}^{d}h (1/2)^h\bigg) \\
+\text{ but } &amp; 2^d = \Theta(n) \Longrightarrow O\bigg(n\sum \limits_{h=1}^{d}h (1/2)^h \bigg)
 \end{align*}
 \]</div>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="build-heap-tighter-running-time-analysis_2">Build-Heap: <strong>Tighter</strong> Running Time Analysis<a class="headerlink" href="#build-heap-tighter-running-time-analysis_2" title="Permanent link">&para;</a></h2>
 <div class="arithmatex">\[
-\sum_{h=1}^{d}h(1/2)^h \leq  \sum_{h=0}^{d}h(1/2)^h \leq \sum_{h=0}^{\infty}h(1/2)^h 
+\sum \limits_{h=1}^{d}h(1/2)^h \leq  \sum \limits_{h=0}^{d}h(1/2)^h \leq \sum \limits_{h=0}^{\infty}h(1/2)^h 
 \]</div>
 <ul>
 <li>recall infinite decreasing geometric series</li>
 </ul>
 <div class="arithmatex">\[
-\sum_{k=0}^{\infty} x^k = \frac{1}{1-x} \text{ where } |x|&lt;1 
+\sum \limits_{k=0}^{\infty} x^k = \frac{1}{1-x} \text{ where } |x|&lt;1 
 \]</div>
 <ul>
 <li>differentiate both sides</li>
 </ul>
 <div class="arithmatex">\[
-\sum_{k=0}^{\infty}kx^{k-1} = \frac{1}{(1-x)^2}  
+\sum \limits_{k=0}^{\infty}kx^{k-1} = \frac{1}{(1-x)^2}  
 \]</div>
 <hr />
 <h2 id="build-heap-tighter-running-time-analysis_3">Build-Heap: <strong>Tighter</strong> Running Time Analysis<a class="headerlink" href="#build-heap-tighter-running-time-analysis_3" title="Permanent link">&para;</a></h2>
 <div class="arithmatex">\[
-\sum_{k=0}^{\infty}kx^{k-1} = \frac{1}{(1-x)^2}  
+\sum \limits_{k=0}^{\infty}kx^{k-1} = \frac{1}{(1-x)^2}  
 \]</div>
 <ul>
 <li>then, multiply both sides by <span class="arithmatex">\(x\)</span></li>
 </ul>
 <div class="arithmatex">\[
-\sum_{k=0}^{\infty}kx^k = \frac{x}{(1-x)^2}  
+\sum \limits_{k=0}^{\infty}kx^k = \frac{x}{(1-x)^2}  
 \]</div>
 <ul>
 <li>in our case: <span class="arithmatex">\(x = 1/2\)</span> and <span class="arithmatex">\(k = h\)</span></li>
 </ul>
 <div class="arithmatex">\[
-\therefore \sum_{h=0}^{\infty}h(1/2)^h = \frac{1/2}{(1-(1/2))^2}=2=O(1) \\
-\therefore T(n)=O(n\sum_{h=1}^{d}h(1/2)^h)=O(n)  
+\therefore \sum \limits_{h=0}^{\infty}h(1/2)^h = \frac{1/2}{(1-(1/2))^2}=2=O(1) \\
+\therefore T(n)=O(n\sum \limits_{h=1}^{d}h(1/2)^h)=O(n)  
 \]</div>
 <hr />
 <h2 id="heapsort-algorithm-steps">Heapsort Algorithm Steps<a class="headerlink" href="#heapsort-algorithm-steps" title="Permanent link">&para;</a></h2>
@@ -3982,8 +3987,8 @@ T(n) &amp;= O\bigg(\sum_{h=1}^{d}h2^{d-h} \bigg)=O\bigg(\sum_{h=1}^{d}h \frac{2^
 <p><img alt="center height:250px" src="../assets/ce100-week-4-heap-heap_sort_runtime_1.drawio.svg" /></p>
 <div class="arithmatex">\[
 \begin{align*}
-T(n) &amp;= \Theta(n)+\sum_{i=2}^{n}O(lgi) \\
-&amp;= \Theta(n)+O\bigg( \sum_{i=2}^{n}O(lgn) \bigg) \\
+T(n) &amp;= \Theta(n)+\sum \limits_{i=2}^{n}O(lgi) \\
+&amp;= \Theta(n)+O\bigg( \sum \limits_{i=2}^{n}O(lgn) \bigg) \\
 &amp;= O(nlgn)
 \end{align*}
 \]</div>
@@ -4156,6 +4161,8 @@ T(n) &amp;= \Theta(n)+\sum_{i=2}^{n}O(lgi) \\
 <h2 id="heap-implementation-of-priority-queue-pq">Heap Implementation of Priority Queue (PQ)<a class="headerlink" href="#heap-implementation-of-priority-queue-pq" title="Permanent link">&para;</a></h2>
 <p><img alt="bg right:70% w:800px" src="../assets/ce100-week-4-heap-heap_imp_pq.drawio.svg" /></p>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="summary-max-heap">Summary: <strong>Max Heap</strong><a class="headerlink" href="#summary-max-heap" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Heapify(A, i)</strong></li>
@@ -4171,6 +4178,8 @@ T(n) &amp;= \Theta(n)+\sum_{i=2}^{n}O(lgi) \\
 <li>Runtime: <span class="arithmatex">\(O(lgn)\)</span></li>
 </ul>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="summary-max-heap_1">Summary: <strong>Max Heap</strong><a class="headerlink" href="#summary-max-heap_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Build-Heap(A, n)</strong></li>
@@ -4520,17 +4529,17 @@ T(n) &amp;= \Theta(n)+\sum_{i=2}^{n}O(lgi) \\
 <ul>
 <li><strong>Theorem:</strong> Any comparison sort algorithm requires 
   <span class="arithmatex">\(\Omega(nlgn)\)</span> comparisons in the worst case.</li>
-<li><strong>Proof:</strong> We’ll prove that any decision tree corresponding to a comparison sort algorithm must have height <span class="arithmatex">\(\Omega(nlgn)\)</span>
-  $$
-  \begin{align*}
-  2^h &amp; \geq n! \
-  h &amp; \geq lg(n!) \
-  &amp; \geq lg((n/e)^n) (Stirling Approximation) \
-  &amp; = nlgn - nlge \
-  &amp; = \Omega(nlgn)</li>
+<li><strong>Proof:</strong> We’ll prove that any decision tree corresponding to a comparison sort algorithm must have height <span class="arithmatex">\(\Omega(nlgn)\)</span></li>
 </ul>
-<p>\end{align*}
-$$</p>
+<div class="arithmatex">\[
+\begin{align*}
+2^h &amp; \geq n! \\
+h &amp; \geq lg(n!) \\
+&amp; \geq lg((n/e)^n) (Stirling Approximation) \\
+&amp; = nlgn - nlge \\
+&amp; = \Omega(nlgn)
+\end{align*}
+\]</div>
 <hr />
 <h2 id="lower-bound-for-decision-tree-sorting_1">Lower Bound for Decision Tree Sorting<a class="headerlink" href="#lower-bound-for-decision-tree-sorting_1" title="Permanent link">&para;</a></h2>
 <p><strong>Corollary:</strong> Heapsort and merge sort are asymptotically optimal comparison sorts.</p>
@@ -4734,7 +4743,7 @@ S(d) &amp;= 10 S(d-1) + 1 \\
      &amp; = 10 \bigg(10 S(d-2) + 1 \bigg) + 1 \\
      &amp; = 10 \Big(10 \bigg(10 S(d-3) + 1\bigg) + 1 \Big) + 1 \\
      &amp; = 10i S(d-i) + 10i-1 + 10i-2 + \dots +  101 + 100 \\
-     &amp;=\sum_{i=0}^{d-1}10^i
+     &amp;=\sum \limits_{i=0}^{d-1}10^i
 \end{align*}
 \]</div>
 <ul>
@@ -4747,7 +4756,7 @@ S(d) &amp;= 10 S(d-1) + 1 \\
 </ul>
 <div class="arithmatex">\[
 \begin{align*}
- S(d) &amp;=\sum_{i=0}^{d-1}10^i \\
+ S(d) &amp;=\sum \limits_{i=0}^{d-1}10^i \\
  &amp; = \frac{10^d-1}{10-1} \\
  &amp; = \frac{1}{9}(10^d-1)\\
  &amp; \Downarrow \\
@@ -4804,6 +4813,8 @@ P(1) &amp;= 0 \\
 <li>Overhead of recursive calls in a modern computer</li>
 </ul>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="lsd-first-radix-sort">LSD-First Radix Sort<a class="headerlink" href="#lsd-first-radix-sort" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
@@ -4904,6 +4915,8 @@ P(1) &amp;= 0 \\
 </li>
 </ul>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="radix-sort-runtime_1">Radix Sort: <strong>Runtime</strong><a class="headerlink" href="#radix-sort-runtime_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
@@ -4923,15 +4936,15 @@ P(1) &amp;= 0 \\
 <ul>
 <li><strong>Radix sort runtime:</strong> </li>
 </ul>
-<p>$$
-  \begin{align*}
+</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align*}
 T(n,b)&amp;=\Theta \bigg( \frac{b}{r}(n+2^r) \bigg)
 \end{align*}
-  $$</p>
-</li>
-<li>
-<p><span class="arithmatex">\(\overbrace{[rbits|rbits|rbits|rbits]}^{b/r \text{ bits}}\)</span></p>
-</li>
+\]</div>
+<ul>
+<li><span class="arithmatex">\(\overbrace{[rbits|rbits|rbits|rbits]}^{b/r \text{ bits}}\)</span></li>
 </ul>
 <hr />
 <h2 id="radix-sort-runtime-analysis">Radix Sort: <strong>Runtime Analysis</strong><a class="headerlink" href="#radix-sort-runtime-analysis" title="Permanent link">&para;</a></h2>
@@ -5024,7 +5037,7 @@ T(n,b)&amp;=\Theta \bigg( \frac{b}{r}(n+2^r) \bigg)
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 12, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 14, 2022</span>
       
     
   </small>

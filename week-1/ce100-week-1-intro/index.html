@@ -1977,8 +1977,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#references-todo-update-missing-references" class="md-nav__link">
-    References (TODO: Update Missing References)
+  <a href="#references" class="md-nav__link">
+    References
   </a>
   
 </li>
@@ -3486,8 +3486,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#references-todo-update-missing-references" class="md-nav__link">
-    References (TODO: Update Missing References)
+  <a href="#references" class="md-nav__link">
+    References
   </a>
   
 </li>
@@ -3694,12 +3694,14 @@ An algorithm must halt within finite time with the right output</p>
 <li><span class="arithmatex">\(T(n)\)</span> the running time of the algorithm:</li>
 </ul>
 <div class="arithmatex">\[
-\sum_{\text{all statement}}(\text{cost of statement})*(\text{number of times statement is executed}) = T(n)
+\sum \limits_{\text{all statement}}^{}(\text{cost of statement})*(\text{number of times statement is executed}) = T(n)
 \]</div>
 <hr />
 <h2 id="what-is-the-processing-time">What is the processing time ?<a class="headerlink" href="#what-is-the-processing-time" title="Permanent link">&para;</a></h2>
 <p><img alt="alt:&quot;processing time map&quot; height:500px center" src="../assets/ce100-week-1-intro-processing_time.drawio.svg" /></p>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="insertion-sort-algorithm-1">Insertion Sort Algorithm (1)<a class="headerlink" href="#insertion-sort-algorithm-1" title="Permanent link">&para;</a></h2>
 <p>Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands</p>
 <p>The array is virtually split into a sorted and an unsorted part</p>
@@ -3713,7 +3715,7 @@ An algorithm must halt within finite time with the right output</p>
 <p><img alt="alt:&quot;insertion sort movement&quot; height:450px center" src="../assets/ce100-week-1-intro-ins_sort_1.drawio.svg" /></p>
 <hr />
 <h2 id="insertion-sort-algorithm-2">Insertion Sort Algorithm (2)<a class="headerlink" href="#insertion-sort-algorithm-2" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;insertion sort algorithm&quot; height:550px center" src="../assets/ce100-week-1-intro-ins_sort_2.drawio.svg" /></p>
+<p><img alt="alt:&quot;insertion sort algorithm&quot; height:500px center" src="../assets/ce100-week-1-intro-ins_sort_2.drawio.svg" /></p>
 <hr />
 <h2 id="insertion-sort-algorithm-pseudo-code-3">Insertion Sort Algorithm (Pseudo-Code) (3)<a class="headerlink" href="#insertion-sort-algorithm-pseudo-code-3" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">Insertion</span><span class="o">-</span><span class="nf">Sort</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
@@ -3728,10 +3730,10 @@ An algorithm must halt within finite time with the right output</p>
 </code></pre></div>
 <hr />
 <h2 id="insertion-sort-step-by-step-description-1">Insertion Sort Step-By-Step Description (1)<a class="headerlink" href="#insertion-sort-step-by-step-description-1" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;insertion sort description-1&quot; height:550px center" src="../assets/ce100-week-1-intro-ins_sort_3.drawio.svg" /></p>
+<p><img alt="alt:&quot;insertion sort description-1&quot; height:500px center" src="../assets/ce100-week-1-intro-ins_sort_3.drawio.svg" /></p>
 <hr />
 <h2 id="insertion-sort-step-by-step-description-2">Insertion Sort Step-By-Step Description (2)<a class="headerlink" href="#insertion-sort-step-by-step-description-2" title="Permanent link">&para;</a></h2>
-<p><img alt="alt:&quot;insertion sort description-2&quot; height:550px center" src="../assets/ce100-week-1-intro-ins_sort_4.drawio.svg" /></p>
+<p><img alt="alt:&quot;insertion sort description-2&quot; height:500px center" src="../assets/ce100-week-1-intro-ins_sort_4.drawio.svg" /></p>
 <hr />
 <h2 id="insertion-sort-step-by-step-description-3">Insertion Sort Step-By-Step Description (3)<a class="headerlink" href="#insertion-sort-step-by-step-description-3" title="Permanent link">&para;</a></h2>
 <p><img alt="alt:&quot;insertion sort description-3&quot; height:500px center" src="../assets/ce100-week-1-intro-ins_sort_5.drawio.svg" /></p>
@@ -3867,9 +3869,13 @@ An algorithm must halt within finite time with the right output</p>
 </ul>
 <hr />
 <h2 id="asymptotic-analysis-3">Asymptotic Analysis (3)<a class="headerlink" href="#asymptotic-analysis-3" title="Permanent link">&para;</a></h2>
+<style scoped>section{ font-size: 25px; }</style>
+
 <p>For both algorithms, we can see a minimum item size in the following chart. After this point, we can see performance differences.  Some algorithms for small item size can be run faster than others but if you increase item size you will see a reference point that notation proof performance metrics. </p>
 <p><img alt="alt:&quot;T(n) and n change graph&quot; height:350px center" src="../assets/ce100-week-1-intro-bigo_chart2.drawio.svg" /></p>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="insertion-sort-runtime-analysis-1">Insertion Sort - Runtime Analysis (1)<a class="headerlink" href="#insertion-sort-runtime-analysis-1" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">Cost</span>   <span class="n">Times</span>   <span class="n">Insertion</span><span class="o">-</span><span class="nf">Sort</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="o">----</span>   <span class="o">-----</span>   <span class="o">---------------------</span>
@@ -3883,7 +3889,7 @@ An algorithm must halt within finite time with the right output</p>
 <a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">c8</span>     <span class="n">n</span><span class="m">-1</span>     <span class="m">8</span><span class="n">.</span>     <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="m">+1</span><span class="p">]</span> <span class="o">=</span> <span class="n">key</span>
 </code></pre></div>
 <p>we have two loops here, if we sum up costs as follow we can see big-O worst case notation. </p>
-<p><span class="arithmatex">\(k_5 = \sum_{j=2}^n{t_j}\)</span> and <span class="arithmatex">\(k_6 = \sum_{j=2}^n{t_i-1}\)</span> </p>
+<p><span class="arithmatex">\(k_5 = \sum \limits_{j=2}^n{t_j}\)</span> and <span class="arithmatex">\(k_6 = \sum \limits_{j=2}^n{t_i-1}\)</span> </p>
 <p>for operation counts</p>
 <hr />
 <h2 id="insertion-sort-runtime-analysis-2">Insertion Sort - Runtime Analysis (2)<a class="headerlink" href="#insertion-sort-runtime-analysis-2" title="Permanent link">&para;</a></h2>
@@ -3891,17 +3897,17 @@ An algorithm must halt within finite time with the right output</p>
 <div class="arithmatex">\[
 \begin{align*}
 T(n) &amp;=c_1n+c_2(n-1)+ 0(n-1)+c_4(n-1) \\
-  &amp; +c_5\sum_{j=2}^n{t_j}+c_6\sum_{j=2}^n{t_i-1} \\
-  &amp; +c_7\sum_{j=2}^n{t_i-1}+c_8(n-1)
+  &amp; +c_5\sum \limits_{j=2}^n{t_j}+c_6\sum \limits_{j=2}^n{t_i-1} \\
+  &amp; +c_7\sum \limits_{j=2}^n{t_i-1}+c_8(n-1)
 \end{align*}
 \]</div>
 <hr />
 <h2 id="insertion-sort-runtime-analysis-3">Insertion Sort - Runtime Analysis (3)<a class="headerlink" href="#insertion-sort-runtime-analysis-3" title="Permanent link">&para;</a></h2>
 <div class="arithmatex">\[
 \begin{align*}
-\sum_{j=2}^n j &amp;= (n(n+1)/2)- 1 \\
+\sum \limits_{j=2}^n j &amp;= (n(n+1)/2)- 1 \\
 &amp; \text{ and } \\
-\sum_{j=2}^n {j-1} &amp;= n(n-1)/2
+\sum \limits_{j=2}^n {j-1} &amp;= n(n-1)/2
 \end{align*}
 \]</div>
 <hr />
@@ -3922,18 +3928,22 @@ T(n) &amp;= an^2 + bn + c \\
 \end{align*}
 \]</div>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="best-case-scenario-sorted-array-1">Best-Case Scenario (Sorted Array) (1)<a class="headerlink" href="#best-case-scenario-sorted-array-1" title="Permanent link">&para;</a></h2>
 <p>Problem-1, If <span class="arithmatex">\(A[1...j]\)</span>  is already sorted, what will be <span class="arithmatex">\(t_j=?\)</span></p>
 <p><img alt="alt:&quot;Insertion Sort Best-Case Scenario (Sorted Array)&quot; height:400px center" src="../assets/ce100-week-1-intro-ins_sort_10.drawio.svg" /></p>
 <p><span class="arithmatex">\(t_j=1\)</span></p>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="best-case-scenario-sorted-array-2">Best-Case Scenario (Sorted Array) (2)<a class="headerlink" href="#best-case-scenario-sorted-array-2" title="Permanent link">&para;</a></h2>
 <p><em>Parameters are taken from image</em></p>
 <div class="arithmatex">\[
 \begin{align*}
 T(n) &amp;=c_1n+c_2(n-1)+c_3(n-1) \\
-&amp; +c_4\sum_{j=2}^nt_j+c_5\sum_{j=2}^n(t_j-1) \\
-&amp; +c_6\sum_{j=2}^n(t_j-1)+c_7(n-1)
+&amp; +c_4\sum \limits_{j=2}^nt_j+c_5\sum \limits_{j=2}^n(t_j-1) \\
+&amp; +c_6\sum \limits_{j=2}^n(t_j-1)+c_7(n-1)
 \end{align*}
 \]</div>
 <p><span class="arithmatex">\(t_j=1\)</span> for all <span class="arithmatex">\(j\)</span> </p>
@@ -3946,6 +3956,8 @@ T(n) &amp;=an-b \\
 \end{align*}
 \]</div>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="worst-case-scenario-reversed-array-1">Worst-Case Scenario (Reversed Array) (1)<a class="headerlink" href="#worst-case-scenario-reversed-array-1" title="Permanent link">&para;</a></h2>
 <p>Problem-2 If <span class="arithmatex">\(A[j]\)</span> is smaller than every entry in <span class="arithmatex">\(A[1...j-1]\)</span>, what will be <span class="arithmatex">\(t_j=?\)</span> </p>
 <p><img alt="alt:&quot;Insertion Sort Worst-Case Scenario (Reversed Array)&quot; height:400px center" src="../assets/ce100-week-1-intro-ins_sort_11.drawio.svg" /></p>
@@ -3969,8 +3981,8 @@ T(n) &amp;=1/2an^2+bn-c \\
 <p>Inner Loop is <span class="arithmatex">\(\Theta(j)\)</span> </p>
 <div class="arithmatex">\[
 \begin{align*}
-T(n) &amp;=\sum_{j=2}^n\Theta(j) \\
-&amp;=\Theta(\sum_{j=2}^nj) \\
+T(n) &amp;=\sum \limits_{j=2}^n\Theta(j) \\
+&amp;=\Theta(\sum \limits_{j=2}^nj) \\
 &amp;=\Theta(n^2)
 \end{align*}
 \]</div>
@@ -3979,8 +3991,8 @@ T(n) &amp;=\sum_{j=2}^n\Theta(j) \\
 <p>Inner Loop is <span class="arithmatex">\(\Theta(j/2)\)</span></p>
 <div class="arithmatex">\[
 \begin{align*}
-T(n) &amp;=\sum_{j=2}^n\Theta(j/2) \\
-&amp;=\sum_{j=2}^n\Theta(j) \\
+T(n) &amp;=\sum \limits_{j=2}^n\Theta(j/2) \\
+&amp;=\sum \limits_{j=2}^n\Theta(j) \\
 &amp;=\Theta(n^2)
 \end{align*}
 \]</div>
@@ -4026,6 +4038,8 @@ T(n) &amp;=\sum_{j=2}^n\Theta(j/2) \\
 <a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="n">endif</span>
 </code></pre></div>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h2 id="merge-sort-algorithm-combine-1">Merge Sort Algorithm (Combine-1)<a class="headerlink" href="#merge-sort-algorithm-combine-1" title="Permanent link">&para;</a></h2>
 <p><span class="arithmatex">\(p = start-point\)</span>
 <span class="arithmatex">\(q = mid-point\)</span>
@@ -4557,6 +4571,8 @@ f(n) &amp;= \omega(g(n)) \leftrightarrow a &gt; b \\
 </tbody>
 </table>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h3 id="asymptotic-function-properties">Asymptotic Function Properties<a class="headerlink" href="#asymptotic-function-properties" title="Permanent link">&para;</a></h3>
 <p><strong>Transitivity</strong>: holds for all</p>
 <p>e.g. <span class="arithmatex">\(f(n) = \Theta(g(n)) \&amp; g(n)=\Theta(h(n)) \Rightarrow f(n)=\Theta(h(n))\)</span></p>
@@ -4567,6 +4583,8 @@ f(n) &amp;= \omega(g(n)) \leftrightarrow a &gt; b \\
 <p><strong>Transpose Symmetry</strong>: holds for <span class="arithmatex">\((O \leftrightarrow \Omega)\)</span> and <span class="arithmatex">\((o \leftrightarrow \omega)\)</span></p>
 <p>e.g. <span class="arithmatex">\(f(n)=O(g(n))\Leftrightarrow g(n)=\Omega(f(n))\)</span></p>
 <hr />
+<style scoped>section{ font-size: 25px; }</style>
+
 <h3 id="using-o-notation-to-describe-running-times-1">Using <span class="arithmatex">\(O\)</span>-Notation to Describe Running Times (1)<a class="headerlink" href="#using-o-notation-to-describe-running-times-1" title="Permanent link">&para;</a></h3>
 <p>Used to bound worst-case running times, Implies an upper bound runtime for arbitrary inputs as well</p>
 <p><strong>Example:</strong></p>
@@ -4785,7 +4803,7 @@ stands for some anonymous function in the set</p>
 </li>
 </ul>
 <hr />
-<h2 id="references-todo-update-missing-references">References (TODO: Update Missing References)<a class="headerlink" href="#references-todo-update-missing-references" title="Permanent link">&para;</a></h2>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p><a href="https://mitpress.mit.edu/books/introduction-algorithms-third-edition">Introduction to Algorithms, Third Edition | The MIT Press</a></p>
@@ -4820,7 +4838,7 @@ stands for some anonymous function in the set</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 12, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 14, 2022</span>
       
     
   </small>
