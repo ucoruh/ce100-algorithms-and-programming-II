@@ -739,18 +739,20 @@ $$
 $$
 m_{ij}=\underset{i \leq k < j}{MIN} \{ m_{ik} + m_{k+1,j} + p_{i-1} p_k p_j \} \\[10pt]
 \begin{align*}
+\begin{aligned}
 A_1 &: (30 \times 35) \\
 A_2 &: (35 \times 15) \\
 A_3 &: (15 \times 5) \\
 A_4 &: (5 \times 10) \\
 A_5 &: (10 \times 20) \\
 A_6 &: (20 \times 25)
-\end{align*}
-\begin{align*}
+\end{aligned}
+\begin{aligned}
 & ((A_2)\overbrace{\vdots}^{ (k=2) } (A_3 A_4 A_5)) \\[10 pt]
 \quad cost &= m_{22} + m_{35} + p_1p_2p_5 \\
 &= 0 + 2500 + 35 \times 15 \times 20 \\
 &= 13000
+\end{aligned}
 \end{align*}
 $$
 
@@ -766,18 +768,20 @@ $$
 $$
 m_{ij}=\underset{i \leq k < j}{MIN} \{ m_{ik} + m_{k+1,j} + p_{i-1} p_k p_j \} \\[10pt]
 \begin{align*}
+\begin{aligned}
 A_1 &: (30 \times 35) \\
 A_2 &: (35 \times 15) \\
 A_3 &: (15 \times 5) \\
 A_4 &: (5 \times 10) \\
 A_5 &: (10 \times 20) \\
 A_6 &: (20 \times 25)
-\end{align*}
-\begin{align*}
+\end{aligned}
+\begin{aligned}
 & ((A_2 A_3) \overbrace{\vdots}^{ (k=3) } (A_4 A_5)) \\[10 pt]
 \quad cost &= m_{23} + m_{45} + p_1p_3p_5 \\
 &= 2625 + 1000 + 35 \times 5 \times 20 \\
 &= 7125
+\end{aligned}
 \end{align*}
 $$
 
@@ -793,18 +797,20 @@ $$
 $$
 m_{ij}=\underset{i \leq k < j}{MIN} \{ m_{ik} + m_{k+1,j} + p_{i-1} p_k p_j \} \\[10pt]
 \begin{align*}
+\begin{aligned}
 A_1 &: (30 \times 35) \\
 A_2 &: (35 \times 15) \\
 A_3 &: (15 \times 5) \\
 A_4 &: (5 \times 10) \\
 A_5 &: (10 \times 20) \\
 A_6 &: (20 \times 25)
-\end{align*}
-\begin{align*}
+\end{aligned}
+\begin{aligned}
 & ((A_2 A_3 A_4)\overbrace{\vdots}^{ (k=4) }(A_5)) \\[10 pt]
 \quad cost &= m_{24} + m_{55} + p_1p_4p_5 \\
 &= 4375 + 0 + 35 \times 10 \times 20 \\
 &= 11375
+\end{aligned}
 \end{align*}
 $$
 
@@ -820,19 +826,21 @@ $$
 $$
 m_{ij}=\underset{i \leq k < j}{MIN} \{ m_{ik} + m_{k+1,j} + p_{i-1} p_k p_j \} \\[10pt]
 \begin{align*}
+\begin{aligned}
 A_1 &: (30 \times 35) \\
 A_2 &: (35 \times 15) \\
 A_3 &: (15 \times 5) \\
 A_4 &: (5 \times 10) \\
 A_5 &: (10 \times 20) \\
 A_6 &: (20 \times 25)
-\end{align*} \quad
-\begin{align*}
+\end{aligned} \quad
+\begin{aligned}
 & ((A_2)\overbrace{\vdots}^{ (k=2) } (A_3 A_4 A_5)) \rightarrow m_{22} + m_{35} + p_1p_2p_5 = 13000 \\
 & ((A_2 A_3) \overbrace{\vdots}^{ (k=3) } (A_4 A_5)) \rightarrow m_{23} + m_{45} + p_1p_3p_5 = \overbrace{ \boldsymbol{7125}}^{selected} \Leftarrow \text{min}\\
 & ((A_2 A_3 A_4)\overbrace{\vdots}^{ (k=4) }(A_5)) \rightarrow m_{24} + m_{55} + p_1p_4p_5 = 11375 \\[20 pt]
 & m_{25} = 7125 \\
 & s_{25} = 3 
+\end{aligned} 
 \end{align*} 
 
 $$
