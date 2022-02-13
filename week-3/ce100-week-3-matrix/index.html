@@ -4126,26 +4126,24 @@ T(n) = T(1) + T(n-1) + cn
 <hr />
 <h2 id="best-case-analysis-for-intuition-only">Best Case Analysis (for intuition only)<a class="headerlink" href="#best-case-analysis-for-intuition-only" title="Permanent link">&para;</a></h2>
 <ul>
-<li>If we’re extremely lucky, <strong>H-PARTITION</strong> splits the array evenly at every recursive call
-  $$
-  \begin{align*} 
-  T(n) &amp;= 2T(n/2) + \Theta(n) \<div class="highlight"><pre><span></span><code>&amp;= \Theta(nlgn)
-</code></pre></div>
-</li>
+<li>If we’re extremely lucky, <strong>H-PARTITION</strong> splits the array evenly at every recursive call</li>
 </ul>
-<p>\end{align*}
-  $$ 
-  (same as merge sort)</p>
+<div class="arithmatex">\[
+\begin{align*} 
+T(n) &amp;= 2T(n/2) + \Theta(n) \\
+&amp;= \Theta(nlgn)
+\end{align*}
+\]</div>
+<p><em>(same as merge sort)</em></p>
 <ul>
-<li>Instead of splitting <span class="arithmatex">\(0.5:0.5\)</span>, if we split <span class="arithmatex">\(0.1:0.9\)</span> then we need solve following equation.
-  $$
-  \begin{align*} 
-  T(n) &amp;= T(n/10) + T(9n/10) + \Theta(n) \<div class="highlight"><pre><span></span><code>&amp;= \Theta(nlgn)
-</code></pre></div>
-</li>
+<li>Instead of splitting <span class="arithmatex">\(0.5:0.5\)</span>, if we split <span class="arithmatex">\(0.1:0.9\)</span> then we need solve following equation.</li>
 </ul>
-<p>\end{align*}
-  $$ </p>
+<div class="arithmatex">\[
+\begin{align*} 
+T(n) &amp;= T(n/10) + T(9n/10) + \Theta(n) \\
+&amp;= \Theta(nlgn)
+\end{align*}
+\]</div>
 <hr />
 <h2 id="almost-best-case-analysis">“Almost-Best” Case Analysis<a class="headerlink" href="#almost-best-case-analysis" title="Permanent link">&para;</a></h2>
 <p><img alt="alt:&quot;alt&quot; height:500px center" src="../assets/ce100-week-3-matrix-quicksort_bestcase.drawio.svg" /></p>
@@ -4962,11 +4960,11 @@ Note: &amp; \frac{1}{n}T(max(1,n-1)) = \frac{1}{n}T(n-1)=\frac{1}{n}O(n^2) = O(n
 \]</div>
 <hr />
 <h2 id="average-case-analysis-of-randomized-select-2">Average-Case Analysis of Randomized Select (2)<a class="headerlink" href="#average-case-analysis-of-randomized-select-2" title="Permanent link">&para;</a></h2>
-<p>$$
-\begin{align*}</p>
-<p>\therefore T(n) \leq \frac{1}{n}\sum \limits_{q=1}^{n-1}T(max(q,n-q))+O(n)</p>
-<p>\end{align*}
-$$</p>
+<div class="arithmatex">\[
+\begin{align*}
+\therefore T(n) \leq \frac{1}{n}\sum \limits_{q=1}^{n-1}T(max(q,n-q))+O(n)
+\end{align*}
+\]</div>
 <div class="arithmatex">\[
 max(q, n–q) =
 \begin{cases}
@@ -5175,7 +5173,8 @@ T(n)&amp; \leq \frac{2c}{n} \Bigg(\frac{1}{2}n(n-1)-\frac{1}{2} \lceil \frac{n}{
 <p><img alt="alt:&quot;alt&quot; h:500px center" src="../assets/ce100-week-3-matrix-median_ex2.drawio.svg" /></p>
 <hr />
 <h2 id="selection-in-worst-case-linear-time-example-9">Selection in Worst Case Linear Time - Example (9)<a class="headerlink" href="#selection-in-worst-case-linear-time-example-9" title="Permanent link">&para;</a></h2>
-<div class="arithmatex">\[S =
+<div class="arithmatex">\[
+S =
 \begin{array}{ccc}
 \{  25 &amp; 9 &amp; 16  &amp; 8  &amp; 11 &amp;  27 &amp; 39 &amp; 42 &amp; 15 &amp; 6  
 32 &amp; 14 &amp; 36 &amp; 20 &amp; 33 &amp; 22 &amp; 31 &amp; 4 &amp; 17 &amp; 3 &amp; 30 &amp; 41 \\ 2 &amp; 13 &amp; 19 &amp; 7 &amp; 21 &amp; 10 &amp; 34 &amp; 1 &amp; 37 &amp; 23 &amp; 40 &amp; 5 &amp; 29 &amp; 18 &amp; 24 &amp; 12 &amp; 38 &amp; 28 &amp; 26 &amp; 35 &amp; 43  \}
