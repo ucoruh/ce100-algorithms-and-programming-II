@@ -138,7 +138,7 @@ $$
 
 ![alt:"alt" height:450px center](assets/ce100-week-3-matrix.drawio.svg)
 
-- $c_{ij}=\sum_{1\leq k \leq n}a_{ik}.b_{kj}$
+- $c_{ij}=\sum \limits_{1\leq k \leq n}^{}a_{ik}.b_{kj}$
 
 ---
 
@@ -284,6 +284,8 @@ $$
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Matrix Multiplication: Strassen’s Idea (2)
 
 - **Reminder:** 
@@ -304,6 +306,8 @@ $$
 $$
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Matrix Multiplication: Strassen’s Idea (3)
 
@@ -471,6 +475,8 @@ TODO : detailed solution in textbook...
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Divide: Partition the array around a pivot element
 
 - Choose a pivot element $x$
@@ -480,7 +486,7 @@ TODO : detailed solution in textbook...
   - Left subarray: All elements $\leq x$
   - Right subarray: All elements $\geq x$
   
-  ![alt:"alt" height:400px center](assets/ce100-week-3-matrix-quicksort_arr_1.drawio.svg)
+  ![alt:"alt" height:350px center](assets/ce100-week-3-matrix-quicksort_arr_1.drawio.svg)
 
 ---
 
@@ -488,11 +494,13 @@ TODO : detailed solution in textbook...
 
 Note: Everything in the left subarray ≤ everything in the right subarray
 
-![alt:"alt" height:400px center](assets/ce100-week-3-matrix-quicksort_arr_2.drawio.svg)
+![alt:"alt" height:350px center](assets/ce100-week-3-matrix-quicksort_arr_2.drawio.svg)
 
 Note: Combine is trivial after conquer. Array already sorted.
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Two partitioning algorithms
 
@@ -531,6 +539,8 @@ Note: Combine is trivial after conquer. Array already sorted.
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Hoare’s Partitioning Algorithm (3)
 
 - Elements are exchanged when
@@ -557,37 +567,37 @@ Note: Combine is trivial after conquer. Array already sorted.
 
 ## Hoare’s Partitioning Algorithm Example (Step-1)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_hoare_ex1.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_hoare_ex1.drawio.svg)
 
 ---
 
 ## Hoare’s Partitioning Algorithm Example (Step-2)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_hoare_ex2.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_hoare_ex2.drawio.svg)
 
 ---
 
 ## Hoare’s Partitioning Algorithm Example (Step-3)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_hoare_ex3.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_hoare_ex3.drawio.svg)
 
 ---
 
 ## Hoare’s Partitioning Algorithm Example (Step-4)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_hoare_ex4.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_hoare_ex4.drawio.svg)
 
 ---
 
 ## Hoare’s Partitioning Algorithm Example (Step-5)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_hoare_ex5.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_hoare_ex5.drawio.svg)
 
 ---
 
 ## Hoare’s Partitioning Algorithm Example (Step-6)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_hoare_ex6.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_hoare_ex6.drawio.svg)
 
 ---
 
@@ -599,33 +609,35 @@ Note: Combine is trivial after conquer. Array already sorted.
 
 ## Hoare’s Partitioning Algorithm Example (Step-8)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_hoare_ex8.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_hoare_ex8.drawio.svg)
 
 ---
 
 ## Hoare’s Partitioning Algorithm Example (Step-9)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_hoare_ex9.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_hoare_ex9.drawio.svg)
 
 ---
 
 ## Hoare’s Partitioning Algorithm Example (Step-10)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_hoare_ex10.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_hoare_ex10.drawio.svg)
 
 ---
 
 ## Hoare’s Partitioning Algorithm Example (Step-11)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_hoare_ex11.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_hoare_ex11.drawio.svg)
 
 ---
 
 ## Hoare’s Partitioning Algorithm Example (Step-12)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_hoare_ex12.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_hoare_ex12.drawio.svg)
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Hoare’s Partitioning Algorithm - Notes
 
@@ -650,6 +662,8 @@ Note: Combine is trivial after conquer. Array already sorted.
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Quicksort with Hoare’s Partitioning Algorithm
 
 ```r
@@ -666,6 +680,8 @@ Initial invocation: `QUICKSORT(A,1,n)`
 ![alt:"alt" height:150px center](assets/ce100-week-3-matrix-quicksort_1.drawio.svg)
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Hoare’s Partitioning Algorithm: Pivot Selection
 
@@ -729,6 +745,8 @@ We need to prove $3$ claims to show correctness:
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Correctness of Hoare’s Algorithm (4)
 
 **Original correctness claims:**
@@ -747,6 +765,8 @@ We need to prove $3$ claims to show correctness:
 **The proof of claims (a) and (b) complete**
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Correctness of Hoare’s Algorithm (5)
 
@@ -798,43 +818,43 @@ $A[p \dots i_m-1] \leq x$ and $A[j_m-1 \dots r] \geq x$
 
 ## Lomuto’s Partitioning Algorithm (2)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_lomuto_steps.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_lomuto_steps.drawio.svg)
 
 ---
 
 ## Lomuto’s Partitioning Algorithm Ex. (Step-1)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex1.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex1.drawio.svg)
 
 ---
 
 ## Lomuto’s Partitioning Algorithm Ex. (Step-2)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex2.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex2.drawio.svg)
 
 ---
 
 ## Lomuto’s Partitioning Algorithm Ex. (Step-3)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex3.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex3.drawio.svg)
 
 ---
 
 ## Lomuto’s Partitioning Algorithm Ex. (Step-4)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex4.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex4.drawio.svg)
 
 ---
 
 ## Lomuto’s Partitioning Algorithm Ex. (Step-5)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex5.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex5.drawio.svg)
 
 ---
 
 ## Lomuto’s Partitioning Algorithm Ex. (Step-6)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex6.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex6.drawio.svg)
 
 ---
 
@@ -846,49 +866,49 @@ $A[p \dots i_m-1] \leq x$ and $A[j_m-1 \dots r] \geq x$
 
 ## Lomuto’s Partitioning Algorithm Ex. (Step-8)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex8.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex8.drawio.svg)
 
 ---
 
 ## Lomuto’s Partitioning Algorithm Ex. (Step-9)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex9.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex9.drawio.svg)
 
 ---
 
 ## Lomuto’s Partitioning Algorithm Ex. (Step-10)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex10.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex10.drawio.svg)
 
 ---
 
 ## Lomuto’s Partitioning Algorithm Ex. (Step-11)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex11.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex11.drawio.svg)
 
 ---
 
 ## Lomuto’s Partitioning Algorithm Ex. (Step-12)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex12.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex12.drawio.svg)
 
 ---
 
 ## Lomuto’s Partitioning Algorithm Ex. (Step-13)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex13.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex13.drawio.svg)
 
 ---
 
 ## Lomuto’s Partitioning Algorithm Ex. (Step-14)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex14.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex14.drawio.svg)
 
 ---
 
 ## Lomuto’s Partitioning Algorithm Ex. (Step-15)
 
-![alt:"alt" height:550px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex15.drawio.svg)
+![alt:"alt" height:500px center](assets/ce100-week-3-matrix-quicksort_lomuto_ex15.drawio.svg)
 
 ---
 
@@ -1101,18 +1121,20 @@ $$
 
 ## Balanced Partitioning (6)
 
-- **Question:** What is the probability that H-PARTITION returns a split that is more balanced than $0.1-to-0.9$?
+<style scoped>section{ font-size: 25px; }</style>
 
-![alt:"alt" h:200px center](assets/ce100-week-3-matrix-quicksort_question_1.drawio.svg)
+- **Question:** What is the probability that H-PARTITION returns a split that is more balanced than $0.1-to-0.9$?
 
 $$
 \begin{align*} 
-Probability=\sum_{q=0.1n+1}^{0.9n-1}\frac{1}{n} 
-=\frac{1}{n}(0.9n-1-0.1n-1+1) \\ 
-= 0.8-\frac{1}{n} \\ 
-\approx 0.8 \text{ for large n}
+Probability &=\sum \limits_{q=0.1n+1}^{0.9n-1}\frac{1}{n} \\
+&=\frac{1}{n}(0.9n-1-0.1n-1+1) \\ 
+&= 0.8-\frac{1}{n} \\ 
+& \approx 0.8 \text{ for large n}
 \end{align*} 
 $$
+
+![bg right:50% w:500px](assets/ce100-week-3-matrix-quicksort_question_1.drawio.svg)
 
 ---
 
@@ -1126,15 +1148,17 @@ $$
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Balanced Partitioning (8)
 
 - **Question:** What is the probability that H-PARTITION returns a split that is more balanced than $\alpha-to-(1-\alpha)$?
 
-![alt:"alt" h:410px center](assets/ce100-week-3-matrix-quicksort_question_2.drawio.svg)
+![bg right:40% w:500px](assets/ce100-week-3-matrix-quicksort_question_2.drawio.svg)
 
 $$
 \begin{align*} 
-Probability & =\sum_{q=\alpha n+1}^{(1-\alpha)n-1}\frac{1}{n} \\
+Probability & =\sum \limits_{q=\alpha n+1}^{(1-\alpha)n-1}\frac{1}{n} \\
 & =\frac{1}{n}((1-\alpha)n-1- \alpha n-1+1) \\ 
 & = (1-2\alpha)-\frac{1}{n} \\ 
 & \approx (1-2\alpha) \text{ for large n}
@@ -1221,7 +1245,7 @@ Compare 2-successive levels of avg case vs. 1 level of best case
   L(n) & = 2(L(n/2-1) + \Theta(n/2)) + \Theta(n) \\
           & = 2L(n/2-1) + \Theta(n) \\
           & = Θ(nlgn) 
-\end{align*} 
+  \end{align*} 
   $$
 
 - How can we make sure we are usually lucky for all inputs?
@@ -1271,9 +1295,9 @@ for any constant $\alpha, 0 < \alpha \leq 0.5$
 - For a random input array, the probability of having a split 
   - more balanced than   $0.1 – to – 0.9 : 80\%$
   - more balanced than $0.01 – to – 0.99  :  98\%$
-  - more balanced than $\alpha – to – (1-\alpha) : 1 – 2\alpha$
+  - more balanced than $\alpha – to – (1-\alpha) : 1 – 2 \alpha$
     
-                for any constant $\alpha, 0 < \alpha \leq 0.5$
+- for any constant $\alpha, 0 < \alpha \leq 0.5$
 
 ---
 
@@ -1324,6 +1348,8 @@ for any constant $\alpha, 0 < \alpha \leq 0.5$
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Randomized Quicksort (1)
 
 - Using Hoare’s partitioning algorithm:
@@ -1347,6 +1373,7 @@ R-PARTITION(A, p, r)
   - but, would be more difficult to analyze
 
 ---
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Randomized Quicksort (2)
 
@@ -1403,6 +1430,8 @@ R-PARTITION(A, p, r)
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Various Outcomes of H-PARTITION (1)
 
 - Assume that $rank(x)=1$
@@ -1418,6 +1447,8 @@ $pivot=x=2$
 **TODO: convert to image...S6_P9**
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Various Outcomes of H-PARTITION (2)
 
@@ -1463,6 +1494,8 @@ $pivot=x=5$
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Average - Case Analysis: Recurrence (1)
 
 $x=pivot$
@@ -1482,20 +1515,22 @@ $$
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Average - Case Analysis: Recurrence (2)
 
 $$
 \begin{align*} 
-T(n) &= \frac{1}{n}\sum_{q=1}^{n-1}(T(q)+T(n-q))+\frac{1}{n}(T(1)+T(n-1))+\Theta(n)\\
+T(n) &= \frac{1}{n}\sum \limits_{q=1}^{n-1}(T(q)+T(n-q))+\frac{1}{n}(T(1)+T(n-1))+\Theta(n)\\
 & \text{Note: } \frac{1}{n}(T(1)+T(n-1))=\frac{1}{n}(\Theta(1)+O(n^2))=O(n) \\
-T(n) &= \frac{1}{n}\sum_{q=1}^{n-1}(T(q)+T(n-q))+\Theta(n)
+T(n) &= \frac{1}{n}\sum \limits_{q=1}^{n-1}(T(q)+T(n-q))+\Theta(n)
 \end{align*} 
 $$
 
 for $k=1,2,\dots,n-1$ each term $T(k)$ appears twice once for $q = k$ and once for $q = n−k$
 
 $$
-T(n) = \frac{2}{n}\sum_{k=1}^{n-1} T(k)+\Theta(n)
+T(n) = \frac{2}{n}\sum \limits_{k=1}^{n-1} T(k)+\Theta(n)
 $$
 
 ---
@@ -1507,9 +1542,9 @@ $$
 
 $$
 \begin{align*} 
-T(n) &= \frac{2}{n}\sum_{k=1}^{n-1} T(k)+\Theta(n) \\
-& \leq \frac{2}{n}\sum_{k=1}^{n-1} aklgk+\Theta(n) \\
-& \leq \frac{2a}{n}\sum_{k=1}^{n-1} klgk+\Theta(n) 
+T(n) &= \frac{2}{n} \sum \limits_{k=1}^{n-1} T(k)+\Theta(n) \\
+& \leq \frac{2}{n} \sum \limits_{k=1}^{n-1} aklgk+\Theta(n) \\
+& \leq \frac{2a}{n}  \sum \limits_{k=1}^{n-1} klgk+\Theta(n) 
 \end{align*} 
 $$
 
@@ -1520,7 +1555,7 @@ $$
 ## Tight bound for $\sum klgk$ (1)
 
 - Bounding the terms
-  - $\sum_{k=1}^{n-1}klgk \leq \sum_{k=1}^{n-1}nlgn = n(n-1)lgn \leq n^2lgn$
+  - $\ \sum \limits_{k=1}^{n-1}klgk \leq \sum \limits_{k=1}^{n-1}nlgn = n(n-1)lgn \leq n^2lgn$
   - This bound **is not strong** enough because
   - $T(n) \leq \frac{2a}{n}n^2lgn+\Theta(n)$
   - $=2anlgn+\Theta(n)$ $\Longrightarrow$ couldn’t prove $T(n) \leq anlgn$
@@ -1530,33 +1565,43 @@ $$
 ## Tight bound for $\sum klgk$ (2)
 
 - **Splitting summations:** ignore ceilings for simplicity
+$$
+\sum \limits_{k=1}^{n-1}klgk \leq \sum \limits_{k=1}^{n/2-1}klgk + \sum \limits_{k=n/2}^{n-1}klgk
+$$
 
-- $\sum_{k=1}^{n-1}klgk \leq \sum_{k=1}^{n/2-1}klgk + \sum_{k=n/2}^{n-1}klgk$
-  
   - **First summation**: $lgk < lg(n/2)=lgn-1$
   - **Second summation**: $lgk < lgn$
 
 ---
 
-## Splitting: $\sum_{k=1}^{n-1}klgk \leq \sum_{k=1}^{n/2-1}klgk + \sum_{k=n/2}^{n-1}klgk$ (3)
+<style scoped>section{ font-size: 25px; }</style>
 
-- $\sum_{k=1}^{n-1}klgk \leq (lg(n-1))\sum_{k=1}^{n/2-1}k + lgn \sum_{k=n/2}^{n-1}k$
-  
-  - $=lgn \sum_{k=1}^{n-1}k- \sum_{k=1}^{n/2-1}k$
-  
-  - $= \frac{1}{2}n(n-1)lgn- \frac{1}{2} \frac{n}{2}(\frac{n}{2}-1)$
-  
-  - $=\frac{1}{2}n^2lgn- \frac{1}{8}n^2- \frac{1}{2}n(lgn-1/2)$
+## Splitting: $\sum \limits_{k=1}^{n-1}klgk \leq \sum \limits_{k=1}^{n/2-1}klgk + \sum \limits_{k=n/2}^{n-1}klgk$ (3)
 
-- $\sum_{k=1}^{n-1}klgk \leq \frac{1}{2}n^2lgn-\frac{1}{8}n^2$ for $lgn \geq 1/2 \Longrightarrow n \geq \sqrt{2}$
+$$
+\begin{align*}
+& \sum \limits_{k=1}^{n-1}klgk \leq (lg(n-1))\sum \limits_{k=1}^{n/2-1}k + lgn \sum \limits_{k=n/2}^{n-1}k \\
+&= lgn \sum \limits_{k=1}^{n-1}k- \sum \limits_{k=1}^{n/2-1}k \\
+&= \frac{1}{2}n(n-1)lgn - \frac{1}{2} \frac{n}{2}(\frac{n}{2}-1) \\
+&= \frac{1}{2}n^2lgn - \frac{1}{8}n^2 - \frac{1}{2}n(lgn-1/2) \\
+\end{align*}
+$$
+
+$$
+\begin{align*}
+& \sum \limits_{k=1}^{n-1} klgk \leq \frac{1}{2}n^2lgn-\frac{1}{8}n^2 \ for \ lgn \geq 1/2 \Longrightarrow n \geq \sqrt{2} 
+\end{align*}
+$$
+
+
 
 ---
 
-## Substituting: - $\sum_{k=1}^{n-1}klgk \leq \frac{1}{2}n^2lgn-\frac{1}{8}n^2$ (4)
+## Substituting: - $\sum \limits_{k=1}^{n-1}klgk \leq \frac{1}{2}n^2lgn-\frac{1}{8}n^2$ (4)
 
 $$
 \begin{align*} 
-T(n) & \leq \frac{2a}{n}\sum_{k=1}^{n-1}klgk+\Theta(n)\\
+T(n) & \leq \frac{2a}{n}\sum \limits_{k=1}^{n-1}klgk+\Theta(n)\\
 & \leq \frac{2a}{n}(\frac{1}{2}n^2lgn-\frac{1}{8}n^2)+\Theta(n) \\
 & = anlgn - (\frac{a}{4}n-\Theta(n))
 \end{align*} 
@@ -1754,6 +1799,8 @@ $$
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Reminder: Various Outcomes of H-PARTITION
 
 - $x: pivot$
@@ -1811,9 +1858,9 @@ $$
 
 $$
 \begin{align*}
-T(n) &\leq \frac{1}{n}T(max(1,n-1))+\frac{1}{n}\sum_{q=1}^{n-1}T(max(q,n-q))+O(n) \\
+T(n) &\leq \frac{1}{n}T(max(1,n-1))+\frac{1}{n}\sum \limits_{q=1}^{n-1}T(max(q,n-q))+O(n) \\
 Note: & \frac{1}{n}T(max(1,n-1)) = \frac{1}{n}T(n-1)=\frac{1}{n}O(n^2) = O(n) \\
-\therefore \text{(3 dot mean therefore) } & T(n) \leq \frac{1}{n}\sum_{q=1}^{n-1}T(max(q,n-q))+O(n)
+\therefore \text{(3 dot mean therefore) } & T(n) \leq \frac{1}{n}\sum \limits_{q=1}^{n-1}T(max(q,n-q))+O(n)
 \end{align*}
 $$
 
@@ -1824,7 +1871,7 @@ $$
 $$
 \begin{align*}
 
-\therefore T(n) \leq \frac{1}{n}\sum_{q=1}^{n-1}T(max(q,n-q))+O(n)
+\therefore T(n) \leq \frac{1}{n}\sum \limits_{q=1}^{n-1}T(max(q,n-q))+O(n)
 
 \end{align*}
 $$
@@ -1848,18 +1895,20 @@ $$
 
 $$
 \begin{align*}
-\sum_{q=1}^{n-1} T(max(q,n-q))+O(n) & \leq 2\sum_{q=\lceil n/2 \rceil}^{n-1} T(q)+O(n) \\
-\therefore T(n) & \leq \frac{2}{n} \sum_{q=\lceil n/2 \rceil}^{n-1}T(q)+O(n)
+\sum \limits_{q=1}^{n-1} T(max(q,n-q))+O(n) & \leq 2\sum \limits_{q=\lceil n/2 \rceil}^{n-1} T(q)+O(n) \\
+\therefore T(n) & \leq \frac{2}{n} \sum \limits_{q=\lceil n/2 \rceil}^{n-1}T(q)+O(n)
 \end{align*}
 $$
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Average-Case Analysis of Randomized Select (4)
 
 $$
 \begin{align*}
-T(n) & \leq \frac{2}{n} \sum_{q=\lceil n/2 \rceil}^{n-1}T(q)+O(n)
+T(n) & \leq \frac{2}{n} \sum \limits_{q=\lceil n/2 \rceil}^{n-1}T(q)+O(n)
 \end{align*}
 $$
 
@@ -1868,8 +1917,8 @@ $$
 
 $$
 \begin{align*}
-T(n) & \leq \frac{2}{n} \sum_{q=\lceil n/2 \rceil}^{n-1}ck+O(n) \\
-& = \frac{2c}{n} \Bigg(\sum_{k=1}^{n-1}k-\sum_{k=1}^{\lceil n/2 \rceil-1}k \Bigg)+ O(n) \\
+T(n) & \leq \frac{2}{n} \sum \limits_{q=\lceil n/2 \rceil}^{n-1}ck+O(n) \\
+& = \frac{2c}{n} \Bigg(\sum \limits_{k=1}^{n-1}k-\sum \limits_{k=1}^{\lceil n/2 \rceil-1}k \Bigg)+ O(n) \\
 & = \frac{2c}{n} \Bigg(\frac{1}{2}n(n-1)-\frac{1}{2} \lceil \frac{n}{2} \rceil \bigg( \frac{n}{2}-1 \bigg) \Bigg)+ O(n)
 \end{align*}
 $$
@@ -1903,6 +1952,8 @@ $$
 - Generate a **good pivot** recursively
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Selection in Worst Case Linear Time
 
@@ -1968,6 +2019,8 @@ $$
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Selection in Worst Case Linear Time - Example (3)
 
 **Step 2:** Compute the median of each group ($\Theta(n)$)
@@ -2023,6 +2076,8 @@ Partition $S$ around $x = 24$
 **Claim:** Partitioning around x is guaranteed to be **well-balanced.**
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Selection in Worst Case Linear Time - Example (6)
 
@@ -2080,6 +2135,8 @@ else
 ```
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Selection in Worst Case Linear Time
 

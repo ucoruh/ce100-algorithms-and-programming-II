@@ -128,6 +128,8 @@ $$
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Recurrence Example
 
 $$
@@ -187,6 +189,8 @@ But, it's usually ok to:
   - $T(n)=\Theta(1)$ for sufficiently small $n$
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Example: When Boundary Conditions Matter
 
@@ -394,6 +398,8 @@ $\Theta(1) \leq c_1n^2 – c_2n$    for $n$ small enough (e.g. $n = n_0$)
 We have proved that $T(n) = O(n^2)$
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Substitution Method: Example 2 (1)
 
@@ -639,11 +645,11 @@ Solve $T(n) = T(n/4) + T(n/2) + n^2$
 
 ## General Method (Akra-Bazzi)
 
-$T(n)=\sum_{i=1}^k{a_iT(n/b_i)}+f(n)$
+$T(n)=\sum \limits_{i=1}^k{a_iT(n/b_i)}+f(n)$
 
 Let $p$ be the unique solution to
 
-$\sum_{i=1}^k{(a_i/b^p_i)}=1$
+$\sum \limits_{i=1}^k{(a_i/b^p_i)}=1$
 
 Then, the answers are the same as for the master method, but with $n^p$ instead of $n^{log_b^a}$
 *(Akra and Bazzi also prove an even more general result.)*
@@ -686,11 +692,11 @@ $n^{log_b^a}T(1)=\Theta(f(n))$
 - Recall from the recursion tree (note $h = lg_bn =\text{tree height}$)
 
 $\text{Leaf Cost}=\Theta(n^{log_b^a})$
-$\text{Non-leaf Cost}=g(n)=\sum_{i=0}^{h-1}a^if(n/{b^i})$
+$\text{Non-leaf Cost}=g(n)=\sum \limits_{i=0}^{h-1}a^if(n/{b^i})$
 
 $T(n)=\text{Leaf Cost} + \text{Non-leaf Cost}$
 
-$T(n)=\Theta(n^{log_b^a}) + \sum_{i=0}^{h-1}a^if(n/{b^i})$
+$T(n)=\Theta(n^{log_b^a}) + \sum \limits_{i=0}^{h-1}a^if(n/{b^i})$
 
 ---
 
@@ -700,21 +706,22 @@ $T(n)=\Theta(n^{log_b^a}) + \sum_{i=0}^{h-1}a^if(n/{b^i})$
 
 - $\frac{n^{log_b^a}}{f(n)}=\Omega(n^{\varepsilon}) \Longrightarrow O(n^{-\varepsilon}) \Longrightarrow f(n) = O(n^{log_b^{a-\varepsilon}})$
 
-- $g(n)=\sum_{i=0}^{h-1}a^iO((n/{b^i})^{log_b^{a-\varepsilon}})=O(\sum_{i=0}^{h-1}a^i(n/{b^i})^{log_b^{a-\varepsilon}})$
+- $g(n)=\sum \limits_{i=0}^{h-1}a^iO((n/{b^i})^{log_b^{a-\varepsilon}})=O(\sum \limits_{i=0}^{h-1}a^i(n/{b^i})^{log_b^{a-\varepsilon}})$
 
-- $O(n^{log_b^{a-\varepsilon}}\sum_{i=0}^{h-1}a^ib^{i\varepsilon}/b^{ilog_b^{a-\varepsilon}})$
+- $O(n^{log_b^{a-\varepsilon}}\sum \limits_{i=0}^{h-1}a^ib^{i\varepsilon}/b^{ilog_b^{a-\varepsilon}})$
 
 ---
 
 ## Proof of Master Theorem Case 1 (2)
 
-- $\sum_{i=0}^{h-1} \frac{a^ib^{i\varepsilon}}{b^{ilog_b^a}} =\sum_{i=0}^{h-1} a^i\frac{(b^\varepsilon)^i}{(b^{log_b^a})^i} =\sum a^i\frac{b^{i\varepsilon}}{a^i}=\sum_{i=0}^{h-1}(b^{\varepsilon})^i$
+- $\sum \limits_{i=0}^{h-1} \frac{a^ib^{i\varepsilon}}{b^{ilog_b^a}} =\sum \limits_{i=0}^{h-1} a^i\frac{(b^\varepsilon)^i}{(b^{log_b^a})^i} =\sum a^i\frac{b^{i\varepsilon}}{a^i}=\sum \limits_{i=0}^{h-1}(b^{\varepsilon})^i$
 
 = An increasing geometric series since $b > 1$
 
 $\frac{b^{h\varepsilon}-1}{b^{\varepsilon}-1}=\frac{(b^h)^{\varepsilon}-1}{b^{\varepsilon}-1} = \frac{(b^{log_b^n})^{\varepsilon}-1}{b^{\varepsilon}-1}=\frac{n^{\varepsilon}-1}{b^{\varepsilon}-1} = O(n^{\varepsilon})$
 
 ---
+
 
 ## Proof of Master Theorem Case 1 (3)
 
@@ -726,14 +733,16 @@ $\frac{b^{h\varepsilon}-1}{b^{\varepsilon}-1}=\frac{(b^h)^{\varepsilon}-1}{b^{\v
 
 ---
 
+<style scoped>section{ font-size: 22px; }</style>
+
 ## Proof of Master Theorem Case 2 (limited to k=0)
 
 - $\frac{f(n)}{n^log_b^a}=\Theta(lg^0n)=\Theta(1) \Longrightarrow f(n)=\Theta(n^{log_b^a}) \Longrightarrow f(n/b^i)=\Theta((n/b^i)^{log_b^a})$
-- $g(n)=\sum_{i=0}^{h-1}a^i\Theta((n/b^i)^{log_b^a})$
-- $= \Theta(\sum_{i=0}^{h-1}a^i\frac{n^{log_b^a}}{b^{ilog_b^a}})$
-- $=\Theta(n^{log_b^a}\sum_{i=0}^{h-1}a^i\frac{1}{(b^{log_b^a})^i})$
-- $=\Theta(n^{log_b^a}\sum_{i=0}^{h-1}a^i\frac{1}{a^i})$
-- $=\Theta(n^{log_b^a}\sum_{i=0}^{log_b^{n-1}}1) = \Theta(n^{log_b^a}log_bn)=\Theta(n^{log_b^a}lgn)$
+- $g(n)=\sum \limits_{i=0}^{h-1}a^i\Theta((n/b^i)^{log_b^a})$
+- $= \Theta(\sum \limits_{i=0}^{h-1}a^i\frac{n^{log_b^a}}{b^{ilog_b^a}})$
+- $=\Theta(n^{log_b^a}\sum \limits_{i=0}^{h-1}a^i\frac{1}{(b^{log_b^a})^i})$
+- $=\Theta(n^{log_b^a}\sum \limits_{i=0}^{h-1}a^i\frac{1}{a^i})$
+- $=\Theta(n^{log_b^a}\sum \limits_{i=0}^{log_b^{n-1}}1) = \Theta(n^{log_b^a}log_bn)=\Theta(n^{log_b^a}lgn)$
 - $T(n)=n^{log_b^a}+\Theta(n^{log_b^a}lgn)$
 - $=\Theta(n^{log_b^a}lgn)$
 
@@ -836,6 +845,8 @@ Merge-Sort(A,1,n)
 ```
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Merge Sort Algorithm (internal iterations)
 
@@ -1105,6 +1116,8 @@ POWER(a, n)
 - **General case:** Based on the inductive hypothesis, prove that the alg. is correct for any input of size n
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Example Correctness Proof: Powering a Number
 

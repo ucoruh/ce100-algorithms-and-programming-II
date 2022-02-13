@@ -147,20 +147,17 @@ Download [DOC](ce100-week-5-dp.md_doc.pdf), [SLIDE](ce100-week-5-dp.md_slide.pdf
 - **Reminder:**
 
 $$
-F(0)=0 \text{ and } F(1)=1 \\
-F(n)=F(n-1)+F(n-2)
+\begin{align*}
+& F(0)=0 \text{ and } F(1)=1 \\
+& F(n)=F(n-1)+F(n-2) \\[10 pt]
+&\text{REC-FIBO}(n) \{ \\
+& \quad \text{if} \ n < 2 \\
+& \qquad   \text{return} \ n \\
+& \quad \text{else} \\
+& \qquad  \text{return} \ \text{REC-FIBO}(n-1) + \text{REC-FIBO}(n-2) \ \}
+\end{align*}
 $$
 
-
-```r
-
-REC-FIBO(n)
-  if n < 2
-    return n
-  else
-    return REC-FIBO(n-1) + REC-FIBO(n-2)
-
-```
 - Overlapping subproblems in different recursive calls. Repeated work!
 
 ![bg right:40% w:500px](assets/ce100-week-5-dp-fib-1.drawio.svg)
@@ -229,6 +226,8 @@ ITER-FIBO(n)
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Problem 2: **Matric Chain Multiplication**
 
 - **Input:** a sequence (chain) $\langle A_1,A_2, \dots , A_n\rangle$ of $n$ matrices
@@ -242,6 +241,8 @@ $\bigg((A_iA_{i+1}A_{i+2} \dots A_k)(A_{k+1}A_{k+2} \dots A_j)\bigg)$ for $i \le
 - All parenthesizations yield the same product; matrix product is associative
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Matrix-chain Multiplication: **An Example Parenthesization**
 
@@ -325,6 +326,8 @@ First parenthesization yields **10x faster** computation
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Counting the Number of Parenthesizations
 
 - **Brute force approach:** exhaustively check all parenthesizations
@@ -338,14 +341,14 @@ $$
 - We obtain the recurrence
 
 $$
-P(1)=1 \text{ and } P(n)=\sum_{k=1}^{n-1}P(k)P(n-k)
+P(1)=1 \text{ and } P(n)=\sum \limits_{k=1}^{n-1}P(k)P(n-k)
 $$
 
 ---
 
 ## Number of Parenthesizations: 
 
-- $P(1)=1$ and $P(n)=\sum_{k=1}^{n-1}P(k)P(n-k)$
+- $P(1)=1$ and $P(n)=\sum \limits_{k=1}^{n-1}P(k)P(n-k)$
 
 - The recurrence generates the sequence of **Catalan Numbers** Solution is $P(n)=C(n-1)$ where
 
@@ -447,6 +450,8 @@ $$
         - $m_{ij} = m_{ik} + m_{k+1,j} +p_{i-1} p_k p_j$ holds
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Direct Recursion: **Inefficient!**
 
@@ -580,6 +585,8 @@ $$
 ![bg right:65% h:500px](assets/ce100-week-5-dp-mult-bottom-up-5.drawio.svg)
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Algorithm for Computing the Optimal Costs
 
@@ -719,6 +726,283 @@ $$
 $$
 
 ![bg right:50% h:600px](assets/ce100-week-5-dp-table-acc-pattern-5.drawio.svg)
+
+---
+
+## **Table access pattern** Example
+
+- Compute $m_{25}$
+- Choose the $k$ value that leads to **min cost**
+
+$$
+m_{ij}=\underset{i \leq k < j}{MIN} \{ m_{ik} + m_{k+1,j} + p_{i-1} p_k p_j \} \\[10pt]
+\begin{align*}
+A_1 &: (30 \times 35) \\
+A_2 &: (35 \times 15) \\
+A_3 &: (15 \times 5) \\
+A_4 &: (5 \times 10) \\
+A_5 &: (10 \times 20) \\
+A_6 &: (20 \times 25)
+\end{align*}
+\begin{align*}
+& ((A_2)\overbrace{\vdots}^{ (k=2) } (A_3 A_4 A_5)) \\[10 pt]
+\quad cost &= m_{22} + m_{35} + p_1p_2p_5 \\
+&= 0 + 2500 + 35 \times 15 \times 20 \\
+&= 13000
+\end{align*}
+$$
+
+![bg right:40% h:500px](assets/ce100-week-5-dp-table-acc-pattern-example-1.drawio.svg)
+
+---
+
+## **Table access pattern** Example
+
+- Compute $m_{25}$
+- Choose the $k$ value that leads to **min cost**
+
+$$
+m_{ij}=\underset{i \leq k < j}{MIN} \{ m_{ik} + m_{k+1,j} + p_{i-1} p_k p_j \} \\[10pt]
+\begin{align*}
+A_1 &: (30 \times 35) \\
+A_2 &: (35 \times 15) \\
+A_3 &: (15 \times 5) \\
+A_4 &: (5 \times 10) \\
+A_5 &: (10 \times 20) \\
+A_6 &: (20 \times 25)
+\end{align*}
+\begin{align*}
+& ((A_2 A_3) \overbrace{\vdots}^{ (k=3) } (A_4 A_5)) \\[10 pt]
+\quad cost &= m_{23} + m_{45} + p_1p_3p_5 \\
+&= 2625 + 1000 + 35 \times 5 \times 20 \\
+&= 7125
+\end{align*}
+$$
+
+![bg right:40% h:500px](assets/ce100-week-5-dp-table-acc-pattern-example-2.drawio.svg)
+
+---
+
+## **Table access pattern** Example
+
+- Compute $m_{25}$
+- Choose the $k$ value that leads to **min cost**
+
+$$
+m_{ij}=\underset{i \leq k < j}{MIN} \{ m_{ik} + m_{k+1,j} + p_{i-1} p_k p_j \} \\[10pt]
+\begin{align*}
+A_1 &: (30 \times 35) \\
+A_2 &: (35 \times 15) \\
+A_3 &: (15 \times 5) \\
+A_4 &: (5 \times 10) \\
+A_5 &: (10 \times 20) \\
+A_6 &: (20 \times 25)
+\end{align*}
+\begin{align*}
+& ((A_2 A_3 A_4)\overbrace{\vdots}^{ (k=4) }(A_5)) \\[10 pt]
+\quad cost &= m_{24} + m_{55} + p_1p_4p_5 \\
+&= 4375 + 0 + 35 \times 10 \times 20 \\
+&= 11375
+\end{align*}
+$$
+
+![bg right:40% h:500px](assets/ce100-week-5-dp-table-acc-pattern-example-3.drawio.svg)
+
+---
+
+## **Table access pattern** Example
+
+- Compute $m_{25}$
+- Choose the $k$ value that leads to **min cost**
+
+$$
+m_{ij}=\underset{i \leq k < j}{MIN} \{ m_{ik} + m_{k+1,j} + p_{i-1} p_k p_j \} \\[10pt]
+\begin{align*}
+A_1 &: (30 \times 35) \\
+A_2 &: (35 \times 15) \\
+A_3 &: (15 \times 5) \\
+A_4 &: (5 \times 10) \\
+A_5 &: (10 \times 20) \\
+A_6 &: (20 \times 25)
+\end{align*} \quad
+\begin{align*}
+& ((A_2)\overbrace{\vdots}^{ (k=2) } (A_3 A_4 A_5)) \rightarrow m_{22} + m_{35} + p_1p_2p_5 = 13000 \\
+& ((A_2 A_3) \overbrace{\vdots}^{ (k=3) } (A_4 A_5)) \rightarrow m_{23} + m_{45} + p_1p_3p_5 = \overbrace{ \boldsymbol{7125}}^{selected} \Leftarrow \text{min}\\
+& ((A_2 A_3 A_4)\overbrace{\vdots}^{ (k=4) }(A_5)) \rightarrow m_{24} + m_{55} + p_1p_4p_5 = 11375 \\[20 pt]
+& m_{25} = 7125 \\
+& s_{25} = 3 
+\end{align*} 
+
+$$
+
+![bg right:40% h:500px](assets/ce100-week-5-dp-table-acc-pattern-example-4.drawio.svg)
+
+---
+
+
+## Constructing an Optimal Solution
+
+- **MATRIX-CHAIN-ORDER** determines the optimal $\#$ of scalar **mults/adds**
+  - needed to compute a matrix-chain product
+  - it does not directly show how to multiply the matrices
+- That is,
+  - it determines the cost of the optimal solution(s)
+  - it does not show how to obtain an optimal solution
+- Each entry $s[i, j]$ records the value of $k$ such that optimal parenthesization of $A_i \dots A_j$ splits the product between $A_k$ & $A_{k+1}$
+- We know that the final matrix multiplication in computing $A_{1 \dots n}$ optimally is $A_{1 \dots s[1,n]} \times A_{s[1,n]+1,n}$
+
+---
+
+## **Example:** Constructing an Optimal Solution
+
+- **Reminder:** $s_{ij}$ is the optimal top-level split of $A_i \dots A_j$
+
+- What is the optimal top-level split for:
+  - $A_1 A_2 A_3 A_4 A_5 A_6$
+  - $s_{16}=3$
+
+![bg right:30% h:400px](assets/ce100-week-5-dp-table-acc-pattern-example-5.drawio.svg)
+
+---
+
+## **Example:** Constructing an Optimal Solution
+
+- **Reminder:** $s_{ij}$ is the optimal top-level split of $A_i \dots A_j$
+
+- $(A_1 A_2 A_3) \overbrace{\vdots}^{ (k=4) } (A_4 A_5 A_6)$
+  - What is the optimal split for $A_1 \dots A_3$ ? ( $s_{13}=1$ )
+  - What is the optimal split for $A_4 \dots A_6$ ? ( $s_{46}=5$ )
+
+
+![bg right:30% h:400px](assets/ce100-week-5-dp-table-acc-pattern-example-6.drawio.svg)
+
+---
+
+## **Example:** Constructing an Optimal Solution
+
+- **Reminder:** $s_{ij}$ is the optimal top-level split of $A_i \dots A_j$
+
+- $\Big((A_1) \overbrace{\vdots}^{ (k=1) } (A_2 A_3) \Big) \Big( (A_4 A_5) \overbrace{\vdots}^{ (k=5) } (A_6) \Big)$
+  - What is the optimal split for $A_1 \dots A_3$ ? ( $s_{13}=1$ )
+  - What is the optimal split for $A_4 \dots A_6$ ? ( $s_{46}=5$ )
+
+
+![bg right:30% h:400px](assets/ce100-week-5-dp-table-acc-pattern-example-7.drawio.svg)
+
+---
+
+## **Example:** Constructing an Optimal Solution
+
+- **Reminder:** $s_{ij}$ is the optimal top-level split of $A_i \dots A_j$
+
+
+
+- $\Big((A_1)  (A_2 A_3) \Big) \Big( (A_4 A_5)  (A_6) \Big)$
+  - What is the optimal split for $A_2 A_3$ ? ( $s_{23}=2$ )
+  - What is the optimal split for $A_4 A_5$ ? ( $s_{45}=4$ )
+
+
+![bg right:30% h:400px](assets/ce100-week-5-dp-table-acc-pattern-example-8.drawio.svg)
+
+
+---
+
+## **Example:** Constructing an Optimal Solution
+
+- **Reminder:** $s_{ij}$ is the optimal top-level split of $A_i \dots A_j$
+
+
+- $\bigg(\Big(A_1\Big)\Big((A_2)\overbrace{\vdots}^{ (k=2) }(A_3)\Big) \bigg) \bigg( \Big((A_4)\overbrace{\vdots}^{ (k=4) }(A_5)\Big) \Big(A_6\Big) \bigg)$
+  - What is the optimal split for $A_2 A_3$ ? ( $s_{23}=2$ )
+  - What is the optimal split for $A_4 A_5$ ? ( $s_{45}=4$ )
+
+
+![bg right:30% h:390px](assets/ce100-week-5-dp-table-acc-pattern-example-8.drawio.svg)
+
+---
+
+## Constructing an **Optimal Solution**
+
+<style scoped>section{ font-size: 20px; }</style>
+
+- Earlier optimal matrix multiplications can be computed recursively 
+- **Given:** 
+  - the chain of matrices $A = \langle A_1, A_2, \dots A_n \rangle$
+the s table computed by $\text{MATRIX-CHAIN-ORDER}$
+  - The following recursive procedure computes the **matrix-chain product** $A_{i \dots j}$
+
+$$
+\begin{align*}
+& \text{MATRIX-CHAIN-MULTIPLY}(A, s, i,  j) \\
+& \quad \text{if} \ j > i \ \text{then} \\
+& \qquad X \longleftarrow \text{MATRIX-CHAIN-MULTIPLY}(A, s, i, s[i, j]) \\
+& \qquad Y \longleftarrow \text{MATRIX-CHAIN-MULTIPLY}(A, s, s[i, j]+1, j) \\
+& \qquad \text{return} \ \text{MATRIX-MULTIPLY}(X, Y) \\
+& \quad \text{else} \\
+& \qquad return A_i
+\end{align*}
+$$
+
+- **Invocation:** $\text{MATRIX-CHAIN-MULTIPLY}(A, s, 1, n)$
+
+---
+
+## Example: Recursive Construction of an Optimal Solution
+
+![center](assets/ce100-week-5-dp-rec-mcm-1.drawio.svg)
+
+---
+
+## Example: Recursive Construction of an Optimal Solution
+
+![center](assets/ce100-week-5-dp-rec-mcm-2.drawio.svg)
+
+---
+
+## Example: Recursive Construction of an Optimal Solution
+
+![center](assets/ce100-week-5-dp-rec-mcm-3.drawio.svg)
+
+---
+
+## Table reference pattern for $m[i, j]$ $(1 \leq i \leq j \leq n)$ 
+
+- $m[i, j]$ is referenced for the computation of
+  - $m[i, r] \ \text{for} \ j < r \leq n  \ (n - j )$ times
+  - $m[r, j] \ \text{for} \ 1 \leq r < i \ (i - 1 )$ times
+
+![bg right:60% h:700px](assets/ce100-week-5-dp-table-ref-pattern-1.drawio.svg)
+
+---
+
+## Table reference pattern for $m[i, j]$ $(1 \leq i \leq j \leq n)$ 
+
+- $R(i, j)$ = $\#$ of times that $m[i, j]$ is referenced in computing other entries
+
+$$
+\begin{align*}
+R(i, j) &= (n - j) + (i-1) \\
+ &=(n-1) - (j-i)
+\end{align*}
+$$
+
+- The total $\#$ of references for the entire table is: $\sum \limits_{i=1}^{n}\sum \limits_{j=i}^{n}R(i,j)= \frac{n^3-n}{3}$
+
+
+![bg right:40% h:490px](assets/ce100-week-5-dp-table-ref-pattern-2.drawio.svg)
+
+---
+
+## Summary
+
+- Identification of the optimal substructure property
+
+- Recursive formulation to compute the cost of the optimal solution
+
+- Bottom-up computation of the table entries
+
+- Constructing the optimal solution by backtracing the table entries
+
 
 ---
 

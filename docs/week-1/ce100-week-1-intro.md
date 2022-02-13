@@ -50,6 +50,7 @@ math: katex
 
 <!-- paginate: false -->
 
+
 ## CE100 Algorithms and Programming II
 
 ## Week-1 (Introduction to Analysis of Algorithms)
@@ -258,7 +259,7 @@ To use a loop invariant to prove correctness, we must show 3 things about it.
 - $T(n)$ the running time of the algorithm:
 
 $$
-\sum_{\text{all statement}}(\text{cost of statement})*(\text{number of times statement is executed}) = T(n)
+\sum \limits_{\text{all statement}}^{}(\text{cost of statement})*(\text{number of times statement is executed}) = T(n)
 $$
 
 ---
@@ -268,6 +269,8 @@ $$
 ![alt:"processing time map" height:500px center](assets/ce100-week-1-intro-processing_time.drawio.svg)
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Insertion Sort Algorithm (1)
 
@@ -290,7 +293,7 @@ Values from the unsorted part are picked and placed at the correct position in t
 
 ## Insertion Sort Algorithm (2)
 
-![alt:"insertion sort algorithm" height:550px center](assets/ce100-week-1-intro-ins_sort_2.drawio.svg)
+![alt:"insertion sort algorithm" height:500px center](assets/ce100-week-1-intro-ins_sort_2.drawio.svg)
 
 ---
 
@@ -312,13 +315,13 @@ Insertion-Sort(A)
 
 ## Insertion Sort Step-By-Step Description (1)
 
-![alt:"insertion sort description-1" height:550px center](assets/ce100-week-1-intro-ins_sort_3.drawio.svg)
+![alt:"insertion sort description-1" height:500px center](assets/ce100-week-1-intro-ins_sort_3.drawio.svg)
 
 ---
 
 ## Insertion Sort Step-By-Step Description (2)
 
-![alt:"insertion sort description-2" height:550px center](assets/ce100-week-1-intro-ins_sort_4.drawio.svg)
+![alt:"insertion sort description-2" height:500px center](assets/ce100-week-1-intro-ins_sort_4.drawio.svg)
 
 ---
 
@@ -485,11 +488,15 @@ $$
 
 ## Asymptotic Analysis (3)
 
+<style scoped>section{ font-size: 25px; }</style>
+
 For both algorithms, we can see a minimum item size in the following chart. After this point, we can see performance differences.  Some algorithms for small item size can be run faster than others but if you increase item size you will see a reference point that notation proof performance metrics. 
 
 ![alt:"T(n) and n change graph" height:350px center](assets/ce100-week-1-intro-bigo_chart2.drawio.svg)
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Insertion Sort - Runtime Analysis (1)
 
@@ -508,7 +515,7 @@ c8     n-1     8.     A[i+1] = key
 
 we have two loops here, if we sum up costs as follow we can see big-O worst case notation. 
 
-$k_5 = \sum_{j=2}^n{t_j}$ and $k_6 = \sum_{j=2}^n{t_i-1}$ 
+$k_5 = \sum \limits_{j=2}^n{t_j}$ and $k_6 = \sum \limits_{j=2}^n{t_i-1}$ 
 
 for operation counts
 
@@ -521,8 +528,8 @@ cost function can be evaluated as follow;
 $$
 \begin{align*}
 T(n) &=c_1n+c_2(n-1)+ 0(n-1)+c_4(n-1) \\
-  & +c_5\sum_{j=2}^n{t_j}+c_6\sum_{j=2}^n{t_i-1} \\
-  & +c_7\sum_{j=2}^n{t_i-1}+c_8(n-1)
+  & +c_5\sum \limits_{j=2}^n{t_j}+c_6\sum \limits_{j=2}^n{t_i-1} \\
+  & +c_7\sum \limits_{j=2}^n{t_i-1}+c_8(n-1)
 \end{align*}
 $$
 
@@ -532,9 +539,9 @@ $$
 
 $$
 \begin{align*}
-\sum_{j=2}^n j &= (n(n+1)/2)- 1 \\
+\sum \limits_{j=2}^n j &= (n(n+1)/2)- 1 \\
 & \text{ and } \\
-\sum_{j=2}^n {j-1} &= n(n-1)/2
+\sum \limits_{j=2}^n {j-1} &= n(n-1)/2
 \end{align*}
 $$
 
@@ -563,6 +570,8 @@ $$
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Best-Case Scenario (Sorted Array) (1)
 
 Problem-1, If $A[1...j]$  is already sorted, what will be $t_j=?$
@@ -573,6 +582,8 @@ $t_j=1$
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Best-Case Scenario (Sorted Array) (2)
 
 *Parameters are taken from image*
@@ -580,8 +591,8 @@ $t_j=1$
 $$
 \begin{align*}
 T(n) &=c_1n+c_2(n-1)+c_3(n-1) \\
-& +c_4\sum_{j=2}^nt_j+c_5\sum_{j=2}^n(t_j-1) \\
-& +c_6\sum_{j=2}^n(t_j-1)+c_7(n-1)
+& +c_4\sum \limits_{j=2}^nt_j+c_5\sum \limits_{j=2}^n(t_j-1) \\
+& +c_6\sum \limits_{j=2}^n(t_j-1)+c_7(n-1)
 \end{align*}
 $$
 
@@ -597,6 +608,8 @@ T(n) &=an-b \\
 $$
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Worst-Case Scenario (Reversed Array) (1)
 
@@ -635,8 +648,8 @@ Inner Loop is $\Theta(j)$
 
 $$
 \begin{align*}
-T(n) &=\sum_{j=2}^n\Theta(j) \\
-&=\Theta(\sum_{j=2}^nj) \\
+T(n) &=\sum \limits_{j=2}^n\Theta(j) \\
+&=\Theta(\sum \limits_{j=2}^nj) \\
 &=\Theta(n^2)
 \end{align*}
 $$
@@ -649,8 +662,8 @@ Inner Loop is $\Theta(j/2)$
 
 $$
 \begin{align*}
-T(n) &=\sum_{j=2}^n\Theta(j/2) \\
-&=\sum_{j=2}^n\Theta(j) \\
+T(n) &=\sum \limits_{j=2}^n\Theta(j/2) \\
+&=\sum \limits_{j=2}^n\Theta(j) \\
 &=\Theta(n^2)
 \end{align*}
 $$
@@ -724,6 +737,8 @@ Merge-Sort(A,p,r)
 ```
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Merge Sort Algorithm (Combine-1)
 
@@ -1505,6 +1520,8 @@ e.g. $n$ and $n^{1+sin(n)}$ cannot be compared asymptotically
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ### Asymptotic Function Properties
 
 **Transitivity**: holds for all
@@ -1524,6 +1541,8 @@ e.g. $f(n)=\Theta(g(n)) \Leftrightarrow g(n)=\Theta(f(n))$
 e.g. $f(n)=O(g(n))\Leftrightarrow g(n)=\Omega(f(n))$
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ### Using $O$-Notation to Describe Running Times (1)
 
@@ -1707,7 +1726,7 @@ stands for some anonymous function in the set
 
 ---
 
-## References (TODO: Update Missing References)
+## References
 
 - [Introduction to Algorithms, Third Edition | The MIT Press](https://mitpress.mit.edu/books/introduction-algorithms-third-edition)
 

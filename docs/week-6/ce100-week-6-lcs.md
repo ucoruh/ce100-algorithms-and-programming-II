@@ -95,8 +95,6 @@ Download [DOC](ce100-week-6-lcs.md_doc.pdf), [SLIDE](ce100-week-6-lcs.md_slide.p
     
     ---
     
-    
-    
     - A recursive solution to subproblems (inefficient) 
     - Computing the length of and LCS 
       - LCS Data Structure for DP 
@@ -176,4 +174,12 @@ Download [DOC](ce100-week-6-lcs.md_doc.pdf), [SLIDE](ce100-week-6-lcs.md_slide.p
 
 ## References
 
-TODO
+- [Introduction to Algorithms, Third Edition | The MIT Press](https://mitpress.mit.edu/books/introduction-algorithms-third-edition)
+
+- [Bilkent CS473 Course Notes (new)](http://nabil.abubaker.bilkent.edu.tr/473/)
+
+- [Bilkent CS473 Course Notes (old)](http://cs.bilkent.edu.tr/~ugur/teaching/cs473/)
+
+---
+
+$-End-Of-Week-6-Course-Module-$ 

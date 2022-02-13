@@ -571,6 +571,8 @@ BUILD-HEAP (A, n)
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Build-Heap: **Tighter** Running Time Analysis
 
 - If the heap is complete binary tree then $h_{\ell} = d – \ell$
@@ -580,42 +582,46 @@ BUILD-HEAP (A, n)
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Build-Heap: **Tighter** Running Time Analysis
 
 - Assume that all nodes at level $\ell= d – 1$ are processed 
 
 $$
 \begin{align*}
-  T(n) &=\sum_{\ell=0}^{d-1}n_{\ell}O(h_{\ell})=O(\sum_{\ell=0}^{d-1}n_{\ell}h_{\ell})
+  T(n) &=\sum \limits_{\ell=0}^{d-1}n_{\ell}O(h_{\ell})=O(\sum \limits_{\ell=0}^{d-1}n_{\ell}h_{\ell})
   \begin{cases}
    n_{\ell}=2^{\ell} = \# \text{ of nodes at level }\ell \\
    h_{\ell}=\text{height of nodes at level } \ell
   \end{cases} \\
-\therefore T(n) &= O \bigg( \sum_{\ell=0}^{d-1}2^{\ell}(d-\ell) \bigg) \\
+\therefore T(n) &= O \bigg( \sum \limits_{\ell=0}^{d-1}2^{\ell}(d-\ell) \bigg) \\
 \text{Let } & h=d-\ell \Longrightarrow \ell = d-h \text{ change of variables} \\ 
-T(n) &= O\bigg(\sum_{h=1}^{d}h2^{d-h} \bigg)=O\bigg(\sum_{h=1}^{d}h \frac{2^d}{2^h} \bigg) = O\bigg(2^d\sum_{h=1}^{d}h (1/2)^h\bigg) \\
-\text{ but } & 2^d = \Theta(n) \Longrightarrow O\bigg(n\sum_{h=1}^{d}h (1/2)^h \bigg)
+T(n) &= O\bigg(\sum \limits_{h=1}^{d}h2^{d-h} \bigg)=O\bigg(\sum \limits_{h=1}^{d}h \frac{2^d}{2^h} \bigg) = O\bigg(2^d\sum \limits_{h=1}^{d}h (1/2)^h\bigg) \\
+\text{ but } & 2^d = \Theta(n) \Longrightarrow O\bigg(n\sum \limits_{h=1}^{d}h (1/2)^h \bigg)
 \end{align*}
 $$
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Build-Heap: **Tighter** Running Time Analysis
 
 $$
-\sum_{h=1}^{d}h(1/2)^h \leq  \sum_{h=0}^{d}h(1/2)^h \leq \sum_{h=0}^{\infty}h(1/2)^h 
+\sum \limits_{h=1}^{d}h(1/2)^h \leq  \sum \limits_{h=0}^{d}h(1/2)^h \leq \sum \limits_{h=0}^{\infty}h(1/2)^h 
 $$
 
 - recall infinite decreasing geometric series
 
 $$
-\sum_{k=0}^{\infty} x^k = \frac{1}{1-x} \text{ where } |x|<1 
+\sum \limits_{k=0}^{\infty} x^k = \frac{1}{1-x} \text{ where } |x|<1 
 $$
 
 - differentiate both sides
 
 $$
-\sum_{k=0}^{\infty}kx^{k-1} = \frac{1}{(1-x)^2}  
+\sum \limits_{k=0}^{\infty}kx^{k-1} = \frac{1}{(1-x)^2}  
 $$
 
 ---
@@ -623,20 +629,20 @@ $$
 ## Build-Heap: **Tighter** Running Time Analysis
 
 $$
-\sum_{k=0}^{\infty}kx^{k-1} = \frac{1}{(1-x)^2}  
+\sum \limits_{k=0}^{\infty}kx^{k-1} = \frac{1}{(1-x)^2}  
 $$
 
 - then, multiply both sides by $x$
 
 $$
-\sum_{k=0}^{\infty}kx^k = \frac{x}{(1-x)^2}  
+\sum \limits_{k=0}^{\infty}kx^k = \frac{x}{(1-x)^2}  
 $$
 
 - in our case: $x = 1/2$ and $k = h$
 
 $$
-\therefore \sum_{h=0}^{\infty}h(1/2)^h = \frac{1/2}{(1-(1/2))^2}=2=O(1) \\
-\therefore T(n)=O(n\sum_{h=1}^{d}h(1/2)^h)=O(n)  
+\therefore \sum \limits_{h=0}^{\infty}h(1/2)^h = \frac{1/2}{(1-(1/2))^2}=2=O(1) \\
+\therefore T(n)=O(n\sum \limits_{h=1}^{d}h(1/2)^h)=O(n)  
 $$
 
 ---
@@ -774,8 +780,8 @@ $$
 
 $$
 \begin{align*}
-T(n) &= \Theta(n)+\sum_{i=2}^{n}O(lgi) \\
-&= \Theta(n)+O\bigg( \sum_{i=2}^{n}O(lgn) \bigg) \\
+T(n) &= \Theta(n)+\sum \limits_{i=2}^{n}O(lgi) \\
+&= \Theta(n)+O\bigg( \sum \limits_{i=2}^{n}O(lgn) \bigg) \\
 &= O(nlgn)
 \end{align*}
 $$
@@ -984,6 +990,8 @@ HEAP-INCREASE-KEY(A, i, key)
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Summary: **Max Heap**
 
 - **Heapify(A, i)**
@@ -999,6 +1007,8 @@ HEAP-INCREASE-KEY(A, i, key)
   - Runtime: $O(lgn)$
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Summary: **Max Heap**
 
@@ -1339,14 +1349,14 @@ Return HEAD -> DATA
 - **Theorem:** Any comparison sort algorithm requires 
   $\Omega(nlgn)$ comparisons in the worst case.
 - **Proof:** We’ll prove that any decision tree corresponding to a comparison sort algorithm must have height $\Omega(nlgn)$
-  $$
-  \begin{align*}
-  2^h & \geq n! \\
-  h & \geq lg(n!) \\
-  & \geq lg((n/e)^n) (Stirling Approximation) \\
-  & = nlgn - nlge \\
-  & = \Omega(nlgn)
 
+$$
+\begin{align*}
+2^h & \geq n! \\
+h & \geq lg(n!) \\
+& \geq lg((n/e)^n) (Stirling Approximation) \\
+& = nlgn - nlge \\
+& = \Omega(nlgn)
 \end{align*}
 $$
 
@@ -1581,7 +1591,7 @@ S(d) &= 10 S(d-1) + 1 \\
      & = 10 \bigg(10 S(d-2) + 1 \bigg) + 1 \\
      & = 10 \Big(10 \bigg(10 S(d-3) + 1\bigg) + 1 \Big) + 1 \\
      & = 10i S(d-i) + 10i-1 + 10i-2 + \dots +  101 + 100 \\
-     &=\sum_{i=0}^{d-1}10^i
+     &=\sum \limits_{i=0}^{d-1}10^i
 \end{align*}
 $$
 
@@ -1595,7 +1605,7 @@ $$
 
 $$
 \begin{align*}
- S(d) &=\sum_{i=0}^{d-1}10^i \\
+ S(d) &=\sum \limits_{i=0}^{d-1}10^i \\
  & = \frac{10^d-1}{10-1} \\
  & = \frac{1}{9}(10^d-1)\\
  & \Downarrow \\
@@ -1654,6 +1664,8 @@ $$
   - Overhead of recursive calls in a modern computer
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## LSD-First Radix Sort
 
@@ -1741,6 +1753,8 @@ $$
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
 ## Radix Sort: **Runtime**
 
 - Assume we are trying to sort **$b$-bit** words
@@ -1755,11 +1769,11 @@ $$
     
     - **Radix sort runtime:** 
       
-      $$
-      \begin{align*}
+$$
+\begin{align*}
 T(n,b)&=\Theta \bigg( \frac{b}{r}(n+2^r) \bigg)
 \end{align*}
-      $$
+$$
 
 - $\overbrace{[rbits|rbits|rbits|rbits]}^{b/r \text{ bits}}$
 
