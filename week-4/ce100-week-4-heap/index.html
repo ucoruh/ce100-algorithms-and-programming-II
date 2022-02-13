@@ -4395,8 +4395,12 @@ T(n) &amp;= \Theta(n)+\sum_{i=2}^{n}O(lgi) \\
 <hr />
 <h2 id="how-fast-can-we-sort">How Fast Can We Sort?<a class="headerlink" href="#how-fast-can-we-sort" title="Permanent link">&para;</a></h2>
 <ul>
-<li>The algorithms we have seen so far:</li>
-<li>Based on comparison of elements</li>
+<li>
+<p>The algorithms we have seen so far:</p>
+</li>
+<li>
+<p>Based on comparison of elements</p>
+</li>
 <li>We only care about the relative ordering between the elements (not the actual values)</li>
 <li>The smallest worst-case runtime we have seen so far: <span class="arithmatex">\(O(nlgn)\)</span></li>
 <li>
@@ -4409,8 +4413,12 @@ T(n) &amp;= \Theta(n)+\sum_{i=2}^{n}O(lgi) \\
 <hr />
 <h2 id="decision-trees-for-comparison-sorts">Decision Trees for Comparison Sorts<a class="headerlink" href="#decision-trees-for-comparison-sorts" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Represent a sorting algorithm abstractly in terms of a <strong>decision tree</strong></li>
-<li>A <strong>binary tree</strong> that represents the <strong>comparisons between</strong> elements in the sorting algorithm</li>
+<li>
+<p>Represent a sorting algorithm abstractly in terms of a <strong>decision tree</strong></p>
+</li>
+<li>
+<p>A <strong>binary tree</strong> that represents the <strong>comparisons between</strong> elements in the sorting algorithm</p>
+</li>
 <li>
 <p>Control, data movement, and other aspects are ignored</p>
 </li>
@@ -4431,7 +4439,7 @@ T(n) &amp;= \Theta(n)+\sum_{i=2}^{n}O(lgi) \\
 <h2 id="different-outcomes-for-insertion-sort-and-n3">Different Outcomes for Insertion Sort and n=3<a class="headerlink" href="#different-outcomes-for-insertion-sort-and-n3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Input : 
-<span class="arithmatex">\(&lt;a_1,a_2,a_3&gt;\)</span></li>
+  <span class="arithmatex">\(&lt;a_1,a_2,a_3&gt;\)</span></li>
 </ul>
 <p><img alt="bg right:65% w:760px" src="../assets/ce100-week-4-heap-ins_sort_outcomes.drawio.svg" /></p>
 <hr />
@@ -4460,14 +4468,18 @@ T(n) &amp;= \Theta(n)+\sum_{i=2}^{n}O(lgi) \\
 <h2 id="decision-tree-for-insertion-sort-and-n3_1">Decision Tree for Insertion Sort and n=3<a class="headerlink" href="#decision-tree-for-insertion-sort-and-n3_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Input:
-<span class="arithmatex">\(&lt;9, 4, 6&gt;\)</span></li>
+  <span class="arithmatex">\(&lt;9, 4, 6&gt;\)</span></li>
 </ul>
 <p><img alt="bg right:70% w:850px" src="../assets/ce100-week-4-heap-ins_sort_comp_2.drawio.svg" /></p>
 <hr />
 <h2 id="decision-tree-model">Decision Tree Model<a class="headerlink" href="#decision-tree-model" title="Permanent link">&para;</a></h2>
 <ul>
-<li>A decision tree can model the execution of any comparison sort:</li>
-<li>One tree for each input size <span class="arithmatex">\(n\)</span></li>
+<li>
+<p>A decision tree can model the execution of any comparison sort:</p>
+</li>
+<li>
+<p>One tree for each input size <span class="arithmatex">\(n\)</span></p>
+</li>
 <li>View the algorithm as <strong>splitting</strong> whenever it compares two elements</li>
 <li>
 <p>The tree contains the <strong>comparisons along all possible</strong> instruction traces</p>
@@ -4475,37 +4487,47 @@ T(n) &amp;= \Theta(n)+\sum_{i=2}^{n}O(lgi) \\
 <li>
 <p><strong>The running time of the algorithm</strong> <span class="arithmatex">\(=\)</span> <em>the length of the path taken</em></p>
 </li>
-<li><strong>Worst case running time</strong> <span class="arithmatex">\(=\)</span> <em>height of the tree</em></li>
+<li>
+<p><strong>Worst case running time</strong> <span class="arithmatex">\(=\)</span> <em>height of the tree</em></p>
+</li>
 </ul>
 <hr />
 <h2 id="counting-sort">Counting Sort<a class="headerlink" href="#counting-sort" title="Permanent link">&para;</a></h2>
 <hr />
 <h2 id="lower-bound-for-comparison-sorts">Lower Bound for Comparison Sorts<a class="headerlink" href="#lower-bound-for-comparison-sorts" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Let <span class="arithmatex">\(n\)</span> be the number of elements in the input array.</li>
-<li>What is the <span class="arithmatex">\(min\)</span> number of leaves in the decision tree?<ul>
-<li><span class="arithmatex">\(n!\)</span> <strong>(because there are n! permutations of the input array, and all possible outputs must be captured in the leaves)</strong></li>
-</ul>
+<li>
+<p>Let <span class="arithmatex">\(n\)</span> be the number of elements in the input array.</p>
 </li>
-<li>What is the max number of leaves in a binary tree of height <span class="arithmatex">\(h\)</span>? <span class="arithmatex">\(\Longrightarrow\)</span> <span class="arithmatex">\(2^h\)</span> </li>
-<li>So, we must have:
-$$
-2^h \geq n!
-$$</li>
+<li>
+<p>What is the <span class="arithmatex">\(min\)</span> number of leaves in the decision tree?</p>
+</li>
+<li>
+<p><span class="arithmatex">\(n!\)</span> <strong>(because there are n! permutations of the input array, and all possible outputs must be captured in the leaves)</strong></p>
+</li>
+<li>
+<p>What is the max number of leaves in a binary tree of height <span class="arithmatex">\(h\)</span>? <span class="arithmatex">\(\Longrightarrow\)</span> <span class="arithmatex">\(2^h\)</span> </p>
+</li>
+<li>
+<p>So, we must have:</p>
+</li>
 </ul>
+<p>$$
+  2^h \geq n!
+  $$</p>
 <hr />
 <h2 id="lower-bound-for-decision-tree-sorting">Lower Bound for Decision Tree Sorting<a class="headerlink" href="#lower-bound-for-decision-tree-sorting" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Theorem:</strong> Any comparison sort algorithm requires 
-<span class="arithmatex">\(\Omega(nlgn)\)</span> comparisons in the worst case.</li>
+  <span class="arithmatex">\(\Omega(nlgn)\)</span> comparisons in the worst case.</li>
 <li><strong>Proof:</strong> We’ll prove that any decision tree corresponding to a comparison sort algorithm must have height <span class="arithmatex">\(\Omega(nlgn)\)</span>
-$$
-\begin{align*}
-2^h &amp; \geq n! \
-h &amp; \geq lg(n!) \
-&amp; \geq lg((n/e)^n) (Stirling Approximation) \
-&amp; = nlgn - nlge \
-&amp; = \Omega(nlgn)</li>
+  $$
+  \begin{align*}
+  2^h &amp; \geq n! \
+  h &amp; \geq lg(n!) \
+  &amp; \geq lg((n/e)^n) (Stirling Approximation) \
+  &amp; = nlgn - nlge \
+  &amp; = \Omega(nlgn)</li>
 </ul>
 <p>\end{align*}
 $$</p>
@@ -4538,14 +4560,14 @@ $$</p>
 <h2 id="counting-sort-3">Counting Sort-3<a class="headerlink" href="#counting-sort-3" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Step 2:</strong> Count the number of occurrences
-of each value in the input array</li>
+  of each value in the input array</li>
 </ul>
 <p><img alt="bg right:60% w:750px" src="../assets/ce100-week-4-heap-counting_sort_3.drawio.svg" /></p>
 <hr />
 <h2 id="counting-sort-4">Counting Sort-4<a class="headerlink" href="#counting-sort-4" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Step 3:</strong> Compute the number of elements
-less than or equal to each value</li>
+  less than or equal to each value</li>
 </ul>
 <p><img alt="bg right:60% w:750px" src="../assets/ce100-week-4-heap-counting_sort_4.drawio.svg" /></p>
 <hr />
@@ -4613,14 +4635,18 @@ less than or equal to each value</li>
 <hr />
 <h2 id="radix-sort">Radix Sort<a class="headerlink" href="#radix-sort" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Origin:</strong> Herman Hollerith’s card-sorting machine for the 1890 US Census.</li>
+<li>
+<p><strong>Origin:</strong> Herman Hollerith’s card-sorting machine for the 1890 US Census.</p>
+</li>
 <li>
 <p><strong>Basic idea:</strong> Digit-by-digit sorting</p>
 </li>
 <li>
 <p>Two variations:</p>
 </li>
-<li>Sort from <strong>MSD</strong> to <strong>LSD</strong> (bad idea)</li>
+<li>
+<p>Sort from <strong>MSD</strong> to <strong>LSD</strong> (bad idea)</p>
+</li>
 <li>Sort from <strong>LSD</strong> to <strong>MSD</strong> (good idea)</li>
 </ul>
 <p>(<em>LSD/MSD: Least/most significant digit</em>)</p>
@@ -4644,8 +4670,12 @@ less than or equal to each value</li>
 <hr />
 <h2 id="modern-ibm-card"><strong>Modern</strong> IBM card<a class="headerlink" href="#modern-ibm-card" title="Permanent link">&para;</a></h2>
 <ul>
-<li>One character per column</li>
-<li>So, that’s why text windows have 80 columns!</li>
+<li>
+<p>One character per column</p>
+</li>
+<li>
+<p>So, that’s why text windows have 80 columns!</p>
+</li>
 </ul>
 <p><img alt=" center h:350px" src="../assets/ibm-punch-card.png" /></p>
 <ul>
@@ -4670,8 +4700,12 @@ less than or equal to each value</li>
 <hr />
 <h2 id="holleriths-msd-first-radix-sort_1">Hollerith’s MSD-First Radix Sort<a class="headerlink" href="#holleriths-msd-first-radix-sort_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>To sort a subset of cards recursively:</li>
-<li>All the other cards need to be removed from the machine, because the machine can handle only one sorting problem at a time.</li>
+<li>
+<p>To sort a subset of cards recursively:</p>
+</li>
+<li>
+<p>All the other cards need to be removed from the machine, because the machine can handle only one sorting problem at a time.</p>
+</li>
 <li>The human operator needs to keep track of the intermediate card piles</li>
 </ul>
 <p><img alt="center h:300px" src="../assets/ce100-week-4-heap-msd-radix-sort-2.drawio.svg" /></p>
@@ -4754,30 +4788,46 @@ P(1) &amp;= 0 \\
 <ul>
 <li>
 <p><strong>Example:</strong> To sort <span class="arithmatex">\(3\)</span> digit numbers, in the worst case:</p>
-<ul>
-<li><span class="arithmatex">\(S(d) = (1/9) (103-1) = 111\)</span> sorting passes needed</li>
-<li><span class="arithmatex">\(P(d) = 10d-1-1 = 99\)</span> intermediate card piles generated</li>
-</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(S(d) = (1/9) (103-1) = 111\)</span> sorting passes needed</p>
+</li>
+<li>
+<p><span class="arithmatex">\(P(d) = 10d-1-1 = 99\)</span> intermediate card piles generated</p>
 </li>
 <li>
 <p>MSD-first approach has more recursive calls and intermediate storage requirement</p>
 </li>
-<li>Expensive for a <strong>tabulating machine</strong> to sort punched cards</li>
+<li>
+<p>Expensive for a <strong>tabulating machine</strong> to sort punched cards</p>
+</li>
 <li>Overhead of recursive calls in a modern computer</li>
 </ul>
 <hr />
 <h2 id="lsd-first-radix-sort">LSD-First Radix Sort<a class="headerlink" href="#lsd-first-radix-sort" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Least significant digit (<strong>LSD</strong>)-first radix sort seems to be a folk invention originated by machine operators.</li>
-<li>It is the counter-intuitive, but the better algorithm.</li>
-<li><strong>Basic Algorithm:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>  <span class="n">Sort</span> <span class="n">numbers</span> <span class="n">on</span> <span class="n">their</span> <span class="n">LSD</span> <span class="nf">first   </span><span class="p">(</span><span class="n">Stable</span> <span class="n">Sorting</span> <span class="n">Needed</span><span class="p">)</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>  <span class="n">Combine</span> <span class="n">the</span> <span class="n">cards</span> <span class="n">into</span> <span class="n">a</span> <span class="n">single</span> <span class="n">deck</span> <span class="n">in</span> <span class="n">order</span> 
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>  <span class="n">Continue</span> <span class="n">this</span> <span class="n">sorting</span> <span class="n">process</span> <span class="n">for</span> <span class="n">the</span> <span class="n">other</span> <span class="n">digits</span>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    <span class="n">from</span> <span class="n">the</span> <span class="n">LSD</span> <span class="n">to</span> <span class="n">MSD</span>
-</code></pre></div></li>
-<li>Requires only <span class="arithmatex">\(d\)</span> sorting passes</li>
-<li>No intermediate card pile generated</li>
+<li>
+<p>Least significant digit (<strong>LSD</strong>)-first radix sort seems to be a folk invention originated by machine operators.</p>
+</li>
+<li>
+<p>It is the counter-intuitive, but the better algorithm.</p>
+</li>
+<li>
+<p><strong>Basic Algorithm:</strong></p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">Sort</span> <span class="n">numbers</span> <span class="n">on</span> <span class="n">their</span> <span class="n">LSD</span> <span class="nf">first   </span><span class="p">(</span><span class="n">Stable</span> <span class="n">Sorting</span> <span class="n">Needed</span><span class="p">)</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">Combine</span> <span class="n">the</span> <span class="n">cards</span> <span class="n">into</span> <span class="n">a</span> <span class="n">single</span> <span class="n">deck</span> <span class="n">in</span> <span class="n">order</span> 
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="n">Continue</span> <span class="n">this</span> <span class="n">sorting</span> <span class="n">process</span> <span class="n">for</span> <span class="n">the</span> <span class="n">other</span> <span class="n">digits</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>  <span class="n">from</span> <span class="n">the</span> <span class="n">LSD</span> <span class="n">to</span> <span class="n">MSD</span>
+</code></pre></div>
+<ul>
+<li>
+<p>Requires only <span class="arithmatex">\(d\)</span> sorting passes</p>
+</li>
+<li>
+<p>No intermediate card pile generated</p>
+</li>
 </ul>
 <hr />
 <h2 id="lsd-first-radix-sort-example">LSD-first Radix Sort <strong>Example</strong><a class="headerlink" href="#lsd-first-radix-sort-example" title="Permanent link">&para;</a></h2>
@@ -4808,9 +4858,15 @@ P(1) &amp;= 0 \\
 <hr />
 <h2 id="radix-sort-runtime-example-1">Radix Sort: Runtime – <strong>Example 1</strong><a class="headerlink" href="#radix-sort-runtime-example-1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>We have flexibility in choosing <span class="arithmatex">\(d\)</span> and <span class="arithmatex">\(k\)</span></li>
-<li>Assume we are trying to sort <strong>32-bit words</strong></li>
-<li>We can define each digit to be <strong>4 bits</strong></li>
+<li>
+<p>We have flexibility in choosing <span class="arithmatex">\(d\)</span> and <span class="arithmatex">\(k\)</span></p>
+</li>
+<li>
+<p>Assume we are trying to sort <strong>32-bit words</strong></p>
+</li>
+<li>
+<p>We can define each digit to be <strong>4 bits</strong></p>
+</li>
 <li>Then, the range for each digit <span class="arithmatex">\(k=2^4=16\)</span><ul>
 <li>So, counting sort will take <span class="arithmatex">\(\Theta(n+16)\)</span></li>
 </ul>
@@ -4826,9 +4882,15 @@ P(1) &amp;= 0 \\
 <hr />
 <h2 id="radix-sort-runtime-example-2">Radix Sort: Runtime – <strong>Example 2</strong><a class="headerlink" href="#radix-sort-runtime-example-2" title="Permanent link">&para;</a></h2>
 <ul>
-<li>We have flexibility in choosing <span class="arithmatex">\(d\)</span> and <span class="arithmatex">\(k\)</span></li>
-<li>Assume we are trying to sort <strong>32-bit words</strong></li>
-<li>Or, we can define each digit to be <strong>8 bits</strong></li>
+<li>
+<p>We have flexibility in choosing <span class="arithmatex">\(d\)</span> and <span class="arithmatex">\(k\)</span></p>
+</li>
+<li>
+<p>Assume we are trying to sort <strong>32-bit words</strong></p>
+</li>
+<li>
+<p>Or, we can define each digit to be <strong>8 bits</strong></p>
+</li>
 <li>Then, the range for each digit <span class="arithmatex">\(k = 2^8 = 256\)</span><ul>
 <li>So, counting sort will take <span class="arithmatex">\(\Theta(n+256)\)</span></li>
 </ul>
@@ -4844,22 +4906,28 @@ P(1) &amp;= 0 \\
 <hr />
 <h2 id="radix-sort-runtime_1">Radix Sort: <strong>Runtime</strong><a class="headerlink" href="#radix-sort-runtime_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Assume we are trying to sort <strong><span class="arithmatex">\(b\)</span>-bit</strong> words</li>
-<li>Define each digit to be <strong><span class="arithmatex">\(r\)</span> bits</strong></li>
-<li>Then, the range for each digit <span class="arithmatex">\(k = 2^r\)</span><ul>
+<li>
+<p>Assume we are trying to sort <strong><span class="arithmatex">\(b\)</span>-bit</strong> words</p>
+</li>
+<li>
+<p>Define each digit to be <strong><span class="arithmatex">\(r\)</span> bits</strong></p>
+</li>
+<li>
+<p>Then, the range for each digit <span class="arithmatex">\(k = 2^r\)</span></p>
+<ul>
 <li>So, <strong>counting sort will take</strong> <span class="arithmatex">\(\Theta(n+2^r)\)</span></li>
 </ul>
 </li>
 <li>
 <p>The number of digits <span class="arithmatex">\(d = b/r\)</span></p>
 <ul>
-<li><strong>Radix sort runtime:</strong> 
-$$
-\begin{align*}
+<li><strong>Radix sort runtime:</strong> </li>
+</ul>
+<p>$$
+  \begin{align*}
 T(n,b)&amp;=\Theta \bigg( \frac{b}{r}(n+2^r) \bigg)
 \end{align*}
-$$</li>
-</ul>
+  $$</p>
 </li>
 <li>
 <p><span class="arithmatex">\(\overbrace{[rbits|rbits|rbits|rbits]}^{b/r \text{ bits}}\)</span></p>
