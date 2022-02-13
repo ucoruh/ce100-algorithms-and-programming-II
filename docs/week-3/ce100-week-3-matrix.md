@@ -1039,25 +1039,24 @@ $$
 ## Best Case Analysis (for intuition only)
 
 - If we’re extremely lucky, **H-PARTITION** splits the array evenly at every recursive call
-  $$
-  \begin{align*} 
-  T(n) &= 2T(n/2) + \Theta(n) \\
-  
-        &= \Theta(nlgn)
-  
-  \end{align*}
-  $$ 
-  (same as merge sort)
+
+$$
+\begin{align*} 
+T(n) &= 2T(n/2) + \Theta(n) \\
+&= \Theta(nlgn)
+\end{align*}
+$$ 
+
+*(same as merge sort)*
 
 - Instead of splitting $0.5:0.5$, if we split $0.1:0.9$ then we need solve following equation.
-  $$
-  \begin{align*} 
-  T(n) &= T(n/10) + T(9n/10) + \Theta(n) \\
-  
-        &= \Theta(nlgn)
-  
-  \end{align*}
-  $$ 
+
+$$
+\begin{align*} 
+T(n) &= T(n/10) + T(9n/10) + \Theta(n) \\
+&= \Theta(nlgn)
+\end{align*}
+$$ 
 
 ---
 
@@ -1870,9 +1869,7 @@ $$
 
 $$
 \begin{align*}
-
 \therefore T(n) \leq \frac{1}{n}\sum \limits_{q=1}^{n-1}T(max(q,n-q))+O(n)
-
 \end{align*}
 $$
 
@@ -2115,7 +2112,8 @@ $$
 
 ## Selection in Worst Case Linear Time - Example (9)
 
-$$S =
+$$
+S =
 \begin{array}{ccc}
 \{  25 & 9 & 16  & 8  & 11 &  27 & 39 & 42 & 15 & 6  
 32 & 14 & 36 & 20 & 33 & 22 & 31 & 4 & 17 & 3 & 30 & 41 \\ 2 & 13 & 19 & 7 & 21 & 10 & 34 & 1 & 37 & 23 & 40 & 5 & 29 & 18 & 24 & 12 & 38 & 28 & 26 & 35 & 43  \}

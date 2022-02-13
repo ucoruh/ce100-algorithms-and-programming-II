@@ -183,8 +183,10 @@ $$
 - **Reminder:**
 
 $$
-F(0)=0 \text{ and } F(1)=1 \\
-F(n)=F(n-1)+F(n-2)
+\begin{align*}
+& F(0)=0 \text{ and } F(1)=1 \\
+& F(n)=F(n-1)+F(n-2)
+\end{align*}
 $$
 
 - **Runtime** $\Theta(n)$
