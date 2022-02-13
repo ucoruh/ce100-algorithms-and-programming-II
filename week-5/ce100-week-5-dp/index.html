@@ -2582,18 +2582,20 @@ m_{ij}=\underset{i \leq k &lt; j}{MIN} \{ m_{ik} + m_{k+1,j} + p_{i-1} p_k p_j \
 <div class="arithmatex">\[
 m_{ij}=\underset{i \leq k &lt; j}{MIN} \{ m_{ik} + m_{k+1,j} + p_{i-1} p_k p_j \} \\[10pt]
 \begin{align*}
+\begin{aligned}
 A_1 &amp;: (30 \times 35) \\
 A_2 &amp;: (35 \times 15) \\
 A_3 &amp;: (15 \times 5) \\
 A_4 &amp;: (5 \times 10) \\
 A_5 &amp;: (10 \times 20) \\
 A_6 &amp;: (20 \times 25)
-\end{align*}
-\begin{align*}
+\end{aligned}
+\begin{aligned}
 &amp; ((A_2)\overbrace{\vdots}^{ (k=2) } (A_3 A_4 A_5)) \\[10 pt]
 \quad cost &amp;= m_{22} + m_{35} + p_1p_2p_5 \\
 &amp;= 0 + 2500 + 35 \times 15 \times 20 \\
 &amp;= 13000
+\end{aligned}
 \end{align*}
 \]</div>
 <p><img alt="bg right:40% h:500px" src="../assets/ce100-week-5-dp-table-acc-pattern-example-1.drawio.svg" /></p>
@@ -2606,18 +2608,20 @@ A_6 &amp;: (20 \times 25)
 <div class="arithmatex">\[
 m_{ij}=\underset{i \leq k &lt; j}{MIN} \{ m_{ik} + m_{k+1,j} + p_{i-1} p_k p_j \} \\[10pt]
 \begin{align*}
+\begin{aligned}
 A_1 &amp;: (30 \times 35) \\
 A_2 &amp;: (35 \times 15) \\
 A_3 &amp;: (15 \times 5) \\
 A_4 &amp;: (5 \times 10) \\
 A_5 &amp;: (10 \times 20) \\
 A_6 &amp;: (20 \times 25)
-\end{align*}
-\begin{align*}
+\end{aligned}
+\begin{aligned}
 &amp; ((A_2 A_3) \overbrace{\vdots}^{ (k=3) } (A_4 A_5)) \\[10 pt]
 \quad cost &amp;= m_{23} + m_{45} + p_1p_3p_5 \\
 &amp;= 2625 + 1000 + 35 \times 5 \times 20 \\
 &amp;= 7125
+\end{aligned}
 \end{align*}
 \]</div>
 <p><img alt="bg right:40% h:500px" src="../assets/ce100-week-5-dp-table-acc-pattern-example-2.drawio.svg" /></p>
@@ -2630,18 +2634,20 @@ A_6 &amp;: (20 \times 25)
 <div class="arithmatex">\[
 m_{ij}=\underset{i \leq k &lt; j}{MIN} \{ m_{ik} + m_{k+1,j} + p_{i-1} p_k p_j \} \\[10pt]
 \begin{align*}
+\begin{aligned}
 A_1 &amp;: (30 \times 35) \\
 A_2 &amp;: (35 \times 15) \\
 A_3 &amp;: (15 \times 5) \\
 A_4 &amp;: (5 \times 10) \\
 A_5 &amp;: (10 \times 20) \\
 A_6 &amp;: (20 \times 25)
-\end{align*}
-\begin{align*}
+\end{aligned}
+\begin{aligned}
 &amp; ((A_2 A_3 A_4)\overbrace{\vdots}^{ (k=4) }(A_5)) \\[10 pt]
 \quad cost &amp;= m_{24} + m_{55} + p_1p_4p_5 \\
 &amp;= 4375 + 0 + 35 \times 10 \times 20 \\
 &amp;= 11375
+\end{aligned}
 \end{align*}
 \]</div>
 <p><img alt="bg right:40% h:500px" src="../assets/ce100-week-5-dp-table-acc-pattern-example-3.drawio.svg" /></p>
@@ -2654,19 +2660,21 @@ A_6 &amp;: (20 \times 25)
 <p>$$
 m_{ij}=\underset{i \leq k &lt; j}{MIN} { m_{ik} + m_{k+1,j} + p_{i-1} p_k p_j } \[10pt]
 \begin{align*}
+\begin{aligned}
 A_1 &amp;: (30 \times 35) \
 A_2 &amp;: (35 \times 15) \
 A_3 &amp;: (15 \times 5) \
 A_4 &amp;: (5 \times 10) \
 A_5 &amp;: (10 \times 20) \
 A_6 &amp;: (20 \times 25)
-\end{align*} \quad
-\begin{align*}
+\end{aligned} \quad
+\begin{aligned}
 &amp; ((A_2)\overbrace{\vdots}^{ (k=2) } (A_3 A_4 A_5)) \rightarrow m_{22} + m_{35} + p_1p_2p_5 = 13000 \
 &amp; ((A_2 A_3) \overbrace{\vdots}^{ (k=3) } (A_4 A_5)) \rightarrow m_{23} + m_{45} + p_1p_3p_5 = \overbrace{ \boldsymbol{7125}}^{selected} \Leftarrow \text{min}\
 &amp; ((A_2 A_3 A_4)\overbrace{\vdots}^{ (k=4) }(A_5)) \rightarrow m_{24} + m_{55} + p_1p_4p_5 = 11375 \[20 pt]
 &amp; m_{25} = 7125 \
 &amp; s_{25} = 3 
+\end{aligned} 
 \end{align*} </p>
 <p>$$</p>
 <p><img alt="bg right:40% h:500px" src="../assets/ce100-week-5-dp-table-acc-pattern-example-4.drawio.svg" /></p>
