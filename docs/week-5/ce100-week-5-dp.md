@@ -145,6 +145,7 @@ Download [DOC](ce100-week-5-dp.md_doc.pdf), [SLIDE](ce100-week-5-dp.md_slide.pdf
 ## Problem 1: **Fibonacci Numbers** Recursive Solution
 
 - **Reminder:**
+
 $$
 F(0)=0 \text{ and } F(1)=1 \\
 F(n)=F(n-1)+F(n-2)
@@ -183,6 +184,7 @@ $$
 ## Problem 1: **Fibonacci Numbers** Bottom-up Computation
 
 - **Reminder:**
+
 $$
 F(0)=0 \text{ and } F(1)=1 \\
 F(n)=F(n-1)+F(n-2)
@@ -244,6 +246,7 @@ $\bigg((A_iA_{i+1}A_{i+2} \dots A_k)(A_{k+1}A_{k+2} \dots A_j)\bigg)$ for $i \le
 ## Matrix-chain Multiplication: **An Example Parenthesization**
 
 - **Input:** $\langle A_1,A_2,A_3,A_4\rangle$ ($5$ distinct ways of full parenthesization)
+
 $$
 \begin{align*}
 & \bigg(A_1\Big(A_2(A_3A_4)\Big)\bigg) \\
@@ -327,6 +330,7 @@ First parenthesization yields **10x faster** computation
 - **Brute force approach:** exhaustively check all parenthesizations
 - $P(n)$: $\#$ of parenthesizations of a sequence of n matrices
 - We can split sequence between $k^{th}$ and $(k+1)^{st}$ matrices for any $k=1, 2, \dots , n-1$ , then parenthesize the two resulting sequences independently, i.e.,
+
 $$
 (A_1 A_2 A_3 \dots A_k \overbrace{)(}^{break-point}A_{k+1} A_{k+2} \dots A_n)
 $$
@@ -579,7 +583,7 @@ $$
 
 ## Algorithm for Computing the Optimal Costs
 
-- *Note*: l$=\ell$ and p_{i-1} p_k p_j  $=p_{i-1} p_k p_j$
+- *Note*: l $=\ell$ and p_{i-1} p_k p_j  $=p_{i-1} p_k p_j$
 
 ``` r
 MATRIX-CHAIN-ORDER(p)
@@ -618,53 +622,41 @@ MATRIX-CHAIN-ORDER(p)
 ## Algorithm for Computing the Optimal Costs
 
 $$
-\begin{align*}
-  {
-    \begin{align*}
-    \text{compute } m[i,i+1] \\
+\begin{align}
+  \begin{aligned}
+  \text{compute } m[i,i+1] \\
   \underbrace{ \{ m[1,2],m[2,3], \dots ,m[n-1,n]\} }_{(n-1) \text{ values}}
-  \end{align*}
-  }
-   & \begin{cases}
- & \ell=2  \\
- & \text{for } i=1 \text{ to } n-1 \text{ do } \\
- & \quad m[i,i+1]=\infty \\
- & \quad \quad \text{for } k=i \text{ to } i \text{ do } \\
-&  \quad \quad \quad \vdots
-  \end{cases}
-\end{align*}
-\\
-\begin{align*}
-  {
-    \begin{align*}
-    \text{compute } m[i,i+2] \\
+  \end{aligned}
+    & \begin{cases}
+    & \ell=2  \\
+    & \text{for } i=1 \text{ to } n-1 \text{ do } \\
+    & \quad m[i,i+1]=\infty \\
+    & \quad \quad \text{for } k=i \text{ to } i \text{ do } \\
+    &  \quad \quad \quad \vdots
+    \end{cases} \\
+  \begin{aligned}
+  \text{compute } m[i,i+2] \\
   \underbrace{ \{ m[1,3],m[2,4], \dots ,m[n-2,n]\} }_{(n-2) \text{ values}}
-  \end{align*}
-  }
-   & \begin{cases}
- & \ell=3  \\
- & \text{for } i=1 \text{ to } n-2 \text{ do } \\
- & \quad m[i,i+2]=\infty \\
- & \quad \quad \text{for } k=i \text{ to } i+1 \text{ do } \\
- & \quad \quad \quad \vdots
-  \end{cases}
-\end{align*}
-\\
-\begin{align*}
-  {
-    \begin{align*}
-    \text{compute } m[i,i+3] \\
+  \end{aligned}
+    & \begin{cases}
+    & \ell=3  \\
+    & \text{for } i=1 \text{ to } n-2 \text{ do } \\
+    & \quad m[i,i+2]=\infty \\
+    & \quad \quad \text{for } k=i \text{ to } i+1 \text{ do } \\
+    & \quad \quad \quad \vdots
+    \end{cases} \\
+  \begin{aligned}
+  \text{compute } m[i,i+3] \\
   \underbrace{ \{ m[1,4],m[2,5], \dots ,m[n-3,n]\} }_{(n-3) \text{ values}}
-  \end{align*}
-  }
-   & \begin{cases}
- & \ell=4  \\
- & \text{for } i=1 \text{ to } n-3 \text{ do } \\
- & \quad m[i,i+3]=\infty \\
- & \quad \quad \text{for } k=i \text{ to } i+2 \text{ do } \\
- & \quad \quad \quad \vdots
-  \end{cases}
-\end{align*}
+    \end{aligned}
+    & \begin{cases}
+    & \ell=4  \\
+    & \text{for } i=1 \text{ to } n-3 \text{ do } \\
+    & \quad m[i,i+3]=\infty \\
+    & \quad \quad \text{for } k=i \text{ to } i+2 \text{ do } \\
+    & \quad \quad \quad \vdots
+    \end{cases}
+\end{align} 
 $$
 
 ---
@@ -731,6 +723,12 @@ $$
 ---
 
 ## References
+
+- [Introduction to Algorithms, Third Edition | The MIT Press](https://mitpress.mit.edu/books/introduction-algorithms-third-edition)
+
+- [Bilkent CS473 Course Notes (new)](http://nabil.abubaker.bilkent.edu.tr/473/)
+
+- [Bilkent CS473 Course Notes (old)](http://cs.bilkent.edu.tr/~ugur/teaching/cs473/)
 
 ---
 
