@@ -3610,8 +3610,8 @@ c_{12} &amp; = P_1 + P_2 \\
 </ul>
 <hr />
 <h2 id="maximum-subarray-problem">Maximum Subarray Problem<a class="headerlink" href="#maximum-subarray-problem" title="Permanent link">&para;</a></h2>
-<p><strong>Input:</strong> An array of values
-<strong>Output:</strong> The contiguous subarray that has the largest sum of elements</p>
+<p><strong>Input:</strong> An array of values</p>
+<p><strong>Output:</strong> The contiguous subarray that has the largest sum of elements</p>
 <ul>
 <li>Input array:
   <span class="arithmatex">\([13][-3][-25][20][-3][-16][-23]\overbrace{[18][20][-7][12]}^{\textrm{max. contiguous subarray}}[-22][-4][7]\)</span></li>
@@ -3621,10 +3621,12 @@ c_{12} &amp; = P_1 + P_2 \\
 <ul>
 <li><strong>Basic idea:</strong></li>
 <li><strong>Divide</strong> the input array into 2 from the middle</li>
-<li>Pick the <strong>best</strong> solution among the following:</li>
+<li>Pick the <strong>best</strong> solution among the following:<ul>
 <li>The max subarray of the <strong>left half</strong></li>
 <li>The max subarray of the <strong>right half</strong></li>
 <li>The max subarray <strong>crossing the mid-point</strong></li>
+</ul>
+</li>
 </ul>
 <hr />
 <h2 id="maximum-subarray-problem-divide-conquer-2">Maximum Subarray Problem: Divide &amp; Conquer (2)<a class="headerlink" href="#maximum-subarray-problem-divide-conquer-2" title="Permanent link">&para;</a></h2>
@@ -3632,9 +3634,15 @@ c_{12} &amp; = P_1 + P_2 \\
 <hr />
 <h2 id="maximum-subarray-problem-divide-conquer-3">Maximum Subarray Problem: Divide &amp; Conquer (3)<a class="headerlink" href="#maximum-subarray-problem-divide-conquer-3" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Divide:</strong> Trivial (divide the array from the middle)</li>
-<li><strong>Conquer:</strong> Recursively compute the max subarrays of the left and right halves</li>
-<li><strong>Combine:</strong> Compute the max-subarray crossing the <span class="arithmatex">\(mid-point\)</span> </li>
+<li>
+<p><strong>Divide:</strong> Trivial (divide the array from the middle)</p>
+</li>
+<li>
+<p><strong>Conquer:</strong> Recursively compute the max subarrays of the left and right halves</p>
+</li>
+<li>
+<p><strong>Combine:</strong> Compute the max-subarray crossing the <span class="arithmatex">\(mid-point\)</span> </p>
+</li>
 <li>(can be done in <span class="arithmatex">\(\Theta(n)\)</span> time). </li>
 <li>Return the max among the following:<ul>
 <li>the max subarray of the <span class="arithmatex">\(\text{left-subarray}\)</span></li>
@@ -5309,7 +5317,7 @@ T(n) &amp; \leq c \lceil n/5 \rceil + c(7n/10+6)+\Theta(n) \\
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 13, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 15, 2022</span>
       
     
   </small>

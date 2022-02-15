@@ -2545,7 +2545,7 @@ m_{ij}=\underset{i \leq k &lt; j}{MIN} \{ m_{ik} + m_{k+1,j} + p_{i-1} p_k p_j \
 <h2 id="table-access-pattern-in-computing-mi-js-for-ellj-i1_1"><strong>Table access pattern</strong> in computing <span class="arithmatex">\(m[i, j]\)</span>s for <span class="arithmatex">\(\ell=j-i+1\)</span><a class="headerlink" href="#table-access-pattern-in-computing-mi-js-for-ellj-i1_1" title="Permanent link">&para;</a></h2>
 <div class="arithmatex">\[
 \begin{align*}
-((A_i) \overbrace{\vdots}^{mult.} (A_{i+1}A_{i+2} \dots A_j))
+&amp; \bigg( (A_i) \overset{mult.}{ \vdots } (A_{i+1}A_{i+2} \dots A_j)  \bigg)
 \end{align*}
 \]</div>
 <p><img alt="bg right:50% h:600px" src="../assets/ce100-week-5-dp-table-acc-pattern-2.drawio.svg" /></p>
@@ -2553,7 +2553,7 @@ m_{ij}=\underset{i \leq k &lt; j}{MIN} \{ m_{ik} + m_{k+1,j} + p_{i-1} p_k p_j \
 <h2 id="table-access-pattern-in-computing-mi-js-for-ellj-i1_2"><strong>Table access pattern</strong> in computing <span class="arithmatex">\(m[i, j]\)</span>s for <span class="arithmatex">\(\ell=j-i+1\)</span><a class="headerlink" href="#table-access-pattern-in-computing-mi-js-for-ellj-i1_2" title="Permanent link">&para;</a></h2>
 <div class="arithmatex">\[
 \begin{align*}
-((A_iA_{i+1})\overbrace{\vdots}^{mult.} (A_{i+2} \dots A_j))
+\bigg( (A_iA_{i+1}) \overset{mult.}{ \vdots }  (A_{i+2} \dots A_j) \bigg)
 \end{align*}
 \]</div>
 <p><img alt="bg right:50% h:600px" src="../assets/ce100-week-5-dp-table-acc-pattern-3.drawio.svg" /></p>
@@ -2561,7 +2561,7 @@ m_{ij}=\underset{i \leq k &lt; j}{MIN} \{ m_{ik} + m_{k+1,j} + p_{i-1} p_k p_j \
 <h2 id="table-access-pattern-in-computing-mi-js-for-ellj-i1_3"><strong>Table access pattern</strong> in computing <span class="arithmatex">\(m[i, j]\)</span>s for <span class="arithmatex">\(\ell=j-i+1\)</span><a class="headerlink" href="#table-access-pattern-in-computing-mi-js-for-ellj-i1_3" title="Permanent link">&para;</a></h2>
 <div class="arithmatex">\[
 \begin{align*}
-((A_iA_{i+1}A_{i+2})\overbrace{\vdots}^{mult.} (A_{i+3} \dots A_j))
+\bigg( (A_iA_{i+1}A_{i+2}) \overset{mult.}{ \vdots } (A_{i+3} \dots A_j) \bigg)
 \end{align*}
 \]</div>
 <p><img alt="bg right:50% h:600px" src="../assets/ce100-week-5-dp-table-acc-pattern-4.drawio.svg" /></p>
@@ -2569,7 +2569,7 @@ m_{ij}=\underset{i \leq k &lt; j}{MIN} \{ m_{ik} + m_{k+1,j} + p_{i-1} p_k p_j \
 <h2 id="table-access-pattern-in-computing-mi-js-for-ellj-i1_4"><strong>Table access pattern</strong> in computing <span class="arithmatex">\(m[i, j]\)</span>s for <span class="arithmatex">\(\ell=j-i+1\)</span><a class="headerlink" href="#table-access-pattern-in-computing-mi-js-for-ellj-i1_4" title="Permanent link">&para;</a></h2>
 <div class="arithmatex">\[
 \begin{align*}
-((A_iA_{i+1} \dots A_{j-1})\overbrace{\vdots}^{mult.} (A_j))
+\bigg( (A_iA_{i+1} \dots A_{j-1}) \overset{mult.}{ \vdots } (A_j) \bigg)
 \end{align*}
 \]</div>
 <p><img alt="bg right:50% h:600px" src="../assets/ce100-week-5-dp-table-acc-pattern-5.drawio.svg" /></p>
@@ -2591,7 +2591,7 @@ A_5 &amp;: (10 \times 20) \\
 A_6 &amp;: (20 \times 25)
 \end{aligned}
 \begin{aligned}
-&amp; ((A_2)\overbrace{\vdots}^{ (k=2) } (A_3 A_4 A_5)) \\[10 pt]
+&amp; ((A_2) \overbrace{\vdots}^{ (k=2) } (A_3 A_4 A_5)) \\[10 pt]
 \quad cost &amp;= m_{22} + m_{35} + p_1p_2p_5 \\
 &amp;= 0 + 2500 + 35 \times 15 \times 20 \\
 &amp;= 13000
@@ -2657,26 +2657,26 @@ A_6 &amp;: (20 \times 25)
 <li>Compute <span class="arithmatex">\(m_{25}\)</span></li>
 <li>Choose the <span class="arithmatex">\(k\)</span> value that leads to <strong>min cost</strong></li>
 </ul>
-<p>$$
-m_{ij}=\underset{i \leq k &lt; j}{MIN} { m_{ik} + m_{k+1,j} + p_{i-1} p_k p_j } \[10pt]
+<div class="arithmatex">\[
+m_{ij}=\underset{i \leq k &lt; j}{MIN} \{ m_{ik} + m_{k+1,j} + p_{i-1} p_k p_j \} \\[10pt]
 \begin{align*}
 \begin{aligned}
-A_1 &amp;: (30 \times 35) \
-A_2 &amp;: (35 \times 15) \
-A_3 &amp;: (15 \times 5) \
-A_4 &amp;: (5 \times 10) \
-A_5 &amp;: (10 \times 20) \
+A_1 &amp;: (30 \times 35) \\
+A_2 &amp;: (35 \times 15) \\
+A_3 &amp;: (15 \times 5) \\
+A_4 &amp;: (5 \times 10) \\
+A_5 &amp;: (10 \times 20) \\
 A_6 &amp;: (20 \times 25)
 \end{aligned} \quad
 \begin{aligned}
-&amp; ((A_2)\overbrace{\vdots}^{ (k=2) } (A_3 A_4 A_5)) \rightarrow m_{22} + m_{35} + p_1p_2p_5 = 13000 \
-&amp; ((A_2 A_3) \overbrace{\vdots}^{ (k=3) } (A_4 A_5)) \rightarrow m_{23} + m_{45} + p_1p_3p_5 = \overbrace{ \boldsymbol{7125}}^{selected} \Leftarrow \text{min}\
-&amp; ((A_2 A_3 A_4)\overbrace{\vdots}^{ (k=4) }(A_5)) \rightarrow m_{24} + m_{55} + p_1p_4p_5 = 11375 \[20 pt]
-&amp; m_{25} = 7125 \
+&amp; ((A_2)\overbrace{\vdots}^{ (k=2) } (A_3 A_4 A_5)) \rightarrow m_{22} + m_{35} + p_1p_2p_5 = 13000 \\
+&amp; ((A_2 A_3) \overbrace{\vdots}^{ (k=3) } (A_4 A_5)) \rightarrow m_{23} + m_{45} + p_1p_3p_5 = \overbrace{ \boldsymbol{7125}}^{selected} \Leftarrow \text{min} \\
+&amp; ((A_2 A_3 A_4)\overbrace{\vdots}^{ (k=4) }(A_5)) \rightarrow m_{24} + m_{55} + p_1p_4p_5 = 11375 \\[20 pt]
+&amp; m_{25} = 7125 \\
 &amp; s_{25} = 3 
 \end{aligned} 
-\end{align*} </p>
-<p>$$</p>
+\end{align*}
+\]</div>
 <p><img alt="bg right:40% h:500px" src="../assets/ce100-week-5-dp-table-acc-pattern-example-4.drawio.svg" /></p>
 <hr />
 <h2 id="constructing-an-optimal-solution">Constructing an Optimal Solution<a class="headerlink" href="#constructing-an-optimal-solution" title="Permanent link">&para;</a></h2>
@@ -2849,7 +2849,7 @@ R(i, j) &amp;= (n - j) + (i-1) \\
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 13, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 15, 2022</span>
       
     
   </small>
