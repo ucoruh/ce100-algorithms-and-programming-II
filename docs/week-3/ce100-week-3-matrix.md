@@ -403,6 +403,7 @@ or use https://www.omnicalculator.com/math/log
 ## Maximum Subarray Problem
 
 **Input:** An array of values
+
 **Output:** The contiguous subarray that has the largest sum of elements
 
 - Input array:
@@ -413,11 +414,11 @@ or use https://www.omnicalculator.com/math/log
 ## Maximum Subarray Problem: Divide & Conquer (1)
 
 - **Basic idea:**
-- **Divide** the input array into 2 from the middle
-- Pick the **best** solution among the following:
-  - The max subarray of the **left half**
-  - The max subarray of the **right half**
-  - The max subarray **crossing the mid-point**
+  - **Divide** the input array into 2 from the middle
+  - Pick the **best** solution among the following:
+    - The max subarray of the **left half**
+    - The max subarray of the **right half**
+    - The max subarray **crossing the mid-point**
 
 ---
 
@@ -430,7 +431,9 @@ or use https://www.omnicalculator.com/math/log
 ## Maximum Subarray Problem: Divide & Conquer (3)
 
 - **Divide:** Trivial (divide the array from the middle)
+
 - **Conquer:** Recursively compute the max subarrays of the left and right halves
+
 - **Combine:** Compute the max-subarray crossing the $mid-point$ 
   - (can be done in $\Theta(n)$ time). 
   - Return the max among the following:

@@ -1187,7 +1187,10 @@ $$
 $\Omega(g(n))$ is the set of functions that have asymptotic lower bound $g(n)$ 
 
 $$
-\Omega(g(n))=\{ f(n):\exists \text{ positive constants } c,n_0 \text{ such that } 0 \leq cg(n) \leq f(n), \forall n \geq n_0 \}
+\begin{align*}
+\Omega(g(n)) &=\{ f(n):\exists \text{ positive constants } c,n_0 \text{ such that } \\ 
+& 0 \leq cg(n) \leq f(n), \forall n \geq n_0 \}
+\end{align*}
 $$
 
 ---
@@ -1252,9 +1255,13 @@ $0 \leq 10^{-9}n^2 \leq 10^{-9}n^{2.0001} \text{ for } n \geq 1$
 
 ### Big-Theta /$\Theta$-Notation : Asymptotically tight bound (Average Case) (1)
 
-$f(n)=\Theta(g(n))$ 
-if $\exists$ positive constants $c_1,c_2,n_0$ 
-such that $0 \leq c_1g(n) \leq f(n) \leq c_2g(n), \forall n \geq n_0$
+$$
+\begin{align*}
+f(n) &=\Theta(g(n)) \ if \ \exists \ \text{positive constants} \ c_1,c_2,n_0  \text{such that} \\
+& 0 \leq c_1g(n) \leq f(n) \leq c_2g(n), \forall n \geq n_0
+\end{align*}
+$$
+
 
 ---
 
@@ -1375,7 +1382,10 @@ We can check that $10^{-8}n^2 = \Omega(n)$ and $10^{-8}n^2 \neq O(n)$
 Proof by contradiction for $O(n)$ notation
 
 $$
-O(g(n)) = \{ f(n) : \exists \text{ positive constant } c, n_0 \text{ such that } 0 \leq f(n) \leq cg(n), \forall n \geq n_0 \}
+\begin{align*}
+O(g(n)) &= \{ f(n) : \exists \text{ positive constant } c, n_0 \text{ such that } \\
+& 0 \leq f(n) \leq cg(n), \forall n \geq n_0 \}
+\end{align*}
 $$
 
 ---

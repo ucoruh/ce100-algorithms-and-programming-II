@@ -217,6 +217,7 @@ $$
 - Try to show that $T(n) \geq 2^{n-1}$ (**by substitution**)
 - **Base case:** $T(1) \geq 1 = 2^0 = 2^{1-1}$ for $n=1$
 - **Ind. Hyp.:** 
+
 $$
 \begin{align*}
 T(i) & \geq 2^{i-1} \ \text{for all} \ i=1, 2, \dots, n-1 \ \text{and} \ n \geq 2 \\
@@ -497,7 +498,7 @@ $$
   - Hence, the prefix $Z_{k-1}$ is a **length-($k-1$) CS** of $X_{m-1}$ and $Y_{n-1}$
 - **We have to show that** $Z_{k-1}$ is in fact an **LCS** of $X_{m-1}$ and $Y_{n-1}$
 - **Proof by contradiction:**
-  - **Assume that** $\exist$ a CS $W$ of $X_{m-1}$ and $Y_{n-1}$ with $|W| = k$
+  - **Assume that** $\exists$ a CS $W$ of $X_{m-1}$ and $Y_{n-1}$ with $|W| = k$
   - Then appending $x_m = y_n$ to $W$ produces a **CS** of length $k+1$
 
 ---
@@ -508,7 +509,7 @@ $$
 - **Proof :** If $z_k \neq x_m$ then $Z$ is a CS of $X_{m-1}$ and $Y_n$
   - **We have to show that** $Z$ is in fact an **LCS** of $X_{m-1}$ and $Y_n$
 - **(Proof by contradiction)**
-  - Assume that $\exist$ a CS $W$ of $X_{m-1}$ and $Y_n$ with $|W| > k$
+  - Assume that $\exists$ a CS $W$ of $X_{m-1}$ and $Y_n$ with $|W| > k$
   - Then $W$ would also be a CS of $X$ and $Y$ 
   - Contradiction to the assumption that
     - $Z$ is an LCS of $X$ and $Y$ with $|Z| = k$
@@ -526,7 +527,7 @@ $$
   - we must solve **two subproblems**
     - finding an **LCS** of $X_{m-1} \& Y$
     - finding an **LCS** of $X \& Y_{n-1}$
-  - longer of these two **LCS**s is an **LCS** of $X \& Y$
+  - longer of these two **LCS** s is an **LCS** of $X \& Y$
 - **endif**
 
 ---
@@ -675,7 +676,8 @@ $$
 
 $$
 \begin{align*}
-\begin{rcases}
+\frac{\text{Total Runtime} = \Theta(mn)}{\text{Total Space} = \Theta(mn)}
+\begin{cases}
 & LCS-LENGTH(X,Y) \\
 & \quad m \leftarrow length[X]; n \leftarrow length[Y] \\
 & \quad \text{for} \ i \leftarrow 0 \ \text{to} \ m \ \text{do} \ c[i, 0] \leftarrow 0 \\
@@ -684,15 +686,14 @@ $$
 & \qquad \text{for} \ j \leftarrow 1 \ \text{to} \ n \ \text{do} \\
 & \qquad \quad \text{if} \ x_i = y_j \ \text{then}  \\
 & \qquad \quad \quad c[i, j] \leftarrow c[i-1, j-1]+1 \\
-& \qquad \quad \quad b[i, j] \leftarrow “\nwarrow” \\
+& \qquad \quad \quad b[i, j] \leftarrow " \nwarrow " \\
 & \qquad \quad \text{else if} \ c[i - 1, j] \geq c[i, j-1] \\
 & \qquad \quad \quad c[i, j] \leftarrow c[i-1, j] \\
-& \qquad \quad \quad b[i, j] \leftarrow “\uparrow \\
+& \qquad \quad \quad b[i, j] \leftarrow "\uparrow " \\
 & \qquad \quad \text{else} \\
 & \qquad \quad \quad c[i, j] \leftarrow c[i, j-1] \\
-& \qquad \quad \quad b[i, j] \leftarrow “\leftarrow” \\
-\end{rcases}
-\frac{\text{Total Runtime} = \Theta(mn)}{\text{Total Space} = \Theta(mn)}
+& \qquad \quad \quad b[i, j] \leftarrow " \leftarrow " \\
+\end{cases}
 \end{align*}
 $$
 
@@ -935,7 +936,7 @@ $$
 
 - The $b$ table returned by **LCS-LENGTH** can be used to quickly construct an **LCS** of $X \& Y$
 - Begin at $b[m, n]$ and trace through the table following arrows
-- Whenever you encounter a “$\nwarrow$” in entry $b[i, j]$ it implies that $x_i = y_j$ is an element of **LCS**
+- Whenever you encounter a "$\nwarrow$" in entry $b[i, j]$ it implies that $x_i = y_j$ is an element of **LCS**
 - The elements of **LCS** are encountered in **reverse order**
 
 ---
@@ -953,10 +954,10 @@ $$
 & \text{PRINT-LCS}(b, X, i, j) \\
 & \quad \text{if} \ i = 0 \ \text{or} j = 0 \ \text{then} \\
 & \quad \text{return} \\
-& \quad \text{if} \ b[i, j] = “\nwarrow” \ \text{then} \\
+& \quad \text{if} \ b[i, j] = " \nwarrow " \ \text{then} \\
 & \qquad \text{PRINT-LCS}(b, X, i-1, j-1) \\
 & \qquad \text{print} \ x_i \\
-& \quad \text{else if} \ b[i, j] = “\uparrow” \ \text{then} \\
+& \quad \text{else if} \ b[i, j] = " \uparrow " \ \text{then} \\
 & \qquad \text{PRINT-LCS}(b, X, i-1, j) \\
 & \quad \text{else} \\
 & \qquad \text{PRINT-LCS}(b, X, i, j-1) 
@@ -1071,6 +1072,312 @@ $LCS[i, j-1] = LCS[i-1, j]$.
 
 ---
 
+## **Reminder:** Binary Search Tree (BST)
+
+![center h:470px](assets/ce100-week-6-lcs-bst-1.drawio.svg)
+
+---
+
+## Binary Search Tree Example
+
+- **Example:** English-to-French translation
+  - Organize (English, French) word pairs in a BST
+    - **Keyword:** English word
+    - **Satellite Data:** French word
+- We can search for an English word (node key)  efficiently, and  return the  corresponding French word (satellite data).
+
+
+![bg right:40% h:460px](assets/ce100-week-6-lcs-bst-2.drawio.svg)
+
+---
+
+## **ASCII** Table
+
+<style scoped>section{ font-size: 25px; }</style>
+
+![center h:550](assets/asciitable.png)
+
+---
+
+## Binary Search Tree Example
+
+Suppose we know the frequency of each keyword in texts:
+$$
+\underset{5\%}{\underline{begin}},
+\underset{40\%}{\underline{do}},
+\underset{8\%}{\underline{else}},
+\underset{4\%}{\underline{end}},
+\underset{10\%}{\underline{if}},
+\underset{10\%}{\underline{then}},
+\underset{23\%}{\underline{while}},
+$$
+
+![bg right:50% h:400px](assets/ce100-week-6-lcs-bst-3.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## Cost of a Binary Search Tree
+
+**Example:** If we search for keyword **"while"**, we need
+to access $3$ nodes. So, $23%$ of the queries will have cost of $3$.
+
+$$
+\begin{align*}
+\text{Total Cost} &= \sum \limits_{i}^{}(\text{depth}(i)+1)\text{freq}(i) \\
+&= 1 \times 0.04 + 2 \times 0.4 + \\
+& 2 \times 0.1 + 3 \times 0.05 + \\
+& 3 \times 0.08 + 3 \times 0.1 + \\
+& 3 \times 0.23 \\
+&= 2.42
+\end{align*}
+$$
+
+![bg right:50% h:400px](assets/ce100-week-6-lcs-bst-3.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## Cost of a Binary Search Tree
+
+**Example:** If we search for keyword **"while"**, we need
+to access $3$ nodes. So, $23%$ of the queries will have cost of $3$.
+
+$$
+\begin{align*}
+\text{Total Cost} &= \sum \limits_{i}^{}(\text{depth}(i)+1)\text{freq}(i) \\
+&= 1 \times 0.4 + 2 \times 0.05 + 2 \times 0.23 + \\
+& 3 \times 0.1 + 4 \times 0.08 + \\
+& 4 \times 0.1 + 5 \times 0.04 \\
+&= 2.18
+\end{align*}
+$$
+
+- This is in fact an optimal BST.
+
+![bg right:40% h:650px](assets/ce100-week-6-lcs-bst-4.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## Optimal Binary Search Tree Problem
+
+- **Given:**
+  - A collection of $n$ keys $K_1 < K_2 < \dots K_n$ to be stored in a **BST**.
+  - The corresponding $p_i$ values for $1 \leq i \leq n$
+    - $p_i$: probability of searching for key $K_i$
+- **Find:**
+  - An **optimal BST** with minimum total cost:
+
+$$
+\begin{align*}
+\text{Total Cost} &= \sum \limits_{i}^{}(\text{depth}(i)+1)\text{freq}(i)
+\end{align*}
+$$
+
+- **Note:** The BST will be static. Only search operations will be  performed. No insert, no delete, etc.
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## Cost of a **Binary Search Tree**
+
+- **Lemma 1**: Let $Tij$ be a BST containing keys $K_i < K_{i+1} < \dots < K_j$. Let $T_L$ and $T_R$ be the left and right subtrees of $T$. Then we have:
+
+$$
+\begin{align*}
+\text{cost}(T_{ij})=\text{cost}(T_{L})+\text{cost}(T_{R})+\sum \limits_{h=i}^{j}p_h
+\end{align*}
+$$
+
+**Intuition:** When we add the root node, the depth of each node in $T_L$ and $T_R$ increases by $1$. So, the cost of node $h$ increases by $p_h$. In addition, the cost of root node $r$ is $p_r$. That’s why, we have the last term at the end of the formula above.
+
+![bg right:45% h:500px](assets/ce100-week-6-lcs-bst-5.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## Optimal Substructure Property
+
+- **Lemma 2:** Optimal substructure property
+  - Consider an optimal **BST** $T_{ij}$ for keys $K_i < K_{i+1} < \dots < K_j$
+  - Let $K_m$ be the key at the root of $T_{ij}$
+- **Then:** 
+  - $T_{i,m-1}$ is an **optimal BST** for subproblem containing keys: 
+    - $K_i < \dots < K_{m-1}$
+  - $T_{m+1,j}$ is an **optimal BST** for subproblem containing keys: 
+    - $K_{m+1} < \dots < K_j$
+
+$$
+\begin{align*}
+\text{cost}(T_{ij})=\text{cost}(T_{i,m-1})+\text{cost}(T_{m+1,j})+\sum \limits_{h=i}^{j}p_h
+\end{align*}
+$$
+
+![bg right:30% h:390px](assets/ce100-week-6-lcs-bst-6.drawio.svg)
+
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## Recursive Formulation
+
+- **Note:** *We don’t know which root vertex leads to the minimum total cost. So, we need to try each vertex $m$, and choose the one with minimum total cost.*
+
+- $c[i, j]$: cost of an optimal BST $T_{ij}$ for the subproblem $K_i < \dots < K_j$
+
+$$
+\begin{align*}
+& c[i,j] = 
+\begin{cases}
+& 0  & \text{if} \ i>j \\
+& \underset{i \leq r \leq j}{\text{min}}\{ c[i,r-1]+c[r+1,j]+P_{ij} \} & \text{otherwise} \\
+\end{cases} \\
+& \text{where} \ P_{ij}= \sum \limits_{h=i}^{j}p_h
+\end{align*}
+$$
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## Bottom-up computation
+
+$$
+\begin{align*}
+& c[i,j] = 
+\begin{cases}
+& 0  & \text{if} \ i>j \\
+& \underset{i \leq r \leq j}{\text{min}}\{ c[i,r-1]+c[r+1,j]+P_{ij} \} & \text{otherwise} \\
+\end{cases}
+\end{align*}
+$$
+
+- How to choose the order in which we process $c[i, j]$ values?
+- Before computing $c[i, j]$, we have to make sure that the values for $c[i, r-1]$ and $c[r+1,j]$ have been computed for all $r$.
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## Bottom-up computation
+
+$$
+\begin{align*}
+& c[i,j] = 
+\begin{cases}
+& 0  & \text{if} \ i>j \\
+& \underset{i \leq r \leq j}{\text{min}}\{ c[i,r-1]+c[r+1,j]+P_{ij} \} & \text{otherwise} \\
+\end{cases}
+\end{align*}
+$$
+
+- $c[i,j]$ must be processed after $c[i,r-1]$ and $c[r+1,j]$
+
+![bg right:40% h:430px](assets/ce100-week-6-lcs-bst-7.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## Bottom-up computation
+
+$$
+\begin{align*}
+& c[i,j] = 
+\begin{cases}
+& 0  & \text{if} \ i>j \\
+& \underset{i \leq r \leq j}{\text{min}}\{ c[i,r-1]+c[r+1,j]+P_{ij} \} & \text{otherwise} \\
+\end{cases}
+\end{align*}
+$$
+
+- If the entries $c[i,j]$ are computed in the shown order, then $c[i,r-1]$ and $c[r+1,j]$ values are guaranteed to be computed before $c[i,j]$.
+
+
+![bg right:40% h:430px](assets/ce100-week-6-lcs-bst-8.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## Computing the Optimal BST Cost
+
+$$
+\begin{align*}
+& \text{OPTIMAL-BST-COST} (p, n) \\
+& \quad \text{for} \ i \leftarrow 1 \ \text{to} \ n \ \text{do} \\
+& \qquad c[i, i-1] \leftarrow 0 \\
+& \qquad c[i, i] \leftarrow p[i] \\
+& \qquad R[i, j] \leftarrow i \\
+& \quad PS[1] \leftarrow p[1] \Longleftarrow PS[i] \rightarrow  \text{ prefix-sum } (i): \text{Sum of all} \ p[j] \ \text{values for}  \ j \leq i
+ \\
+& \quad \text{for} \ i \leftarrow 2 \ \text{to} \ n \ \text{do} \\
+& \qquad PS[i] \leftarrow p[i] + PS[i-1]  \Longleftarrow  \text{compute the prefix sum} \\
+& \quad \text{for} \ d \leftarrow 1 \ \text{to} \ n−1 \ \text{do}   \Longleftarrow  \text{BSTs with} \ d+1 \ \text{consecutive keys} \\
+& \qquad \text{for} \  i \leftarrow 1 \ \text{to} \ n – d \ \text{do} \\
+& \qquad \quad j \leftarrow i + d \\
+& \qquad \quad c[i, j] \leftarrow \infty \\
+& \qquad \quad \text{for} \ r \leftarrow i \ \text{to} \ j \ \text{do} \\
+& \qquad \qquad q \leftarrow min\{c[i,r-1] + c[r+1, j]\} +  PS[j] – PS[i-1]\} \\
+& \qquad \qquad \text{if} \ q < c[i, j] \ \text{then} \\
+& \qquad \qquad \quad c[i, j]  \leftarrow q \\
+& \qquad \qquad	\quad R[i, j] \leftarrow r \\
+& \quad \text{return} \ c[1, n], R
+\end{align*}
+$$
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## Note on Prefix Sum
+
+- We need $P_{ij}$ values for each $i, j (1 ≤ i ≤ n \ \text{and} \ 1 ≤ j ≤ n)$, where: 
+
+$$
+\begin{align*}
+P_{ij} = \sum \limits_{h=i}^{j}p_h
+\end{align*}
+$$
+
+- If we compute the summation directly for every $(i, j)$ pair, the runtime would be $\Theta(n^3)$.
+
+- Instead, we spend $O(n)$ time in preprocessing to compute the prefix sum array **PS**. Then we can compute each $P_{ij}$ in $O(1)$ time using **PS**.
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## Note on Prefix Sum
+
+- In preprocessing, compute for each $i$:
+  - $PS[i]$: the sum of $p[j]$ values for $1 \leq j \leq i$
+- Then, we can compute $P_{ij}$ in $O(1)$ time as follows:
+  - $P_{ij} = PS[i] – PS[j-1]$
+- **Example:** 
+
+$$
+\begin{align*}
+p &: \overset{1}{0.05} \ \overset{2}{0.02} \ \overset{3}{0.06} \ \overset{4}{0.07} \ \overset{5}{0.20} \ \overset{6}{0.05} \ \overset{7}{0.08} \ \overset{8}{0.02} \\
+PS &: \overset{1}{0.05} \ \overset{2}{0.07} \ \overset{3}{0.13} \ \overset{4}{0.20} \ \overset{5}{0.40} \ \overset{6}{0.45} \ \overset{7}{0.53} \ \overset{8}{0.55} \\[10 pt]
+P_{27} &= PS[7] – PS[1] = 0.53 – 0.05 = 0.48  \\
+P_{36} &= PS[6] – PS[2] = 0.45 – 0.07 = 0.38  
+\end{align*}
+$$
+
+---
+
+##  Most Common Dynamic Programming **Interview** Questions 
+
+---
+
   - Problem-1:  Longest Increasing Subsequence 
     - https://www.geeksforgeeks.org/longest-increasing-subsequence-dp-3/ 
     - https://en.wikipedia.org/wiki/Longest_increasing_subsequence#:~:text=In%20computer%20science%2C%20the%20longest,not%20necessarily%20contiguous%2C%20or%20unique. 
@@ -1119,12 +1426,9 @@ $LCS[i, j-1] = LCS[i-1, j]$.
 
 ---
 
-  - Problem-13: Coin Change 
-    - https://www.geeksforgeeks.org/coin-change-dp-7/ 
-  - Problem-14: Word Break Problem 
-    - https://www.geeksforgeeks.org/word-break-problem-dp-32/ 
-  - Problem-15: Maximum Product Cutting 
-    - https://www.geeksforgeeks.org/maximum-product-cutting-dp-36/ 
+  - [Problem-13: Coin Change](https://www.geeksforgeeks.org/coin-change-dp-7) 
+  - [Problem-14: Word Break Problem](https://www.geeksforgeeks.org/word-break-problem-dp-32/) 
+  - [Problem-15: Maximum Product Cutting](https://www.geeksforgeeks.org/maximum-product-cutting-dp-36/)
 
 ---
 

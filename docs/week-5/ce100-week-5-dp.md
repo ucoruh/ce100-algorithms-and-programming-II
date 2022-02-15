@@ -687,7 +687,7 @@ $$
 
 $$
 \begin{align*}
-((A_i) \overbrace{\vdots}^{mult.} (A_{i+1}A_{i+2} \dots A_j))
+& \bigg( (A_i) \overset{mult.}{ \vdots } (A_{i+1}A_{i+2} \dots A_j)  \bigg)
 \end{align*}
 $$
 
@@ -699,7 +699,7 @@ $$
 
 $$
 \begin{align*}
-((A_iA_{i+1})\overbrace{\vdots}^{mult.} (A_{i+2} \dots A_j))
+\bigg( (A_iA_{i+1}) \overset{mult.}{ \vdots }  (A_{i+2} \dots A_j) \bigg)
 \end{align*}
 $$
 
@@ -711,7 +711,7 @@ $$
 
 $$
 \begin{align*}
-((A_iA_{i+1}A_{i+2})\overbrace{\vdots}^{mult.} (A_{i+3} \dots A_j))
+\bigg( (A_iA_{i+1}A_{i+2}) \overset{mult.}{ \vdots } (A_{i+3} \dots A_j) \bigg)
 \end{align*}
 $$
 
@@ -723,7 +723,7 @@ $$
 
 $$
 \begin{align*}
-((A_iA_{i+1} \dots A_{j-1})\overbrace{\vdots}^{mult.} (A_j))
+\bigg( (A_iA_{i+1} \dots A_{j-1}) \overset{mult.}{ \vdots } (A_j) \bigg)
 \end{align*}
 $$
 
@@ -748,7 +748,7 @@ A_5 &: (10 \times 20) \\
 A_6 &: (20 \times 25)
 \end{aligned}
 \begin{aligned}
-& ((A_2)\overbrace{\vdots}^{ (k=2) } (A_3 A_4 A_5)) \\[10 pt]
+& ((A_2) \overbrace{\vdots}^{ (k=2) } (A_3 A_4 A_5)) \\[10 pt]
 \quad cost &= m_{22} + m_{35} + p_1p_2p_5 \\
 &= 0 + 2500 + 35 \times 15 \times 20 \\
 &= 13000
@@ -836,13 +836,12 @@ A_6 &: (20 \times 25)
 \end{aligned} \quad
 \begin{aligned}
 & ((A_2)\overbrace{\vdots}^{ (k=2) } (A_3 A_4 A_5)) \rightarrow m_{22} + m_{35} + p_1p_2p_5 = 13000 \\
-& ((A_2 A_3) \overbrace{\vdots}^{ (k=3) } (A_4 A_5)) \rightarrow m_{23} + m_{45} + p_1p_3p_5 = \overbrace{ \boldsymbol{7125}}^{selected} \Leftarrow \text{min}\\
+& ((A_2 A_3) \overbrace{\vdots}^{ (k=3) } (A_4 A_5)) \rightarrow m_{23} + m_{45} + p_1p_3p_5 = \overbrace{ \boldsymbol{7125}}^{selected} \Leftarrow \text{min} \\
 & ((A_2 A_3 A_4)\overbrace{\vdots}^{ (k=4) }(A_5)) \rightarrow m_{24} + m_{55} + p_1p_4p_5 = 11375 \\[20 pt]
 & m_{25} = 7125 \\
 & s_{25} = 3 
 \end{aligned} 
-\end{align*} 
-
+\end{align*}
 $$
 
 ![bg right:40% h:500px](assets/ce100-week-5-dp-table-acc-pattern-example-4.drawio.svg)

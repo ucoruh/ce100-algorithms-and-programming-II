@@ -853,7 +853,9 @@ Merge-Sort(A,1,n)
 internal iterations
 
 $p = start-point$
+
 $q = mid-point$
+
 $r = end-point$
 
 ```r
