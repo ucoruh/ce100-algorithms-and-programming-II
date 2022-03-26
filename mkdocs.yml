@@ -1,8 +1,16 @@
 # Project information
 site_name: "RTEU CE100 Algorithms and Programming-II Course Notes"
+docs_dir: docs  # Where to find the English markdown files
+site_dir: site  # Where to put the English HTML files
 site_author: 'Asst. Prof. Dr. Uğur CORUH'
 site_url: 'https://ucoruh.github.io/ce100-algorithms-and-programming-II/'
 site_description: >-
+    Course Notes for Algorithm Lovers
+    
+site_description_en: >-
+    Course Notes for Algorithm Lovers
+
+site_description_tr: >-
     Course Notes for Algorithm Lovers
 
 # Repository
@@ -11,7 +19,7 @@ repo_url: 'https://github.com/ucoruh/ce100-algorithms-and-programming-II'
 edit_uri: ""
 
 # Copyright
-copyright: Copyleft &copy; 2019 - 2022 Uğur CORUH
+copyright: Copyright &copy; 2019 - 2022 Uğur CORUH
 
 #theme:
 #    name: material
@@ -186,18 +194,96 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  - codehilite:
+      guess_lang: true
 
 plugins:
+  - mkdocs-video #https://pypi.org/project/mkdocs-video/
   - search
+  - i18n:
+      default_language: !ENV [DEFAULT_LANGUAGE, "en"]
+      default_language_only: !ENV [DEFAULT_LANGUAGE_ONLY, false]
+      languages:
+        default:
+          name: English
+          build: true
+        en:
+          name: English
+          build: true
+          site_name: "RTEU CE100 Algorithms and Programming-II Course Notes"
+        tr:
+          name: Türkçe
+          build: true
+          site_name: "RTEU CE100 Algorithms and Programming-II Course Notes"
+      nav_translations:
+        tr:
+          Home: 'Home'
+          Syllabus: 'Syllabus'
+          Course Modules: 'Course Modules'
+          Week-1 (Intro, Asymptotic Notations): 'Week-1 (Intro, Asymptotic Notations)'
+          Week-2 (Solving Recurrences): 'Week-2 (Solving Recurrences)'
+          Week-3 (Matrix Multiplication/Quick Sort): 'Week-3 (Matrix Multiplication/Quick Sort)'
+          Week-4 (Heap/Heap Sort): 'Week-4 (Heap/Heap Sort)'
+          Week-5 (Dynamic Programming): 'Week-5 (Dynamic Programming)'
+          Week-6 (Matrix Chain Order / LCS): 'Week-6 (Matrix Chain Order / LCS)'
+          Week-7 (Greedy Algorithms, Knapsack): 'Week-7 (Greedy Algorithms, Knapsack)'
+          Week-8 (Midterm): 'Week-8 (Midterm)'
+          Week-9 (Huffman Coding): 'Week-9 (Huffman Coding)'
+          Week-10 (Graphs): 'Week-10 (Graphs)'
+          Week-11 (Shortest Path): 'Week-11 (Shortest Path)'
+          Week-12 (Hashing): 'Week-12 (Hashing)'
+          Week-13 (Encryption): 'Week-13 (Encryption)'
+          Week-14 (One-Time-Password / File Enc.): 'Week-14 (One-Time-Password / File Enc.)'
+          Week-15 (Review): 'Week-15 (Review)'
+          Week-16 (Final): 'Week-16 (Final)'
+          License: 'License'
+          Resume: 'Resume'
+          Changelog: 'Changelog'
   - git-revision-date-localized
   - minify:
       minify_html: false
-
+  #- with-pdf:
+      #author: Dr. Uğur CORUH
+      #copyright: ANY TEXT
+      #
+      #cover: false
+      #back_cover: true
+      #cover_title: TITLE TEXT
+      #cover_subtitle: SUBTITLE TEXT
+      #custom_template_path: TEMPLATES PATH
+      #
+      #toc_title: TOC TITLE TEXT
+      #heading_shift: false
+      #toc_level: 3
+      #ordered_chapter_level: 2
+      #excludes_children:
+      #    - 'release-notes/:upgrading'
+      #    - 'release-notes/:changelog'
+      #
+      #exclude_pages:
+      #    - 'bugs/'
+      #    - 'appendix/contribute/'
+      #convert_iframe:
+      #    - src: IFRAME SRC
+      #      img: POSTER IMAGE URL
+      #      text: ALTERNATE TEXT
+      #    - src: ...
+      #two_columns_level: 3
+      #
+      #render_js: true
+      #headless_chrome_path: headless-chromium
+      #
+      #output_path: any-place/document.pdf
+      #enabled_if_env: ENABLE_PDF_EXPORT
+      #
+      #debug_html: true
+      #show_anchors: true
+      #verbose: true
 extra_javascript:
   - javascript/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
- 
+  
 # Page tree
 nav:
   - Home: index.md
@@ -220,5 +306,6 @@ nav:
     - Week-15 (Review): week-15/ce100-week-15-review.md
     - Week-16 (Final): week-16/ce100-week-16-final.md
   - License: license.md
+  - Resume: resume/index.md
   - Changelog: changelog/index.md
 
