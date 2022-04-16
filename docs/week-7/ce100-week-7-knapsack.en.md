@@ -870,15 +870,11 @@ $$
 
 $$
 \begin{align*}
-
 & \text{KNAP0-1}(v, w, n,W) \\
-
 & \quad	\text{for} \ \omega \leftarrow 0 \ \text{to} \ W \ \text{do} \\
 & \qquad c[0, \omega] \leftarrow 0 \\
-
 & \quad	\text{for} \ i \leftarrow 0 \ \text{to} \ m \ \text{do} \\
 & \qquad c[i, 0] \leftarrow 0 \\
-
 & \quad	\text{for} \ i \leftarrow 0 \ \text{to} \ m \ \text{do} \\
 & \qquad \quad \text{for} \ \omega \leftarrow 1 \ \text{to} \ W \ \text{do} \\
 & \qquad \qquad \text{if} \ w_i \leq \omega \ \text{then} \\
@@ -906,7 +902,6 @@ $$
 
 $$
 \begin{align*}
-
 & \text{SOLKNAP0-1}(a, v, w, n,W,c) \\
 & \quad	 i \leftarrow n ; \omega \leftarrow  W 	\\
 & \quad	S \leftarrow \emptyset 					\\
