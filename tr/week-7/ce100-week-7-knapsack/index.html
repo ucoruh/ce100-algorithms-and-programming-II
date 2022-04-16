@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://ucoruh.github.io/ce100-algorithms-and-programming-II/tr/week-7/ce100-week-7-knapsack/">
       
       <link rel="icon" href="../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.1.3">
     
     
       
@@ -923,6 +923,500 @@ Daha fazla bilgi için benimle iletişime geçebilirsiniz <strong>@ugurcoruh</st
 </li>
       
         <li class="md-nav__item">
+  <a href="#activity-selection-problem" class="md-nav__link">
+    Activity Selection Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activity-selection-problem_1" class="md-nav__link">
+    Activity Selection Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activity-selection-problem_2" class="md-nav__link">
+    Activity Selection Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activity-selection-problem-an-example" class="md-nav__link">
+    Activity Selection Problem An Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-substructure-property" class="md-nav__link">
+    Optimal Substructure Property
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-substructure-property_1" class="md-nav__link">
+    Optimal Substructure Property
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-substructure-property_2" class="md-nav__link">
+    Optimal Substructure Property
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-substructure" class="md-nav__link">
+    Optimal Substructure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-substructure_1" class="md-nav__link">
+    Optimal Substructure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-choice-property" class="md-nav__link">
+    Greedy Choice Property
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-choice-property-theorem" class="md-nav__link">
+    Greedy Choice Property - Theorem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-choice-property-proof" class="md-nav__link">
+    Greedy Choice Property - Proof
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm" class="md-nav__link">
+    Greedy Algorithm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm_1" class="md-nav__link">
+    Greedy Algorithm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm_2" class="md-nav__link">
+    Greedy Algorithm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm-for-activity-selection" class="md-nav__link">
+    Greedy Algorithm for Activity Selection
+  </a>
+  
+    <nav class="md-nav" aria-label="Greedy Algorithm for Activity Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definitions-in-greedy-algorithm" class="md-nav__link">
+    Definitions in Greedy Algorithm:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm-for-activity-selection_1" class="md-nav__link">
+    Greedy Algorithm for Activity Selection
+  </a>
+  
+    <nav class="md-nav" aria-label="Greedy Algorithm for Activity Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pseudocode-for-greedy-algorithm" class="md-nav__link">
+    Pseudocode for Greedy Algorithm:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm-for-activity-selection-an-example-step-1" class="md-nav__link">
+    Greedy Algorithm for Activity Selection, An Example (Step-1)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm-for-activity-selection-an-example-step-2" class="md-nav__link">
+    Greedy Algorithm for Activity Selection, An Example (Step-2)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm-for-activity-selection-an-example-step-3" class="md-nav__link">
+    Greedy Algorithm for Activity Selection, An Example (Step-3)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm-for-activity-selection-an-example-step-4" class="md-nav__link">
+    Greedy Algorithm for Activity Selection, An Example (Step-4)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm-for-activity-selection-an-example-step-5" class="md-nav__link">
+    Greedy Algorithm for Activity Selection, An Example (Step-5)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm-for-activity-selection-an-example-step-6" class="md-nav__link">
+    Greedy Algorithm for Activity Selection, An Example (Step-6)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm-for-activity-selection-an-example-step-7" class="md-nav__link">
+    Greedy Algorithm for Activity Selection, An Example (Step-7)
+  </a>
+  
+    <nav class="md-nav" aria-label="Greedy Algorithm for Activity Selection, An Example (Step-7)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#final-solution" class="md-nav__link">
+    Final Solution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-of-dp-and-greedy-algorithms" class="md-nav__link">
+    Comparison of DP and Greedy Algorithms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-dp-based-matrix-chain-order" class="md-nav__link">
+    Reminder: DP-Based Matrix Chain Order
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm-for-activity-selection_2" class="md-nav__link">
+    Greedy Algorithm for Activity Selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm-for-activity-selection_3" class="md-nav__link">
+    Greedy Algorithm for Activity Selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-vs-dynamic-programming" class="md-nav__link">
+    Greedy vs Dynamic Programming
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-vs-dynamic-programming_1" class="md-nav__link">
+    Greedy vs Dynamic Programming
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-of-correctness-of-greedy-algorithms" class="md-nav__link">
+    Proof of Correctness of Greedy Algorithms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-choice-property-proof_1" class="md-nav__link">
+    Greedy Choice Property - Proof
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elements-of-greedy-strategy" class="md-nav__link">
+    Elements of Greedy Strategy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-ingredients-of-greedy-strategy" class="md-nav__link">
+    Key Ingredients of Greedy Strategy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-ingredients-greedy-choice-property" class="md-nav__link">
+    Key Ingredients: Greedy Choice Property
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-ingredients-greedy-choice-property_1" class="md-nav__link">
+    Key Ingredients: Greedy Choice Property
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-ingredients-optimal-substructure" class="md-nav__link">
+    Key Ingredients: Optimal Substructure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-ingredients-optimal-substructure_1" class="md-nav__link">
+    Key Ingredients: Optimal Substructure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knapsack-problems" class="md-nav__link">
+    Knapsack Problems
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knapsack-problem" class="md-nav__link">
+    Knapsack Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knapsack-problem-two-versions" class="md-nav__link">
+    Knapsack Problem: Two Versions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knapsack-problems_1" class="md-nav__link">
+    Knapsack Problems
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-substructure-property-for-the-0-1-knapsack-problem-s-w" class="md-nav__link">
+    Optimal Substructure Property for the 0-1 Knapsack Problem (S, W)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-substructure-property-for-the-0-1-knapsack-problem-s-w_1" class="md-nav__link">
+    Optimal Substructure Property for the 0-1 Knapsack Problem (S, W)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-substructure-property-for-the-0-1-knapsack-problem-s-w_2" class="md-nav__link">
+    Optimal Substructure Property for the 0-1 Knapsack Problem (S, W)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-substructure-property-for-the-fractional-knapsack-problem-s-w" class="md-nav__link">
+    Optimal Substructure Property for the Fractional Knapsack Problem (S, W)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knapsack-problems_2" class="md-nav__link">
+    Knapsack Problems
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fractional-knapsack-problem" class="md-nav__link">
+    Fractional Knapsack Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-solution-to-fractional-knapsack" class="md-nav__link">
+    Greedy Solution to Fractional Knapsack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fractional-knapsack-problem-example" class="md-nav__link">
+    Fractional Knapsack Problem: Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0-1-knapsack-problem" class="md-nav__link">
+    0-1 Knapsack Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0-1-knapsack-problem_1" class="md-nav__link">
+    0-1 Knapsack Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0-1-knapsack-problem_2" class="md-nav__link">
+    0-1 Knapsack Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0-1-knapsack-problem_3" class="md-nav__link">
+    0-1 Knapsack Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-substructure-property_3" class="md-nav__link">
+    Optimal Substructure Property
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-substructure-property_4" class="md-nav__link">
+    Optimal Substructure Property
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-substructure-property_5" class="md-nav__link">
+    Optimal Substructure Property
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursive-formulation" class="md-nav__link">
+    Recursive Formulation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0-1-knapsack-problem_4" class="md-nav__link">
+    0-1 Knapsack Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bottom-up-computation" class="md-nav__link">
+    Bottom-up Computation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bottom-up-computation_1" class="md-nav__link">
+    Bottom-up Computation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dp-solution-to-0-1-knapsack" class="md-nav__link">
+    DP Solution to 0-1 Knapsack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dp-solution-to-0-1-knapsack_1" class="md-nav__link">
+    DP Solution to 0-1 Knapsack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constructing-an-optimal-solution" class="md-nav__link">
+    Constructing an Optimal Solution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-the-set-s-of-articles-in-an-optimal-load" class="md-nav__link">
+    Finding the Set S of Articles in an Optimal Load
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
@@ -1181,6 +1675,500 @@ Daha fazla bilgi için benimle iletişime geçebilirsiniz <strong>@ugurcoruh</st
 </li>
       
         <li class="md-nav__item">
+  <a href="#activity-selection-problem" class="md-nav__link">
+    Activity Selection Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activity-selection-problem_1" class="md-nav__link">
+    Activity Selection Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activity-selection-problem_2" class="md-nav__link">
+    Activity Selection Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activity-selection-problem-an-example" class="md-nav__link">
+    Activity Selection Problem An Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-substructure-property" class="md-nav__link">
+    Optimal Substructure Property
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-substructure-property_1" class="md-nav__link">
+    Optimal Substructure Property
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-substructure-property_2" class="md-nav__link">
+    Optimal Substructure Property
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-substructure" class="md-nav__link">
+    Optimal Substructure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-substructure_1" class="md-nav__link">
+    Optimal Substructure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-choice-property" class="md-nav__link">
+    Greedy Choice Property
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-choice-property-theorem" class="md-nav__link">
+    Greedy Choice Property - Theorem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-choice-property-proof" class="md-nav__link">
+    Greedy Choice Property - Proof
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm" class="md-nav__link">
+    Greedy Algorithm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm_1" class="md-nav__link">
+    Greedy Algorithm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm_2" class="md-nav__link">
+    Greedy Algorithm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm-for-activity-selection" class="md-nav__link">
+    Greedy Algorithm for Activity Selection
+  </a>
+  
+    <nav class="md-nav" aria-label="Greedy Algorithm for Activity Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definitions-in-greedy-algorithm" class="md-nav__link">
+    Definitions in Greedy Algorithm:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm-for-activity-selection_1" class="md-nav__link">
+    Greedy Algorithm for Activity Selection
+  </a>
+  
+    <nav class="md-nav" aria-label="Greedy Algorithm for Activity Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pseudocode-for-greedy-algorithm" class="md-nav__link">
+    Pseudocode for Greedy Algorithm:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm-for-activity-selection-an-example-step-1" class="md-nav__link">
+    Greedy Algorithm for Activity Selection, An Example (Step-1)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm-for-activity-selection-an-example-step-2" class="md-nav__link">
+    Greedy Algorithm for Activity Selection, An Example (Step-2)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm-for-activity-selection-an-example-step-3" class="md-nav__link">
+    Greedy Algorithm for Activity Selection, An Example (Step-3)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm-for-activity-selection-an-example-step-4" class="md-nav__link">
+    Greedy Algorithm for Activity Selection, An Example (Step-4)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm-for-activity-selection-an-example-step-5" class="md-nav__link">
+    Greedy Algorithm for Activity Selection, An Example (Step-5)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm-for-activity-selection-an-example-step-6" class="md-nav__link">
+    Greedy Algorithm for Activity Selection, An Example (Step-6)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm-for-activity-selection-an-example-step-7" class="md-nav__link">
+    Greedy Algorithm for Activity Selection, An Example (Step-7)
+  </a>
+  
+    <nav class="md-nav" aria-label="Greedy Algorithm for Activity Selection, An Example (Step-7)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#final-solution" class="md-nav__link">
+    Final Solution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-of-dp-and-greedy-algorithms" class="md-nav__link">
+    Comparison of DP and Greedy Algorithms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-dp-based-matrix-chain-order" class="md-nav__link">
+    Reminder: DP-Based Matrix Chain Order
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm-for-activity-selection_2" class="md-nav__link">
+    Greedy Algorithm for Activity Selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-algorithm-for-activity-selection_3" class="md-nav__link">
+    Greedy Algorithm for Activity Selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-vs-dynamic-programming" class="md-nav__link">
+    Greedy vs Dynamic Programming
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-vs-dynamic-programming_1" class="md-nav__link">
+    Greedy vs Dynamic Programming
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-of-correctness-of-greedy-algorithms" class="md-nav__link">
+    Proof of Correctness of Greedy Algorithms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-choice-property-proof_1" class="md-nav__link">
+    Greedy Choice Property - Proof
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elements-of-greedy-strategy" class="md-nav__link">
+    Elements of Greedy Strategy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-ingredients-of-greedy-strategy" class="md-nav__link">
+    Key Ingredients of Greedy Strategy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-ingredients-greedy-choice-property" class="md-nav__link">
+    Key Ingredients: Greedy Choice Property
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-ingredients-greedy-choice-property_1" class="md-nav__link">
+    Key Ingredients: Greedy Choice Property
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-ingredients-optimal-substructure" class="md-nav__link">
+    Key Ingredients: Optimal Substructure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-ingredients-optimal-substructure_1" class="md-nav__link">
+    Key Ingredients: Optimal Substructure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knapsack-problems" class="md-nav__link">
+    Knapsack Problems
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knapsack-problem" class="md-nav__link">
+    Knapsack Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knapsack-problem-two-versions" class="md-nav__link">
+    Knapsack Problem: Two Versions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knapsack-problems_1" class="md-nav__link">
+    Knapsack Problems
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-substructure-property-for-the-0-1-knapsack-problem-s-w" class="md-nav__link">
+    Optimal Substructure Property for the 0-1 Knapsack Problem (S, W)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-substructure-property-for-the-0-1-knapsack-problem-s-w_1" class="md-nav__link">
+    Optimal Substructure Property for the 0-1 Knapsack Problem (S, W)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-substructure-property-for-the-0-1-knapsack-problem-s-w_2" class="md-nav__link">
+    Optimal Substructure Property for the 0-1 Knapsack Problem (S, W)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-substructure-property-for-the-fractional-knapsack-problem-s-w" class="md-nav__link">
+    Optimal Substructure Property for the Fractional Knapsack Problem (S, W)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knapsack-problems_2" class="md-nav__link">
+    Knapsack Problems
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fractional-knapsack-problem" class="md-nav__link">
+    Fractional Knapsack Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-solution-to-fractional-knapsack" class="md-nav__link">
+    Greedy Solution to Fractional Knapsack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fractional-knapsack-problem-example" class="md-nav__link">
+    Fractional Knapsack Problem: Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0-1-knapsack-problem" class="md-nav__link">
+    0-1 Knapsack Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0-1-knapsack-problem_1" class="md-nav__link">
+    0-1 Knapsack Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0-1-knapsack-problem_2" class="md-nav__link">
+    0-1 Knapsack Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0-1-knapsack-problem_3" class="md-nav__link">
+    0-1 Knapsack Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-substructure-property_3" class="md-nav__link">
+    Optimal Substructure Property
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-substructure-property_4" class="md-nav__link">
+    Optimal Substructure Property
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-substructure-property_5" class="md-nav__link">
+    Optimal Substructure Property
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursive-formulation" class="md-nav__link">
+    Recursive Formulation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0-1-knapsack-problem_4" class="md-nav__link">
+    0-1 Knapsack Problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bottom-up-computation" class="md-nav__link">
+    Bottom-up Computation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bottom-up-computation_1" class="md-nav__link">
+    Bottom-up Computation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dp-solution-to-0-1-knapsack" class="md-nav__link">
+    DP Solution to 0-1 Knapsack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dp-solution-to-0-1-knapsack_1" class="md-nav__link">
+    DP Solution to 0-1 Knapsack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constructing-an-optimal-solution" class="md-nav__link">
+    Constructing an Optimal Solution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-the-set-s-of-articles-in-an-optimal-load" class="md-nav__link">
+    Finding the Set S of Articles in an Optimal Load
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
@@ -1211,7 +2199,7 @@ Daha fazla bilgi için benimle iletişime geçebilirsiniz <strong>@ugurcoruh</st
 <h2 id="ce100-algorithms-and-programming-ii">CE100 Algorithms and Programming II<a class="headerlink" href="#ce100-algorithms-and-programming-ii" title="Permanent link">&para;</a></h2>
 <h2 id="week-7-greedy-algorithms-knapsack">Week-7 (Greedy Algorithms, Knapsack)<a class="headerlink" href="#week-7-greedy-algorithms-knapsack" title="Permanent link">&para;</a></h2>
 <h4 id="spring-semester-2021-2022">Spring Semester, 2021-2022<a class="headerlink" href="#spring-semester-2021-2022" title="Permanent link">&para;</a></h4>
-<p>Download <a href="../ce100-week-7-knapsack.tr.md_doc.pdf">DOC</a>, <a href="../ce100-week-7-knapsack.tr.md_slide.pdf">SLIDE</a>, <a href="../ce100-week-7-knapsack.tr.md_slide.pptx">PPTX</a></p>
+<p>Download <a href="ce100-week-7-knapsack.tr.md_doc.pdf">DOC</a>, <a href="../ce100-week-7-knapsack.tr.md_slide.pdf">SLIDE</a>, <a href="../ce100-week-7-knapsack.tr.md_slide.pptx">PPTX</a></p>
 <iframe width=700, height=500 frameBorder=0 src="../ce100-week-7-knapsack.tr.md_slide.html"></iframe>
 
 <hr />
@@ -1230,15 +2218,827 @@ Daha fazla bilgi için benimle iletişime geçebilirsiniz <strong>@ugurcoruh</st
 </li>
 </ul>
 <hr />
+<h2 id="activity-selection-problem"><strong>Activity Selection Problem</strong><a class="headerlink" href="#activity-selection-problem" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="activity-selection-problem_1">Activity Selection Problem<a class="headerlink" href="#activity-selection-problem_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>We have: </li>
+<li>A set of activities with fixed start and finish times</li>
+<li>One shared resource (only one activity can use at any time)</li>
+<li><strong>Objective:</strong> Choose the max number of compatible activities</li>
+<li>
+<p><strong>Note:</strong> Objective is to maximize the number of activities, not the total time of activities.</p>
+</li>
+<li>
+<p><strong>Example:</strong></p>
+</li>
+<li><em>Activities:</em> Meetings with fixed start and finish times</li>
+<li><em>Shared resource:</em> A meeting room<ul>
+<li><em>Objective:</em> Schedule the max number of meetings</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="activity-selection-problem_2">Activity Selection Problem<a class="headerlink" href="#activity-selection-problem_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Input:</strong> a set <span class="arithmatex">\(S=\{a_{1}, a_{2}, \dots, a_{n}\}\)</span> of n activities</li>
+<li><span class="arithmatex">\(s_i\)</span>  : Start time of activity <span class="arithmatex">\(a_i\)</span>, </li>
+<li><span class="arithmatex">\(f_i\)</span>  : Finish time of activity <span class="arithmatex">\(a_i\)</span>
+Activity <span class="arithmatex">\(i\)</span> takes place in <span class="arithmatex">\([s_i, f_i )\)</span></li>
+<li><strong>Aim:</strong> Find max-size subset <span class="arithmatex">\(A\)</span> of mutually <em>compatible</em> activities</li>
+<li>Max number of activities, not max time spent in activities</li>
+<li>Activities <span class="arithmatex">\(i\)</span> and <span class="arithmatex">\(j\)</span> are compatible if intervals <span class="arithmatex">\([s_i, f_i )\)</span> and <span class="arithmatex">\([s_j, f_j)\)</span> do not overlap, i.e., either <span class="arithmatex">\(s_i \geq f_j\)</span> or <span class="arithmatex">\(s_j \geq f_i\)</span> </li>
+</ul>
+<hr />
+<h2 id="activity-selection-problem-an-example">Activity Selection Problem An Example<a class="headerlink" href="#activity-selection-problem-an-example" title="Permanent link">&para;</a></h2>
+<p><img alt="center h:400px" src="../assets/ce100-week-7-knapsack.drawio.svg" /></p>
+<hr />
+<h2 id="optimal-substructure-property">Optimal Substructure Property<a class="headerlink" href="#optimal-substructure-property" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Consider an optimal solution <span class="arithmatex">\(A\)</span> for activity set <span class="arithmatex">\(S\)</span>.</li>
+<li>Let <span class="arithmatex">\(k\)</span> be the activity in <span class="arithmatex">\(A\)</span> with the <strong>earliest finish time</strong></li>
+</ul>
+<p><img alt="center h:400px" src="../assets/ce100-week-7-knapsack-activity-select-opt-sub-prop.drawio.svg" /></p>
+<hr />
+<h2 id="optimal-substructure-property_1">Optimal Substructure Property<a class="headerlink" href="#optimal-substructure-property_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Consider an optimal solution <span class="arithmatex">\(A\)</span> for activity set <span class="arithmatex">\(S\)</span>.</li>
+<li>Let <span class="arithmatex">\(k\)</span> be the activity in <span class="arithmatex">\(A\)</span> with the <strong>earliest finish time</strong></li>
+<li>Now, consider the <strong>subproblem <span class="arithmatex">\(S_k'\)</span></strong> that has the activities that start after <span class="arithmatex">\(k\)</span> finishes, i.e. <span class="arithmatex">\(S_k'=\{a_i \in S: s_i \geq f_k \}\)</span></li>
+<li>What can we say about the optimal solution to <span class="arithmatex">\(S_k'\)</span> ?</li>
+</ul>
+<p><img alt="center h:300px" src="../assets/ce100-week-7-knapsack-activity-select-opt-sub-prop-2.drawio.svg" /></p>
+<hr />
+<h2 id="optimal-substructure-property_2">Optimal Substructure Property<a class="headerlink" href="#optimal-substructure-property_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Consider an optimal solution <span class="arithmatex">\(A\)</span> for activity set <span class="arithmatex">\(S\)</span>.</li>
+<li>Let <span class="arithmatex">\(k\)</span> be the activity in <span class="arithmatex">\(A\)</span> with the <strong>earliest finish time</strong></li>
+<li>Now, consider the <strong>subproblem <span class="arithmatex">\(S_k'\)</span></strong> that has the activities that start after <span class="arithmatex">\(k\)</span> finishes, i.e. <span class="arithmatex">\(S_k'=\{a_i \in S: s_i \geq f_k \}\)</span></li>
+<li><span class="arithmatex">\(A-\{k\}\)</span> is an optimal solution for <span class="arithmatex">\(S_k'\)</span>. Why?</li>
+</ul>
+<p><img alt="center h:300px" src="../assets/ce100-week-7-knapsack-activity-select-opt-sub-prop-3.drawio.svg" /></p>
+<hr />
+<h2 id="optimal-substructure">Optimal Substructure<a class="headerlink" href="#optimal-substructure" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Theorem:</strong>  Let <span class="arithmatex">\(k\)</span> be the activity with the earliest finish time in an optimal soln <span class="arithmatex">\(A \subseteq S\)</span> then </li>
+<li><span class="arithmatex">\(A-\{k\}\)</span> is an optimal solution to subproblem</li>
+<li><span class="arithmatex">\(S_k' = \{a_i \in S: s_i \geq f_k \}\)</span></li>
+<li><strong>Proof (by contradiction):</strong></li>
+<li><span class="arithmatex">\(\rhd\)</span> Let <span class="arithmatex">\(B'\)</span> be an optimal solution to <span class="arithmatex">\(S_k'\)</span> and <ul>
+<li><span class="arithmatex">\(|B'| &gt; | A-\{k\}| = | A | - 1\)</span></li>
+</ul>
+</li>
+<li>Then, <span class="arithmatex">\(B = B' \cup \{k\}\)</span> is compatible and<ul>
+<li><span class="arithmatex">\(|B| = |B'|+1 &gt; | A |\)</span> </li>
+</ul>
+</li>
+<li>Contradiction to the optimality of <span class="arithmatex">\(A\)</span>               <br />
+<span class="arithmatex">\(Q.E.D.\)</span></li>
+</ul>
+<hr />
+<h2 id="optimal-substructure_1">Optimal Substructure<a class="headerlink" href="#optimal-substructure_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>Recursive formulation:</strong> Choose the first activity <span class="arithmatex">\(k\)</span>, and then solve the remaining subproblem <span class="arithmatex">\(S_k'\)</span></p>
+</li>
+<li>
+<p>How to choose the first activity <span class="arithmatex">\(k\)</span>?</p>
+</li>
+<li>DP, memoized recursion?<ul>
+<li>i.e. choose the <span class="arithmatex">\(k\)</span> value that will have the max size for <span class="arithmatex">\(S_k'\)</span></li>
+</ul>
+</li>
+<li>DP would work, </li>
+<li>but is it necessary to try all possible values for <span class="arithmatex">\(k\)</span>?</li>
+</ul>
+<hr />
+<h2 id="greedy-choice-property">Greedy Choice Property<a class="headerlink" href="#greedy-choice-property" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Assume (without loss of generality) <span class="arithmatex">\(f_1 \leq f_2 \leq \dots \leq f_n\)</span></li>
+<li>
+<p>If not, sort activities according to their finish times in non-decreasing order</p>
+</li>
+<li>
+<p><strong>Greedy choice property:</strong> a sequence of locally optimal (greedy) choices <span class="arithmatex">\(\Rightarrow\)</span> an optimal solution</p>
+</li>
+<li>
+<p>How to choose the first activity <strong>greedily</strong> without losing optimality?</p>
+</li>
+</ul>
+<hr />
+<h2 id="greedy-choice-property-theorem">Greedy Choice Property - Theorem<a class="headerlink" href="#greedy-choice-property-theorem" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Let activity set <span class="arithmatex">\(S = \{a_1, a_2, \dots a_n\}\)</span>, where <span class="arithmatex">\(f_1 \leq f_2 \leq \dots \leq f_n\)</span></p>
+</li>
+<li>
+<p><strong>Theorem:</strong> There exists an optimal solution <span class="arithmatex">\(A \subseteq S\)</span> such that <span class="arithmatex">\(a_1 \in A\)</span></p>
+</li>
+</ul>
+<p><strong>In other words, the activity with the earliest finish time is guaranteed to be in an optimal solution</strong>.</p>
+<hr />
+<h2 id="greedy-choice-property-proof">Greedy Choice Property - Proof<a class="headerlink" href="#greedy-choice-property-proof" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>Theorem:</strong> There exists an optimal solution <span class="arithmatex">\(A \subseteq S\)</span> such that <span class="arithmatex">\(a_1 \in A\)</span></p>
+</li>
+<li>
+<p><strong>Proof:</strong> Consider an arbitrary optimal solution <span class="arithmatex">\(B = \{a_k, a_{\ell}, a_m, \dots\}\)</span>, where <span class="arithmatex">\(f_k &lt; f_{\ell} &lt; f_m &lt; \dots\)</span></p>
+</li>
+<li>If <span class="arithmatex">\(k = 1\)</span>, then <span class="arithmatex">\(B\)</span> starts with <span class="arithmatex">\(a_1\)</span>, and the proof is complete</li>
+<li>If <span class="arithmatex">\(k &gt; 1\)</span>, then create another solution <span class="arithmatex">\(B'\)</span> by replacing <span class="arithmatex">\(a_k\)</span> with <span class="arithmatex">\(a_1\)</span>. Since <span class="arithmatex">\(f_1 \leq f_k\)</span>, <span class="arithmatex">\(B'\)</span> is guaranteed to be valid, and <span class="arithmatex">\(|B'| = |B|\)</span>, hence also optimal</li>
+</ul>
+<p><img alt="center h:250px" src="../assets/ce100-week-7-knapsack-activity-select-opt-sub-prop-4.drawio.svg" /></p>
+<hr />
+<h2 id="greedy-algorithm">Greedy Algorithm<a class="headerlink" href="#greedy-algorithm" title="Permanent link">&para;</a></h2>
+<ul>
+<li>So far, we have:</li>
+<li><strong>Optimal substructure property:</strong> If <span class="arithmatex">\(A = \{a_k, \dots \}\)</span> is an optimal solution, then <span class="arithmatex">\(A-\{a_k\}\)</span> must be optimal for subproblem <span class="arithmatex">\(S_k'\)</span>, where <span class="arithmatex">\(Sk' = \{a_i \in S: s_i \geq f_k\}\)</span><ul>
+<li><strong>Note:</strong> <span class="arithmatex">\(a_k\)</span> is the activity with the earliest finish time in <span class="arithmatex">\(A\)</span></li>
+</ul>
+</li>
+<li><strong>Greedy choice property:</strong> There is an optimal solution <span class="arithmatex">\(A\)</span> that contains <span class="arithmatex">\(a_1\)</span><ul>
+<li><strong>Note:</strong> <span class="arithmatex">\(a_1\)</span> is the activity with the earliest finish time in <span class="arithmatex">\(S\)</span></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="greedy-algorithm_1">Greedy Algorithm<a class="headerlink" href="#greedy-algorithm_1" title="Permanent link">&para;</a></h2>
+<p><img alt="center h:450px" src="../assets/ce100-week-7-knapsack-activity-select-opt-sub-prop-5.drawio.svg" /></p>
+<p><em>explained in the next slide..</em></p>
+<hr />
+<h2 id="greedy-algorithm_2">Greedy Algorithm<a class="headerlink" href="#greedy-algorithm_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>Theorem:</strong> There exists an optimal solution <span class="arithmatex">\(A \subseteq S\)</span> such that <span class="arithmatex">\(a_1 \in A\)</span></p>
+</li>
+<li>
+<p>Basic idea of the greedy algorithm:</p>
+</li>
+<li>Add <span class="arithmatex">\(a_1\)</span> to <span class="arithmatex">\(A\)</span></li>
+<li>
+<p>Solve the remaining subproblem <span class="arithmatex">\(S_1'\)</span>, and then append the result to <span class="arithmatex">\(A\)</span></p>
+</li>
+<li>
+<p><strong>Remember arbitary optimal solution explaination from previous sections (finish time order is important for <span class="arithmatex">\(a_1\)</span> selection with star time and overlapping checking)</strong></p>
+</li>
+<li><span class="arithmatex">\(B = \{a_k, a_{\ell}, a_m, \dots\}\)</span>, </li>
+<li>where <span class="arithmatex">\(f_k &lt; f_{\ell} &lt; f_m &lt; \dots\)</span></li>
+</ul>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="greedy-algorithm-for-activity-selection">Greedy Algorithm for Activity Selection<a class="headerlink" href="#greedy-algorithm-for-activity-selection" title="Permanent link">&para;</a></h2>
+<h3 id="definitions-in-greedy-algorithm">Definitions in Greedy Algorithm:<a class="headerlink" href="#definitions-in-greedy-algorithm" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span class="arithmatex">\(j\)</span>: specifies the index of most recent activity added to <span class="arithmatex">\(A\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(f_j = Max\{f_k : k \in A\}\)</span>, max finish time of any activity in <span class="arithmatex">\(A\)</span>; </p>
+</li>
+<li>because activities are processed in non-decreasing order of finish times</li>
+<li>Thus, <span class="arithmatex">\(s_i \geq f_j\)</span> checks the compatibility of <span class="arithmatex">\(i\)</span> to current <span class="arithmatex">\(A\)</span></li>
+<li><strong>Running time:</strong> <span class="arithmatex">\(\Theta(n)\)</span> assuming that the activities were already sorted.</li>
+</ul>
+<hr />
+<h2 id="greedy-algorithm-for-activity-selection_1">Greedy Algorithm for Activity Selection<a class="headerlink" href="#greedy-algorithm-for-activity-selection_1" title="Permanent link">&para;</a></h2>
+<h3 id="pseudocode-for-greedy-algorithm">Pseudocode for Greedy Algorithm:<a class="headerlink" href="#pseudocode-for-greedy-algorithm" title="Permanent link">&para;</a></h3>
+<p>$$
+\begin{align*}
+&amp; \text{GAS}(s, f, n)  { \
+&amp; \quad  A \leftarrow {1} \
+&amp; \quad  j \leftarrow 1 \</p>
+<p>&amp; \quad \text{for}  i \leftarrow 2  \text{to}  n  \text{do} \
+&amp; \qquad \text{if}  s_i \geq f_j  \text{then} \
+&amp; \qquad \quad A \leftarrow A \cup {i} \
+&amp; \qquad \quad j \leftarrow i  \
+&amp; \qquad \text{endif}  \
+&amp; \quad \text{endfor} \
+&amp; \quad }
+\end{align*}
+$$</p>
+<hr />
+<h2 id="greedy-algorithm-for-activity-selection-an-example-step-1">Greedy Algorithm for Activity Selection, An Example (Step-1)<a class="headerlink" href="#greedy-algorithm-for-activity-selection-an-example-step-1" title="Permanent link">&para;</a></h2>
+<p><img alt="center h:450px" src="../assets/ce100-week-7-knapsack-activiy-sel-ex-it-1.drawio.svg" /></p>
+<hr />
+<h2 id="greedy-algorithm-for-activity-selection-an-example-step-2">Greedy Algorithm for Activity Selection, An Example (Step-2)<a class="headerlink" href="#greedy-algorithm-for-activity-selection-an-example-step-2" title="Permanent link">&para;</a></h2>
+<p><img alt="center h:450px" src="../assets/ce100-week-7-knapsack-activiy-sel-ex-it-2.drawio.svg" /></p>
+<hr />
+<h2 id="greedy-algorithm-for-activity-selection-an-example-step-3">Greedy Algorithm for Activity Selection, An Example (Step-3)<a class="headerlink" href="#greedy-algorithm-for-activity-selection-an-example-step-3" title="Permanent link">&para;</a></h2>
+<p><img alt="center h:450px" src="../assets/ce100-week-7-knapsack-activiy-sel-ex-it-3.drawio.svg" /></p>
+<hr />
+<h2 id="greedy-algorithm-for-activity-selection-an-example-step-4">Greedy Algorithm for Activity Selection, An Example (Step-4)<a class="headerlink" href="#greedy-algorithm-for-activity-selection-an-example-step-4" title="Permanent link">&para;</a></h2>
+<p><img alt="center h:450px" src="../assets/ce100-week-7-knapsack-activiy-sel-ex-it-4.drawio.svg" /></p>
+<hr />
+<h2 id="greedy-algorithm-for-activity-selection-an-example-step-5">Greedy Algorithm for Activity Selection, An Example (Step-5)<a class="headerlink" href="#greedy-algorithm-for-activity-selection-an-example-step-5" title="Permanent link">&para;</a></h2>
+<p><img alt="center h:450px" src="../assets/ce100-week-7-knapsack-activiy-sel-ex-it-5.drawio.svg" /></p>
+<hr />
+<h2 id="greedy-algorithm-for-activity-selection-an-example-step-6">Greedy Algorithm for Activity Selection, An Example (Step-6)<a class="headerlink" href="#greedy-algorithm-for-activity-selection-an-example-step-6" title="Permanent link">&para;</a></h2>
+<p><img alt="center h:450px" src="../assets/ce100-week-7-knapsack-activiy-sel-ex-it-6.drawio.svg" /></p>
+<hr />
+<h2 id="greedy-algorithm-for-activity-selection-an-example-step-7">Greedy Algorithm for Activity Selection, An Example (Step-7)<a class="headerlink" href="#greedy-algorithm-for-activity-selection-an-example-step-7" title="Permanent link">&para;</a></h2>
+<h3 id="final-solution">Final Solution<a class="headerlink" href="#final-solution" title="Permanent link">&para;</a></h3>
+<p><img alt="center h:450px" src="../assets/ce100-week-7-knapsack-activiy-sel-ex-it-7.drawio.svg" /></p>
+<hr />
+<h2 id="comparison-of-dp-and-greedy-algorithms"><strong>Comparison of DP and Greedy Algorithms</strong><a class="headerlink" href="#comparison-of-dp-and-greedy-algorithms" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="reminder-dp-based-matrix-chain-order"><strong>Reminder</strong>: DP-Based Matrix Chain Order<a class="headerlink" href="#reminder-dp-based-matrix-chain-order" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[
+m_{ij}=\underset{i \leq k &lt; j}{MIN} \{ m_{ik} + m_{k+1,j} + p_{i-1} p_k p_j \}
+\]</div>
+<ul>
+<li>
+<p>We don’t know ahead of time which <span class="arithmatex">\(k\)</span> value to choose.</p>
+</li>
+<li>
+<p>We first need to compute the results of subproblems <span class="arithmatex">\(m_{ik}\)</span>  and <span class="arithmatex">\(m_{k+1,j}\)</span> before computing <span class="arithmatex">\(m_{ij}\)</span></p>
+</li>
+<li>
+<p>The selection of <span class="arithmatex">\(k\)</span> is done based on the <strong>results of the subproblems</strong>.</p>
+</li>
+</ul>
+<hr />
+<h2 id="greedy-algorithm-for-activity-selection_2">Greedy Algorithm for Activity Selection<a class="headerlink" href="#greedy-algorithm-for-activity-selection_2" title="Permanent link">&para;</a></h2>
+<p><img alt="center h:450px" src="../assets/ce100-week-7-knapsack-activity-greed-selection.drawio.svg" /></p>
+<p><em>explained in the next slide..</em></p>
+<hr />
+<h2 id="greedy-algorithm-for-activity-selection_3">Greedy Algorithm for Activity Selection<a class="headerlink" href="#greedy-algorithm-for-activity-selection_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Make a greedy selection in the beginning:</li>
+<li>Choose <span class="arithmatex">\(a_1\)</span> (the activity with the earliest finish time)</li>
+<li>Solve the remaining subproblem <span class="arithmatex">\(S_1'\)</span> (all activities that start after a1)</li>
+</ul>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="greedy-vs-dynamic-programming">Greedy vs Dynamic Programming<a class="headerlink" href="#greedy-vs-dynamic-programming" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Optimal substructure property exploited by both <strong>Greedy</strong> and <strong>DP</strong> strategies</li>
+<li><strong>Greedy Choice Property:</strong> A sequence of locally optimal choices <span class="arithmatex">\(\Rightarrow\)</span> an optimal solution</li>
+<li>We make the choice that seems best at the moment</li>
+<li>Then solve the subproblem arising after the choice is made</li>
+<li><strong>DP:</strong> We also make a choice/decision at each step, but the choice may depend on the optimal solutions to subproblems</li>
+<li><strong>Greedy:</strong> The choice may depend on the choices made so far, but it cannot depend on any future choices or on the solutions to subproblems</li>
+</ul>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="greedy-vs-dynamic-programming_1">Greedy vs Dynamic Programming<a class="headerlink" href="#greedy-vs-dynamic-programming_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>DP</strong> is a bottom-up strategy (<em>use memory to store the results of subproblems</em>)</li>
+<li><strong>Greedy</strong> is a top-down strategy (<em>make choices at each step</em>)</li>
+<li>each greedy choice in the sequence iteratively reduces each problem to a similar but smaller problem</li>
+</ul>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="proof-of-correctness-of-greedy-algorithms">Proof of Correctness of Greedy Algorithms<a class="headerlink" href="#proof-of-correctness-of-greedy-algorithms" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Examine a globally optimal solution</li>
+<li>Show that this soln can be modified so that </li>
+<li>(1) A greedy choice is made as the first step</li>
+<li>(2) This choice reduces the problem to a similar but smaller problem</li>
+<li>Apply induction to show that a greedy choice can be used at every step</li>
+<li>Showing (2) reduces the proof of correctness to proving that the problem exhibits optimal substructure property</li>
+</ul>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="greedy-choice-property-proof_1">Greedy Choice Property - Proof<a class="headerlink" href="#greedy-choice-property-proof_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>Theorem:</strong> There exists an optimal solution <span class="arithmatex">\(A \subseteq S\)</span> such that <span class="arithmatex">\(a_1 \in A\)</span></p>
+</li>
+<li>
+<p><strong>Proof:</strong> Consider an arbitrary optimal solution <span class="arithmatex">\(B = \{a_k, a_{\ell}, a_m, \dots\}\)</span>, where <span class="arithmatex">\(f_k &lt; f_{\ell} &lt; f_m &lt; \dots\)</span></p>
+</li>
+<li>If <span class="arithmatex">\(k = 1\)</span>, then <span class="arithmatex">\(B\)</span> starts with <span class="arithmatex">\(a_1\)</span>, and the proof is complete</li>
+<li>If <span class="arithmatex">\(k &gt; 1\)</span>, then create another solution <span class="arithmatex">\(B'\)</span> by replacing <span class="arithmatex">\(a_k\)</span> with <span class="arithmatex">\(a_1\)</span>. Since <span class="arithmatex">\(f_1 \leq f_k\)</span>, <span class="arithmatex">\(B'\)</span> is guaranteed to be valid, and <span class="arithmatex">\(|B'| = |B|\)</span>, hence also optimal</li>
+</ul>
+<p><img alt="center h:250px" src="../assets/ce100-week-7-knapsack-activity-select-opt-sub-prop-4.drawio.svg" /></p>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="elements-of-greedy-strategy">Elements of Greedy Strategy<a class="headerlink" href="#elements-of-greedy-strategy" title="Permanent link">&para;</a></h2>
+<ul>
+<li>How can you judge whether</li>
+<li>
+<p>A greedy algorithm will solve a particular optimization problem?</p>
+</li>
+<li>
+<p><strong>Two key ingredients</strong></p>
+</li>
+<li>Greedy choice property</li>
+<li>Optimal substructure property </li>
+</ul>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="key-ingredients-of-greedy-strategy">Key Ingredients of Greedy Strategy<a class="headerlink" href="#key-ingredients-of-greedy-strategy" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Greedy Choice Property:</strong> A globally optimal solution can be arrived at by making locally optimal (greedy) choices</li>
+<li>In <strong>DP</strong>,we make a choice at each step but the choice may depend on the solutions to subproblems</li>
+<li>In <strong>Greedy Algorithms</strong>, we make the choice that seems best at that moment then solve the subproblems arising after the choice is made</li>
+<li>The choice may depend on choices so far, but it cannot depend on any future choice or on the solutions to subproblems</li>
+<li>DP solves the problem bottom-up</li>
+<li>Greedy usually progresses in a top-down fashion by making one greedy choice after another reducing each given problem instance to a smaller one </li>
+</ul>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="key-ingredients-greedy-choice-property">Key Ingredients: <strong>Greedy Choice Property</strong><a class="headerlink" href="#key-ingredients-greedy-choice-property" title="Permanent link">&para;</a></h2>
+<ul>
+<li>We must prove that a greedy choice at each step yields a globally optimal solution</li>
+<li>The proof examines a globally optimal solution</li>
+<li>Shows that the soln can be modified so that a <strong>greedy choice made as the first step</strong> reduces the problem to a similar but smaller subproblem</li>
+<li>Then <strong>induction</strong> is applied to show that a greedy choice can be used at each step</li>
+<li>Hence, this induction proof reduces the proof of correctness to demonstrating that an optimal solution must exhibit <strong>optimal substructure</strong> property</li>
+</ul>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="key-ingredients-greedy-choice-property_1">Key Ingredients: <strong>Greedy Choice Property</strong><a class="headerlink" href="#key-ingredients-greedy-choice-property_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>How to prove the greedy choice property?</strong></li>
+<li>Consider the greedy choice <span class="arithmatex">\(c\)</span></li>
+<li>Assume that there is an <strong>optimal solution <span class="arithmatex">\(B\)</span> that doesn’t contain <span class="arithmatex">\(c\)</span></strong>.</li>
+<li>Show that it is possible to <strong>convert <span class="arithmatex">\(B\)</span></strong> to another optimal solution <span class="arithmatex">\(B'\)</span>, where <span class="arithmatex">\(B'\)</span> contains <span class="arithmatex">\(c\)</span>.</li>
+<li><strong>Example:</strong> Activity selection algorithm</li>
+<li>Greedy choice: <span class="arithmatex">\(a_1\)</span> (the activity with the earliest finish time)</li>
+<li>Consider an optimal solution <span class="arithmatex">\(B\)</span> without <span class="arithmatex">\(a_1\)</span></li>
+<li>Replace the first activity in <span class="arithmatex">\(B\)</span> with <span class="arithmatex">\(a_1\)</span> to construct <span class="arithmatex">\(B'\)</span></li>
+<li>Prove that <span class="arithmatex">\(B'\)</span> must be an optimal solution</li>
+</ul>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="key-ingredients-optimal-substructure">Key Ingredients: <strong>Optimal Substructure</strong><a class="headerlink" href="#key-ingredients-optimal-substructure" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A problem exhibits optimal substructure if an optimal solution to the problem contains within it optimal solutions to subproblems</li>
+<li><strong>Example:</strong> Activity selection problem <span class="arithmatex">\(S\)</span></li>
+<li>If an optimal solution A to S begins with activity a1 then the set of activities</li>
+</ul>
+<p>$$
+  A' = A - {a_1}
+  $$</p>
+<ul>
+<li>is an optimal solution to the activity selection problem </li>
+</ul>
+<p>$$
+  S' = { a_i \in S : s_i \geq f_1 }
+  $$</p>
+<ul>
+<li>where <span class="arithmatex">\(s_i\)</span> is the start time of activity <span class="arithmatex">\(a_i\)</span> and <span class="arithmatex">\(f_i\)</span> is the finish time of activity <span class="arithmatex">\(a_i\)</span></li>
+</ul>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="key-ingredients-optimal-substructure_1">Key Ingredients: <strong>Optimal Substructure</strong><a class="headerlink" href="#key-ingredients-optimal-substructure_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Optimal substructure property is exploited by both Greedy and dynamic programming strategies</li>
+<li>Hence one may</li>
+<li>Try to generate a dynamic programming soln to a problem when a greedy strategy suffices  inefficient</li>
+<li>Or, may mistakenly think that a greedy soln works when in fact a DP soln is required  incorrect</li>
+<li><strong>Example:</strong> <code>Knapsack Problems(S, w)</code></li>
+</ul>
+<hr />
+<h2 id="knapsack-problems"><strong>Knapsack Problems</strong><a class="headerlink" href="#knapsack-problems" title="Permanent link">&para;</a></h2>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="knapsack-problem">Knapsack Problem<a class="headerlink" href="#knapsack-problem" title="Permanent link">&para;</a></h2>
+<p><img alt="bg right:40% h:400px" src="../assets/knapsack-wiki.png" /></p>
+<ul>
+<li>Each item <span class="arithmatex">\(i\)</span> has:</li>
+<li>weight <span class="arithmatex">\(w_i\)</span></li>
+<li>value <span class="arithmatex">\(v_i\)</span></li>
+<li>
+<p>A thief has a knapsack of weight capacity <span class="arithmatex">\(w\)</span></p>
+</li>
+<li>
+<p><strong>Which items to choose to maximize the value of the items in the knapsack?</strong></p>
+</li>
+</ul>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="knapsack-problem-two-versions">Knapsack Problem: <strong>Two Versions</strong><a class="headerlink" href="#knapsack-problem-two-versions" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>The 0-1 knapsack problem:</strong></li>
+<li>Each item is discrete.</li>
+<li>Each item either chosen as a whole or not chosen.</li>
+<li>
+<p><strong>Examples:</strong> <em>TV, laptop, gold bricks, etc</em>.</p>
+</li>
+<li>
+<p><strong>The fractional knapsack problem:</strong></p>
+</li>
+<li>Can choose fractional part of each item.</li>
+<li>If item i has weight wi, we can choose any amount ≤ wi</li>
+<li><strong>Examples:</strong> <em>Gold dust, silver dust, rice, etc.</em> </li>
+</ul>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="knapsack-problems_1">Knapsack Problems<a class="headerlink" href="#knapsack-problems_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>The 0-1 Knapsack Problem(<span class="arithmatex">\(S, W\)</span>)</strong></li>
+<li>A thief robbing a store finds <span class="arithmatex">\(n\)</span> items <span class="arithmatex">\(S=\{I_1, I_2, \dots , I_n\}\)</span>, the ith item is worth <span class="arithmatex">\(v_i\)</span> dollars and weighs <span class="arithmatex">\(w_i\)</span> pounds, where vi and wi are integers</li>
+<li>He wants to take as valuable a load as possible, but he can carry at most <span class="arithmatex">\(W\)</span> pounds in his knapsack, where <span class="arithmatex">\(W\)</span> is an integer</li>
+<li>The thief cannot take a fractional amount of an item</li>
+<li><strong>The Fractional Knapsack Problem (<span class="arithmatex">\(S, W\)</span>)</strong></li>
+<li>The scenario is the same</li>
+<li>But, the thief can take fractions of items rather than having to make binary (<span class="arithmatex">\(0-1\)</span>) choice for each item</li>
+</ul>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="optimal-substructure-property-for-the-0-1-knapsack-problem-s-w">Optimal Substructure Property for the 0-1 Knapsack Problem (S, W)<a class="headerlink" href="#optimal-substructure-property-for-the-0-1-knapsack-problem-s-w" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Consider an optimal load L for the problem (S, W).</li>
+<li>Let Ij be an item chosen in L with weight wj</li>
+<li>Assume we remove Ij from L, and let:</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align*}
+&amp; L_{j}' = L – \{I_j\} \\
+&amp; S_{j}' = S – \{I_j\} \\
+&amp; W_{j}' = W – w_j
+\end{align*}
+\]</div>
+<ul>
+<li>Q: <em>What can we say about the optimal substructure property?</em></li>
+</ul>
+<p><img alt="center h:150px" src="../assets/ce100-week-7-knapsack-knapsack-1.drawio.svg" /></p>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="optimal-substructure-property-for-the-0-1-knapsack-problem-s-w_1">Optimal Substructure Property for the 0-1 Knapsack Problem (S, W)<a class="headerlink" href="#optimal-substructure-property-for-the-0-1-knapsack-problem-s-w_1" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[
+\begin{align*}
+&amp; L_{j}' = L – \{I_j\} \\
+&amp; S_{j}' = S – \{I_j\} \\
+&amp; W_{j}' = W – w_j
+\end{align*}
+\]</div>
+<ul>
+<li>Optimal substructure property: </li>
+<li><span class="arithmatex">\(L_j'\)</span> must be an optimal solution for <span class="arithmatex">\((S_j', W_j')\)</span></li>
+<li><strong>Why?</strong></li>
+<li>If we remove item <span class="arithmatex">\(j\)</span> from <span class="arithmatex">\(L\)</span>, we can construct a new optimal solution <span class="arithmatex">\(L_j'\)</span> for <span class="arithmatex">\((S_j', W_j')\)</span></li>
+<li>If <span class="arithmatex">\(L_j'\)</span> is optimal, then <span class="arithmatex">\(L\)</span> must be optimal</li>
+</ul>
+<p><img alt="center h:150px" src="../assets/ce100-week-7-knapsack-knapsack-1.drawio.svg" /></p>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="optimal-substructure-property-for-the-0-1-knapsack-problem-s-w_2">Optimal Substructure Property for the 0-1 Knapsack Problem (S, W)<a class="headerlink" href="#optimal-substructure-property-for-the-0-1-knapsack-problem-s-w_2" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[
+\begin{align*}
+&amp; L_j' = L – \{I_j\} \\
+&amp; S_j' = S – \{I_j\} \\ 
+&amp; W_j' = W – w_j 
+\end{align*}
+\]</div>
+<ul>
+<li>
+<p>Optimal substructure: <span class="arithmatex">\(L_j'\)</span> must be an optimal solution for <span class="arithmatex">\((S_j', W_j')\)</span></p>
+</li>
+<li>
+<p><strong>Proof:</strong>  By contradiction, assume there is a solution <span class="arithmatex">\(B_j'\)</span> for <span class="arithmatex">\((S_j', W_j')\)</span>, which is better than <span class="arithmatex">\(L_j'\)</span>. </p>
+</li>
+<li>We can construct a solution B for the original problem (<span class="arithmatex">\(S, W\)</span>) as: <span class="arithmatex">\(B = Bjʹ ∪ {Ij}\)</span>. </li>
+<li>The total value of <span class="arithmatex">\(B\)</span> is now higher than <span class="arithmatex">\(L\)</span>, which is a contradiction because <span class="arithmatex">\(L\)</span> is optimal for <span class="arithmatex">\((S, W)\)</span>. </li>
+<li><span class="arithmatex">\(Q.E.D.\)</span></li>
+</ul>
+<hr />
+<style scoped>section{ font-size: 23px; }</style>
+
+<h2 id="optimal-substructure-property-for-the-fractional-knapsack-problem-s-w">Optimal Substructure Property for the Fractional Knapsack Problem (S, W)<a class="headerlink" href="#optimal-substructure-property-for-the-fractional-knapsack-problem-s-w" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Consider an optimal solution L for (S, W)</li>
+<li>
+<p>If we remove a weight <span class="arithmatex">\(0 &lt; w \leq w_j\)</span> of item <span class="arithmatex">\(j\)</span> from optimal load <span class="arithmatex">\(L\)</span> and let:</p>
+</li>
+<li>
+<p>The remaining load </p>
+</li>
+</ul>
+<p>$$
+  L_j' = L - { w  \text{pounds of}  I_j } 
+  $$</p>
+<ul>
+<li>must be a most valuable load weighing at most </li>
+</ul>
+<p>$$
+  W_j' = W - w
+  $$</p>
+<div class="highlight"><pre><span></span><code>- pounds that the thief can take from
+</code></pre></div>
+<p>$$
+  S_j' = S  - {I_j} \cup { w_j - w  \text{pounds of}  I_j } 
+  $$</p>
+<ul>
+<li>That is, Lj´ should be an optimal soln to the </li>
+</ul>
+<div class="arithmatex">\[
+\text{Fractional Knapsack Problem}(S_j', W_j')
+\]</div>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="knapsack-problems_2">Knapsack Problems<a class="headerlink" href="#knapsack-problems_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Two different problems:</li>
+<li>0-1 knapsack problem</li>
+<li>
+<p>Fractional knapsack problem</p>
+</li>
+<li>
+<p>The problems are similar.</p>
+</li>
+<li>
+<p>Both problems have optimal substructure property.</p>
+</li>
+<li>
+<p>Which algorithm to solve each problem? </p>
+</li>
+</ul>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="fractional-knapsack-problem">Fractional Knapsack Problem<a class="headerlink" href="#fractional-knapsack-problem" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Can we use a greedy algorithm?</li>
+<li>
+<p>Greedy choice: Take as much as possible from the item with the largest value per pound <span class="arithmatex">\(v_i/w_i\)</span></p>
+</li>
+<li>
+<p>Does the greedy choice property hold?</p>
+</li>
+<li>Let <span class="arithmatex">\(j\)</span> be the item with the largest value per pound <span class="arithmatex">\(v_j/w_j\)</span></li>
+<li>Need to prove that there is an optimal load that has as much <span class="arithmatex">\(j\)</span> as possible.</li>
+<li><strong>Proof:</strong> <em>Consider an optimal solution L that does not have the maximum amount of item <span class="arithmatex">\(j\)</span>. We could replace the items in <span class="arithmatex">\(L\)</span> with item <span class="arithmatex">\(j\)</span> until <span class="arithmatex">\(L\)</span> has maximum amount of <span class="arithmatex">\(j\)</span>. <span class="arithmatex">\(L\)</span> would still be optimal, because item <span class="arithmatex">\(j\)</span> has the highest value per pound.</em></li>
+</ul>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="greedy-solution-to-fractional-knapsack">Greedy Solution to Fractional Knapsack<a class="headerlink" href="#greedy-solution-to-fractional-knapsack" title="Permanent link">&para;</a></h2>
+<ul>
+<li>(1) Compute the value per pound <span class="arithmatex">\(v_i/w_i\)</span> for each item</li>
+<li>(2) The thief begins by taking, as much as possible, of the item with the greatest value per pound</li>
+<li>(3) If the supply of that item is exhausted before filling the knapsack, then he takes, as much as possible, of the item with the next greatest value per pound</li>
+<li>(4) Repeat (2-3) until his knapsack becomes full</li>
+</ul>
+<p><strong>Thus, by sorting the items by value per pound the greedy algorithm runs in <span class="arithmatex">\(O(nlgn)\)</span> time</strong></p>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="fractional-knapsack-problem-example">Fractional Knapsack Problem: <strong>Example</strong><a class="headerlink" href="#fractional-knapsack-problem-example" title="Permanent link">&para;</a></h2>
+<p><img alt="center h:450px" src="../assets/ce100-week-7-knapsack-knapsack-2.drawio.svg" /></p>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="0-1-knapsack-problem">0-1 Knapsack Problem<a class="headerlink" href="#0-1-knapsack-problem" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Can we use the same greedy algorithm?</li>
+<li>Is there a better solution?</li>
+</ul>
+<p><img alt="center h:450px" src="../assets/ce100-week-7-knapsack-knapsack-3.drawio.svg" /></p>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="0-1-knapsack-problem_1">0-1 Knapsack Problem<a class="headerlink" href="#0-1-knapsack-problem_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The optimal solution for this problem is:</li>
+<li>This solution cannot be obtained using the greedy algorithm</li>
+</ul>
+<p><img alt="center h:450px" src="../assets/ce100-week-7-knapsack-knapsack-4.drawio.svg" /></p>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="0-1-knapsack-problem_2">0-1 Knapsack Problem<a class="headerlink" href="#0-1-knapsack-problem_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>When we consider an item <span class="arithmatex">\(I_j\)</span> for inclusion we must compare the solutions to two subproblems </li>
+<li>Subproblems in which <span class="arithmatex">\(I_j\)</span> is included and excluded</li>
+<li>The problem formulated in this way gives rise to many </li>
+<li><strong>overlapping subproblems</strong> (a key ingredient of DP)<ul>
+<li>In fact, dynamic programming can be used to solve the <strong>0-1 Knapsack problem</strong></li>
+</ul>
+</li>
+</ul>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="0-1-knapsack-problem_3">0-1 Knapsack Problem<a class="headerlink" href="#0-1-knapsack-problem_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A thief robbing a store containing <span class="arithmatex">\(n\)</span> articles </li>
+<li><span class="arithmatex">\(\{a_1, a_2, \dots, a_n\}\)</span></li>
+<li>The value of <span class="arithmatex">\(i_{th}\)</span> article is <span class="arithmatex">\(v_i\)</span> dollars (<span class="arithmatex">\(v_i\)</span> is integer)</li>
+<li>The weight of <span class="arithmatex">\(i_{th}\)</span> article is <span class="arithmatex">\(w_i\)</span> kg (<span class="arithmatex">\(w_i\)</span> is integer)</li>
+<li>Thief can carry at most <span class="arithmatex">\(W\)</span> kg in his knapsack</li>
+<li>Which articles should he take to maximize the value of his load?</li>
+<li>Let <span class="arithmatex">\(K_{n,W} = \{a_1, a_2, \dots ,a_n:W\}\)</span> denote 0-1 knapsack problem</li>
+<li>Consider the solution as a sequence of <span class="arithmatex">\(n\)</span> decisions</li>
+<li><strong>i.e.</strong>, <span class="arithmatex">\(i_{th}\)</span> decision: whether thief should pick <span class="arithmatex">\(a_i\)</span> for optimal load.</li>
+</ul>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="optimal-substructure-property_3">Optimal Substructure Property<a class="headerlink" href="#optimal-substructure-property_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Notation: <span class="arithmatex">\(K_{n,W}\)</span>: </li>
+<li>The items to choose from: <span class="arithmatex">\(\{a_1, \dots , a_n\}\)</span></li>
+<li>The knapsack capacity: <span class="arithmatex">\(W\)</span></li>
+<li>
+<p>Consider an optimal load <span class="arithmatex">\(L\)</span> for problem <span class="arithmatex">\(K_{n,W}\)</span></p>
+</li>
+<li>
+<p>Let’s consider two cases:</p>
+<ul>
+<li><span class="arithmatex">\(a_n\)</span> is <strong>in</strong> <span class="arithmatex">\(L\)</span></li>
+<li><span class="arithmatex">\(a_n\)</span> is <strong>not in</strong> <span class="arithmatex">\(L\)</span></li>
+</ul>
+</li>
+</ul>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="optimal-substructure-property_4">Optimal Substructure Property<a class="headerlink" href="#optimal-substructure-property_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Case 1:</strong> If  <span class="arithmatex">\(a_n \in L\)</span></li>
+<li>What can we say about the optimal substructure?<ul>
+<li><span class="arithmatex">\(L – \{a_n\}\)</span> must be optimal for <span class="arithmatex">\(K_{n-1,W-wn}\)</span></li>
+<li><span class="arithmatex">\(K_{n-1,W-wn}\)</span>:</li>
+<li>The items to choose from <span class="arithmatex">\(\{a_1, \dots a_{n-1}\}\)</span></li>
+<li>The knapsack capacity: <span class="arithmatex">\(W – wn\)</span></li>
+</ul>
+</li>
+<li><strong>Case 2:</strong> If <span class="arithmatex">\(a_n \notin L\)</span></li>
+<li>What can we say about the optimal substructure?<ul>
+<li><span class="arithmatex">\(L\)</span> must be optimal for <span class="arithmatex">\(K_{n-1,W}\)</span></li>
+<li><span class="arithmatex">\(K_{n-1,W}\)</span>:</li>
+<li>The items to choose from <span class="arithmatex">\(\{a_1, \dots a_{n-1}\}\)</span></li>
+<li>The knapsack capacity: <span class="arithmatex">\(W\)</span></li>
+</ul>
+</li>
+</ul>
+<hr />
+<style scoped>section{ font-size: 40px; }</style>
+
+<h2 id="optimal-substructure-property_5">Optimal Substructure Property<a class="headerlink" href="#optimal-substructure-property_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li>In other words, optimal solution to <span class="arithmatex">\(K_{n,W}\)</span> contains an optimal solution to:</li>
+<li>either: <span class="arithmatex">\(K_{n-1,W-wn}\)</span>  (if <span class="arithmatex">\(a_n\)</span> is selected)</li>
+<li>or:      <span class="arithmatex">\(K_{n-1, W}\)</span>       (if <span class="arithmatex">\(a_n\)</span> is not selected)</li>
+</ul>
+<hr />
+<style scoped>section{ font-size: 30px; }</style>
+
+<h2 id="recursive-formulation">Recursive Formulation<a class="headerlink" href="#recursive-formulation" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[
+c[i,w] =
+\begin{cases}
+0 &amp; \text{ if } i = 0, \ \text{or} \ w = 0 \\
+c[i-1,w], &amp; \text{ if } w_i &gt; w \\
+max\{v_i + c[i-1,w-w_i],c[i-1,w] &amp; otherwise \\
+\end{cases}
+\]</div>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="0-1-knapsack-problem_4">0-1 Knapsack Problem<a class="headerlink" href="#0-1-knapsack-problem_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Recursive definition for value of optimal soln:</strong></li>
+<li>This recurrence says that an optimal solution <span class="arithmatex">\(S_{i,w}\)</span> for <span class="arithmatex">\(K_{i,w}\)</span> <ul>
+<li>either contains <span class="arithmatex">\(a_i \Rightarrow c(S_i,w) = v_i + c(S_{i-1,w-w_i})\)</span></li>
+<li>or does not contain <span class="arithmatex">\(a_i \Rightarrow c(Si,w) = c(S_{i-1},w)\)</span></li>
+</ul>
+</li>
+<li>If thief decides to pick <span class="arithmatex">\(a_i\)</span><ul>
+<li>He takes <span class="arithmatex">\(v_i\)</span> value and he can choose from <span class="arithmatex">\(\{a_1, a_2, \dots,a_{i-1}\}\)</span> up to the weight limit <span class="arithmatex">\(w - w_i\)</span> to get <span class="arithmatex">\(c[i-1,w-w_i]\)</span> </li>
+</ul>
+</li>
+<li>If he decides not to pick <span class="arithmatex">\(a_i\)</span> <ul>
+<li>He can choose from <span class="arithmatex">\(\{a_1, a_2, \dots ,a_{i-1}\}\)</span> up to the weight limit <span class="arithmatex">\(w\)</span> to get <span class="arithmatex">\(c[i-1,w]\)</span></li>
+</ul>
+</li>
+<li>The better of these two choices should be made</li>
+</ul>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="bottom-up-computation">Bottom-up Computation<a class="headerlink" href="#bottom-up-computation" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Need to process:</li>
+<li><span class="arithmatex">\(c[i, w]\)</span></li>
+<li>after computing:</li>
+<li><span class="arithmatex">\(c[i-1, w]\)</span>,</li>
+<li><span class="arithmatex">\(c[i-1, w-w_i]\)</span><ul>
+<li>for all <span class="arithmatex">\(w_i &lt; w\)</span></li>
+</ul>
+</li>
+</ul>
+<p><img alt="bg right:50% h:500px" src="../assets/ce100-week-7-knapsack-knapsack-bottom-up.drawio.svg" /></p>
+<hr />
+<style scoped>section{ font-size: 25px; }</style>
+
+<h2 id="bottom-up-computation_1">Bottom-up Computation<a class="headerlink" href="#bottom-up-computation_1" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[
+\begin{align*}
+&amp; \quad \text{for} \ i \leftarrow 1 \ \text{to} \ n \ \text{do} \\
+&amp; \qquad \text{for} \ w \leftarrow 1 \ \text{to} \ W \ \text{do} \\
+&amp; \qquad \quad \dots  \\
+&amp; \qquad \quad c[i,w] \leftarrow \dots  \\
+&amp; \qquad \quad \dots  \\
+\end{align*}
+\]</div>
+<p><img alt="bg right:50% h:500px" src="../assets/ce100-week-7-knapsack-knapsack-bottom-up-2.drawio.svg" /></p>
+<hr />
+<h2 id="dp-solution-to-0-1-knapsack">DP Solution to 0-1 Knapsack<a class="headerlink" href="#dp-solution-to-0-1-knapsack" title="Permanent link">&para;</a></h2>
+<style scoped>section{ font-size: 25px; }</style>
+
+<ul>
+<li>
+<p><span class="arithmatex">\(c\)</span> is an <span class="arithmatex">\((n + 1)\times(W+1)\)</span> array; <span class="arithmatex">\(c[0 \dots n : 0 \dots W]\)</span></p>
+</li>
+<li>
+<p><strong>Note</strong> : table is computed in row-major order</p>
+</li>
+<li>
+<p><strong>Run time:</strong> <span class="arithmatex">\(T(n) = \Theta(nW)\)</span></p>
+</li>
+</ul>
+<hr />
+<h2 id="dp-solution-to-0-1-knapsack_1">DP Solution to 0-1 Knapsack<a class="headerlink" href="#dp-solution-to-0-1-knapsack_1" title="Permanent link">&para;</a></h2>
+<style scoped>section{ font-size: 25px; }</style>
+
+<p>$$
+\begin{align*}</p>
+<p>&amp; \text{KNAP0-1}(v, w, n,W) \</p>
+<p>&amp; \quad \text{for}  \omega \leftarrow 0  \text{to}  W  \text{do} \
+&amp; \qquad c[0, \omega] \leftarrow 0 \</p>
+<p>&amp; \quad \text{for}  i \leftarrow 0  \text{to}  m  \text{do} \
+&amp; \qquad c[i, 0] \leftarrow 0 \</p>
+<p>&amp; \quad \text{for}  i \leftarrow 0  \text{to}  m  \text{do} \
+&amp; \qquad \quad \text{for}  \omega \leftarrow 1  \text{to}  W  \text{do} \
+&amp; \qquad \qquad \text{if}  w_i \leq \omega  \text{then} \
+&amp; \qquad \qquad \quad c[i, \omega] \leftarrow max{v_i + c[i-1, \omega - w_i] , c[i -1, \omega]} \
+&amp; \qquad \qquad \text{else} \
+&amp; \qquad \qquad \quad c[i, \omega] \leftarrow c[i-1, \omega] \
+&amp; \quad return  c[m,W]
+\end{align*}
+$$</p>
+<hr />
+<h2 id="constructing-an-optimal-solution">Constructing an Optimal Solution<a class="headerlink" href="#constructing-an-optimal-solution" title="Permanent link">&para;</a></h2>
+<style scoped>section{ font-size: 30px; }</style>
+
+<ul>
+<li>No extra data structure is maintained to keep track of the choices made to compute <span class="arithmatex">\(c[i, w]\)</span></li>
+<li>i.e. The choice of whether choosing item i or not</li>
+<li>Possible to understand the choice done by comparing <span class="arithmatex">\(c[i, w]\)</span> with <span class="arithmatex">\(c[i-1, w]\)</span></li>
+<li>If <span class="arithmatex">\(c[i,w] = c[i-1, w]\)</span> then it means item i was assumed to be not chosen for the best <span class="arithmatex">\(c[i, w]\)</span></li>
+</ul>
+<hr />
+<h2 id="finding-the-set-s-of-articles-in-an-optimal-load">Finding the Set S of Articles in an Optimal Load<a class="headerlink" href="#finding-the-set-s-of-articles-in-an-optimal-load" title="Permanent link">&para;</a></h2>
+<p>$$
+\begin{align*}</p>
+<p>&amp; \text{SOLKNAP0-1}(a, v, w, n,W,c) \
+&amp; \quad  i \leftarrow n ; \omega \leftarrow  W  \
+&amp; \quad S \leftarrow \emptyset                  \
+&amp; \quad while  i \leftarrow 0  do \
+&amp; \qquad if  c[i, \omega] = c[i-1, \omega]  then \
+&amp; \qquad \quad i \leftarrow i - 1 \
+&amp; \qquad else \
+&amp; \qquad \quad S \leftarrow S \cup {a_i} \
+&amp; \qquad \quad \omega \leftarrow \omega - w_i \
+&amp; \qquad \quad i \leftarrow i - 1 \
+&amp; \quad  return  S 
+\end{align*}
+$$</p>
+<hr />
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
-<p>TODO</p>
+<ul>
+<li>
+<p><a href="https://mitpress.mit.edu/books/introduction-algorithms-third-edition">Introduction to Algorithms, Third Edition | The MIT Press</a></p>
+</li>
+<li>
+<p><a href="http://nabil.abubaker.bilkent.edu.tr/473/">Bilkent CS473 Course Notes (new)</a></p>
+</li>
+<li>
+<p><a href="http://cs.bilkent.edu.tr/~ugur/teaching/cs473/">Bilkent CS473 Course Notes (old)</a></p>
+</li>
+</ul>
+<hr />
+<p><span class="arithmatex">\(-End-Of-Week-7-Course-Module-\)</span> </p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Son Güncelleme:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">26 Mart 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">16 Nisan 2022</span>
       
     
   </small>
@@ -1420,7 +3220,7 @@ Daha fazla bilgi için benimle iletişime geçebilirsiniz <strong>@ugurcoruh</st
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Kopyala", "clipboard.copied": "Kopyaland\u0131", "search.config.lang": "tr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Ara", "search.result.placeholder": "Aramaya ba\u015flamak i\u00e7in yaz\u0131n", "search.result.none": "E\u015fle\u015fen dok\u00fcman bulunamad\u0131", "search.result.one": "1 dok\u00fcman bulundu", "search.result.other": "# dok\u00fcman bulundu", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.efc77bfa.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.efc77bfa.min.js", "translations": {"clipboard.copied": "Kopyaland\u0131", "clipboard.copy": "Kopyala", "search.config.lang": "tr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Ara", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "E\u015fle\u015fen dok\u00fcman bulunamad\u0131", "search.result.one": "1 dok\u00fcman bulundu", "search.result.other": "# dok\u00fcman bulundu", "search.result.placeholder": "Aramaya ba\u015flamak i\u00e7in yaz\u0131n", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
   
