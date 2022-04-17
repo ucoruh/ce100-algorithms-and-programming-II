@@ -2974,22 +2974,22 @@ max\{v_i + c[i-1,w-w_i],c[i-1,w] &amp; otherwise \\
 <h2 id="dp-solution-to-0-1-knapsack_1">DP Solution to 0-1 Knapsack<a class="headerlink" href="#dp-solution-to-0-1-knapsack_1" title="Permanent link">&para;</a></h2>
 <style scoped>section{ font-size: 25px; }</style>
 
-<p>$$
-\begin{align*}</p>
-<p>&amp; \text{KNAP0-1}(v, w, n,W) \</p>
-<p>&amp; \quad \text{for}  \omega \leftarrow 0  \text{to}  W  \text{do} \
-&amp; \qquad c[0, \omega] \leftarrow 0 \</p>
-<p>&amp; \quad \text{for}  i \leftarrow 0  \text{to}  m  \text{do} \
-&amp; \qquad c[i, 0] \leftarrow 0 \</p>
-<p>&amp; \quad \text{for}  i \leftarrow 0  \text{to}  m  \text{do} \
-&amp; \qquad \quad \text{for}  \omega \leftarrow 1  \text{to}  W  \text{do} \
-&amp; \qquad \qquad \text{if}  w_i \leq \omega  \text{then} \
-&amp; \qquad \qquad \quad c[i, \omega] \leftarrow max{v_i + c[i-1, \omega - w_i] , c[i -1, \omega]} \
-&amp; \qquad \qquad \text{else} \
-&amp; \qquad \qquad \quad c[i, \omega] \leftarrow c[i-1, \omega] \
-&amp; \quad return  c[m,W]
+<div class="arithmatex">\[
+\begin{align*}
+&amp; \text{KNAP0-1}(v, w, n,W) \\
+&amp; \quad \text{for} \ \omega \leftarrow 0 \ \text{to} \ W \ \text{do} \\
+&amp; \qquad c[0, \omega] \leftarrow 0 \\
+&amp; \quad \text{for} \ i \leftarrow 0 \ \text{to} \ m \ \text{do} \\
+&amp; \qquad c[i, 0] \leftarrow 0 \\
+&amp; \quad \text{for} \ i \leftarrow 0 \ \text{to} \ m \ \text{do} \\
+&amp; \qquad \quad \text{for} \ \omega \leftarrow 1 \ \text{to} \ W \ \text{do} \\
+&amp; \qquad \qquad \text{if} \ w_i \leq \omega \ \text{then} \\
+&amp; \qquad \qquad \quad c[i, \omega] \leftarrow max\{v_i + c[i-1, \omega - w_i] , c[i -1, \omega]\} \\
+&amp; \qquad \qquad \text{else} \\
+&amp; \qquad \qquad \quad c[i, \omega] \leftarrow c[i-1, \omega] \\
+&amp; \quad return \ c[m,W]
 \end{align*}
-$$</p>
+\]</div>
 <hr />
 <h2 id="constructing-an-optimal-solution">Constructing an Optimal Solution<a class="headerlink" href="#constructing-an-optimal-solution" title="Permanent link">&para;</a></h2>
 <style scoped>section{ font-size: 30px; }</style>
@@ -3002,21 +3002,21 @@ $$</p>
 </ul>
 <hr />
 <h2 id="finding-the-set-s-of-articles-in-an-optimal-load">Finding the Set S of Articles in an Optimal Load<a class="headerlink" href="#finding-the-set-s-of-articles-in-an-optimal-load" title="Permanent link">&para;</a></h2>
-<p>$$
-\begin{align*}</p>
-<p>&amp; \text{SOLKNAP0-1}(a, v, w, n,W,c) \
-&amp; \quad  i \leftarrow n ; \omega \leftarrow  W  \
-&amp; \quad S \leftarrow \emptyset                  \
-&amp; \quad while  i \leftarrow 0  do \
-&amp; \qquad if  c[i, \omega] = c[i-1, \omega]  then \
-&amp; \qquad \quad i \leftarrow i - 1 \
-&amp; \qquad else \
-&amp; \qquad \quad S \leftarrow S \cup {a_i} \
-&amp; \qquad \quad \omega \leftarrow \omega - w_i \
-&amp; \qquad \quad i \leftarrow i - 1 \
-&amp; \quad  return  S 
+<div class="arithmatex">\[
+\begin{align*}
+&amp; \text{SOLKNAP0-1}(a, v, w, n,W,c) \\
+&amp; \quad  i \leftarrow n ; \omega \leftarrow  W  \\
+&amp; \quad S \leftarrow \emptyset                  \\
+&amp; \quad while \ i \leftarrow 0 \ do \\
+&amp; \qquad if \ c[i, \omega] = c[i-1, \omega] \ then \\
+&amp; \qquad \quad i \leftarrow i - 1 \\
+&amp; \qquad else \\
+&amp; \qquad \quad S \leftarrow S \cup \{a_i\} \\
+&amp; \qquad \quad \omega \leftarrow \omega - w_i \\
+&amp; \qquad \quad i \leftarrow i - 1 \\
+&amp; \quad  return \ S 
 \end{align*}
-$$</p>
+\]</div>
 <hr />
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
