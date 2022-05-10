@@ -1,1 +1,1 @@
-start "" "https://ucoruh.github.io/course-note-template/"
+start "" "https://ucoruh.github.io/ce100-algorithms-and-programming-II/"
