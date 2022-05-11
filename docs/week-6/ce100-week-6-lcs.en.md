@@ -5,6 +5,7 @@ style: |
     img[alt~="center"] {
       display: block;
       margin: 0 auto;
+      background-color: transparent!important;
     }
 _class: lead
 paginate: true
