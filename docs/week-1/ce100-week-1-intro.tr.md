@@ -58,7 +58,7 @@ math: katex
 
 #### Spring Semester, 2021-2022
 
-Download [DOC](ce100-week-1-intro.tr.md_doc.pdf), [SLIDE](ce100-week-1-intro.tr.md_slide.pdf), [PPTX](ce100-week-1-intro.tr.md_slide.pptx)
+Download [DOC-PDF](ce100-week-1-intro.tr.md_doc.pdf), [DOC-DOCX](ce100-week-1-intro.tr.md_word.docx), [SLIDE](ce100-week-1-intro.tr.md_slide.pdf), [PPTX](ce100-week-1-intro.tr.md_slide.pptx)
 
 <iframe width=700, height=500 frameBorder=0 src="../ce100-week-1-intro.tr.md_slide.html"></iframe>
 
@@ -128,7 +128,7 @@ please read the syllabus carefully.
   - Statistical proofs in pure mathematics
   - Computer-assisted proofs
 
-[Mathematical proof - Wikipedia](https://en.wikipedia.org/wiki/Mathematical_proof)
+[Mathematical proof - Wikipedia](https://tr.wikipedia.org/wiki/Mathematical_proof)
 
 ---
 
@@ -202,7 +202,7 @@ You can use [Flowgorithm](http://www.flowgorithm.org/) application to understand
 
 ### Links and Examples
 
-[Wikipedia](https://en.wikipedia.org/wiki/Pseudocode)
+[Wikipedia](https://tr.wikipedia.org/wiki/Pseudocode)
 
 [CS50](https://cs50.harvard.edu/ap/2021/problems/algorithms/)
 

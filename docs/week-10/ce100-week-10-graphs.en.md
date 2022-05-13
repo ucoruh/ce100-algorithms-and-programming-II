@@ -57,7 +57,7 @@ math: katex
 
 #### Spring Semester, 2021-2022
 
-Download [DOC](ce100-week-10-graphs.en.md_doc.pdf), [SLIDE](ce100-week-10-graphs.en.md_slide.pdf), [PPTX](ce100-week-10-graphs.en.md_slide.pptx)
+Download [DOC-PDF](ce100-week-10-graphs.en.md_doc.pdf), [DOC-DOCX](ce100-week-10-graphs.en.md_word.docx), [SLIDE](ce100-week-10-graphs.en.md_slide.pdf), [PPTX](ce100-week-10-graphs.en.md_slide.pptx)
 
 <iframe width=700, height=500 frameBorder=0 src="../ce100-week-10-graphs.en.md_slide.html"></iframe>
 
@@ -144,7 +144,6 @@ E=\{&(A,B),(A,C),(A,D),\\
 $$
 
 ![bg right:50% h:350px](assets/ce100-week-10-graphs-sampleGraph.drawio.svg)
-
 
 ---
 
@@ -550,7 +549,7 @@ $$
 
 <style scoped>section{ font-size: 30px; }</style>
 
-### **Introduction to Graphs**
+### **Introduction to Graphs** - Review
 
 $G=(V,E)$
 
@@ -558,6 +557,56 @@ $G=(V,E)$
 - Sparse Matrix $\rightarrow$ $|E|<|V^2|$
 - Dense Matrix $\rightarrow$ $|E| \ close \ to \ |V^2|$
 - Space Complexity $\Theta(|V|+|E|)$
+
+---
+
+<style scoped>section{ font-size: 27px; }</style>
+
+### **Introduction to Graphs** - Review
+
+- Many definitions for directed and undirected graphs are the same although certain terms have slightly different meanings
+- If $(u,v) \in E$ in a **directed graph** $G=(V,E)$, we say that $(u,v)$ is **incident from** or **leaves** vertex $u$ and is **incident to** or **enters** vertex $v$
+- If $(u,v) \in E$ in an **undirected graph** $G=(V,E)$, we say that $(u,v)$ is **incident on** vertices $u$ and $v$
+- If $(u,v)$ is an edge in a graph $G=(V,E)$, we say that vertex $v$ is **adjacent to** vertex $u$
+- When the graph is **undirected**,the **adjacency relation** is symmetric
+- When the graph is **directed** 
+  - the **adjacency relation** is **not necessarily symmetric**
+  - if $v$ is adjacent to $u$, we sometimes write $u \rightarrow v$
+
+---
+
+<style scoped>section{ font-size: 27px; }</style>
+
+### **Introduction to Graphs** - Review
+
+- The **degree** of a vertex in an **undirected graph** is the number of edges **incident on** it
+- In a directed graph, 
+  - **out-degree of a vertex:** number of edges **leaving** it
+  - **in-degree of a vertex:** number of edges **entering** it
+  - **degree of a vertex:** its **in-degree** + its **out-degree**
+- A **path** of **length** $k$ from a vertex $u$ to a vertex $u'$ in a graph $G=(V,E)$ is a **sequence** $\langle v_0,v_1,v_2,\dots,v_k \rangle$ of vertices such 
+  - that $v_0=u$,$v_k=u'$ and $(v_{i-1},v_i) \in E$, for $i=1,2,\dots,k$
+- The **length** of a **path** is the **number of edges** in the path
+
+---
+
+<style scoped>section{ font-size: 27px; }</style>
+
+### **Introduction to Graphs** - Review
+
+- If there is a path $p$ from $u$ to $u'$, we say that $u'$ is **reachable** from $u$ via $p: u \xrightarrow[]{p} u'$
+- A **path is simple** if all vertices in the path are **distinct**
+- A **subpath** of path $p= \langle v_0,v_1,v_2,\dots,v_k \rangle$ is a **contiguous subsequence** of its vertices
+- That is, for any $0 \leq i \leq j \leq k$, the subsequence of vertices $\langle v_i, v_{i+1},\dots, v_j \rangle$ is a **subpath** of $p$
+- In a **directed graph**, a path $\langle v_0,v_1,\dots, v_k\rangle$ forms a **cycle** if $v_0=v_k$ and the path contains at least one edge
+- The **cycle** is **simple** if, in addition, $v_0,v_1,\dots,v_k$ are **distinct** 
+- A **self-loop** is a **cycle** of **length 1**
+
+---
+
+<style scoped>section{ font-size: 27px; }</style>
+
+### **Introduction to Graphs** - Review
 
 ---
 
@@ -2148,14 +2197,26 @@ while !queue.empty():
 ## **Graph Traversal**
 ### Topological Sort - BFS version (Kahn's algorithm)
 
+- STEP-1
+
 ![center h:450px](assets/ce100-week-10-graphs-topological-topo-bfs.drawio.svg)
+
+---
+
+## **Graph Traversal**
+### Topological Sort - BFS version (Kahn's algorithm)
+
+- STEP-2
+
+![center h:450px](assets/ce100-week-10-graphs-topological-topo-bfs-1.1.drawio.svg)
 
 
 ---
 
 ## **Graph Traversal**
 ### Topological Sort - BFS version (Kahn's algorithm)
-- STEP-1
+
+- STEP-3
 
 ![center h:450px](assets/ce100-week-10-graphs-topological-topo-bfs-1.drawio.svg)
 
@@ -2163,7 +2224,8 @@ while !queue.empty():
 
 ## **Graph Traversal**
 ### Topological Sort - BFS version (Kahn's algorithm)
-- STEP-2
+
+- STEP-4
 
 ![center h:450px](assets/ce100-week-10-graphs-topological-topo-bfs-2.drawio.svg)
 
@@ -2171,7 +2233,8 @@ while !queue.empty():
 
 ## **Graph Traversal**
 ### Topological Sort - BFS version (Kahn's algorithm)
-- STEP-3
+
+- STEP-5
 
 ![center h:450px](assets/ce100-week-10-graphs-topological-topo-bfs-3.drawio.svg)
 
@@ -2179,7 +2242,8 @@ while !queue.empty():
 
 ## **Graph Traversal**
 ### Topological Sort - BFS version (Kahn's algorithm)
-- STEP-4
+
+- STEP-6
 
 ![center h:450px](assets/ce100-week-10-graphs-topological-topo-bfs-4.drawio.svg)
 
@@ -2187,7 +2251,8 @@ while !queue.empty():
 
 ## **Graph Traversal**
 ### Topological Sort - BFS version (Kahn's algorithm)
-- STEP-5
+
+- STEP-7
 
 ![center h:450px](assets/ce100-week-10-graphs-topological-topo-bfs-5.drawio.svg)
 
@@ -2195,9 +2260,37 @@ while !queue.empty():
 
 ## **Graph Traversal**
 ### Topological Sort - BFS version (Kahn's algorithm)
-- STEP-6
+
+- STEP-8
 
 ![center h:450px](assets/ce100-week-10-graphs-topological-topo-bfs-6.drawio.svg)
+
+---
+
+## **Graph Traversal**
+### Topological Sort - BFS version (Kahn's algorithm)
+
+- STEP-9
+
+![center h:450px](assets/ce100-week-10-graphs-topological-topo-bfs-7.drawio.svg)
+
+---
+
+## **Graph Traversal**
+### Topological Sort - BFS version (Kahn's algorithm)
+
+- STEP-10
+
+![center h:450px](assets/ce100-week-10-graphs-topological-topo-bfs-8.drawio.svg)
+
+---
+
+## **Graph Traversal**
+### Topological Sort - BFS version (Kahn's algorithm)
+
+- STEP-11 (Final)
+
+![center h:450px](assets/ce100-week-10-graphs-topological-topo-bfs-final.drawio.svg)
 
 ---
 

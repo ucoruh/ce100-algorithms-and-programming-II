@@ -57,7 +57,7 @@ math: katex
 
 #### Spring Semester, 2021-2022
 
-Download [DOC](ce100-week-3-matrix.en.md_doc.pdf), [SLIDE](ce100-week-3-matrix.en.md_slide.pdf), [PPTX](ce100-week-3-matrix.en.md_slide.pptx)
+Download [DOC-PDF](ce100-week-3-matrix.en.md_doc.pdf), [DOC-DOCX](ce100-week-3-matrix.en.md_word.docx), [SLIDE](ce100-week-3-matrix.en.md_slide.pdf), [PPTX](ce100-week-3-matrix.en.md_slide.pptx)
 
 <iframe width=700, height=500 frameBorder=0 src="../ce100-week-3-matrix.en.md_slide.html"></iframe>
 
