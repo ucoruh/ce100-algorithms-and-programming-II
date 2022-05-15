@@ -547,6 +547,145 @@ $$
 
 ---
 
+<style scoped>section{ font-size: 40px; }</style>
+
+## **Graph Representations** - Review
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Graph Representations** - Review
+
+- The standard two ways to represent a graph $G=(V,E)$
+  - As a collection of **adjacency-lists**
+  - As an **adjacency-matrix**
+- **Adjacency-list** representation is usually preferred
+- Provides a compact way to represent sparse graphs
+  - Those graphs for which $|E| << |V|^2$
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Graph Representations** - Review
+
+- **Adjacency-matrix** representation may be preferred 
+  - for dense graphs for which $|E|$ is close to $|V|^2$
+  - when we need to be able to tell quickly if there is an edge connecting two given vertices
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Adjacency-List Representation** - Review
+
+- An array $Adj$ of $|V|$ lists, one for each vertex $u \in V$
+- For each $u \in V$ the adjacency-list $Adj[u]$ contains (pointers to) all vertices $v$ such that $(u,v) \in E$
+- That is, $Adj[u]$ consists of all vertices adjacent to $u$ in $G$
+- The vertices in each adjacency-list are stored in an arbitrary order
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Adjacency-List Representation** - Review
+
+- If $G$ is a directed graph 
+  - The sum of the lengths of the adjacency lists $=|E|$
+- If $G$ is an undirected graph 
+  - The sum of the lengths of the adjacency lists $=2|E|$
+  - since an edge $(u,v)$ appears in both $Adj[u]$ and $Adj[v]$ 
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Undirected Graphs Representations** - Review
+
+![center h:500px](assets/ce100-week-10-graphs-graph-review-undirectedgraph-representations.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Directed Graphs Representations** - Review
+
+![center h:550px](assets/ce100-week-10-graphs-graph-review-directedgraph-representations.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Adjacency List Representation (continued)** - Review
+
+- Adjacency list representation has the desirable property
+  - it requires $O(max(V,E)) = O(V+E)$ memory
+  - for both undirected and directed graphs
+- Adjacency lists can be adopted to represent **weighted graphs** 
+  - each edge has an associated **weight** typically given by a **weight function** $w: E \rightarrow R$
+- The weight $w(u, v)$ of an edge $(u, v) \in E$ is simply stored with 
+  - vertex $v$ in $Adj[u]$ or with                                                  
+  - vertex $u$ in $Adj[v]$ or **both**
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Adjacency List Representation (continued)** - Review
+
+- A **potential disadvantage** of adjacency list representation
+  - there is no quicker way to determine if a given edge $(u, v)$ is present in G than to search $v$ in $Adj[u]$ or $u$ in $Adj[v]$
+- This disadvantage can be remedied by an **adjacency matrix** representation at the cost of using asymptotically more memory
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Adjacency Matrix Representation** - Review
+
+- Assume that, the vertices of $G=(V, E)$ are numbered as $1,2,\dots,|V|$ 
+- Adjacency matrix rep. consists of a $|V|\times|V|$ matrix $A=(a_{ij}) \backepsilon$ 
+
+$$
+a_{ij}=
+\begin{cases} 
+1 & \text{if} \ (i,j) \in E \\ 
+0 & otherwise 
+\end{cases}
+$$
+
+- Requires $\Theta(V^2)$ memory independent of the number of edges $|E|$
+- We define the transpose of a matrix $A=(a_{ij})$ to be the matrix
+  - $A^T = (a_{ij})^T$ given by $a_{ij}^T = a_{ji}$
+- Since in an undirected graph, $(u,v)$ and $(v,u)$ represent the same edge $A = A^T$ for an undirected graph
+- That is, adjacency matrix of an undirected graph is symmetric
+- Hence, in some applications, only upper triangular part is stored
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Adjacency Matrix Representation** - Review
+
+- Adjacency matrix representation can also be used for
+  - weighted graphs
+
+$$
+a_{ij}=
+\begin{cases} 
+w(i,j) & \text{if} \ (i,j) \in E \\ 
+NIL \ or \ 0 \ or \ \infty & otherwise 
+\end{cases}
+$$
+
+- Adjacency matrix may also be preferable for
+  - reasonably small graphs
+- Moreover, if the graph  is unweighted
+  - rather than using one word of memory for each matrix entry adjacency matrix representation uses one bit per entry
+
+---
+
 <style scoped>section{ font-size: 30px; }</style>
 
 ### **Introduction to Graphs** - Review
@@ -607,6 +746,428 @@ $G=(V,E)$
 <style scoped>section{ font-size: 27px; }</style>
 
 ### **Introduction to Graphs** - Review
+
+Two paths $\langle v_0,v_1,v_2,\dots,v_k\rangle$ & $\langle v_0',v_1',v_2',\dots,v_k'\rangle$ form the **same cycle** if there is an integer $j$ such that $v_i' = v_{(i+j)\ \text{mod} \ k }$ for $i=0,1,\dots,k-1$
+
+![center h:200px](assets/ce100-week-10-graphs-graph-review-1.drawio.svg)
+
+- The path $p_1 = \langle 1, 2, 4, 1\rangle$ forms the same cycles as the paths
+  - $p_2= \langle 2, 4, 1, 2 \rangle$ and $p_3= \langle 4, 1, 2, 4\rangle$
+- A **directed graph** with **no self-loops** is **simple**
+- In an **undirected graph** a path $\langle v_0,v_1,\dots,v_k\rangle$ forms a **cycle**
+  - if $v_0=v_k$ and $v_1,v_2,\dots,v_k$ are **distinct**
+- A **graph** with **no cycles** is **acyclic**
+
+---
+
+<style scoped>section{ font-size: 28px; }</style>
+
+### **Introduction to Graphs** - Review
+
+- An **undirected graph** is **connected**
+  - if every pair of vertices is **connected** by a **path**
+- The **connected components** of a graph are the
+  - **equivalence classes** of vertices under the
+  - "**is reachable from**" relation
+- An **undirected graph** is **connected** if it has exactly **one component**, 
+  - i.e., if every vertex is reachable from every other vertex
+
+---
+
+<style scoped>section{ font-size: 28px; }</style>
+
+### **Introduction to Graphs** - Review
+
+- A **directed graph** is **strongly-connected**
+  - if every two vertices are reachable from each other
+- The **strongly-connected components** of a digraph are the 
+  - **equivalence classes** of vertices under the
+  - "**are mutually reachable**" relation
+- A directed graph is **strongly-connected**
+  - if it has **only one strongly-connected component**
+
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+### **Introduction to Graphs** - Review
+
+- Two graphs $G=(V,E)$ and $G'=(V',E')$ are **isomorphic**
+  - if there exists a bijection $f : V \rightarrow V'$ such that
+  - $(u, v) \in E \iff (f (u), f (v)) \in E'$
+- That is, we can relabel the vertices of $G$ to be vertices of $G'$ maintaining the corresponding edges in $G$ and $G'$
+
+
+![center h:350px](assets/ce100-week-10-graphs-graph-review-isomorphic.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+### **Introduction to Graphs** - Review
+
+- A graph $G'=(V', E')$ is a **subgraph** of $G=(V,E)$ if
+  - $V \subseteq V$ and $E' \subseteq E$
+- Given a set $V' \subseteq V$, the subgraph of $G$ **induced** by $V'$ is the graph 
+  - $G'=(V', E')$ where $E'=\{(u,v) \in E: u,v \in V'\}$
+
+![center h:350px](assets/ce100-week-10-graphs-graph-review-subgraph.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+### **Introduction to Graphs** - Review
+
+- Given an **undirected** graph $G=(V,E)$, the **directed version** of $G$ is the directed graph $G'=(V', E')$, where
+  - $(u,v)\in E'$ and $(v,u) \in E' \iff (u,v) \in E$ 
+- That is, each undirected edge $(u,v)$ in $G$ is replaced in $G'$ by two directed edges $(u,v)$ and $(v,u)$
+- Given a **directed** graph $G=(V,E)$, the **undirected version** of G is the undirected graph $G'=(V',E')$, where
+  - $(u,v) \in E' \iff u \neq v$ and $(u,v) \in E$
+- That is the undirected version contains the edges of G 
+  - "**with their directions removed**" and with **self-loops eliminated**
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+### **Introduction to Graphs** - Review
+
+![center h:200px](assets/ce100-week-10-graphs-graph-review-adjency.drawio.svg)
+
+- i.e., $(u,v)$ and $(v,u)$ in $G$ are replaced in $G'$ by the same edge $(u,v)$
+- In a directed graph $G=(V,E)$, a neighbor of a vertex $u$ is any vertex that is adjacent to $u$ in the undirected version of $G$
+- That, is $v$ is a neighbor of $u \iff$ either $(u,v)\in E$ or $(v,u) \in E$ 
+
+![center h:80px](assets/ce100-week-10-graphs-graph-review-adjency-2.drawio.svg)
+
+- $v$ is a neighbor of $u$ in both cases
+- In an **undirected graph**, $u$ and $v$ are **neighbors** if they are **adjacent**
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+### **Introduction to Graphs** - Review
+
+- Several kinds of graphs are given special names
+  - **Complete graph:** undirected graph in which every pair of vertices is **adjacent**
+  - **Bipartite graph:** undirected graph $G=(V,E)$ in which $V$ can be partitioned into two disjoint sets $V_1$ and $V_2$ such that
+    - $(u,v) \in E$ implies either $u \in V_1$ and $v \in V_2$ or $u \in V_2$ and $v \in V_1$
+
+![center h:350px](assets/ce100-week-10-graphs-graph-review-biparite.drawio.svg)
+
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+### **Introduction to Graphs** - Review
+
+- **Forest**: *acyclic*, *undirected graph*
+- **Tree**: *connected*, *acyclic*, *undirected graph*
+- **Dag**: *directed* *acyclic graph*
+- **Multigraph**: *undirected graph* with *multiple edges between vertices* and *self-loops*
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+### **Introduction to Graphs** - Review
+
+- **Hypergraph**: like an *undirected graph*, but each *hyperedge*,
+  - rather than connecting two *vertices*,
+  - connects an arbitrary subset of *vertices*
+
+![center h:400px](assets/ce100-week-10-graphs-graph-review-hypergraph.drawio.svg)
+
+
+---
+
+<style scoped>section{ font-size: 40px; }</style>
+
+## **Free Trees**
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Free Trees**
+
+- A **free tree** is a **connected, acyclic, undirected** graph
+- We often omit the adjective "**free**" when we say that a graph is a tree
+- If an undirected graph is acyclic but possibly disconnected it is a **forest**
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Theorem (Properties of Free Trees)**
+
+- The following are equivalent for an undirected graph $G=(V,E)$
+1. $G$ is a free tree
+2. Any two vertices in $G$ are connected by a unique simple-path
+3. $G$ is connected, but if any edge is removed from E the resulting graph is disconnected
+4. $G$ is connected, and $|E| = |V|-1$
+5. $G$ is acyclic, and $|E| = |V| - 1$
+6. $G$ is acyclic, but if any edge is added to $E$, the resulting graph contains a cycle
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Properties of Free Trees $(1 \Rightarrow 2)$**
+
+1. G is a free tree
+2. Any two vertices in G are connected by a unique simple-path
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Properties of Free Trees $(1 \Rightarrow 2)$**
+
+- Since a tree is connected, any two vertices in $G$ are connected by a simple path
+  - Let two vertices $u,v \in V$ are connected by two simple paths $p_1$ and $p_2$
+  - Let $w$ and $z$ be the first vertices at which $p_1$ and $p_2$ diverge and re-converge
+  - Let $p'_1$ be the subpath of $p_1$ from $w$ to $z$
+  - Let $p'_2$ be the subpath of $p_2$ from $w$ to $z$
+  - $p'_1$ and $p'_2$ share no vertices except their end points
+  - The path $p'_1 || p'_2$ is a cycle (contradiction)
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Properties of Free Trees $(1 \Rightarrow 2)$**
+
+![center h:400px](assets/ce100-week-10-graphs-graph-free-tree-1.drawio.svg)
+
+- $p'_1$ and $p'_2$ share no vertices except their end points
+- $p'_1 || p'_2$ is a cycle (contradiction)
+- Thus, if $G$ is a tree, there can be at most one path between two vertices
+
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Properties of Free Trees $(2 \Rightarrow 3)$**
+
+2. Any two vertices in $G$ are connected by a unique simple-path
+3. $G$ is connected, but if any edge is removed from $E$ the resulting graph is disconnected
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Properties of Free Trees $(2 \Rightarrow 3)$**
+
+- If any two vertices in $G$ are connected by a unique simple path, then $G$ is connected
+  - Let $(u,v)$ be any edge in $E$. This edge is a path from $u$ to $v$. So it must be the unique path from $u$ to $v$
+- Thus, if we remove $(u,v)$ from $G$, there is no path from $u$ to $v$
+- Hence, its removal disconnects $G$
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Properties of Free Trees $(3 \Rightarrow 4)$**
+
+- Before proving $3 \Rightarrow 4$ consider the following
+- **Lemma**: any connected, undirected graph $G=(V,E)$ 
+  - satisfies $|E| \geq |V|-1$
+- **Proof**: Consider a graph $G'$ with $|V|$ vertices and no edges. 
+  - Thus initially there are $|C|=|V|$ connected components
+    - Each isolated vertex is a connected component
+  - Consider an edge $(u,v)$ and let $C_u$ and $C_v$ denote the connected-components of $u$ and $v$
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Properties of Free Trees (Lemma)$**
+
+- If $C_u \neq C_v$ then $(u,v)$ connects $C_u$ and $C_v$ into a 
+  - connected component $C_{uv}$
+- Otherwise $(u,v)$ adds an extra edge to the 
+  - connected component $C_u = C_v$
+- Hence, each edge added to the graph reduces the 
+  - number of connected components by at most $1$
+- Thus, at least $|V|-1$ edges are required to reduce the number of components to $1$    
+  - $Q.E.D$
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Properties of Free Trees $(3 \Rightarrow 4)$**
+
+3. $G$ is connected, but if any edge is removed from $E$ the resulting graph is disconnected
+4. $G$ is connected, and $|E|=|V|-1$
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Properties of Free Trees $(3 \Rightarrow 4)$**
+
+- By assuming **(3)**, the graph $G$ is connected
+- We need to show both $|E| \geq |V|-1$ and $|E| \leq |V|-1$ in 
+  - order to show that $|E| = |V|-1$
+- $|E| \geq |V|-1$: valid due previous lemma
+- $|E| \leq |V|-1$: (proof by induction)
+- **Basis**: a connected graph with $n=1$ or $n=2$ vertices has $n-1$ edges
+- **IH**: suppose that all graphs $G'=(V',E')$ satisfying **(3)** also 
+  - satisfy $|E'| \leq |V'|-1$
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Properties of Free Trees $(3 \Rightarrow 4)$**
+
+- Consider $G=(V,E)$ that satisfies **(3)** with $|V|= n \geq 3$
+- Removing an arbitrary edge $(u,v)$ from $G$ separates the graph into **2** connected graphs $G_u=(V_u,E_u)$ and $G_v=(V_v,E_v)$ such that $V = V_u \cup V_v$ and $E=E_u \cup E_v$
+- Hence, connected graphs $G_u$ and $G_v$ both satisfy **(3)** else $G$ would not satisfy $(3)$
+- Note that $|V_u|$ and $|V_v| < n$ since $|V_u| + |Vv| = n$ 
+- Hence, $|E_u| \leq |V_u|-1$ and $|E_v| \leq |V_v|-1$ (by IH)
+- Thus, $|E| = |E_u| + |E_v| + 1 \leq (|V_u|-1) + (|V_v|-1) + 1$
+  - $\Rightarrow |E| \leq |V|-1$ 
+  - $Q.E.D$
+          
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Properties of Free Trees $(4 \Rightarrow 5)$**
+
+4. $G$ is connected, and $|E|=|V|-1$ 
+5. $G$ is acyclic, and $|E|=|V|-1$
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Properties of Free Trees $(4 \Rightarrow 5)$**
+
+- Suppose that $G$ is connected, and $|E|=|V|-1$, we must 
+  - show that $G$ is acyclic
+- Suppose $G$ has a cycle containing $k$ vertices $v_1, v_2,\dots, v_k$
+- Let $G_k=(V_k,E_k)$ be subgraph of $G$ consisting of the cycle
+
+![center h:200px](assets/ce100-week-10-graphs-graph-free-tree-2.drawio.svg)
+
+- If $k < |V|$, there must be a vertex $v_{k+1} \in V-V_k$ that is adjacent to some vertex $v_i \in V_k$, since $G$ is connected
+
+---
+
+<style scoped>section{ font-size: 28px; }</style>
+
+## **Properties of Free Trees $(4 \Rightarrow 5)$**
+
+- Define $G_{k+1}=(V_{k+1},E_{k+1})$ to be subgraph of $G$ with $V_{k+1}=V_k \cup v_{k+1}$ and $E_{k+1} = E_k \cup (v_{k+1},v_i)$ 
+
+![center h:260px](assets/ce100-week-10-graphs-graph-free-tree-3.drawio.svg)
+
+- If $k+1 < |V|$, we can similarly define $G_{k+2} =(V_{k+2},E_{k+2})$ to be the subgraph of $G$ with 
+  - $V_{k+2}= V_{k+1} \cup v_{k+2}$ and $E_{k+2} = E_{k+1} \cup (v_{k+2},v_j)$ 
+  - for some $v_j \in V_{k+1}$ where $|V_{k+2}|=|E_{k+2}|$
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Properties of Free Trees $(4 \Rightarrow 5)$**
+
+- We can continue defining $G_{k+m}$ with $|V_{k+m}|=|E_{k+m}|$ until we obtain $G_n = (V_n,E_n)$ where 
+  - $n=|V|$ and $V_n=|V|$ and $|V_n|=|E_n|=|V|$
+- Since $G_n$ is a subgraph of $G$, we have
+  - $E_n \subseteq E \Rightarrow |E| \geq |E_n|=|V|$ which contradicts the assumption $|E|=|V|-1$
+- Hence $G$ is acyclic
+  - $Q.E.D$
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Properties of Free Trees $(5 \Rightarrow 6)$**
+
+5. $G$ is acyclic, and $|E| = |V| - 1$
+6. $G$ is acyclic, but if any edge is added to $E$, the resulting graph contains a cycle
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Properties of Free Trees $(5 \Rightarrow 6)$**
+
+- Suppose that $G$ is acyclic and $|E| = |V| - 1$
+- Let $k$ be the number of connected components of $G$
+- $G_1=(V_1,E_1),G_2=(V_2,E_2),\dots,G_k=(V_k,E_k)$ such that
+  - $\overset{k}{\underset{i=1}{\cup}}V_i=V;V_i \cap V_j = \empty; 1 \leq i,j \leq k$ and $i \neq j$
+  - $\overset{k}{\underset{i=1}{\cup}}E_i=E;E_i \cap E_j = \empty; 1 \leq i,j \leq k$ and $i \neq j$
+- Each connected component $G_i$ is a tree by definition.
+
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Properties of Free Trees $(5 \Rightarrow 6)$**
+
+- Since $(1 \Rightarrow 5)$ each component $G_i$ is satisfies
+  - $|E_i| = |V_i| -1$ for $i =1,2, \dots,k$
+- Thus
+  - $\sum \limits_{i=1}^{k} |E_i| = \sum \limits_{i=1}^{k} |V_i| - \sum \limits_{i=1}^{k} 1$
+  - $|E|=|V|-k$
+- Therefore, we must have $k=1$
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Properties of Free Trees $(5 \Rightarrow 6)$**
+
+- That is $(5) \Rightarrow G$ is connected $\Rightarrow G$ is a tree
+- Since $(1 \Rightarrow 2)$
+  - any two vertices in $G$ are connected by a unique simple path
+- Thus,
+  - adding any edge to $G$ creates a cycle
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Properties of Free Trees $(6 \Rightarrow 1)$**
+
+6. $G$ is acyclic, but if any edge is added to $E$, the resulting graph contains a cycle
+1. $G$ is a free tree
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Properties of Free Trees $(6 \Rightarrow 1)$**
+
+- Suppose that $G$ is acyclic but if any edge is added to $E$ a cycle is created
+- We must show that $G$ is connected due to the definition
+- Let $u$ and $v$ be two arbitrary vertices in $G$
+- If $u$ and $v$ are not already adjacent
+  - adding the edge $(u,v)$ creates a cycle in 
+  - which all edges but $(u,v)$ belong to $G$
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Properties of Free Trees $(6 \Rightarrow 1)$**
+
+- Thus there is a path from $u$ to $v$, and since $u$ and $v$ are chosen arbitrarily $G$ is connected
+
+![center h:300px](assets/ce100-week-10-graphs-graph-free-tree-4.drawio.svg)
+
 
 ---
 
@@ -990,6 +1551,74 @@ for more information visit
 
 ---
 
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Graph Traversal**
+
+### Breadth-first search (BFS)
+
+- Graph $G=(V, E)$, directed or undirected with adjacency list repres.
+- **GOAL:** Systematically explores edges of G to
+  - discover every vertex reachable from the **source** vertex $s$
+  - compute the shortest path distance of every vertex
+    - from the **source** vertex $s$
+  - produce a **breadth-first tree (BFT)** $G_\pi$ with root $s$
+    - **BFT** contains all vertices reachable from $s$
+    - the unique path from any vertex $v$ to $s$ in G        constitutes a shortest path from $s$ to $v$ in $G$
+- **IDEA:** Expanding **frontier** across the **breadth** -greedy-
+  - propagate a wave $1$ edge-distance at a time
+  - using a **FIFO queue:** $O(1)$ time to update pointers to both ends
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Graph Traversal**
+
+### Breadth-first search (BFS)
+
+- Maintains the following fields for each $u \in V$
+  - $color[u]:$ color of $u$  
+    - $WHITE$ : not discovered yet
+    - $GRAY$  : discovered and to be or being processed
+    - $BLACK$ : discovered and processed
+  - $\pi[u]$: parent of $u$ ($NIL$ of $u = s$ or $u$ is not discovered yet)
+  - $d[u]$: distance of $u$ from $s$
+
+$Processing \ a \ vertex = scanning \ its \ adjacency \ list$
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Graph Traversal**
+
+### Breadth-first search (BFS) Algorithm
+
+$$
+\begin{align*}
+& BFS(G, s) \\
+& \quad for \ each \ u \in V - {s} do \\
+& \qquad color[u] \rightarrow WHITE \\
+& \qquad \pi[u] \rightarrow NIL; d [u] \rightarrow \infty \\[8pt]
+& \quad color[s] \rightarrow GRAY \\
+& \quad \pi[s] \rightarrow NIL; d [s] \rightarrow 0 \\
+& \quad Q \rightarrow {s} \\[8pt]
+& \quad while \ Q \neq \empty \ do \\
+& \qquad u \rightarrow head[Q] \\
+& \qquad for \ each \ v \ in \ Adj[u] \ do \\
+& \quad \qquad if \ color[v] \rightarrow WHITE \ then \\
+& \qquad \qquad color[v] \rightarrow GRAY \\
+& \qquad \qquad \pi[v] \rightarrow u \\
+& \qquad \qquad d [v] \rightarrow d [u] + 1 \\
+& \qquad \qquad ENQUEUE(Q, v) \\
+& \qquad DEQUEUE(Q) \\
+& \qquad color[u] \rightarrow BLACK
+\end{align*}
+$$
+
+---
+
 ## **Graph Traversal**
 
 ### Breadth-first search (BFS)
@@ -1337,6 +1966,31 @@ f = b
 ![center h:400px](assets/ce100-week-10-graphs-bfs-bfs-end.drawio.svg)
 
 ---
+
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Graph Traversal**
+
+### Breadth-first search (BFS) Print Paths
+
+- Prints out vertices on a $s \rightarrow v$ shortest path
+
+$$
+\begin{align*}
+& \text{PRINT-PATH}(G, s, v) \\
+& \quad	if \ v = s \ then \ print \ s \\
+& \quad	else \ if \prod[v] = NIL \ then \\	    
+& \qquad print \ no \ "s \rightarrow v \ path" \\
+& \quad else \\
+& \qquad \text{PRINT-PATH}(G, s, \prod[v] ) \\
+& \qquad print \ v 
+\end{align*}
+$$
+
+
+
+---
 <style scoped>section{ font-size: 25px; }</style>
 
 ## **Graph Traversal**
@@ -1350,8 +2004,213 @@ f = b
 - **Step 6** - When queue becomes empty, then produce final spanning tree by removing unused edges from the graph
 
 ---
+<style scoped>section{ font-size: 25px; }</style>
 
-$TODO - Add \ more \ examples$
+## **Graph Traversal**
+### Breadth-first search (BFS) Running Time
+
+- **Running time:** $O(V+E) =$ considered linear time in graphs
+  - **initialization:** $\Theta(V)$
+  - **queue operations:** $O(V)$
+    - each vertex **enqueued** and **dequeued** at most once
+    - both enqueue and dequeue operations take $O(1)$ time
+  - **processing gray vertices:** $O(E)$
+    - each vertex is processed at most once and 
+    - $\sum \limits{u \in V}{}|Adj[u]|=\Theta(E)$
+
+---
+
+
+$Begining-of-BFS-Proof$
+
+
+---
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Graph Traversal**
+### Theorems Related to BFS
+
+- **DEF**: $\delta(s, v) =$ shortest path distance from $s$ to $v$
+- **LEMMA 1**: for any $s \in V \& (u, v) \in E; \delta(s, v) \leq \delta(s, u) + 1$
+- For any $BFS(G, s)$ run on $G=(V,E)$
+- **LEMMA 2**: $d[v] \geq \delta(s, v) \ \forall \ v \in V$
+- **LEMMA 3**: at any time of $BFS$, the queue $Q=\langle v_1, v_2, \dots, v_r \rangle$ satisfies
+  - $d[v_r] \leq d[v_1] + 1$
+  - $d[v_i] \leq d[v_{i+1}], \ for \ i = 1, 2, \dots, r - 1$
+- **THM1**: $BFS(G, s)$ achieves the following
+  - discovers every $v \in V$ where $s \rightarrow v$ (i.e., $v$ is reachable from $s$)
+  - upon termination, $d[v]= \delta(s, v) \ \forall \ v \in V$
+  - for any $v \neq s \& s \rightarrow v; sp(s, \prod[v]) \sim (\prod[v], v)$ is a $sp(s, v)$
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Graph Traversal**
+### Proofs of BFS Theorems
+
+- **DEF:** *shortest path distance* $\delta(s, v)$ from $s$ to $v$
+  - $\delta(s, v)=$ minimum number of edges in any path from $s$ to $v$
+  - $= \infty$ if no such path exists (i.e., $v$ is not reachable from $s$)
+- **L1**: for any $s \in V  \&  (u, v) \in E; \delta(s, v) \leq \delta(s, u) + 1$
+- **PROOF**: $s \rightarrow u \Rightarrow s \rightarrow v$. Then, 
+  - consider the path $p(s, v) = sp(s, u) \sim (u, v)$
+  - $|p(s, v)| = | sp(s, u) | + 1 = \delta(s, u) + 1$
+  - therefore, $\delta(s, v) \leq |p(s, v)| = \delta(s, u) + 1$
+
+  ![bg right:30% h:150px](assets/ce100-week-10-graphs-bfs-bfs-proof-1.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Graph Traversal**
+### Proofs of BFS Theorems
+
+- **DEF**: shortest path distance $\delta(s, v)$ from $s$ to $v$
+- $\delta(s, v) =$ minimum number of edges in any path from s to v
+- **L1**: for any $s \in V \& (u, v) \in E; \delta(s, v) \leq \delta(s, u) + 1$
+- **C1 of L1**: if $G=(V,E)$ is undirected then $(u, v) \in E \Rightarrow (v, u) \in E$ 
+  - $\delta(s, v) \leq \delta(s, u) + 1$ and $\delta(s, u) \leq \delta(s, v) + 1$
+  - $\Rightarrow \delta(s, u) - 1 \leq \delta(s, v) \leq \delta(s, u) + 1$ and 
+  - $\delta(s, v) - 1 \leq \delta(s, u) \leq \delta(s, v) + 1$
+  - $\Rightarrow \delta(s, u) \ \& \ \delta(s, v)$  differ by at most $1$
+
+  ![bg right:30% h:150px](assets/ce100-week-10-graphs-bfs-bfs-proof-2.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Graph Traversal**
+### Proofs of BFS Theorems
+
+- **L2**: upon termination of $BFS(G, s)$ on $G=(V,E)$;
+  - $d[v] \geq \delta(s, v) \ \forall \ v \in V$
+- **PROOF**: by induction on the number of **ENQUEUE** operations
+  - **basis**: immediately after 1st enqueue operation
+    - $ENQ(Q, s): d[s] = \delta(s, s)$ 
+  - **hypothesis**: $d [v] \geq \delta(s, v)$  for all $v$ inserted into $Q$
+  - **induction**: consider a white vertex $v$ discovered during scanning $Adj[u]$
+    - $d [v] = d [u] + 1$ due to the assignment statement
+    - $\geq \delta(s, u) + 1$  due to the **inductive hypothesis** since $u \in Q$
+    - $\geq \delta(s, v)$ due to $L1$
+  - vertex $v$ is then enqueued and it is never enqueued again
+    - $d[v]$ never changes again, maintaining **inductive hypothesis**
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Graph Traversal**
+### Proofs of BFS Theorems
+
+- **L3**: Let $Q = \langle v_1,v_2,\dots, v_r\rangle$ during the execution of $BFS(G, s)$, then,
+  - $d[v_r] \leq d[v_1] + 1$ and $d[v_i] \leq d[v_{i+1}]$ for $i=1,2,\dots,r-1$
+
+- **PROOF**: by induction on the number of $QUEUE$ operations
+  - **basis**: lemma holds when $Q \leftarrow {s}$
+  - **hypothesis**: lemma holds for a particular $Q$  (i.e., after a certain $\#$ of $QUEUE$ operations)
+  - **induction**: must prove lemma holds after both $DEQUEUE$ & $ENQUEUE$ operations 
+  - $DEQUEUE(Q): Q = \langle v_1, v_2, \dots , v_r \rangle \Rightarrow Q' = \langle v_2, v_3,\dots, v_r \rangle$ 
+    - $d[v_r] \leq d[v_1] + 1$  & $d[v_1] \leq d[v_2]$ in $Q \Rightarrow d[v_r] \leq d[v_2]+1$ in $Q'$ 
+    - $d[v_i] \leq d[v_{i+1}]$ for $i=1,2,\dots,r-1$ in $Q'$
+    - $d[v_i] \leq d[v_{i+1}]$ for $i=2,\dots,r-1$ in $Q'$ 
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Graph Traversal**
+### Proofs of BFS Theorems
+
+- $ENQUEUE(Q, v):$ 
+  - $Q = \langle v_1, v_2, \dots , v_r \rangle \Rightarrow$ 
+  - $Q' = \langle v_1, v_2,\dots, v_r,v_{r+1} = v \rangle$
+- $v$ was encountered during scanning $Adj[u]$ where $u = v_1$
+- thus, $d [v_{r+1}] = d[v] = d [u] + 1 = d [v_1] + 1 \Rightarrow$
+  - $d[v_{r+1}] = d [v_1] + 1$ in $Q'$
+- but $d[v_r] \leq d[v_1] + 1 = d [v_{r+1}]$
+  - $\Rightarrow d[v_{r+1}] = d[v_1] + 1$ and $d [v_r] \leq d[v_{r+1}]$ in $Q'$
+- **C3 of L3 (monotonicity property)**:
+  - **if**: the vertices are enqueued in the order $v_1, v_2, \dots, v_n$
+  - **then**: the sequence of distances is monotonically increasing,
+    - i.e., $d [v_1] \leq d [v_2] \leq \dots \leq d[v_n]$
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Graph Traversal**
+### Proofs of BFS Theorems
+
+- **THM (correctness of BFS)**: $BFS(G, s)$ achieves the following on $G=(V,E)$ 
+  - discovers every $v \in V$ where $s \rightarrow v$ 
+  - upon termination: $d[v] = \delta(s, v) \ \forall v \in V$
+  - for any $v \neq s \& s \rightarrow v; sp(s,\prod[v]) \sim (\prod[v], v) = sp(s, v)$
+
+- **PROOF**: by induction on $k$, where $V_k = \{v \in V: \delta(s, v) = k \}$
+  - **hypothesis**: for each $v \in V_k, \exists$ exactly one point during execution of BFS at which $color[v] \rightarrow GRAY, d [v] \rightarrow k, \prod[v] \rightarrow u \in V_{k-1}$, and then $ENQUEUE(Q, v)$
+  - **basis**: for $k=0$ since $V_0 = \{s\}; color[s] \rightarrow GRAY, d[s] \rightarrow 0$ and $ENQUEUE(Q, s)$
+  - **induction**: must prove hypothesis holds for each $v \in V_{k+1}$
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Graph Traversal**
+### Proofs of BFS Theorems
+
+- Consider an arbitrary vertex $v \in V_{k+1}$, where $k \geq 0$ 
+  - monotonicity $(L3) + d[v] \geq k+1 \ (L2)+$ **inductive hypothesis**
+    - $\Rightarrow$ $v$ must be discovered after all vertices in $V_k$ were enqueued
+  - since $\delta(s, v) = k + 1, \exists \ u \in V_k$ such that $(u, v) \in E$
+  - let $u \in V_k$ be the first such vertex grayed (must happen due to hyp.)
+  - $u \leftarrow head(Q)$ will be ultimately executed since $BFS$ enqueues every grayed vertex
+    - $v$ will be discovered during scanning $Adj[u]$
+      - $color[v] \leftarrow WHITE$ since $v$ isn’t adjacent to any vertex in $V_j$ for $j<k$
+    - $color[v] \leftarrow GRAY$, $d[v] \leftarrow d[u]+ 1, \prod[v] \leftarrow u$
+    - then, $ENQUEUE(Q, v)$ thus proving the inductive hypothesis
+- To conclude the proof
+  - if $v \in V_{k+1}$ then due to above inductive proof  $\prod[v] \in V_k$
+  - thus $sp(s, \prod[v]) \sim (\prod[v], v)$ is a shortest path from $s$ to $v$
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Graph Traversal**
+### Theorems Related to BFS
+
+- **DEF**: $\delta(s, v) =$ shortest path distance from $s$ to $v$
+- **LEMMA 1**: for any $s \in V \& (u, v) \in E; \delta(s, v) \leq \delta(s, u) + 1$
+- For any $BFS(G, s)$ run on $G=(V,E)$
+- **LEMMA 2**: $d[v] \geq \delta(s, v) \forall v \in V$
+- **LEMMA 3**: at any time of $BFS$, the queue $Q=\langle v_1, v_2,\dots, v_r \rangle$ satisfies
+  - $d[v_r] \leq d[v_1] + 1$
+  - $d[v_i] \leq d[v_{i+1}], \ for \ i=1,2,\dots,r-1$
+- **THM1**: $BFS(G, s)$ achieves the following
+  - discovers every $v \in V$ where $s \rightarrow v$ (i.e., $v$ is reachable from $s$)
+  - upon termination, $d[v]= \delta(s, v) \forall v \in V$
+  - for any $v \neq s \& s \rightarrow v; sp(s, \prod[v]) \sim (\prod[v], v)$ is a $sp(s, v)$
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Graph Traversal**
+### Breadth-First Tree Generated by BFS
+
+- **LEMMA 4**: predecessor subgraph $G_{\prod}=(V_{\prod}, E_{\prod})$ generated by $BFS(G, s)$, where 
+  - $V_{\prod} =\{v \in V: \prod[v] \neq NIL\}\cup{s}$ and 
+  - $E_{\prod} =\{(\prod[v],v) \in E: v \in V_{\prod} -\{s\}\}$
+- is a **breadth-first tree** such that
+  - $V_{\prod}$ consists of all vertices in $V$ that are reachable from $s$
+  - $\forall v \in V_{\prod}$, unique path $p(v, s)$ in $G_{\prod}$ constitutes a $sp(s, v)$ in $G$
+
+---
+
+$End-of-BFS-Proof$
 
 ---
 
@@ -1363,6 +2222,87 @@ $TODO - Add \ more \ examples$
 
 ## **Graph Traversal**
 ### Depth-first search (DFS) 
+
+- Graph $G=(V,E)$ directed or undirected
+- Adjacency list representation
+- **Goal**: Systematically explore every vertex and every edge
+- **Idea**: search deeper whenever possible
+  - Using a LIFO queue (Stack; FIFO queue used in BFS)
+
+---
+
+## **Graph Traversal**
+### Depth-first search (DFS) 
+
+- Maintains several fields for each $v \in V$ 
+- Like $BFS$, colors the vertices to indicate their states. Each vertex is
+  - **Initially** $white$, 
+  - $grayed$ when **discovered**, 
+  - $blackened$ when **finished**
+- Like $BFS$, records discovery of a white $v$ during scanning $Adj[u]$ by $\pi[v] \rightarrow u$
+
+---
+
+## **Graph Traversal**
+### Depth-first search (DFS) 
+
+- Unlike $BFS$, predecessor graph $G_{\pi}$ produced by DFS forms spanning forest
+- $G_{\pi}=(V,E_{\pi})$ where 
+  - $E_{\pi}=\{(\pi[v],v): v \in V  \text{and} \pi[v] \neq NIL\}$
+- $G_{\pi}=$ depth-first forest (DFF) is composed of disjoint depth-first trees (DFTs)
+
+---
+
+## **Graph Traversal**
+### Depth-first search (DFS) 
+
+- DFS also timestamps each vertex with two **timestamps**
+- $d[v]$: records when v is first discovered and **grayed**
+- $f[v]$: records when v is finished and **blackened**
+- Since there is only one discovery event and finishing event for each vertex we have $1\leq d[v] \leq f[v] \leq 2|V|$
+
+
+---
+
+## **Graph Traversal**
+### Depth-first search (DFS) Algorithm
+
+$$
+\begin{align*}
+&         \text{DFS}(G) \\
+& \quad   for \ each \ u \in V \ do \\
+& \qquad		color[u] \leftarrow white \\
+& \qquad		\pi[u] \leftarrow NIL \\[8pt]
+& \quad	  time \leftarrow 0 \\[8pt]
+& \quad   for \ each \ u \in V \ do \\
+& \qquad    if \ color[u] = white \ then \\
+& \quad \qquad \text{DFS-VISIT}(G, u)
+\end{align*}
+$$
+
+---
+
+## **Graph Traversal**
+### Depth-first search (DFS) Algorithm
+
+$$
+\begin{align*}
+& \text{DFS-VISIT}(G, u) \\
+&	\quad color[u] \leftarrow gray \\
+&	\quad d[u] \leftarrow time \leftarrow time +1 \\[8pt]
+&	\quad for \ each \ v \in Adj[u] \ do \\
+& \qquad if \ color[v] = white \ then \\
+&	\quad \qquad \pi[v] \leftarrow u \\
+& \quad \qquad \text{DFS-VISIT}(G, v) \\[8pt]
+&	\quad color[u] \leftarrow black \\
+&	\quad f[u] \leftarrow time \leftarrow time+1
+\end{align*}
+$$
+
+---
+
+## **Graph Traversal**
+### Depth-first search (DFS) Algorithm
 - Complexity of the following part is $\Theta(V+V)=O(V)$ (two sequential loops)
 
 ```cpp
@@ -1380,7 +2320,7 @@ DFS(G)
 
 ## **Graph Traversal**
 
-### Depth-first search (DFS)
+### Depth-first search (DFS) Algorithm
 
 ```cpp
 DFS-VISIT(G,u)
@@ -1398,46 +2338,6 @@ DFS-VISIT(G,u)
 
 ---
 
-## SCC - Kosaraju's algorithm
-
-```cpp
-for each unvisited vertex u, DFS(u)
-
-  try all free neighbor v of u, DFS(v)
-
-  finish DFS(u), add u to the front of list
-
-transpose the graph
-
-DFS in order of the list, DFS(u)
-
-  try all free neighbor v of u, DFS(v)
-
-each time we complete a DFS, we get an SCC
-```
-
----
-
-## SCC - Tarjan's algorithm
-
-```cpp
-for each unvisited vertex u
-
-  DFS(u), s.push(u), num[u] = low[u] = DFSCount
-
-    for each neighbor v of u
-
-      if v is unvisited, DFS(v)
-
-      low[u] = min(low[u], low[v])
-
-    if low[u] == num[u] // root of an SCC
-
-      pop from stack s until we get u
-```
-
----
-
 ## **Graph Traversal**
 
 ### Depth-first search (DFS)
@@ -1450,7 +2350,7 @@ for each unvisited vertex u
 
 ## **Graph Traversal**
 
-### Depth-first search (DFS)
+### Edge Classification in a DFF
 
 - Edge Types in DFS
   - Tree Edges
@@ -1466,9 +2366,34 @@ for each unvisited vertex u
 
 ## **Graph Traversal**
 
-### Depth-first search (DFS) Example-1
+### Edge Classification in a DFF
 
-#### Kosaraju's algorithm
+- **Tree Edge**: discover a new (WHITE) vertex
+  - $GRAY \Rightarrow WHITE$
+- **Back Edge**: from a descendent to an ancestor in DFT
+  - $GRAY \Rightarrow GRAY$
+- **Forward Edge**: from ancestor to descendent in DFT
+  - $GRAY \Rightarrow BLACK$
+- **Cross Edge**: remaining edges (btwn trees and subtrees)
+  - $GRAY \Rightarrow BLACK$
+- **Note**: ancestor/descendent is wrt **Tree Edges**
+
+---
+
+## **Graph Traversal**
+
+### Edge Classification in a DFF
+
+- How to decide which $GRAY$ to $BLACK$ edges are forward, which are cross
+  - Let $BLACK$ vertex $v \in Adj[u]$ is encountered while processing $GRAY$ vertex $u$
+    - $(u,v)$ is a **forward edge** if $d[u] < d[v]$ 
+    - $(u,v)$ is a **cross edge** if $d[u] < d[v]$ 
+
+---
+
+## **Graph Traversal**
+
+### Depth-first search (DFS) Example-1
 
 ![center h:400px](assets/ce100-week-10-graphs-dfs-dfs.drawio.svg)
 
@@ -1636,6 +2561,22 @@ for each unvisited vertex u
 
 ---
 
+## **Graph Traversal**
+
+### Depth-first search (DFS) 
+
+- Running time: $\Theta(V+E)$
+- Initialization loop in $DFS$ : $\Theta(V)$
+- Main loop in $\text{DFS}$: $\Theta(V)$ exclusive of time to execute calls to $\text{DFS-VISIT}$
+- $\text{DFS-VISIT}$ is called exactly once for each $v\in V$ since
+- $\text{DFS-VISIT}$ is invoked only on white vertices and
+- $\text{DFS-VISIT}(G, u)$ immediately colors u as gray
+- For loop of $\text{DFS-VISIT}(G, u)$ is executed $|Adj[u]|$ time
+- Since $\sum |Adj[u]| = E$, total cost of executing loop of 
+  - $\text{DFS-VISIT}$ is $\Theta(E)$
+
+---
+
 <style scoped>section{ font-size: 24px; }</style>
 
 ## **Elementary Graph Algorithms**
@@ -1652,7 +2593,152 @@ for each unvisited vertex u
 
 ---
 
-$TODO - Add \ more \ examples$
+$Begining-of-DFS-Proof$
+
+---
+
+## **Elementary Graph Algorithms**
+### DFS: Parenthesis Theorem
+
+- **Thm**: In any DFS of $G=(V,E)$, let $int[v] = [d[v], f[v]]$ then exactly one of the following holds
+- for any $u$ and $v \in V$
+  - $int[u]$ and $int[v]$ are entirely disjoint
+  - $int[v]$ is entirely contained in $int[u]$ and 
+	$v$ is a descendant of $u$ in a $DFT$
+  - $int[u]$ is entirely contained in $int[v]$ and 
+	$u$ is a descendant of $v$ in a $DFT$
+
+---
+
+## **Elementary Graph Algorithms**
+### Parenthesis Thm (proof for the case $d[u] < d[v]$) 
+
+- **Subcase** $d[v] < f[u]$ ($int[u]$ and $int[v]$ are overlapping)
+  - $v$ was discovered while $u$ was still $GRAY$
+  - This implies that $v$ is a descendant of $u$ 
+  - So search returns back to $u$ and finishes $u$ after finishing $v$
+  - i.e., $d[v] < f[u] \Rightarrow int[v]$ is entirely contained in $int[u]$
+- **Subcase** $d[v] > f[u] \Rightarrow int[v]$ and $int[u]$ are entirely disjoint
+- **Proof** for the case $d[v] < d[u]$ is similar (dual)
+$Q.E.D$
+
+---
+
+## **Elementary Graph Algorithms**
+### Nesting of Descendents’ Intervals
+
+- **Corollary 1** (Nesting of Descendents’ Intervals): 
+  - $v$ is a descendant of u if and only if 
+    - $d[u] < d[v] < f[v] < f[u]$
+- **Proof**: immediate from the Parenthesis Thrm
+$Q.E.D$
+
+---
+
+## **Elementary Graph Algorithms**
+## DFS Parenthesis Theorem
+
+![center h:500px](assets/ce100-week-10-graphs-dfs-dfs-parenthesis-theorem.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Elementary Graph Algorithms**
+### DFS on Undirected Graphs
+
+- Ambiguity in edge classification, since $(u,v)$ and $(v,u)$ are the same edge
+First classification is valid (whichever of $(u,v)$ or $(v,u)$ is explored first)
+**Lemma 1**: any $DFS$ on an undirected graph produces only $Tree$ and $Back edges$
+
+---
+
+<style scoped>section{ font-size: 24px; }</style>
+
+## **Elementary Graph Algorithms**
+### DFS on Undirected Graphs - Lemma 1: Proof
+
+- Assume $(x,z)$ is a $F(F?)$ (Figure-1)
+  - But $(x,z)$ must be a $B$, since $DFS$ must finish $z$ before resuming $x$
+- Assume $(u,v)$ is a $C(C?)$ btw subtrees (Figure-2-4)
+  - But $(y,u) \& (y,v)$ cannot be both $T$; one must be a $B$ and $(u,v)$ must be a $T$
+- If $(u,v)$ is first explored while processing $u /v, (y,v) / (y,u)$ must be a $B$  (Figure-2-4)
+
+![center h:300px](assets/ce100-week-10-graphs-dfs-dfs-proof-1.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Elementary Graph Algorithms**
+### DFS on Undirected Graphs
+
+- **Lemma 2**: an undirected graph is acyclic (i.e. a forest) iff DFS yields no $Back edges$
+- **Proof** 
+  - (acyclic $\Rightarrow$ no Back edges; by contradiction):
+	- Let $(u,v)$ be a $B$ then $color[u] = color[v] = GRAY$
+	  - $\Rightarrow$ there exists a path between $u$ and $v$
+	- So, $(u,v)$ will complete a cycle ($Back edge \Rightarrow cycle$)
+- ($no Back edges \Rightarrow acyclic$):
+	- If there are no $Back edges$ then there are only $T$ edges by 
+  - **Lemma 1** $\Rightarrow$ forest \Rightarrow acyclic
+$Q.E.D$
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Elementary Graph Algorithms**
+### DFS on Undirected Graphs (Cycle Detection)
+
+- How to determine whether an undirected graph $G=(V,E)$ is acyclic 
+  - Run a $DFS$ on $G$: 
+    - if a $Back edge$ is found then there is a **cycle**
+  - Running time: $O(V)$, not $O(V + E)$
+  - If ever seen $|V|$ distinct edges, 
+    - must have seen a back edge ($|E| \leq |V|-1$ in a forest)
+
+---
+
+## DFS: White Path Theorem
+
+- **WPT**: In a $DFS$ of $G$, $v$ is a descendent of $u$ iff at time $d[u]$, $v$ can be reached from $u$ along a $WHITE$ path
+- **Proof** ($\Rightarrow$): assume $v$ is a descendent of $u$ 
+  - Let $w$ be any vertex on the path from $u$ to $v$ in the $DFT$
+	- So, $w$ is a descendent of $u \Rightarrow d[u] < d[w]$ 
+	  - (by **Corollary 1** nesting of descendents’ intervals)
+	- Hence, $w$ is white at time $d[u]$
+
+---
+
+## DFS: White Path Theorem
+
+- Proof ($\Leftarrow$) assume a white path $p(u,v)$ at time $d[u]$ but $v$ does not become a descendent of $u$ in the $DFT$ (contradiction):
+  - Assume every other vertex along $p$ becomes a descendent of $u$ in the $DFT$
+
+![center h:300px](assets/ce100-week-10-graphs-dfs-whitepath.drawio.svg)
+
+---
+
+## DFS: White Path Theorem
+
+- otherwise let $v$ be the closest vertex to $u$ along $p$ that does 
+  - not become a descendent
+- Let w be predecessor of $v$ along $p(u,v)$: 
+  - $d[u] < d[w] < f[w] < f[u]$ by **Corollary 1**
+	- Since, $v$ was $WHITE$ at time $d[u]$ ($u$ was $GRAY$) $d[u] < d[v]$
+	- Since, $w$ is a descendent of $u$ but $v$ is not
+	  - $d[w] < d[v] \Rightarrow d[v] < f[w]$
+- By (1)–(3): $d[u] < d[v] < f[w] < f[u] \Rightarrow d[u] < d[v] < f[w]$
+- So by Parenthesis Thm $int[v]$ is within $int[u]$, $v$ is descendent of $u$
+
+$Q.E.D$
+
+---
+
+$End-of-DFS-Proof$
+
+
 
 ---
 
@@ -1682,13 +2768,55 @@ consider vertices
 in order of decreasing u.finishTime 
 (as computed in DFS)
 ```
+---
+
+## **Graph Segmentation**
+## SCC - Kosaraju's algorithm
+
+```cpp
+for each unvisited vertex u, DFS(u)
+
+  try all free neighbor v of u, DFS(v)
+
+  finish DFS(u), add u to the front of list
+
+transpose the graph
+
+DFS in order of the list, DFS(u)
+
+  try all free neighbor v of u, DFS(v)
+
+each time we complete a DFS, we get an SCC
+```
+
+---
+
+## **Graph Segmentation**
+## SCC - Tarjan's algorithm
+
+```cpp
+for each unvisited vertex u
+
+  DFS(u), s.push(u), num[u] = low[u] = DFSCount
+
+    for each neighbor v of u
+
+      if v is unvisited, DFS(v)
+
+      low[u] = min(low[u], low[v])
+
+    if low[u] == num[u] // root of an SCC
+
+      pop from stack s until we get u
+```
 
 ---
 
 ## **Graph Segmentation**
 ### SCC Algorithm - Example-1 Graph
+#### Kosaraju's algorithm
 
-  ![center h:400px](assets/ce100-week-10-graphs-scc-scc.drawio.svg)
+  ![center h:350px](assets/ce100-week-10-graphs-scc-scc.drawio.svg)
 
 ---
 
@@ -1988,8 +3116,55 @@ in order of decreasing u.finishTime
 
 ---
 
+<style scoped>section{ font-size: 40px; }</style>
+
+## **Directed Acyclic Graphs (DAG)**
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Directed Acyclic Graphs (DAG)**
+
+- No Directed Cycles
+
+![center h:400px](assets/ce100-week-10-graphs-dfs-dag.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Directed Acyclic Graphs (DAG)**
+
+- **Theorem**: a directed graph G is acyclic iff $DFS$ on $G$ yields no **Back** edges
+- **Proof** (acyclic  no Back edges; by contradiction):
+- Let (v,u) be a Back edge visited during scanning $Adj[v]$
+	- $\Rightarrow color[v] = color[u] = GRAY$ and $d[u] < d[v]$
+	- $\Rightarrow int[v]$ is contained in $int[u] \Rightarrow v$ is descendent of $u$
+	- $\Rightarrow \exists$ a path from $u$ to $v$ in a $DFT$ and hence in $G$
+	-  $\therefore$ edge $(v,u)$ will create a cycle (Back edge $\Rightarrow$ cycle)
+
+---
+
+<style scoped>section{ font-size: 23px; }</style>
+
+## **Directed Acyclic Graphs (DAG)**
+### acyclic iff no Back edges
+
+- **Proof** (no Back edges $\Rightarrow$ acyclic):
+  - Suppose $G$ contains a cycle $C$ (Show that a $DFS$ on $G$ yields a $Back Edge$; proof by contradiction)
+  - Let $v$ be the first vertex discovered in $C$ and let $(u,v)$ be proceeding edge in $C$
+  - At time $d[v]: \exists$ a white path from $v$ to $u$ along $C$
+  - By $White Path$ Thrm $u$ becomes a descendent of $v$ in a $DFT$
+  - Therefore $(u,v)$ is a $Back Edge$ (descendent to ancestor)
+
+![center h:300px](assets/ce100-week-10-graphs-dfs-dag-cycle.drawio.svg)
+
+
+---
+
 ## **Graph Traversal**
-### Topological Sort
+### Topological Sort of a DAG
 
 - When we are scheduling jobs or tasks, they may have dependencies. 
 - For example, before we finish task a, we have to finish b first. 
@@ -2002,16 +3177,21 @@ in order of decreasing u.finishTime
 ---
 
 ## **Graph Traversal**
-### Topological Sort
+### Topological Sort of a DAG
 
 - Topological sort is a linear ordering of a directed acyclic graph.
 - If a graph has a cycle, it is not a directed acyclic graph.
 - A graph is acyclic if it has no cycles.
 
+- Linear ordering "$<$" of $V$ such that 
+  - $(u,v) \in E \Rightarrow u < v$ in ordering
+    - Ordering may not be unique
+    - i.e., mapping the partial ordering to total ordering may yield more than one orderings
+
 ---
 
 ## **Graph Traversal**
-### Topological Sort
+### Topological Sort of a DAG
 #### DFS version
 
 - The key observation is that, leaf nodes should always come after their parents and ancestors. Following this intuition we can apply DFS and output nodes from leaves to the root.
@@ -2023,19 +3203,21 @@ in order of decreasing u.finishTime
 ---
 
 ## **Graph Traversal**
-### Topological Sort - DFS Version
+### Topological Sort of a DAG
+#### DFS version
 
 ```cpp
 run DFS(G)
 when a vertex finished, output it
-vertices output in reverse topologically sorted order
+vertices output in **reverse** topologically sorted order
 ```
 - Runs in O(V+E) time
 
 ---
 
 ## **Graph Traversal**
-### Topological Sort - DFS Version
+### Topological Sort of a DAG
+#### DFS version
 
 ```cpp
 def topological_sort():
@@ -2078,9 +3260,10 @@ reverse list
 ---
 
 ## **Graph Traversal**
-### Topological Sort - DFS Version (Example)
+### Topological Sort of a DAG
+#### DFS version
 
-![center h:500px](assets/ce100-week-10-graphs-topological-topo-dfs.drawio.svg)
+![center h:450px](assets/ce100-week-10-graphs-topological-topo-dfs.drawio.svg)
 
 
 ---
@@ -2164,7 +3347,7 @@ reverse list
 ---
 
 ## **Graph Traversal**
-### Topological Sort
+### Topological Sort of a DAG
 #### BFS version (Kahn's algorithm)
 
 - For BFS, we need an array indegree to keep the track of indegrees. Then we will try to output all nodes with 0 indegree, and remove the edges coming out of them at the same time. Besides, remember to put the nodes that become 0 indegree in the queue.
@@ -2174,7 +3357,7 @@ reverse list
 ---
 
 ## **Graph Traversal**
-### Topological Sort
+### Topological Sort of a DAG
 #### BFS version (Kahn's algorithm)
 
 ```cpp
@@ -2294,10 +3477,38 @@ while !queue.empty():
 
 ---
 
+## **Graph Traversal**
+### Topological Sort of a DAG
+#### Correctness of the Algorithm
+
+- **Claim**: $(u,v) \in E \Rightarrow f[u] > f[v]$
+- **Proof**: consider any edge $(u,v)$ explored by $DFS$
+- when $(u,v)$ is explored, $u$ is $GRAY$  
+  - if $v$ is $GRAY$, $(u,v)$ is a Back edge (contradicting acyclic theorem)
+  - if $v$ is $WHITE$, $v$ becomes a descendent of $u$ (b WPT)  $\Rightarrow f[v] < f[u]$
+  - if $v$ is $BLACK$, $f[v] < d[u] \Rightarrow f[v] < f[u]$
+  $Q.E.D$
+
+---
+
+## Topological Sort of a DAG - Getting Dressed **Example** 
+
+![center h:600px](assets/ce100-week-10-graphs-topological-getting-dressed.drawio.svg)
+
+---
+
 ## References
 
+- [Introduction to Algorithms, Third Edition | The MIT Press](https://mitpress.mit.edu/books/introduction-algorithms-third-edition)
+
+- [Bilkent CS473 Course Notes (new)](http://nabil.abubaker.bilkent.edu.tr/473/)
+
+- [Bilkent CS473 Course Notes (old)](http://cs.bilkent.edu.tr/~ugur/teaching/cs473/)
+
 - [BtechSmartClass-Introduction to Graphs](http://www.btechsmartclass.com/data_structures/introduction-to-graphs.html)
+
 - [BtechSmartClass-Graph Representations](http://www.btechsmartclass.com/data_structures/graph-representations.html)
+
 - [Leetcode - Topological Sort](https://leetcode.com/discuss/general-discussion/1078072/introduction-to-topological-sort#:~:text=According%20to%20Introduction%20to%20Algorithms,pointing%20from%20left%20to%20right.)
 
 ---
