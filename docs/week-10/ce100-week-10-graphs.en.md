@@ -1177,79 +1177,6 @@ Two paths $\langle v_0,v_1,v_2,\dots,v_k\rangle$ & $\langle v_0',v_1',v_2',\dots
 
 ---
 
-## **Elementary Graph Algorithms**
-
-- Graph Traversal
-  - [DONE] Breadth-first search (BFS)
-  - [DONE] Depth-first search (DFS)
-
----
-
-## **Elementary Graph Algorithms**
-
-- Topological sort
-  - [DONE] DFS version
-  - [DONE] BFS version (Kahn's algorithm)
-
----
-
-## **Elementary Graph Algorithms**
-
-- Bipartite Graph Check
-  - [TBD] BFS version
-  - [TBD] DFS version
-
----
-
-## **Elementary Graph Algorithms**
-
-- Cut Vertex & Bridge
-  - [TBD] DFS version
-
----
-
-## **Elementary Graph Algorithms**
-
-- Strongly connected components (SCC)
-  - [DONE] Kosaraju's algorithm
-  - [DONE] Tarjan's algorithm
-
----
-
-## **Elementary Graph Algorithms**
-
-- [TBD] 2-SAT Checker
-
----
-
-## **Elementary Graph Algorithms**
-
-- Single-source shortest path (SSSP)
-  - [TBD] Dijkstra's algorithm
-  - [TBD] Bellman-Ford algorithm
-  - [TBD] Johnson's algorithm
-  - [TBD] DFS 
-  - [TBD] BFS 
-  - [TBD] DP
-
----
-
-## **Elementary Graph Algorithms**
-
-- Minimum spanning tree
-  - [TBD] Kruskal's algorithm
-  - [TBD] Prim's algorithm
-
----
-
-## **Elementary Graph Algorithms**
-
-- Convex Hull
-  - [TBD] Graham Scan
-  - [TBD] Jarvis march
-
----
-
 <style scoped>section{ font-size: 40px; }</style>
 
 ## **Online Visual Animations**
@@ -1540,6 +1467,54 @@ for more information visit
 <style scoped>section{ font-size: 40px; }</style>
 
 ## **Elementary Graph Algorithms**
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Elementary Graph Algorithms**
+
+- **Graph Traversal**
+  - Breadth-first search (BFS)
+  - Depth-first search (DFS)
+
+- **Strongly connected components (SCC)**
+  - Kosaraju's algorithm
+  - Tarjan's algorithm
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Elementary Graph Algorithms**
+
+
+- **Topological sort**
+  - DFS version
+  - BFS version (Kahn's algorithm)
+
+- **Minimum spanning tree**
+  - Kruskal's algorithm
+  - Prim's algorithm
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Elementary Graph Algorithms**
+
+- **Cycle Detection**
+  - DFS
+  - BFS
+- **Bipartite Graph Check**
+  - DFS
+  - BFS
+
+---
+
+<style scoped>section{ font-size: 40px; }</style>
+
+## **Breadth-first search (BFS)**
 
 ---
 
@@ -2214,6 +2189,13 @@ $End-of-BFS-Proof$
 
 ---
 
+
+<style scoped>section{ font-size: 40px; }</style>
+
+## **Depth-first search (DFS)**
+
+---
+
 ## **Graph Traversal**
 ### Depth-first search (DFS) 
 - DFS is a traversal algorithm that visits each vertex in a graph in a depth-first manner.
@@ -2739,26 +2721,64 @@ $Q.E.D$
 $End-of-DFS-Proof$
 
 
+---
+
+
+<style scoped>section{ font-size: 40px; }</style>
+
+## **Strongly Connected Components (SCC)**
+
 
 ---
 
-## **Graph Segmentation**
-### SCC (Strongly Connected Components)
+## **Graph Segmentation** - SCC (Strongly Connected Components)
 
 - SCC Algorithm is used to find the connected components in a graph.
+- Has two version
+  - Kosaraju's algorithm
+  - Tarjan's algorithm
 
 ---
 
-## **Graph Segmentation**
-### SCC (Strongly Connected Components)
+## **Graph Segmentation** - SCC (Strongly Connected Components)
+
+- **Definition**:  a strongly connected component ($SCC$) of a 
+  - directed graph $G=(V,E)$ is a **maximal** set of vertices $U \subseteq V$ such that
+  - For each $u,v \in U$ we have both $u \mapsto v$ and $v \mapsto u$ 
+- i.e., $u$ and $v$ are **mutually reachable** from each other ($u \leftrightharpoons v$) 
+- Let $G^T=(V,E_T)$ be the **transpose** of $G=(V,E)$ where
+  - $E^T=\{(u,v):(v,u) \in E\}$
+  - i.e., $E^T$ consists of edges of $G$ with their directions reversed
+  - Constructing $G^T$ from $G$ takes $O(V+E)$ time (adjacency list rep)
+  - Note: $G$ and $G^T$ have the same $SCC$s ($u \leftrightharpoons v$ in $G \iff u \leftrightharpoons v$ in $G^T$)
+
+
+---
+
+## **Graph Segmentation** - SCC (Strongly Connected Components)
 
 - $G^T=(V,E^T)$ can create $G^T$ $\rightarrow$ $\Theta(V+E)$ adjency list.
 - $SCC(G)$ complexity is $O(V+E)$
 
 ---
 
-## **Graph Segmentation**
-### SCC Algorithm
+## **Graph Segmentation** - SCC Algorithm
+
+$$
+\begin{align*}
+& \text{KOSARAJU-SCC}(G) \\
+& \quad call \ DFS(G) \ compute \ all \ u.finishTime \ values \\
+& \quad compute \ G^T = (V,E^T) \ and \ reverse \ edge \ directions \\
+& \quad call \ DFS(G^T) \ but \ in \ the \ main \ loop, \\
+& \quad consider \ vertices \ in \ order \ of \ decreasing \ u.finishTime \\
+& \qquad (as \ computed \ in \ DFS) \\
+& \quad output \ each \ DFT component
+\end{align*}
+$$
+
+---
+
+## **Graph Segmentation** - SCC - Kosaraju's algorithm
 
 ```cpp
 1- call DFS(G) compute all u.finishTime values
@@ -2770,65 +2790,49 @@ in order of decreasing u.finishTime
 ```
 ---
 
-## **Graph Segmentation**
-## SCC - Kosaraju's algorithm
+## **Graph Segmentation** - SCC - Kosaraju's algorithm
 
 ```cpp
 for each unvisited vertex u, DFS(u)
-
   try all free neighbor v of u, DFS(v)
-
   finish DFS(u), add u to the front of list
-
 transpose the graph
-
 DFS in order of the list, DFS(u)
-
   try all free neighbor v of u, DFS(v)
-
 each time we complete a DFS, we get an SCC
 ```
 
 ---
 
-## **Graph Segmentation**
-## SCC - Tarjan's algorithm
+## **Graph Segmentation** - SCC - Tarjan's algorithm
 
 ```cpp
 for each unvisited vertex u
-
   DFS(u), s.push(u), num[u] = low[u] = DFSCount
-
     for each neighbor v of u
-
       if v is unvisited, DFS(v)
-
       low[u] = min(low[u], low[v])
-
     if low[u] == num[u] // root of an SCC
-
       pop from stack s until we get u
 ```
 
 ---
 
-## **Graph Segmentation**
-### SCC Algorithm - Example-1 Graph
+## **Graph Segmentation** - SCC Algorithm - Example-1
 #### Kosaraju's algorithm
 
   ![center h:350px](assets/ce100-week-10-graphs-scc-scc.drawio.svg)
 
 ---
 
-## **Graph Segmentation**
-### SCC Algorithm - Example-1 / Step - 1
+## **Graph Segmentation** - SCC Algorithm - Ex-1 / Step - 1
 
 ![center h:500px](assets/ce100-week-10-graphs-scc-scc-1.drawio.svg)
 
 ---
 
 ## **Graph Segmentation**
-### SCC Algorithm - Example-1 / Step - 2
+### SCC Algorithm - Ex-1 / Step - 2
 
 ![center h:500px](assets/ce100-week-10-graphs-scc-scc-2.drawio.svg)
 
@@ -2842,7 +2846,7 @@ for each unvisited vertex u
 ---
 
 ## **Graph Segmentation**
-### SCC Algorithm - Example-1/ Step - 4
+SCC Algorithm - Example-1/ Step - 4
   
 ![center h:500px](assets/ce100-week-10-graphs-scc-scc-4.drawio.svg)
 
@@ -3116,6 +3120,196 @@ for each unvisited vertex u
 
 ---
 
+## **Graph Segmentation**
+### Strongly Connected Components Generate Acyclic Component Graph
+
+![center h:500px](assets/ce100-week-10-graphs-scc-scc-43.drawio.svg)
+
+---
+
+$Begining-of-SCC-Proof$
+
+---
+
+## **Strongly Connected Components**
+
+- **Lemma 1**: no path between a pair of vertices in the same $SCC$, ever leaves the $SCC$
+- **Proof**: let $u$ and $v$ be in the same $SCC \Rightarrow u \leftrightharpoons v$
+- let $w$ be on some path $u \mapsto w \mapsto v \Rightarrow u \mapsto w$ 
+- but $v \mapsto u \Rightarrow \exists$ a path $w \mapsto v \mapsto u \Rightarrow w \mapsto u$ 
+- therefore $u$ and $w$ are in the same $SCC$  $\Longrightarrow$($Q.E.D$)
+
+![center h:250px](assets/ce100-week-10-graphs-scc-scc-proof-1.drawio.svg)
+
+---
+
+<style>section{font-size:25px}</style>
+
+## **Strongly Connected Components**
+
+- **Theorem 1**: in any $DFS$, all vertices in the same $SCC$ are placed in the same $DFT$
+- **Proof**: let $r$ be the first vertex discovered in $SCC$ $S_r$
+because $r$ is first, $color[x]=WHITE \ \forall x \in S_r-{r}$ at time $d[r]$
+- So all vertices are $WHITE$ on each $r \mapsto x$ path $\forall x \in S_r-{r}$
+  - since these paths never leave Sr
+- Hence each vertex in $S_r-{r}$ becomes a descendent of $r$ (**White-path Theorem**) $\Longrightarrow$ ($Q.E.D$)
+
+![center h:250px](assets/ce100-week-10-graphs-scc-scc-proof-2.drawio.svg)
+
+---
+
+## Notation for the Strongly Connected Components
+
+- $d[u]$ and $f[u]$ refer to those values computed by $DFS(G)$ at step (1)
+- $u \mapsto v$ refers to $G$ not $G^T$
+- **Definition**: forefather $\phi(u)$ of vertex $u$
+1. $\phi(u)=$ That vertex $w$ such that $u \mapsto w$ and $f[w]$ is maximized
+2. $\phi(u)=u$ possible because $u \mapsto u \Rightarrow f[u] \leq f[\phi(u)]$ 
+
+---
+
+<style>section{font-size:25px}</style>
+
+## **Strongly Connected Components**
+
+- **Lemma 2**: $\phi(\phi(u)) = \phi(u)$
+- **Proof** try to show that $f[\phi(\phi(u))]=f[\phi(u)]:$
+  - For any $u,v \in V; u \mapsto v \Rightarrow R_v \subseteq R_u \Rightarrow f[\phi(v)] \leq f[\phi(u)]$ 
+  - So, $u \mapsto \phi(u) \Rightarrow f[\phi(\phi(u))] \leq f[\phi(u)]$
+  - Due to definition of $\phi(u)$ we have $f[\phi(\phi(u))] \geq f[\phi(u)]$
+  - Therefore $f[\phi(\phi(u))] = f[\phi(u)]$
+  - $f[x]=f[y] \Rightarrow x = y$ (same vertex)
+
+  ![center h:220px](assets/ce100-week-10-graphs-scc-scc-proof-3.drawio.svg)
+
+---
+
+<style>section{font-size:25px}</style>
+
+## **Strongly Connected Components**
+
+- **Properties of forefather**:
+  - Every vertex in an $SCC$ has the **same forefather** which is in the $SCC$
+  - **Forefather** of an $SCC$ is the **representative** vertex of the $SCC$
+  - In the $DFS$ of $G$, forefather of an $SCC$ is the
+    - **first** vertex **discovered** in the $SCC$
+    - **last** vertex **finished** in the $SCC$
+
+---
+
+<style>section{font-size:25px}</style>
+
+## **Strongly Connected Components**
+
+- **Theorem 2**: $\phi(u)$ of any $u \in V$ in any $DFS$ of $G$ is an ancestor of $u$
+
+- **Proof**: Trivial if $\phi(u) = u$. 
+- If $\phi(u) \neq u$, consider color of $\phi(u)$ at time $d[u]$
+  - $\phi(u)$ is $GRAY$: $\phi(u)$ is an ancestor of $u \Rightarrow$ proving the theorem
+  - $\phi(u)$ is $BLACK$: $f[\phi(u)] < f[u] \Rightarrow$ contradiction to def. of $\phi(u)$
+  - $\phi(u)$ is $WHITE$: $exist$ $2$ cases according to colors of intermediate vertices on $p(u, \phi(u))$
+- Path $p(u, \phi(u))$ at time $d[u]$:
+
+![center h:170px](assets/ce100-week-10-graphs-scc-scc-proof-4.drawio.svg)
+
+
+---
+
+<style>section{font-size:25px}</style>
+
+## **Strongly Connected Components**
+
+- **Case 1**: every intermediate vertex $x_i \in p(u, \phi(u))$ is $WHITE$
+  - $\Rightarrow \phi(u)$ becomes a descendant of $u$ ($White-Path-Theorem$) 
+  - $\Rightarrow f [\phi(u)] < f [u]$
+  - $\Rightarrow$ contradiction
+- **Case 2**: $\exists$ some $non-WHITE$ intermediate vertices on $p(u, \phi(u))$
+  - Let $x_t$ be the last $non-WHITE$ vertex on 
+    - $p(u, \phi(u)) = \langle u, x_1, x_2,\dots, x_r, \phi(u)\rangle$
+  - Then, $x_t$ must be $GRAY$ since $BLACK-to-WHITE$ edge ($x_t, x_{t+1}$) cannot exist
+  - But then, $p(x_t, \phi(u)) = \langle x_{t+1}, x_{t+2},\dots, x_r, \phi(u)\rangle$ is a white path
+  - $\Rightarrow \phi(u)$ is a descendant of $x_t$ (by white-path theorem)
+  - $f[x_t] > f[\phi(u)]$
+  - contradicting our choice for $\phi(u)$ $\Longrightarrow$ $Q.E.D.$
+
+---
+
+<style>section{font-size:25px}</style>
+
+## **Strongly Connected Components**
+
+- **C1**: in any $DFS$ of $G = (V, E)$ vertices $u$ and $\phi(u)$ lie in the same $SCC$, $\forall u \in V$
+
+- **Proof**: $u \mapsto \phi(u)$ (by definition) and $\phi(u) \mapsto u$ since $\phi(u)$ is an **ancestor** of $u$ (by **Theorem 2**)
+
+- **Theorem 3**: two vertices $u,v \in V$ lie in the same $SCC \iff \phi(u) = \phi(v)$ in a $DFS$ of $G=(V,E)$
+
+- **Proof**: let $u$ and $v$ be in the same $SCC$ $C_{uv} \Rightarrow u \leftrightharpoons v$
+
+---
+
+<style>section{font-size:25px}</style>
+
+## **Strongly Connected Components**
+
+- $\forall w: v \mapsto w \Rightarrow u \mapsto w$ and $\forall w: u \mapsto w \Rightarrow v \mapsto w$, i.e., 
+  - every vertex reachable from $u$ is reachable from $v$ and vice-versa
+- So, $w = \phi(u) \Rightarrow w = \phi(v)$ and $w = \phi(v) \Rightarrow w = \phi(u)$ by definition of forefather
+- **Proof**: Let $\phi(u) = \phi(v) = w \in C_w \Rightarrow u \in C_w$ by $C1$ and $v \in C_w$ by $C1$
+- By **Theorem 3**: $SCC$s are sets of vertices with the same forefather
+- By **Theorem 2** and **parenthesis Theorem**: A **forefather** is the **first vertex discovered** and the **last vertex finished** in its $SCC$
+
+![center h:250px](assets/ce100-week-10-graphs-scc-scc-proof-5.drawio.svg)
+
+---
+
+<style>section{font-size:25px}</style>
+
+## **$SCC$: Why do we Run $DFS$ on $G^T$?**
+
+- Consider $r \in V$ with largest finishing time computed by $DFS$ on $G$
+- $r$ must be a **forefather** by definition since $r \mapsto r$  and $f[r]$ is maximum in $V$
+- $C_r = ?: Cr =$ vertices in $r$**’s SCC** $= \{u \in V: \phi(u) = r\}$
+  - $\Rightarrow C_r = \{u \in V: u \mapsto r \ and \ f[x] \leq f[r] \forall x \in R_u\}$
+    - where $R_u =\{v \in V: u \mapsto v\}$
+  - $\Rightarrow C_r = \{u \in V: u \mapsto r\}$ since $f[r]$ is maximum
+  - $\Rightarrow C_r = R_r^T = \{u \in V: r \mapsto u \in G^T\}=$ **reachability set** of $r \in G^T$
+- i.e., $C_r =$ those vertices reachable from $r \in G^T$
+- Thus $\text{DFS-VISIT}(G^T, r)$ identifies all vertices in $C_r$ and
+  - **blackens** them
+
+---
+
+<style>section{font-size:25px}</style>
+
+## **$SCC$: Why do we Run $DFS$ on $G^T$?**
+
+- $BFS(G^T, r)$ can also be used to identify $C_r$
+- Then, $DFS$ on $G^T$ continues with $DFS-VISIT(G^T, r')
+  - where $f[r'] > f[w] \forall w \in V- C_r$
+- $r$ must be a **forefather** by definition since $r' \mapsto r'$  and
+  - $f[r']$ is maximum in $V - C_r$
+
+![center h:300px](assets/ce100-week-10-graphs-scc-scc-proof-6.drawio.svg)
+
+---
+
+<style>section{font-size:25px}</style>
+
+## **$SCC$: Why do we Run $DFS$ on $G^T$?**
+
+- Hence by similar reasoning $\text{DFS-VISIT}(G^T, r')$ identifies $C_{r'}$
+- Thus, each $\text{DFS-VISIT}(G^T, x)$ in $DFS(G^T)$
+  - identifies an $SCC$ $C_x$ with $\phi = x$
+
+![center h:400px](assets/ce100-week-10-graphs-scc-scc-proof-7.drawio.svg)
+
+---
+
+$End-of-SCC-Proof$
+
+---
+
 <style scoped>section{ font-size: 40px; }</style>
 
 ## **Directed Acyclic Graphs (DAG)**
@@ -3148,8 +3342,7 @@ for each unvisited vertex u
 
 <style scoped>section{ font-size: 23px; }</style>
 
-## **Directed Acyclic Graphs (DAG)**
-### acyclic iff no Back edges
+## **Directed Acyclic Graphs (DAG)** - aAcyclic iff no Back edges
 
 - **Proof** (no Back edges $\Rightarrow$ acyclic):
   - Suppose $G$ contains a cycle $C$ (Show that a $DFS$ on $G$ yields a $Back Edge$; proof by contradiction)
@@ -3163,8 +3356,15 @@ for each unvisited vertex u
 
 ---
 
-## **Graph Traversal**
-### Topological Sort of a DAG
+
+<style scoped>section{ font-size: 40px; }</style>
+
+## **Topological Sort of a DAG**
+
+---
+
+
+## **Graph Traversal** - Topological Sort of a DAG
 
 - When we are scheduling jobs or tasks, they may have dependencies. 
 - For example, before we finish task a, we have to finish b first. 
@@ -3176,8 +3376,7 @@ for each unvisited vertex u
 
 ---
 
-## **Graph Traversal**
-### Topological Sort of a DAG
+## **Graph Traversal** - Topological Sort of a DAG
 
 - Topological sort is a linear ordering of a directed acyclic graph.
 - If a graph has a cycle, it is not a directed acyclic graph.
@@ -3190,9 +3389,8 @@ for each unvisited vertex u
 
 ---
 
-## **Graph Traversal**
-### Topological Sort of a DAG
-#### DFS version
+## **Graph Traversal** -Topological Sort of a DAG
+### DFS version
 
 - The key observation is that, leaf nodes should always come after their parents and ancestors. Following this intuition we can apply DFS and output nodes from leaves to the root.
 
@@ -3497,6 +3695,960 @@ while !queue.empty():
 
 ---
 
+<style scoped>section{ font-size: 40px; }</style>
+
+## **Cycle Detection**
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Detect Cycle in a Directed Graph**
+
+**Approach:** 
+- Depth First Traversal can be used to detect a cycle in a Graph. 
+- DFS for a connected graph produces a tree. 
+- There is a cycle in a graph only if there is a back edge present in the graph. 
+- A back edge is an edge that is 
+  - from a node to itself (self-loop) or 
+  - one of its ancestors in the tree produced by DFS.
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Detect Cycle in a Directed Graph**
+
+**Algorithm**: 
+- Create the graph using the given number of edges and vertices.
+- Create a recursive function that initializes the current index or vertex, visited, and recursion stack.
+- Mark the current node as visited and also mark the index in recursion stack.
+- Find all the vertices which are not visited and are adjacent to the current node. Recursively call the function for those vertices, If the recursive function returns true, return true.
+- If the adjacent vertices are already marked in the recursion stack then return true.
+- Create a wrapper class, that calls the recursive function for all the vertices and if any function returns true return true. Else if for all vertices the function returns false return false.
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Detect Cycle in a Directed Graph**
+
+- Complexity Analysis: 
+  - Time Complexity: $O(V+E)$. 
+    - Time Complexity of this method is same as time complexity of $DFS$ traversal which is $O(V+E)$.
+- Space Complexity: $O(V)$. 
+  - To store the visited and recursion stack $O(V)$ space is needed.
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Detect cycle in an undirected graph**
+
+**Approach**: 
+- Run a DFS from every unvisited node. 
+- Depth First Traversal can be used to detect a cycle in a Graph. 
+- DFS for a connected graph produces a tree. 
+- There is a cycle in a graph only if there is a back edge present in the graph. 
+- A back edge is an edge that is joining a node to 
+  - itself (self-loop) or 
+  - one of its ancestor in the tree produced by DFS. 
+- To find the back edge to any of its ancestors 
+  - keep a visited array and if there is a back edge to any visited node 
+  - then there is a loop and return true.
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Detect cycle in an undirected graph**
+
+**Algorithm**: 
+
+- Create the graph using the given number of edges and vertices.
+- Create a recursive function that have current index or vertex, visited array and parent node.
+- Mark the current node as visited .
+- Find all the vertices which are not visited and are adjacent to the current node. 
+  - Recursively call the function for those vertices, If the recursive function returns true return true.
+- If the adjacent node is not parent and already visited then return true.
+- Create a wrapper class, that calls the recursive function for all the vertices and if any function returns true, return true.
+- Else if for all vertices the function returns false return false.
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Detect cycle in an undirected graph**
+
+**Complexity Analysis**: 
+- **Time Complexity**: $O(V+E)$. 
+  - The program does a simple DFS Traversal of the graph which is represented using adjacency list. So the time complexity is $O(V+E)$.
+- **Space Complexity**: $O(V)$. 
+  - To store the visited array $O(V)$ space is required.
+
+---
+
+<style scoped>section{ font-size: 40px; }</style>
+
+## **Graph Coloring**
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Graph Coloring**
+
+- Given an undirected graph and a number m, 
+- determine if the graph can be coloured with at most m colours such that no two adjacent vertices of the graph are colored with the same color. 
+- Here coloring of a graph means the assignment of colors to all vertices. 
+
+![bg right:40% h:400px](assets/ce100-week-10-graphs-graphcoloring.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Graph Coloring**
+### Naive Approach: 
+- Generate all possible configurations of colors. 
+- Since each node can be coloured using any of the m available colours, 
+- the total number of colour configurations possible are $m^V$. 
+- After generating a configuration of colour, 
+  - check if the adjacent vertices have the 
+    - same colour or not. 
+  - If the conditions are met, 
+  - print the combination and break the loop.
+
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Graph Coloring**
+### Naive Algorithm: 
+
+- Create a recursive function that takes current index, number of vertices and output color array.
+- If the current index is equal to number of vertices. 
+  - Check if the output color configuration is safe, 
+    - i.e check if the adjacent vertices do not have same color. 
+  - If the conditions are met, 
+    - print the configuration and break.
+- Assign a color to a vertex (1 to m).
+- For every assigned color 
+  - recursively call the function with next index and number of vertices
+- If any recursive function returns true break the loop and returns true.
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Graph Coloring**
+### Naive Complexity Analysis: 
+
+- **Time Complexity**: $O(m^V)$. 
+  - There is a total $O(m^V)$ combination of colors. So the time complexity is $O(m^V)$.
+- **Space Complexity**: $O(V)$. 
+  - Recursive Stack of $graphColoring(\dots)$ function will require $O(V)$ space.
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Graph Coloring**
+### Backtracking  Approach: 
+
+- The idea is to assign colors one by one to different vertices, 
+  - starting from the vertex 0. 
+- Before assigning a color, check for safety by considering already assigned colors to the adjacent vertices 
+  - i.e check if the adjacent vertices have the same color or not. 
+- If there is any color assignment that does not violate the conditions, 
+- mark the color assignment as part of the solution. 
+- If no assignment of color is possible then backtrack and return false.
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Graph Coloring**
+### Backtracking Algorithm: 
+
+- Create a recursive function that takes the graph, current index, number of vertices, and output color array.
+- If the current index is equal to the number of vertices. Print the color configuration in output array.
+- Assign a color to a vertex (1 to m).
+- For every assigned color, 
+  - check if the configuration is safe, 
+    - (i.e. check if the adjacent vertices do not have the same color) 
+  - recursively call the function with next index and number of vertices
+- If any recursive function returns true break the loop and return true.
+- If no recursive function returns true then return false.
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Graph Coloring**
+### Using BFS Approach / Algorithm
+
+- The approach here is to color each node from 1 to n 
+- initially by color 1. 
+- And start travelling BFS from an unvisited starting node to cover all connected components in one go. 
+- On reaching each node during BFS traversal, do the following:
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Graph Coloring**
+### Using BFS Approach / Algorithm
+
+  - Check all edges of the given node.
+  - For each vertex connected to our node via an edge:
+    - check if the color of the nodes is the same. 
+      - If same, 
+        - increase the color of the other node (not the current) by one.
+    - check if it visited or unvisited. 
+      - If not visited, 
+        - mark it as visited and push it in a queue.
+  - Check condition for maxColors till now. 
+    - If it exceeds M, return false
+- After visiting all nodes, 
+  - return true (As no violating condition could be found while travelling).
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Graph Coloring**
+### Using BFS Complexity Analysis:
+
+- **Time Complexity**: $O(V + E)$.
+- **Space Complexity**: $O(V)$. 
+  - For Storing Visited List.
+
+---
+
+<style scoped>section{ font-size: 40px; }</style>
+
+## **Biparitite Checker**
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Biparitite Checker**
+
+- A Bipartite Graph is a graph 
+  - whose vertices can be divided into 
+    - two independent sets, 
+    - U and V such that every edge (u, v) either connects a vertex from U to V or a vertex from V to U. 
+  - In other words, for every edge (u, v), 
+  - either u belongs to U and v to V, 
+  - or u belongs to V and v to U.
+- We can also say that there is no edge that connects vertices of same set.
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Biparitite Checker**
+
+- A bipartite graph is possible if the graph coloring is possible using two colors such that vertices in a set are colored with the same color. 
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Biparitite Checker**
+
+![center h:250px](assets/ce100-week-10-graphs-graphcoloring-biparite-1.drawio.svg)
+
+![center h:250px](assets/ce100-week-10-graphs-graphcoloring-biparite-2.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Biparitite Checker**
+
+- Note that it is possible to color a cycle graph with even cycle using two colors.
+
+![center h:300px](assets/ce100-week-10-graphs-graphcoloring-biparite-3.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Biparitite Checker**
+
+- It is not possible to color a cycle graph with odd cycle using two colors. 
+
+![center h:300px](assets/ce100-week-10-graphs-graphcoloring-biparite-4.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Biparitite Checker Algorithm**
+
+- One approach is to check whether the graph is 2-colorable or not using backtracking algorithm m coloring problem. 
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Biparitite Checker Algorithm**
+
+- Following is a simple algorithm to find out whether a given graph is Bipartite or not using 
+  - Breadth First Search (BFS).
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Biparitite Checker Algorithm**
+
+1. Assign RED color to the source vertex (putting into set U). 
+2. Color all the neighbors with BLUE color (putting into set V). 
+3. Color all neighbor’s neighbor with RED color (putting into set U). 
+4. This way, assign color to all vertices such that it satisfies all the constraints of m way coloring problem where m = 2. 
+5. While assigning colors, if we find a neighbor which is colored with same color as current vertex, then the graph cannot be colored with 2 vertices (or graph is not Bipartite) 
+
+---
+
+<style scoped>section{ font-size: 40px; }</style>
+
+## **Disjoint Set Operations**
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Disjoint Set Operations**
+
+- A **disjoint-set data structure**
+  - Maintains a collection $S=\{s_1,\dots,s_k\}$ of **disjoint dynamic sets**
+  - Each set is identified by a representative which is some member of the set
+- In some applications,
+  - It **doesn't matter** which **member** is used as the   **representative**
+  - **We only care** that,
+    - if we ask for the representative of a set twice without
+      - modifying the set between the requests,
+    - we get the same answer both times
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Disjoint Set Operations**
+
+- In **other applications**,
+- There may be a **prescribed rule** for choosing the representative 
+  - E.G. Choosing the smallest member in the set 
+- Each element of a set is **represented** by an **object** "$x$"
+- $\text{MAKE-SET}(x)$ creates a new set whose only member is $x$
+  - Object $x$ is the representative of the set
+  - $x$ is not already a member of any other set 
+- $\text{UNION}(x, y)$  unites the dynamic sets $S_x\&S_y$ that contain $x\&y$ 
+  - $S_x\&S_y$ are assumed to be disjoint prior to the operation
+  - The new representative is some member of $S_x \cup S_y$
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Disjoint Set Operations**
+
+- Usually, the representative of either $S_x$ or  $S_y$ is chosen as the **new representative** 
+- We destroy sets $S_x$ and $S_y$, removing them from the collection $S$ since we require the sets in the collection to be **disjoint**
+- $\text{FIND-SET}(x)$ returns a pointer to the representative of the unique set containing x
+- We will analyze the **running times** in terms of two parameters
+  - $n$  : The number of $\text{MAKE-SET}$ operations
+  - $m$ : The total number of $\text{MAKE-SET}$, $\text{UNION}$ and $\text{FIND-SET}$ operations 
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Disjoint Set Operations**
+
+- Each union operation reduces the number of sets by one
+  - since the sets are disjoint
+  - Therefore, only **one set remains** after $n - 1$ union operations
+  - Thus, the number of union operations is $ \leq n – 1$
+- Also note that, $m \geq n$ always hold 
+  - since $\text{MAKE-SET}$ operations are included in the total number of operations
+
+----
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **An Application of Disjoint-Set Data Structures**
+
+- Determining the connected components of an undirected graph $G=(V,E)$
+
+$$
+\begin{align*}
+& \text{CONNECTED-COMPONENTS}(G)\\
+&	\quad for \ each \ vertex \ v \in V[G] \ do \\
+&	\qquad \text{MAKE-SET}(v) \\
+&	\quad endfor \\[8pt] 
+&	\quad for \ each \ edge \ (u, v) \in E[G] \ do \\[5pt]
+&	\qquad if   \ \text{FIND-SET}(u) \neq \text{FIND-SET}(v) \ then \\
+&	\qquad \quad UNION(u, v) \\
+& \qquad endif \\[5pt]
+& \quad endfor \\
+&end 
+\end{align*}
+$$
+
+----
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **An Application of Disjoint-Set Data Structures**
+
+$$
+\begin{align*}
+& \text{SAME-COMPONENT}(u,v)\\
+& \quad if \ \text{FIND-SET}(u) = \text{FIND-SET}(v) \ then \\
+& \qquad return \ TRUE	\\
+& \quad else \\
+& \qquad return \ FALSE	\\
+& \quad endif \\
+& end	
+\end{align*}
+$$
+
+----
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **An Application of Disjoint-Set Data Structures**
+
+![center h:550px](assets/ce100-week-10-graphs-disjointset.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Linked-List Representation of Disjoint Sets**
+
+- Represent **each set** by **a linked-list**
+- The **first object** in the linked-list serves as its **set representative**
+- Each object in the linked-list contains
+  - A **set member**
+  - A **pointer** to the object containing the **next set member**
+  - A **pointer** back to the **representative**
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Linked-List Representation of Disjoint Sets**
+
+- $\text{MAKE-SET}(x)$ : $O(1)$
+
+![center h:300px](assets/ce100-week-10-graphs-disjointset-disjoint-set-op-2.drawio.svg)
+
+- $\text{FIND-SET}(x)$ : We return the representative pointer of $x$
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Linked-List Representation of Disjoint Sets**
+- A Simple Implementation of Union : $UNION(x, y)$
+  - $\text{APPEND}$ $x$'s list to the end of $y$'s list
+    - The representative of $y$'s list becomes the new representative
+  - $\text{UPDATE}$ the representative pointer of each object originally on $x$'s list which takes time linear in the length of $x$'s list 
+
+![bg right:40% h:400px](assets/ce100-week-10-graphs-disjointset-disjoint-set-op-3.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Linked-List Representation of Disjoint Sets**
+
+![center h:500px](assets/ce100-week-10-graphs-disjointset-disjoint-set-op-4.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Analysis of the Simple Union Implementation**
+
+$$
+\begin{matrix}
+Operation & Number of Objectst Updated & Updated Objects^*\\
+--- & --- & ---\\
+\text{MAKE-SET}(X_1) & 1 & \{x_1^*\} \\
+\text{MAKE-SET}(X_2) & 1 & \{x_2^*\} \\
+\vdots & \vdots & \vdots \\
+\text{MAKE-SET}(X_n) & 1 & \{x_n^*\} \\
+\text{UNION}(X_1,X_2) & 1 & \{x_1\} \cup \{x_2\} \leftarrow \{x_1^*,x_2\} \\
+\text{UNION}(X_2,X_3) & 2 & \{x_1,x_2\} \cup \{x_3\} \leftarrow \{x_1^*,x_2^*,x_3\} \\
+\text{UNION}(X_3,X_4) & 3 & \{x_1,x_2,x_3\} \cup \{x_4\} \leftarrow \{x_1^*,x_2^*,x_3^*,x_4\} \\
+\vdots & \vdots & \vdots \\
+\text{UNION}(X_{n-1},X_n) & n-1 & \{x_1,x_2,\dots,x_{n-1}\} \cup \{x_n\} \leftarrow \{x_1^*,x_2^*,x_3^*,\dots,x^*_{n-1},x_n\} \\
+\end{matrix}
+$$
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Analysis of the Simple Union Implementation**
+
+- The total number of representative pointer updates
+  - $\overbrace{n}^{MAKE-SET}+ \overbrace{\sum\limits_{i=1}^{n-1}i}^{UNION} = n + \frac{1}{2}(n-1)n = \frac{1}{2}n^2 + \frac{1}{2}n = \Theta(n^2)$ 
+  - $=\Theta(m^2)$ since $n=\lceil m/2 \rceil$
+- Thus, on the average, each operation requires $\Theta(m)$ time
+- That is, the amortized time of an operation is $\Theta(m)$
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **A Weighted-Union Heuristic**
+
+- The simple implementation is **inefficient** because
+  - We may be appending a **longer list** to a **shorter list** during a $\text{UNION}$ operation
+    - so that we must update the representative pointer of **each member** of the longer list
+
+- Maintain the length of each list
+- Always append the smaller list to the longer list
+  - With ties broken arbitrarily
+- A single $\text{UNION}$ can still take $\Omega(m)$ time if both sets have $\Omega(m)$ members
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **A Weighted-Union Heuristic**
+
+- **Theorem**: A sequence of $m$ $\text{MAKE-SET}, \text{UNION} \& \text{FIND-SET}$ operations, $n$ of which are $\text{MAKE-SET}$ operations, takes $O(m+nlgn)$ time
+- **Proof**: Try to compute an upper bound on the number of representative pointer updates for each object in a set of size $n$
+- Consider a fixed object $x$
+- Each time $x$’s $R-PTR$ was updated, $x$ was a member of the smaller set 
+- $\{x\} \cup \{v\} \rightarrow \{x^*,v\} \Longrightarrow \ \text{1-st update} \ |S_x| \geq 2$
+- $\{x, v\} \cup \{w_1, w_2\} \rightarrow \{ x^*,v^*,w_1,w_2\} \Longrightarrow \ \text{2-nd update} \ |S_x| \geq 4$
+- $\{x,v,w_1,w_2\} \cup \{z_1,z_2,z_3,z_4\} \rightarrow \{x^*,v^*,,w_1^*,w_2^*,z_1,z_2,z_3,z_4\}; |S_x| \geq 4$
+- $\text{3-rd update} \ |S| \geq 8$
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **A Weighted-Union Heuristic**
+
+- For any $k \leq n$, after $x$’s $R-PTR$ has been updated $\lceil lg k \rceil$ times	the resulting set must have at least $k$ members
+- $R-PTR$ of each object can be updated at most $\lceil lg k \rceil$ time over all $\text{UNION}$ operations
+- Analysis of The Weighted-Union Heuristic
+  - The below illustrates a **worst case sequence** for a set with $n = 16$ objects
+  - The total number of $R-PTR$ updates
+
+$$
+\begin{align*}
+&= \frac{16}{2}\times 1+\frac{16}{4}\times 2+\frac{16}{8}\times 4+\frac{16}{16}\times 8 \\
+&= 8 \times 1 +4 \times 2 +2 \times 4 +1 \times 8 \\
+&= 8 \times 4 \\
+&= 32 \\
+&= \underbrace{\frac{n}{2}+\frac{n}{2}+\dots+\frac{n}{2}}_{lgn}  = \frac{n}{2}lgn = O(nlgn)
+\end{align*}
+$$
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Analysis of The Weighted-Union Heuristic**
+
+![center h:500px](assets/ce100-week-10-graphs-disjointset-disjoint-set-op-5.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Analysis of The Weighted-Union Heuristic**
+
+- Each $\text{MAKE-SET} \& \text{FIND-SET}$ operation takes $O(1)$ time, and there are $O(m)$ of them
+- The total time for the entire sequence $=O(m+nlgn)$ 
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Disjoint Set Forests**
+
+  - In a **faster implementation**, we **represent sets** by **rooted trees**
+    - Each node contains one member
+    - Each tree represents one set
+    - Each member points only to its parent
+    - The **root** of **each tree** contains the **representative**
+    - Each root is its own parent
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Disjoint Set Forests**
+
+![center h:500px](assets/ce100-week-10-graphs-disjointset-disjoint-set-op-6.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Disjoint Set Forests** - Straightforward Implementation 
+
+- $\text{MAKE-SET}$ : Simply creates a tree with just one node : $O(1)$
+- $\text{FIND-SET}$ : Follows parent pointers until the root node is found 
+  - The nodes visited on this path toward the root constitute the $\text{FIND-PATH}$
+- $\text{UNION}$: Makes the root of one tree to point to the other one
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Disjoint Set Forests** - Heuristics To Improve the Running Time 
+
+- **Straightforward implementation** is **no faster** than ones that use the **linked-list representation**
+- A sequence of $n – 1$ $\text{UNION}$'s, following a sequence of n $\text{MAKE-SET}$'s, may create a tree, **which is just a linear chain of $n$ nodes** 
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Disjoint Set Forests** - Heuristics To Improve the Running Time 
+ **First Heuristic : UNION by Rank**
+- **Similar** to the **weighted-union** used for the **linked-list** representation
+- The idea is to make the root of the tree with fewer nodes point to the root of the tree with more nodes
+- Rather than explicitly keeping the size of the subtree
+  - rooted at each node
+	- We maintain a **rank** 
+    - that **approximates** the **logarithm** of the **subtree size** 
+    - and is also an **upperbound** on the **height of the node**
+- During a $\text{UNION}$ operation 
+  - make **the root** with **smaller rank to point** to **the root** with **larger rank**	
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Disjoint Set Forests** - Heuristics To Improve the Running Time 
+ **Second Heuristic : Path Compression**
+- Use it during the $\text{FIND-SET}$ operations 
+  - Make each node on the $\text{FIND-PATH}$ to point directly to the root
+
+![center h:350px](assets/ce100-week-10-graphs-disjointset-disjoint-set-op-7.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Disjoint Set Forests** - Heuristics To Improve the Running Time 
+ **Path Compression During FIND-SET(b) Operation**
+
+![center h:350px](assets/ce100-week-10-graphs-disjointset-disjoint-set-op-8.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Disjoint Set Forests** - Pseudocodes For the Heuristics 
+ **Implementation of UNION-BY-RANK Heuristic**
+- $p[x]$: Pointer to the parent of the node $x$
+- $rank[x]$: An upperbound on the height of node $x$ in the tree
+
+$$
+\begin{align*}
+& \text{MAKE-SET}(x) \\
+& \quad p[x] \rightarrow x \\
+& \quad rank[x] \rightarrow 0
+& end
+\end{align*}
+$$
+
+$$
+\dots
+$$
+
+$$
+\begin{align*}
+& \text{UNION}(x,y) \\
+& \quad \text{LINK}(\text{FIND-SET}(x),\text{FIND-SET}(y)) \\
+& end
+\end{align*}
+$$
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Disjoint Set Forests** - Pseudocodes For the Heuristics 
+ **Implementation of UNION-BY-RANK Heuristic**
+
+$$
+\begin{align*}
+& \text{LINK}(x,y) \\
+& \quad if \ rank[x] > rank[y] \ then \\
+& \qquad p[y] \rightarrow x \\
+& \quad else \\
+& \qquad p[x] \rightarrow y \\
+& \qquad if \ rank[x] = rank[y] \ then \\
+& \qquad \quad rank[y] = rank[y] + 1 \\
+& \qquad endif \\
+& \quad endif \\
+& end	
+\end{align*}
+$$
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Implementation of UNION-BY-RANK Heuristic**
+
+- When a **singleton set** is created by a $\text{MAKE-SET}$
+  - the **initial rank** of the **single node** in the tree is **zero** 
+- Each $\text{FIND-SET}$ operation leaves **all ranks unchanged** 
+- When applying a $\text{UNION}$ to two trees,
+  - we make the **root of tree** with **higher rank** 
+	  - the **parent** of the **root of lower rank**
+- **Ties are broken arbitrarily **
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Implementation of the Path-Compression Heuristic**
+
+**The FIND-SET procedure with Path-Compression**
+- Iterative Version
+
+$$
+\begin{align*}
+& \text{FIND-SET}(x) \\
+&	\quad y \leftarrow x \\
+&	\quad while \ y \neq p[y] \ do \\
+& \qquad y \leftarrow p[y] \\
+& \quad	endwhile \\
+&	\quad root \leftarrow y \\
+&	\quad while \ x \neq p[x] \ do \\
+& \qquad parent \leftarrow p[x] \\
+& \qquad p[x] \leftarrow root \\
+& \qquad x \leftarrow parent \\
+& \quad endwhile \\
+& \quad return \ root \\
+& end	
+\end{align*}
+$$
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Implementation of the Path-Compression Heuristic**
+
+**The FIND-SET procedure with Path-Compression**
+
+- Recursive Version
+
+$$
+\begin{align*}
+& \text{FIND-SET}(x) \\
+& \quad if \ x \neq p[x]  \ then \\
+& \qquad p[x] \leftarrow \text{FIND-SET}(p[x]) \\
+& \quad endif \\
+& \quad return \ p[x] \\
+& end
+\end{align*}
+$$
+
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+## **Analysis Of Union By Rank With Path Compression**
+
+- When we use both union-by-rank and path-compression the worst case running time is $O(m\alpha(m,n))$ where $\alpha(m,n)$ is the **very slowly growing inverse of the Ackerman’s function**.
+
+ -In any conceivable application of disjoint-set data structure $\alpha(m,n) \leq 4$.
+
+- Thus, we can view the running time as linear  in practical situations.
+
+---
+
+<style scoped>section{ font-size: 40px; }</style>
+
+## **Minimum Spanning Tree (MST)**
+- Kruskal 
+- Prim
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Minimum Spanning Tree**
+
+- One of the most famous **greedy** algorithms.
+- Weight is minimum over all
+- It has $|V|-1$ edges
+- It has no cycles
+- It might not be unique
+- **Undirected Graph** $G =(V,E)$
+- **Connected** 
+- Weight Function $\omega : E \rightarrow R$
+- **Spanning Tree** :  Tree that connects all vertices 
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Minimum Spanning Tree**
+
+- **MST** :  $\omega(T) = \sum(u,v) \in T \omega(u,v)$
+- **Note** : MST is not unique.
+
+![center h:400px](assets/ce100-week-10-graphs-mst.drawio.svg)
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **MST-Optimal Structure**
+
+- **Optimal Structure**: Optimal tree has optimal subtrees.
+  - Let $T$ be an $MST$ of $G=(V,E)$
+  - Removing any edge $(u,v)$ of $T$ partitions $T$ into two subtrees : $T_1 \& T_2$
+  - Where $T_1 = (V_1,E_{T_1}) \& T_2 = (V_2, E_{T_2})$
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **MST-Optimal Structure**
+
+- Let $G_1=(V_1,E_1) \& G_2=(V_2,E_2)$ be
+  - subgraphs induced by $V_1 \& V_2$
+    - i.e. $E_i=\{(x,y) \in E : x, y \in V_i\}$
+  - **Claim** : $T_1 \& T_2$ are $MST$s of $G_1 \& G_2$ respectively
+  - **Proof** : $\omega(T) = \omega(u,v) + \omega(T1) + \omega(T2)$
+- There can’t be better trees than $T_1\&T_2$ for $G_1\&G_2$
+- Otherwise, $T$ would be suboptimal for $G$
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Generic MST Algorithm**
+
+- $A$ is always a subset of some $MST(s)$
+- $(u,v)$ is a **safe edge** for $A$ if $A \cup \{ (u,v) \}$ is also a subtree of some $MST$
+
+$$
+\begin{align*}
+& \text{GENERIC-MST}(G, \omega) \\
+& \quad A \leftarrow \empty \\
+& \quad while \ A \ does \ not \ form \ a \ spanning \ tree \ do \\
+& \qquad find \ a \ safe \ edge \ (u,v) \ for \ A \\
+& \qquad A \leftarrow A  \cup \{ (u,v) \} \\
+& \quad return  \ A \\
+& end
+\end{align*}
+$$
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **Generic MST Algorithm**
+
+- One safe edge must exist at each step since :
+- $A \subset T$  where $T$ is an $MST$
+- Let $(u,v) \in T (u,v) \backepsilon A \Rightarrow (u,v)$ is safe for $A$
+- A cut  $(S,V-S)$  of  $G=(V,E)$ is a **Partition** of $V$
+- An edge $(u,v) \in E$ crosses the cut $(S,V-S)$
+  - if  $u \in S \& v \in V-S$ or vice versa
+- A cut **respects** the set $A$ of edges if no edge in $A$ crosses the cut
+- An edge is a light edge crossing a cut
+  - If its weight is the minimum of any edges crossing the cut
+  - There can be more than one light edge crossing the cut in the case of ties.
+
+---
+
+TODO - Missing Parts...
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **MST - Kruskal Algorithm**
+
+- Sort the graph edges with weight
+- Add from minimum weights
+- Only add edges which doesn't form a cycle
+- Disjoint Sets
+  - MAKE-SET
+  - FIND-SET
+  - UNION
+
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **MST - Kruskal Algorithm**
+
+$$
+\begin{align*}
+& \text{MST-KRUSKAL}(G, \omega) \\
+& \quad A \leftarrow \empty \\
+& \quad for \ each \ vertex \ v \in V[G] \ do \\
+& \qquad \text{MAKE-SET}(v) \\
+& \quad SORT \ the \ edges \ of \ E \ by \ nondecreasing \  weight \ \omega \\               
+& \quad for \ each \ edge \ (u,v) \in E \ in \ nondecreasing \ order \ do \\
+& \qquad if \text{FIND-SET}(u) \neq FIND-SET(v) \ then \\
+& \qquad \quad A \leftarrow A \cup \{(u,v)\} \\
+& \qquad \quad UNION (u,v) \\
+& \quad return A \\
+& end
+\end{align*}
+$$
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **MST - Kruskal Analysis of Algorithm**
+
+- Depends on Implementation of Disjoint Sets
+- init set take $O(1)$
+- sort edge $O(ElogE)$
+- for loop FIND-SET and UNION $O(E)$
+- $|V|$
+- $O((V+E)\alpha(V))$
+- $|E|\leq |V|-1$
+  - $logE = O(logV)$
+  - $O(ElgV)$
+- **Total Time** = $O(ElgE)$
+
+
+---
+
+<style scoped>section{ font-size: 30px; }</style>
+
+## **MST - Prim**
+
+---
+
+$TBD$
+
+
+
+---
+
 ## References
 
 - [Introduction to Algorithms, Third Edition | The MIT Press](https://mitpress.mit.edu/books/introduction-algorithms-third-edition)
@@ -3510,6 +4662,14 @@ while !queue.empty():
 - [BtechSmartClass-Graph Representations](http://www.btechsmartclass.com/data_structures/graph-representations.html)
 
 - [Leetcode - Topological Sort](https://leetcode.com/discuss/general-discussion/1078072/introduction-to-topological-sort#:~:text=According%20to%20Introduction%20to%20Algorithms,pointing%20from%20left%20to%20right.)
+
+- [GeeksforGeeks-Detect Cycle in a Directed Graph](https://www.geeksforgeeks.org/detect-cycle-in-a-graph/?ref=leftbar-rightbar)
+
+- [GeeksforGeeks-Detect Cycle in a Undirected Graph](https://www.geeksforgeeks.org/detect-cycle-undirected-graph/)
+
+- [GeeksforGeeks-m Coloring Problem | Backtracking-5](https://www.geeksforgeeks.org/m-coloring-problem-backtracking-5/)
+
+- [GeeksforGeeks-Check whether a given graph is Bipartite or not](https://www.geeksforgeeks.org/bipartite-graph/?ref=leftbar-rightbar)
 
 ---
 
