@@ -1284,7 +1284,6 @@ Compare 2-successive levels of avg case vs. 1 level of best case
 - The extra divide cost $\Theta(n)$ of bad splits absorbed into the $\Theta(n)$ of good splits.
 
 - Running time is still $\Theta(nlgn)$
-  
   - But, slightly larger hidden constants, because the height of the recursion tree is about twice of that of best case.
 
 ---
@@ -1292,20 +1291,19 @@ Compare 2-successive levels of avg case vs. 1 level of best case
 ## Intuition for the Average Case (5)
 
 - Another way of looking at it:
-  
   - Suppose we alternate lucky, unlucky, lucky, unlucky, $\dots$
   - We can write the recurrence as:
     - $L(n) = 2U(n/2) + \Theta(n)$    lucky split (best)
     - $U(n) = L(n-1) + \Theta(n)$        unlucky split (worst)
   - Solving:
   
-  $$
-  \begin{align*} 
+$$
+\begin{align*} 
 L(n) & = 2(L(n/2-1) + \Theta(n/2)) + \Theta(n) \\
-        & = 2L(n/2-1) + \Theta(n) \\
-        & = Θ(nlgn) 
+& = 2L(n/2-1) + \Theta(n) \\
+& = Θ(nlgn) 
 \end{align*} 
-  $$
+$$
 
 - How can we make sure we are usually lucky for all inputs?
 
@@ -1779,7 +1777,7 @@ $$
 
 ## Selection in Expected Linear Time (1)
 
-```r
+``` r
 R-SELECT(A,p,r,i)
   if p == r then 
     return A[p];
@@ -1798,7 +1796,9 @@ x & = pivot
 \end{align*} 
 $$
 
+
 ---
+
 
 ## Selection in Expected Linear Time (2)
 
@@ -1809,6 +1809,13 @@ x & = pivot
 \end{align*} 
 $$
 
+---
+
+<style scoped>section{ font-size: 25px; }</style>
+
+
+## Selection in Expected Linear Time (2)
+
 - All elements in $L \leq$  all elements in $R$ 
 - $L$ contains:
   - $|L| = q–p+1$  $=$ k smallest elements of $A[p...r]$
@@ -1817,7 +1824,10 @@ $$
   - else 
     - **search** $R$ recursively for its $(i-k)^{th}$ smallest element 
 
+
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Runtime Analysis (1)
 
@@ -1834,6 +1844,8 @@ i & = 7
 $$
 
 ---
+
+<style scoped>section{ font-size: 25px; }</style>
 
 ## Runtime Analysis (2)
 
