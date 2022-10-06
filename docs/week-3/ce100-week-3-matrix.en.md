@@ -401,6 +401,60 @@ or use https://www.omnicalculator.com/math/log
 
 ---
 
+## Matrix Multiplication Solution Faster Than Strassen's Algorithm
+
+- In 5 Oct. 2022 new paper published
+  
+  - [Discovering faster matrix multiplication algorithms with reinforcement learning | Nature](https://www.nature.com/articles/s41586-022-05172-4)
+  
+  - [GitHub - deepmind/alphatensor](https://github.com/deepmind/alphatensor)
+  
+  - [Article](files/s41586-022-05172-4.pdf)
+  
+  - [Discovering novel algorithms with AlphaTensor](https://www.deepmind.com/blog/discovering-novel-algorithms-with-alphatensor)
+
+---
+
+## Matrix Multiplication Solution Faster Than Strassen's Algorithm
+
+For example, if the traditional algorithm taught in school multiplies a 4x5 by 5x5 matrix using 100 multiplications, and this number was reduced to 80 with human ingenuity, AlphaTensor has found algorithms that do the same operation using just 76 multiplications.
+
+---
+
+## Matrix Multiplication Solution Faster Than Strassen's Algorithm
+
+![center h:450px]
+
+
+---
+
+## Standard Multiplication
+
+![center h:400px](assets/5295aa5bc51e2fcee45558028ee14a14b1d1780a.svg)
+
+---
+
+## Standard and Strassen Comparison
+
+![bg right h:650px](assets/78f486a380f37bf03bacb59046fa1605a418afeb.svg)
+
+---
+
+## Improved Solution
+
+![bg right  h:660px](assets/45ecd09a7fd6282e2abd1548ec26a531c1f9148c.svg)
+
+---
+
+## How it's done
+
+>  "Single-player game played by AlphaTensor, where the goal is to find a correct matrix multiplication algorithm. The state of the game is a cubic array of numbers (shown as grey for 0, blue for 1, and green for -1), representing the remaining work to be done."
+
+![center h:350px](assets/7cad75cfc46fed6547ba2baf846f86623dbf49c3.svg)
+
+
+---
+
 ## Maximum Subarray Problem
 
 **Input:** An array of values
@@ -436,6 +490,7 @@ or use https://www.omnicalculator.com/math/log
 - **Conquer:** Recursively compute the max subarrays of the left and right halves
 
 - **Combine:** Compute the max-subarray crossing the $mid-point$ 
+  
   - (can be done in $\Theta(n)$ time). 
   - Return the max among the following:
     - the max subarray of the $\text{left-subarray}$
@@ -1056,6 +1111,7 @@ $$
 - Instead of splitting $0.5:0.5$, if we split $0.1:0.9$ then we need solve following equation.
 
 $$
+
 \begin{align*} 
 T(n) &= T(n/10) + T(9n/10) + \Theta(n) \\
 &= \Theta(nlgn)
@@ -1245,10 +1301,10 @@ Compare 2-successive levels of avg case vs. 1 level of best case
   
   $$
   \begin{align*} 
-  L(n) & = 2(L(n/2-1) + \Theta(n/2)) + \Theta(n) \\
-          & = 2L(n/2-1) + \Theta(n) \\
-          & = Θ(nlgn) 
-  \end{align*} 
+L(n) & = 2(L(n/2-1) + \Theta(n/2)) + \Theta(n) \\
+        & = 2L(n/2-1) + \Theta(n) \\
+        & = Θ(nlgn) 
+\end{align*} 
   $$
 
 - How can we make sure we are usually lucky for all inputs?
@@ -1296,10 +1352,11 @@ for any constant $\alpha, 0 < \alpha \leq 0.5$
 ## Summary: Quicksort Runtime Analysis (3)
 
 - For a random input array, the probability of having a split 
+  
   - more balanced than   $0.1 – to – 0.9 : 80\%$
   - more balanced than $0.01 – to – 0.99  :  98\%$
   - more balanced than $\alpha – to – (1-\alpha) : 1 – 2 \alpha$
-    
+
 - for any constant $\alpha, 0 < \alpha \leq 0.5$
 
 ---
@@ -1376,6 +1433,7 @@ R-PARTITION(A, p, r)
   - but, would be more difficult to analyze
 
 ---
+
 <style scoped>section{ font-size: 25px; }</style>
 
 ## Randomized Quicksort (2)
@@ -1568,10 +1626,11 @@ $$
 ## Tight bound for $\sum klgk$ (2)
 
 - **Splitting summations:** ignore ceilings for simplicity
-$$
-\sum \limits_{k=1}^{n-1}klgk \leq \sum \limits_{k=1}^{n/2-1}klgk + \sum \limits_{k=n/2}^{n-1}klgk
-$$
-
+  
+  $$
+  \sum \limits_{k=1}^{n-1}klgk \leq \sum \limits_{k=1}^{n/2-1}klgk + \sum \limits_{k=n/2}^{n-1}klgk
+  $$
+  
   - **First summation**: $lgk < lg(n/2)=lgn-1$
   - **Second summation**: $lgk < lgn$
 
@@ -1595,8 +1654,6 @@ $$
 & \sum \limits_{k=1}^{n-1} klgk \leq \frac{1}{2}n^2lgn-\frac{1}{8}n^2 \ for \ lgn \geq 1/2 \Longrightarrow n \geq \sqrt{2} 
 \end{align*}
 $$
-
-
 
 ---
 
@@ -1945,7 +2002,9 @@ $$
 ## Summary of Randomized Order-Statistic Selection
 
 - Works fast: linear expected time
+
 - Excellent algorithm in practise
+
 - But, the worst case is very bad: $\Theta(n^2)$
 
 - **Blum, Floyd, Pratt, Rivest & Tarjan[1973]** algorithms are runs in **linear time** in the **worst case**.
@@ -2256,6 +2315,8 @@ $$
 - [NIST - big-O notation](https://xlinux.nist.gov/dads/HTML/bigOnotation.html)
 
 - [NIST - big-Omega notation](https://xlinux.nist.gov/dads/HTML/omegaCapital.html)
+
+- [Discovering novel algorithms with AlphaTensor](https://www.deepmind.com/blog/discovering-novel-algorithms-with-alphatensor)
 
 ---
 
