@@ -63,11 +63,11 @@ math: katex
 
 #### Syllabus
 
-#### Spring Semester, 2021-2022
+#### Spring Semester, 2022-2023
 
 Download [DOC](syllabus.en.md_doc.pdf), [SLIDE](syllabus.en.md_slide.pdf), [PPTX](syllabus.en.md_slide.pptx)
 
-Download [WORD](2021-2022-spring-ce100-algorithms-and-programming-II-comp-eng.docx), [PDF](2021-2022-spring-ce100-algorithms-and-programming-II-comp-eng.pdf)
+Download [WORD (legacy)](2021-2022-spring-ce100-algorithms-and-programming-II-comp-eng.docx), [PDF(legacy)](2021-2022-spring-ce100-algorithms-and-programming-II-comp-eng.pdf)
 
 <iframe width=700, height=500 frameBorder=0 src="../syllabus.en.md_slide.html"></iframe>
 
@@ -75,18 +75,19 @@ Download [WORD](2021-2022-spring-ce100-algorithms-and-programming-II-comp-eng.do
 
 <!-- paginate: true -->
 
-| Instructor                 | Asst. Prof. Dr. Uğur CORUH |
-| -------------------------- | -------------------------- |
-| **Contact Information**    | ugur.coruh@erdogan.edu.tr  |
-| **Office No**              | F-301                      |
-| **Google Classroom Code**  | bafwwt6                    |
-| **Lecture Hours and Days** | TBD                        |
+| Instructor                 | Asst. Prof. Dr. Uğur CORUH                            |
+| -------------------------- | ----------------------------------------------------- |
+| **Contact Information**    | ugur.coruh@erdogan.edu.tr                             |
+| **Office No**              | F-301                                                 |
+| **Google Classroom Code**  | hhgoiwu                                               |
+| **Microsoft Teams Code**   | iqn0cia                                               |
+| **Lecture Hours and Days** | Tuesday 09:00-12:00 (Theory) Friday 10:00-12:00 (Lab) |
 
 ---
 
-| **Lecture Classroom** | İBBF 402 Level-4                                                                                                                                                                                                                                    |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Office Hours**      | Meetings will be scheduled over Google Meet with your university account and email and performed via demand emails. Please send emails with the subject starting with *[CE100]* tag for the fast response and write formal, clear, and short emails |
+| **Lecture Classroom** | İBBF 402 Level-4 or Online Google Meet / Microsoft Teams                                                                                                                                                                                                               |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Office Hours**      | Meetings will be scheduled over Google Meet or Microsoft Teams with your university account and email and performed via demand emails. Please send emails with the subject starting with *[CE100]* tag for the fast response and write formal, clear, and short emails |
 
 ---
 
@@ -279,17 +280,13 @@ $$
 
 ## F. Instructional Strategies and Methods
 
-The basic teaching method of this course will be planned to be face-to-face in the classroom, and support resources, home works, and announcements will be shared over google classroom. Students are expected to be in the university. This responsibility is very important to complete this course with success. If pandemic situation changes and distance education is required during this course, this course will be done using synchronous and asynchronous distance education methods. In this scenario, students are expected to be in the online platform, zoom, or meet at the time specified in the course schedule. Attendance will be taken.
+The basic teaching method of this course will be planned to be face-to-face in the classroom, and support resources, home works, and announcements will be shared over google classroom. In unexpected situations course will be planned for online for disaster scenarios. Students are expected to be in the university if face-to-face method selected. This responsibility is very important to complete this course with success. If pandemic situation changes and distance education is required during this course, this course will be done using synchronous and asynchronous distance education methods. In this scenario, students are expected to be in the online platform, zoom, or meet at the time specified in the course schedule. Attendance will be taken.
 
 ---
 
 ## G. Late Homework
 
-Throughout the semester, assignments must be submitted as specified by the announced deadline. Your grade will be reduced by 10% of the full points for each calendar day for overdue assignments.
-
----
-
-Overdue assignments will not be accepted after three (3) days.
+Throughout the semester, assignments must be submitted as specified by the announced deadline. Overdue assignments will not be accepted.
 
 ---
 
@@ -299,7 +296,7 @@ Unexpected situations must be reported to the instructor for late home works by 
 
 ## H. Course Platform and Communication
 
-Google Classroom will be used as a course learning management system. All electronic resources and announcements about the course will be shared on this platform. It is very important to check the course page daily, access the necessary resources and announcements, and communicate with the instructor as you need **Algorithms and Programming I** programming skills  to complete the course with success
+Google Classroom and Microsoft Teams will be used as a course learning management system. All electronic resources and announcements about the course will be shared on this platform. It is very important to check the course page daily, access the necessary resources and announcements, and communicate with the instructor as you need **Algorithms and Programming I** programming skills  to complete the course with success
 
 ---
 
@@ -377,48 +374,48 @@ If deemed necessary, changes in the lecture content or course schedule can be ma
 
 ## Course Schedule Overview
 
-| Weeks  | Dates | Subjects                                                                                                                                                                                                                                                                                                                                                              | Other Tasks |
-|:------ |:----- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:----------- |
-| Week 1 | TBD   | Course Plan and Communication Grading System, Assignments and Exams. Algorithms Basics, Pseudocode,iv.	RAM (Random Access Machine Model), Algorithm Cost Calculation for Time Complexity. Worst, Average and Best Case Summary Sorting Problem (Insertion and Merge Sort Analysis), 4.	Asymptotic Notation(Big O, Big Teta,Big Omega, Small o, Small omega Notations) | TBD         |
-| Week 2 | TBD   | Solving Recurrences (Recursion Tree, Master Method and Back-Substitution) Divide-and-Conquer Analysis (Merge Sort, Binary Search) Recurrence Solution                                                                                                                                                                                                                 | TBD         |
+| Weeks  | Dates                 | Subjects                                                                                                                                                                                                                                                                                                                                                                    | Other Tasks |
+|:------ |:--------------------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:----------- |
+| Week 1 | 21.02.2023 24.02.2023 | Course Plan and Communication Grading System, Assignments and Exams. Algorithms Basics, Pseudocode,iv.    RAM (Random Access Machine Model), Algorithm Cost Calculation for Time Complexity. Worst, Average and Best Case Summary Sorting Problem (Insertion and Merge Sort Analysis), 4.    Asymptotic Notation(Big O, Big Teta,Big Omega, Small o, Small omega Notations) | TBD         |
+| Week 2 | 28.02.2023 03.03.2023 | Solving Recurrences (Recursion Tree, Master Method and Back-Substitution) Divide-and-Conquer Analysis (Merge Sort, Binary Search) Recurrence Solution                                                                                                                                                                                                                       | TBD         |
 
 ---
 
-| Week 3 | TBD | Matrix Multiplication(Traditional,Recursive,Strassen),Quicksort(Hoare and Lomuto Partitioning,Recursive Sorting),Quicksort Analysis,Randomized Quicksort, Randomized Selection(Recursive,Medians)     | TBD |
-|:------ |:--- |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--- |
-| Week 4 | TBD | Heaps (Max / Min Heap, Heap Data Structure, Iterative and Recursive Heapify, Extract-Max, Build Heap) Heap Sort, Priority Queues, Linked Lists, Radix Sort,Counting Sort                              | TBD |
-| Week 5 | TBD | Convex Hull (Divide & Conquer) Dynamic Programming (Fibonacci Numbers) Divide-and-Conquer (DAC) vs Dynamic Programming (DP)  Development of a DP Algorithms  Matrix-Chain Multiplication and Analysis | TBD |
+| Week 3 | 07.03.2023 10.03.2023 | Matrix Multiplication(Traditional,Recursive,Strassen),Quicksort(Hoare and Lomuto Partitioning,Recursive Sorting),Quicksort Analysis,Randomized Quicksort, Randomized Selection(Recursive,Medians) Heaps (Max / Min Heap, Heap Data Structure, Iterative and Recursive Heapify, Extract-Max, Build Heap) Heap Sort, Priority Queues, Linked Lists, Radix Sort,Counting Sort | Midterm Homework-1 Will Be Sent on 07.03.2023 |
+|:------ |:--------------------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--------------------------------------------- |
+| Week 4 | 14.03.2023 17.03.2023 | Midterm Homework-1 Controls and Review with Summary                                                                                                                                                                                                                                                                                                                        | Midterm Homework-1 Due-Date 14.03.2023        |
+| Week 5 | 21.03.2023 24.03.2023 | Convex Hull (Divide & Conquer) Dynamic Programming (Fibonacci Numbers) Divide-and-Conquer (DAC) vs Dynamic Programming (DP)  Development of a DP Algorithms  Matrix-Chain Multiplication and Analysis                                                                                                                                                                      | TBD                                           |
 
 ---
 
-| Week-6 | TBD | Elements of Dynamic Programming Recursive Matrix Chain Order Memoization (Top-Down Approach, RMC, MemoizedMatrixChain, LookupC) Dynamic Programming vs. Memoization Longest Common Subsequence (LCS) Most Common Dynamic Programming Interview Questions | TBD |
-|:------ |:--- |:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--- |
-| Week-7 | TBD | Greedy Algorithms and Dynamic Programming Differences Greedy Algorithms (Activity Selection Problem, Knapsack Problems)                                                                                                                                  | TBD |
-| Week-8 | TBD | **Midterm**                                                                                                                                                                                                                                              | TBD |
+| Week-6 | 28.03.2023 31.03.2023 | Elements of Dynamic Programming Recursive Matrix Chain Order Memoization (Top-Down Approach, RMC, MemoizedMatrixChain, LookupC) Dynamic Programming vs. Memoization Longest Common Subsequence (LCS) Most Common Dynamic Programming Interview Questions, Greedy Algorithms and Dynamic Programming Differences Greedy Algorithms (Activity Selection Problem, Knapsack Problems) | Midterm Homework-2 Will Be Sent on 28.03.2023 |
+|:------ |:--------------------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--------------------------------------------- |
+| Week-7 | 04.04.2023 07.04.2023 | Midterm Homework-2 Controls and Review with Summary                                                                                                                                                                                                                                                                                                                               | Midterm Homework-2 Due Date 04.04.2023        |
+| Week-8 | 08.04.2023 16.04.2023 | **Midterm**                                                                                                                                                                                                                                                                                                                                                                       | TBD                                           |
 
 ---
 
-| Week-9  | TBD | Heap Data Structure, Heap Sort, Huffman Coding                                                                                                                                      | TBD |
-|:------- |:--- |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--- |
-| Week-10 | TBD | Introduction to Graphs, Gr,aphs and Representation, BFS (Breath-First Search), DFS (Depth-First Search), Topological Order, SCC (Strongly Connected Components), MST, Prim, Kruskal | TBD |
-| Week-11 | TBD | Disjoint Sets and Kruskal Relationships,Single-Source Shortest Path,(Bellman- Ford,Dijkstra),Q-Learning Shortest Path,Max-Flow Min-Cut (Ford-Fulkerson,Edmond’s Karp,Dinic)         | TBD |
+| Week-9  | 18.04.2023 21.04.2023 | Heap Data Structure, Heap Sort, Huffman Coding                                                                                                                                                                                                                                    | 21.04.2023 Ramadan Holiday-1                |
+|:------- |:--------------------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:------------------------------------------- |
+| Week-10 | 25.04.2023 28.04.2023 | Introduction to Graphs, Gr,aphs and Representation, BFS (Breath-First Search), DFS (Depth-First Search), Topological Order, SCC (Strongly Connected Components), MST, Prim, Kruskal Disjoint Sets and Kruskal Relationships,Single-Source Shortest Path,(Bellman- Ford,Dijkstra), | TBD                                         |
+| Week-11 | 02.05.2023 05.05.2023 | Q-Learning Shortest Path,Max-Flow Min-Cut (Ford-Fulkerson,Edmond’s Karp,Dinic) Crypto++ Library Usage, Hashing and Integrity Control, Cryptographic Hash Functions (SHA-1,SHA-256,SHA-512,H-MAC), Checksums(MD5,CRC32)                                                            | Final Homework-1 Will Be Sent on 02.05.2023 |
 
 ---
 
-| Week-12 | TBD | Crypto++ Library Usage, Hashing and Integrity Control, Cryptographic Hash Functions (SHA-1,SHA-256,SHA-512,H-MAC), Checksums(MD5,CRC32)                                                   | TBD |
-|:------- |:--- |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--- |
-| Week-13 | TBD | Symmetric Encryption Algorithms (AES, DES, TDES), Symmetric Encryption Modes (ECB, CBC), Asymmetric Encryption, Key Pairs (Public-Private Key Pairs), Signature Generation and Validation | TBD |
-| Week-14 | TBD | OTP Calculation(Time-based, Counter-based),File Encryption and Decryption and Integrity Control Operations                                                                                | TBD |
+| Week-12 | 09.05.2023 12.05.2023 | Final Homework-1 Controls and Review with Summary                                                                                                                                         | Final Homework-1 Due Date 09.05.2023                               |
+|:------- |:--------------------- |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:------------------------------------------------------------------ |
+| Week-13 | 16.05.2023 19.05.2023 | Symmetric Encryption Algorithms (AES, DES, TDES), Symmetric Encryption Modes (ECB, CBC), Asymmetric Encryption, Key Pairs (Public-Private Key Pairs), Signature Generation and Validation | 19.05.2023 Holiday, Commemoration of Atatürk, Youth and Sports Day |
+| Week-14 | 23.05.2023 26.05.2023 | OTP Calculation(Time-based, Counter-based),File Encryption and Decryption and Integrity Control Operations                                                                                | Final Homework-2 Will Be Sent on 23.05.2023                        |
 
 ---
 
-| Week-15 | TBD | Review    | TBD |
-|:------- |:--- |:--------- |:--- |
-| Week-16 | TBD | **Final** | TBD |
+| Week-15 | 30.05.2023 02.06.2023 | Final Homework-2 Controls and Review with Summary | Final Homework-2 Due Date 30.05.2023      |
+|:------- |:--------------------- |:------------------------------------------------- |:----------------------------------------- |
+| Week-16 | 03.06.2023 11.06.2023 | **Final**                                         | There won't be makeup exams for homeworks |
 
 ---
 
-### Bologna Information 
+### Bologna Information
 
 <iframe width=700, height=1000 frameBorder=0 src="../ce100-algorithms-and-prgramming-II-bologna-en.pdf"></iframe>
 
