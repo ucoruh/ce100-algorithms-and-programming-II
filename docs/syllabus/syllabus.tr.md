@@ -80,7 +80,7 @@ Download [WORD](2021-2022-spring-ce100-algorithms-and-programming-II-comp-eng.do
 | **Contact Information**    | ugur.coruh@erdogan.edu.tr                             |
 | **Office No**              | F-301                                                 |
 | **Google Classroom Code**  | hhgoiwu                                               |
-| **Microsoft Teams Code**   | iqn0cia                                               |
+| **Microsoft Teams Code**   | bvw1vfk                                               |
 | **Lecture Hours and Days** | Tuesday 09:00-12:00 (Theory) Friday 10:00-12:00 (Lab) |
 
 ---
